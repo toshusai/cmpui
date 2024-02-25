@@ -1,0 +1,1 @@
+.shortcut-list-item:not([data-disabled])>div+div{color:var(--cmpui-text2-color)}.shortcut-list-item:not([data-disabled]):hover>div+div{color:var(--cmpui-text2-color)}.shortcut-list-item:not([data-disabled])[data-highlighted]>div+div{color:#fff}

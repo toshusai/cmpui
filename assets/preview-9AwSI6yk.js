@@ -1,0 +1,6 @@
+import{j as e}from"./jsx-runtime-DtaoT6pD.js";import{useMDXComponents as a}from"./index-KwbRfTVY.js";import{M as i,T as m,d as c,P as p,e as l,f as d,t as u}from"./index-hwwBzB1V.js";import{r as h}from"./index-OjgoNOWw.js";/* empty css               */import"./iframe-XABfafOa.js";import"../sb-preview/runtime.js";import"./index-mQqIOHEI.js";import"./index-Eok78svH.js";import"./index-ogXoivrg.js";import"./index-XkRcYS9h.js";import"./index-PPLHz8o0.js";function s(t){return e.jsxs(e.Fragment,{children:[e.jsx(i,{isTemplate:!0}),`
+`,e.jsx(m,{}),`
+`,e.jsx(c,{}),`
+`,e.jsx(p,{}),`
+`,e.jsx(l,{}),`
+`,e.jsx(d,{includePrimary:!1})]})}function x(t={}){const{wrapper:o}={...a(),...t.components};return o?e.jsx(o,{...t,children:e.jsx(s,{...t})}):s()}const E={parameters:{actions:{argTypesRegex:"^on[A-Z].*"},layout:"centered",controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},docs:{page:x,theme:u.dark}}},n=(t,o)=>{const r=o.globals.theme;return h.useEffect(()=>{document.body.dataset.theme=r},[r]),e.jsx(t,{})},P=[n],X={theme:{name:"Theme",description:"Global theme for components",defaultValue:"light",toolbar:{icon:"sun",items:[{value:"light",icon:"sun",title:"light"},{value:"dark",icon:"moon",title:"dark"}],showName:!0}}};n.__docgenInfo={description:"",methods:[],displayName:"withTheme"};export{P as decorators,E as default,X as globalTypes,n as withTheme};
