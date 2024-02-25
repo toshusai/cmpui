@@ -1,0 +1,45 @@
+.cmpui_color-input__root {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+}
+
+.cmpui_color-input__root > .cmpui_text-input__root:nth-child(1) {
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cmpui_color-input__root > .cmpui_text-input__root:nth-child(2) {
+  width: 64px;
+  min-width: 64px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cmpui_color-input__input {
+  visibility: hidden;
+  appearance: none;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  inline-size: 32px;
+  block-size: 32px;
+  margin: 0;
+  padding: 0;
+  transform: translate(-4px, 0px);
+}
+
+.cmpui_color-input__color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 12px;
+  cursor: pointer;
+  mask-image: linear-gradient(to right, transparent 50%, black 50%);
+}

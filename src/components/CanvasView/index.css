@@ -1,0 +1,10 @@
+.cmpui_canvas-view__root {
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.cmpui_canvas-view__root:focus {
+  outline: none;
+}

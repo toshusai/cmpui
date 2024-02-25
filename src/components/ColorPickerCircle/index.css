@@ -1,0 +1,18 @@
+.cmpui_color-picker-circle__root {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  position: relative;
+}
+
+.cmpui_color-picker-circle__root > div {
+  position: relative;
+}
+
+.cmpui_color-picker-circle__sv-picker-parent {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

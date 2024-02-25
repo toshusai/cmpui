@@ -1,0 +1,40 @@
+{/* http://localhost:6006/iframe.html?args=&id=readme--documentation&viewMode=docs */}
+
+import { README } from "./docs/README";
+import { Source } from "@storybook/blocks";
+
+
+<README >
+
+## Installation
+
+A quick tutorial on how to use the package
+
+### 1. Install the package
+
+Install the package using your package manager of choice
+
+<Source code={`pnpm add cmpui`} language="bash" dark />
+
+### 2. Import the component and the styles
+
+Import the component and the styles in your project
+
+<Source code={`
+import { Button } from 'cmpui'
+import 'cmpui/dist/index.css'
+
+export default function App() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  )
+}
+`} language="tsx" dark />
+
+### 3. Enjoy
+
+You can now use the component in your project
+
+</README>

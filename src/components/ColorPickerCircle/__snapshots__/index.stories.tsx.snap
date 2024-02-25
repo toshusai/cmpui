@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Colors/ColorPickerCircle Default smoke-test 1`] = `
+<div class="cmpui_color-picker-circle__root">
+  <div>
+    <div class="cmpui_hue-circle__root"
+         tabindex="0"
+         style="--cmpui-width: 24px; --cmpui-size: 192px;"
+    >
+      <div class="cmpui_hue-circle__hue"
+           style="width: 192px; height: 192px;"
+      >
+      </div>
+      <div x="27.8363521006857"
+           y="46.911130537989536"
+           class="cmpui_circle__root cmpui_hue-circle__nob"
+           style="--cmpui-circle-nob-fill: rgb(255,0,231); --cmpui-circle-nob-radius: 8px; --cmpui-circle-nob-stroke-color: rgb(0,0,0); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(0, 0, 0); left: 19.8364px; top: 38.9111px;"
+      >
+      </div>
+      <div class="cmpui_hue-circle__inner">
+      </div>
+    </div>
+    <div class="cmpui_color-picker-circle__sv-picker-parent">
+      <div class="cmpui_sv-picker__root"
+           tabindex="0"
+      >
+        <canvas width="93.33809511662427"
+                height="93.33809511662427"
+                style="width: 93.3381px; height: 93.3381px;"
+        >
+        </canvas>
+        <div class="cmpui_circle__root cmpui_sv-picker__nob"
+             x="58.92556509887897"
+             y="20.86380949665719"
+             style="--cmpui-circle-nob-fill: rgb(198,73,186); --cmpui-circle-nob-radius: 8px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 50.9256px; top: 12.8638px;"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cmpui_color-slider__root"
+       tabindex="0"
+  >
+    <div style="position: relative; overflow: hidden; cursor: pointer; width: 192px; height: 20px;">
+      <div class="alpha-checker-board"
+           style="width: 192px; height: 20px;"
+      >
+        <div style="width: 100%; height: 100%; background: rgb(198, 73, 186); mask-image: linear-gradient(to right, transparent 0%, black 100%);">
+        </div>
+      </div>
+      <div x="192"
+           y="10"
+           class="cmpui_circle__root alpha-checker-board"
+           style="--cmpui-circle-nob-fill: white; --cmpui-circle-nob-radius: 6.666666666666667px; --cmpui-circle-nob-stroke-color: rgb(0,0,0); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(0, 0, 0); left: 185.333px; top: 3.33333px; --cmpui-block-size: 4px; pointer-events: none;"
+      >
+      </div>
+      <div x="192"
+           y="10"
+           class="cmpui_circle__root cmpui_color-slider__nob"
+           style="--cmpui-circle-nob-fill: rgba(198,73,186,1); --cmpui-circle-nob-radius: 6.666666666666667px; --cmpui-circle-nob-stroke-color: rgb(0,0,0); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(0, 0, 0); left: 185.333px; top: 3.33333px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Colors/HueCircle Default smoke-test 1`] = `
+<div class="cmpui_hue-circle__root"
+     tabindex="0"
+     style="--cmpui-width: 24px; --cmpui-size: 192px;"
+>
+  <div class="cmpui_hue-circle__hue"
+       style="width: 192px; height: 192px;"
+  >
+  </div>
+  <div x="96"
+       y="12"
+       class="cmpui_circle__root cmpui_hue-circle__nob"
+       style="--cmpui-circle-nob-fill: rgb(255,0,0); --cmpui-circle-nob-radius: 8px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 88px; top: 4px;"
+  >
+  </div>
+  <div class="cmpui_hue-circle__inner">
+  </div>
+</div>
+`;
+
+exports[`Components/Colors/HueCircle ForMobile smoke-test 1`] = `
+<div class="cmpui_hue-circle__root"
+     tabindex="0"
+     style="--cmpui-width: 32px; --cmpui-size: 192px;"
+>
+  <div class="cmpui_hue-circle__hue"
+       style="width: 192px; height: 192px;"
+  >
+  </div>
+  <div x="96"
+       y="16"
+       class="cmpui_circle__root cmpui_hue-circle__nob"
+       style="--cmpui-circle-nob-fill: rgb(255,0,0); --cmpui-circle-nob-radius: 10.666666666666666px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 85.3333px; top: 5.33333px;"
+  >
+  </div>
+  <div class="cmpui_hue-circle__inner">
+  </div>
+</div>
+`;
+
+exports[`Components/Colors/HueCircle Size smoke-test 1`] = `
+<div class="cmpui_hue-circle__root"
+     tabindex="0"
+     style="--cmpui-width: 24px; --cmpui-size: 64px;"
+>
+  <div class="cmpui_hue-circle__hue"
+       style="width: 64px; height: 64px;"
+  >
+  </div>
+  <div x="32"
+       y="12"
+       class="cmpui_circle__root cmpui_hue-circle__nob"
+       style="--cmpui-circle-nob-fill: rgb(255,0,0); --cmpui-circle-nob-radius: 8px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 24px; top: 4px;"
+  >
+  </div>
+  <div class="cmpui_hue-circle__inner">
+  </div>
+</div>
+`;

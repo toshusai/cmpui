@@ -1,0 +1,80 @@
+.cmpui_button {
+  background-color: var(--cmpui-primary-color);
+
+  align-items: center;
+  border-radius: 9999px;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-family: unset;
+  font-size: 16px;
+  height: 32px;
+  justify-content: center;
+  line-height: 16px;
+  outline: none;
+  padding: 0;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cmpui_button:hover {
+  background-color: var(--cmpui-primary-hover-color);
+}
+
+.cmpui_button:active {
+  background-color: var(--cmpui-primary-active-color);
+}
+
+.cmpui_button:focus-visible {
+  outline: var(--cmpui-primary-color) solid 1px;
+  outline-offset: 1px;
+}
+
+/* disabled */
+
+.cmpui_button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.cmpui_button:disabled:hover {
+  background-color: var(--cmpui-primary-color);
+}
+
+.cmpui_button:disabled:active {
+  background-color: var(--cmpui-primary-color);
+}
+
+/* Variant: secondary */
+
+.cmpui_button[data-variant="secondary"] {
+  background-color: var(--cmpui-secondary-color);
+}
+
+.cmpui_button[data-variant="secondary"]:hover {
+  background-color: var(--cmpui-secondary-hover-color);
+}
+
+.cmpui_button[data-variant="secondary"]:active {
+  background-color: var(--cmpui-secondary-active-color);
+}
+
+.cmpui_button[data-variant="secondary"]:disabled:hover {
+  background-color: var(--cmpui-secondary-color);
+}
+
+.cmpui_button[data-variant="secondary"]:disabled:active {
+  background-color: var(--cmpui-secondary-color);
+}
+
+/* Size: S */
+
+.cmpui_button[data-size="S"] {
+  font-size: 12px;
+  height: 24px;
+  line-height: 12px;
+  padding: 4px 12px;
+}

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Colors/ColorPickerRect Default smoke-test 1`] = `
+<div class="cmpui_color-picker-rect__root">
+  <div class="cmpui_sv-picker__root"
+       tabindex="0"
+  >
+    <canvas width="192"
+            height="192"
+            style="width: 192px; height: 192px;"
+    >
+    </canvas>
+    <div class="cmpui_circle__root cmpui_sv-picker__nob"
+         x="96"
+         y="96"
+         style="--cmpui-circle-nob-fill: rgb(128,64,64); --cmpui-circle-nob-radius: 8px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 88px; top: 88px;"
+    >
+    </div>
+  </div>
+  <div class="cmpui_color-slider__root"
+       tabindex="0"
+  >
+    <div style="position: relative; overflow: hidden; cursor: pointer; width: 192px; height: 20px;">
+      <div class="alpha-checker-board"
+           style="width: 192px; height: 20px;"
+      >
+        <div style="width: 100%; height: 100%; background-image: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);">
+        </div>
+      </div>
+      <div x="0"
+           y="10"
+           class="cmpui_circle__root alpha-checker-board"
+           style="--cmpui-circle-nob-fill: white; --cmpui-circle-nob-radius: 6.666666666666667px; --cmpui-circle-nob-stroke-color: rgb(0,0,0); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(0, 0, 0); left: -6.66667px; top: 3.33333px; --cmpui-block-size: 4px; pointer-events: none;"
+      >
+      </div>
+      <div x="0"
+           y="10"
+           class="cmpui_circle__root cmpui_color-slider__nob"
+           style="--cmpui-circle-nob-fill: rgba(255,0,0,1); --cmpui-circle-nob-radius: 6.666666666666667px; --cmpui-circle-nob-stroke-color: rgb(0,0,0); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(0, 0, 0); left: -6.66667px; top: 3.33333px;"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="cmpui_color-slider__root"
+       tabindex="0"
+  >
+    <div style="position: relative; overflow: hidden; cursor: pointer; width: 192px; height: 20px;">
+      <div class="alpha-checker-board"
+           style="width: 192px; height: 20px;"
+      >
+        <div style="width: 100%; height: 100%; background: rgb(128, 64, 64); mask-image: linear-gradient(to right, transparent 0%, black 100%);">
+        </div>
+      </div>
+      <div x="192"
+           y="10"
+           class="cmpui_circle__root alpha-checker-board"
+           style="--cmpui-circle-nob-fill: white; --cmpui-circle-nob-radius: 6.666666666666667px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 185.333px; top: 3.33333px; --cmpui-block-size: 4px; pointer-events: none;"
+      >
+      </div>
+      <div x="192"
+           y="10"
+           class="cmpui_circle__root cmpui_color-slider__nob"
+           style="--cmpui-circle-nob-fill: rgba(128,64,64,1); --cmpui-circle-nob-radius: 6.666666666666667px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 185.333px; top: 3.33333px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+`;

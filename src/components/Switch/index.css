@@ -1,0 +1,73 @@
+.cmpui_switch__root {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.cmpui_switch__root[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.cmpui_switch__box {
+  align-items: center;
+  display: flex;
+  height: 24px;
+  min-width: 40px;
+  padding: 0 2px;
+  position: relative;
+  width: 40px;
+}
+
+.cmpui_switch__input {
+  background-color: var(--cmpui-bg-color);
+  border: 1px solid var(--cmpui-border-color);
+
+  appearance: none;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.cmpui_switch__input:focus-visible {
+  outline: var(--cmpui-primary-color) solid 1px;
+
+  outline-offset: 1px;
+}
+
+.cmpui_switch__input:checked {
+  background-color: var(--cmpui-primary-color);
+}
+
+.cmpui_switch__input:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.cmpui_switch__nob {
+  background-color: gray;
+  border-radius: 9999px;
+  display: block;
+  height: 18px;
+  left: 5px;
+  pointer-events: none;
+  position: absolute;
+  transition: transform 100ms;
+  width: 18px;
+  will-change: transform;
+}
+
+.cmpui_switch__nob[data-checked="true"] {
+  background-color: white;
+  transform: translateX(16px);
+}
+
+.cmpui_switch__label {
+  color: var(--cmpui-text-color);
+
+  font-size: 14px;
+}

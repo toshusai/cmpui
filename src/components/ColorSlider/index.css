@@ -1,0 +1,25 @@
+.cmpui_color-slider__root {
+  background-color: white;
+  position: relative;
+  border: 1px solid var(--cmpui-border-color);
+  box-sizing: border-box;
+}
+
+.cmpui_color-slider__root:focus-visible {
+  outline: 1px solid var(--cmpui-primary-color);
+  outline-offset: 1px;
+}
+
+.cmpui_color-slider__nob {
+  position: absolute;
+  cursor: grab;
+  border-radius: 9999px;
+}
+
+.cmpui_color-slider__nob:active {
+  cursor: grabbing;
+}
+
+.cmpui_color-slider__nob:focus {
+  outline: none;
+}

@@ -1,0 +1,73 @@
+.cmpui_modal__root {
+  background-color: var(--cmpui-bg-color);
+
+  animation: contentShow 100ms;
+  left: 50%;
+  min-width: 256px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cmpui_modal__header {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  min-height: 24px;
+  text-align: center;
+}
+
+.cmpui_modal__divider {
+  background-color: var(--cmpui-border-color);
+
+  all: unset;
+  display: block;
+  height: 1px;
+  margin: 4px 0;
+  width: 100%;
+}
+
+.cmpui_modal__title {
+  color: var(--cmpui-text-color);
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cmpui_modal__overlay {
+  background-color: var(--cmpui-overlay-color);
+
+  animation: overlayShow 100ms;
+  inset: 0;
+  position: absolute;
+}
+
+.cmpui_modal__close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

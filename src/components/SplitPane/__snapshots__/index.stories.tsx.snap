@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Layout/SplitPane Horizontal smoke-test 1`] = `
+<div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
+  <div class="cmpui_split-pane__root"
+       data-orientation="horizontal"
+  >
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: auto;"
+    >
+      <div color="#a8e6cf"
+           name="A"
+           style="background: rgb(168, 230, 207); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          A
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="horizontal"
+         data-resizable="true"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: auto;"
+    >
+      <div color="#dcedc1"
+           name="B"
+           style="background: rgb(220, 237, 193); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          B
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="horizontal"
+         data-resizable="true"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: auto;"
+    >
+      <div color="#ffd3b6"
+           name="C"
+           style="background: rgb(255, 211, 182); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          C
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/Layout/SplitPane MinMax smoke-test 1`] = `
+<div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
+  <div class="cmpui_split-pane__root"
+       data-orientation="horizontal"
+  >
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: 100px; max-width: 200px;"
+    >
+      <div color="#a8e6cf"
+           name="A"
+           style="background: rgb(168, 230, 207); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          A
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="horizontal"
+         data-resizable="true"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: auto;"
+    >
+      <div color="#dcedc1"
+           name="B"
+           style="background: rgb(220, 237, 193); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          B
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="horizontal"
+         data-resizable="true"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: 10%; max-width: 50%;"
+    >
+      <div color="#ffd3b6"
+           name="C"
+           style="background: rgb(255, 211, 182); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          C
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/Layout/SplitPane Readonly smoke-test 1`] = `
+<div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
+  <div class="cmpui_split-pane__root"
+       data-orientation="horizontal"
+  >
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: auto;"
+    >
+      <div color="#a8e6cf"
+           name="A"
+           style="background: rgb(168, 230, 207); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          A
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="horizontal"
+         data-resizable="false"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: auto;"
+    >
+      <div color="#dcedc1"
+           name="B"
+           style="background: rgb(220, 237, 193); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          B
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="horizontal"
+         data-resizable="false"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 33.3333%; height: 100%; min-width: auto;"
+    >
+      <div color="#ffd3b6"
+           name="C"
+           style="background: rgb(255, 211, 182); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          C
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/Layout/SplitPane Vertical smoke-test 1`] = `
+<div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
+  <div class="cmpui_split-pane__root"
+       data-orientation="vertical"
+  >
+    <div class="cmpui_split-pane__child"
+         style="width: 100%; height: 33.3333%; min-height: auto;"
+    >
+      <div color="#a8e6cf"
+           name="A"
+           style="background: rgb(168, 230, 207); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          A
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="vertical"
+         data-resizable="true"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 100%; height: 33.3333%; min-height: auto;"
+    >
+      <div color="#dcedc1"
+           name="B"
+           style="background: rgb(220, 237, 193); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          B
+        </div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__divider"
+         data-orientation="vertical"
+         data-resizable="true"
+    >
+      <div>
+      </div>
+    </div>
+    <div class="cmpui_split-pane__child"
+         style="width: 100%; height: 33.3333%; min-height: auto;"
+    >
+      <div color="#ffd3b6"
+           name="C"
+           style="background: rgb(255, 211, 182); width: 100%; height: 100%; display: flex; overflow: auto; position: relative;"
+      >
+        <div style="width: 100%; pointer-events: none; height: 100%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; position: absolute;">
+          C
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

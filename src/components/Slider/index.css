@@ -1,0 +1,108 @@
+.cmpui_slider__root {
+  align-items: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+}
+
+.cmpui_slider__root[aria-disabled="true"] {
+  opacity: 0.5;
+}
+
+.cmpui_slider__root[data-orientation="vertical"] {
+  flex-direction: column;
+  height: 100px;
+  width: 4px;
+}
+
+.cmpui_slider__input {
+  appearance: none;
+  background: transparent;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cmpui_slider__input::-webkit-slider-thumb {
+  appearance: none;
+}
+
+.cmpui_slider__root:hover > .cmpui_slider-track {
+  border: 1px solid var(--cmpui-border-hover-color);
+}
+
+.cmpui_slider__root[aria-disabled="true"]:hover > .cmpui_slider-track {
+  border: 1px solid var(--cmpui-border-color);
+}
+
+.cmpui_slider__input:focus > .cmpui_slider-track {
+  box-shadow: 0 0 0 1px var(--cmpui-primary-color);
+  outline: none;
+}
+
+.cmpui_slider__nob {
+  background-color: var(--cmpui-primary-color);
+  border-radius: 50%;
+  box-shadow: var(--cmpui-float-shadow);
+  cursor: grab;
+  display: block;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+}
+
+.cmpui_slider__nob:active {
+  cursor: grabbing;
+}
+
+.cmpui_slider__nob[data-disabled] {
+  cursor: default;
+}
+
+.cmpui_slider__nob[data-orientation="vertical"] {
+  top: unset;
+}
+
+.cmpui_slider__nob:focus {
+  outline: none;
+}
+
+.cmpui_slider__nob:focus-visible {
+  outline: var(--cmpui-primary-color) solid 1px;
+  outline-offset: 1px;
+}
+
+.cmpui_slider__track {
+  background-color: var(--cmpui-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--cmpui-border-color);
+  height: 4px;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.cmpui_slider__track[data-orientation="vertical"] {
+  height: 100%;
+  width: 4px;
+}
+
+.cmpui_slider__range {
+  background-color: var(--cmpui-primary-color);
+  border-radius: 8px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.cmpui_slider__range[data-orientation="vertical"] {
+  height: unset;
+  width: 100%;
+}

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Colors/ColorInput Primary smoke-test 1`] = `
+<div style="width: 192px;">
+  <div class="cmpui_color-input__root">
+    <div class="cmpui_text-input__root">
+      <div class="alpha-checker-board"
+           style="--cmpui-block-size: 4px;"
+      >
+        <div tabindex="0"
+             class="cmpui_color-input__color"
+             style="background-color: rgb(198, 73, 186); mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, black 50%);"
+        >
+        </div>
+      </div>
+      <label class="cmpui_text-input__label">
+        ColorInput
+      </label>
+      <input type="text"
+             class="cmpui_text-input__input"
+             placeholder
+             value="#c649ba"
+      >
+    </div>
+    <div class="cmpui_text-input__root cmpui_slider-number-input__root">
+      <label class="cmpui_text-input__label cmpui_slider-number-input__label">
+        %
+      </label>
+      <input type="text"
+             class="cmpui_text-input__input"
+             placeholder
+             value="50"
+      >
+    </div>
+  </div>
+</div>
+`;

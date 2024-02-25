@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Form/Checkbox Basic smoke-test 1`] = `
+<div class="cmpui_checkbox__root">
+  <div class="cmpui_checkbox__box">
+    <input type="checkbox"
+           class="cmpui_checkbox__input"
+           id="checkbox-basic"
+    >
+    <div class="cmpui_checkbox__indicator"
+         data-checked="false"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg"
+           height="16"
+           viewbox="0 -960 960 960"
+           width="16"
+           fill="currentColor"
+      >
+        <path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z">
+        </path>
+      </svg>
+    </div>
+  </div>
+  <label class="cmpui_checkbox__label"
+         for="checkbox-basic"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`Components/Form/Checkbox Checked smoke-test 1`] = `
+<div class="cmpui_checkbox__root">
+  <div class="cmpui_checkbox__box">
+    <input type="checkbox"
+           class="cmpui_checkbox__input"
+           id="checkbox-checked"
+           checked
+    >
+    <div class="cmpui_checkbox__indicator"
+         data-checked="true"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg"
+           height="16"
+           viewbox="0 -960 960 960"
+           width="16"
+           fill="currentColor"
+      >
+        <path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z">
+        </path>
+      </svg>
+    </div>
+  </div>
+  <label class="cmpui_checkbox__label"
+         for="checkbox-checked"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`Components/Form/Checkbox Disabled smoke-test 1`] = `
+<div class="cmpui_checkbox__root"
+     aria-disabled="true"
+>
+  <div class="cmpui_checkbox__box">
+    <input type="checkbox"
+           class="cmpui_checkbox__input"
+           id="checkbox-disabled"
+           disabled
+    >
+    <div class="cmpui_checkbox__indicator">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           height="16"
+           viewbox="0 -960 960 960"
+           width="16"
+           fill="currentColor"
+      >
+        <path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z">
+        </path>
+      </svg>
+    </div>
+  </div>
+  <label class="cmpui_checkbox__label"
+         for="checkbox-disabled"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`Components/Form/Checkbox Label smoke-test 1`] = `
+<div class="cmpui_checkbox__root">
+  <div class="cmpui_checkbox__box">
+    <input type="checkbox"
+           class="cmpui_checkbox__input"
+           id="checkbox-label"
+           checked
+    >
+    <div class="cmpui_checkbox__indicator"
+         data-checked="true"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg"
+           height="16"
+           viewbox="0 -960 960 960"
+           width="16"
+           fill="currentColor"
+      >
+        <path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z">
+        </path>
+      </svg>
+    </div>
+  </div>
+  <label class="cmpui_checkbox__label"
+         for="checkbox-label"
+  >
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <span class="material-symbols-outlined"
+            style="font-size: 16px;"
+      >
+        star
+      </span>
+      <div>
+        Custom Label
+      </div>
+    </div>
+  </label>
+</div>
+`;

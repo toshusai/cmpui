@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Form/Switch Basic smoke-test 1`] = `
+<div class="cmpui_switch__root">
+  <div class="cmpui_switch__box">
+    <input class="cmpui_switch__input"
+           type="checkbox"
+           id="switch"
+    >
+    <div class="cmpui_switch__nob"
+         data-checked="false"
+    >
+    </div>
+  </div>
+  <label class="cmpui_switch__label"
+         for="switch"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`Components/Form/Switch Checked smoke-test 1`] = `
+<div class="cmpui_switch__root">
+  <div class="cmpui_switch__box">
+    <input class="cmpui_switch__input"
+           type="checkbox"
+           id="switch-checked"
+           checked
+    >
+    <div class="cmpui_switch__nob"
+         data-checked="true"
+    >
+    </div>
+  </div>
+  <label class="cmpui_switch__label"
+         for="switch-checked"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`Components/Form/Switch Disabled smoke-test 1`] = `
+<div class="cmpui_switch__root"
+     aria-disabled="true"
+>
+  <div class="cmpui_switch__box">
+    <input class="cmpui_switch__input"
+           type="checkbox"
+           id="switch-disabled"
+           disabled
+    >
+    <div class="cmpui_switch__nob"
+         data-checked="false"
+    >
+    </div>
+  </div>
+  <label class="cmpui_switch__label"
+         for="switch-disabled"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`Components/Form/Switch Label smoke-test 1`] = `
+<div class="cmpui_switch__root">
+  <div class="cmpui_switch__box">
+    <input class="cmpui_switch__input"
+           type="checkbox"
+           id="switch-label"
+    >
+    <div class="cmpui_switch__nob"
+         data-checked="false"
+    >
+    </div>
+  </div>
+  <label class="cmpui_switch__label"
+         for="switch-label"
+  >
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <span class="material-symbols-outlined"
+            style="font-size: 16px;"
+      >
+        star
+      </span>
+      <div>
+        Custom Label
+      </div>
+    </div>
+  </label>
+</div>
+`;

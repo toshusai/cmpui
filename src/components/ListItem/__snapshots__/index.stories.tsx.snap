@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/View/ListItem Basic smoke-test 1`] = `
+<ol class="cmpui_list-list__root">
+  <li class="cmpui_list-item__root"
+      data-size="M"
+  >
+    Item1
+  </li>
+  <li class="cmpui_list-item__root"
+      data-size="M"
+  >
+    Item2
+  </li>
+  <li class="cmpui_list-item__root"
+      data-size="M"
+  >
+    Item3
+  </li>
+</ol>
+`;
+
+exports[`Components/View/ListItem Commands smoke-test 1`] = `
+<div class="cmpui_float-box__root">
+  <ol class="cmpui_list-list__root">
+    <li class="cmpui_list-item__root"
+        data-size="S"
+        data-rounded="true"
+        style="width: 128px;"
+    >
+      Undo
+      <span style="margin-left: auto; font-size: 10px; color: var(--cmpui-text2-color);">
+        ⌘ Z
+      </span>
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="S"
+        data-rounded="true"
+        style="width: 128px;"
+    >
+      Redo
+      <span style="margin-left: auto; font-size: 10px; color: var(--cmpui-text2-color);">
+        ⇧ ⌘ Z
+      </span>
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="S"
+        data-rounded="true"
+        style="width: 128px;"
+    >
+      Cut
+      <span style="margin-left: auto; font-size: 10px; color: var(--cmpui-text2-color);">
+        ⌘ X
+      </span>
+    </li>
+    <li class="cmpui_list-item__root"
+        aria-selected="true"
+        data-size="S"
+        data-rounded="true"
+        style="width: 128px;"
+    >
+      Copy
+      <span style="margin-left: auto; font-size: 10px; color: white;">
+        ⌘ C
+      </span>
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="S"
+        data-rounded="true"
+        style="width: 128px;"
+    >
+      Paste
+      <span style="margin-left: auto; font-size: 10px; color: var(--cmpui-text2-color);">
+        ⌘ V
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Components/View/ListItem Selected smoke-test 1`] = `
+<ol class="cmpui_list-list__root">
+  <li class="cmpui_list-item__root"
+      aria-selected="true"
+      data-size="M"
+  >
+    Item1
+  </li>
+  <li class="cmpui_list-item__root"
+      data-size="M"
+  >
+    Item2
+  </li>
+  <li class="cmpui_list-item__root"
+      data-size="M"
+  >
+    Item3
+  </li>
+</ol>
+`;
+
+exports[`Components/View/ListItem Small smoke-test 1`] = `
+<ol class="cmpui_list-list__root">
+  <li class="cmpui_list-item__root"
+      data-size="S"
+  >
+    Item1
+  </li>
+  <li class="cmpui_list-item__root"
+      data-size="S"
+  >
+    Item2
+  </li>
+  <li class="cmpui_list-item__root"
+      data-size="S"
+  >
+    Item3
+  </li>
+</ol>
+`;

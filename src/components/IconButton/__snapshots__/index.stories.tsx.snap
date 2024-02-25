@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Actions/IconButton Basic smoke-test 1`] = `
+<div style="display: flex; gap: 4px;">
+  <button type="button"
+          class="cmpui_icon-button__root"
+          data-size="M"
+  >
+    <span class="material-symbols-outlined"
+          data-filled="true"
+          style="font-size: 20px;"
+    >
+      arrow_selector_tool
+    </span>
+  </button>
+  <button type="button"
+          class="cmpui_icon-button__root"
+          aria-selected="true"
+          data-size="M"
+  >
+    <span class="material-symbols-outlined"
+          style="font-size: 20px;"
+    >
+      square
+    </span>
+    <svg width="6"
+         height="6"
+         viewbox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         style="position: absolute; bottom: 4px; right: 4px; transform: scaleX(-1);"
+    >
+      <title>
+        corner
+      </title>
+      <path d="M0 24V0.00427246L24 24H0Z"
+            fill="currentColor"
+      >
+      </path>
+    </svg>
+  </button>
+  <button type="button"
+          class="cmpui_icon-button__root"
+          data-size="M"
+  >
+    <span class="material-symbols-outlined"
+          style="font-size: 20px;"
+    >
+      title
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Actions/IconButton Disabled smoke-test 1`] = `
+<button type="button"
+        class="cmpui_icon-button__root"
+        data-size="M"
+        disabled
+>
+  <span class="material-symbols-outlined"
+        style="font-size: 20px;"
+  >
+    star
+  </span>
+</button>
+`;
+
+exports[`Components/Actions/IconButton Group smoke-test 1`] = `
+<div class="cmpui_icon-button__group">
+  <button type="button"
+          class="cmpui_icon-button__root"
+          data-size="M"
+  >
+    <span class="material-symbols-outlined"
+          data-filled="true"
+          style="font-size: 16px;"
+    >
+      align_horizontal_left
+    </span>
+  </button>
+  <button type="button"
+          class="cmpui_icon-button__root"
+          aria-selected="true"
+          data-size="M"
+  >
+    <span class="material-symbols-outlined"
+          style="font-size: 16px;"
+    >
+      align_horizontal_center
+    </span>
+  </button>
+  <button type="button"
+          class="cmpui_icon-button__root"
+          data-size="M"
+  >
+    <span class="material-symbols-outlined"
+          style="font-size: 16px;"
+    >
+      align_horizontal_right
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Actions/IconButton Selected smoke-test 1`] = `
+<button type="button"
+        class="cmpui_icon-button__root"
+        aria-selected="true"
+        data-size="M"
+>
+  <span class="material-symbols-outlined"
+        style="font-size: 20px;"
+  >
+    star
+  </span>
+</button>
+`;
+
+exports[`Components/Actions/IconButton Small smoke-test 1`] = `
+<button type="button"
+        class="cmpui_icon-button__root"
+        data-size="S"
+>
+  <span class="material-symbols-outlined"
+        style="font-size: 16px;"
+  >
+    star
+  </span>
+</button>
+`;

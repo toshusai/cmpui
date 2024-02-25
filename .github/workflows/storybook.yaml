@@ -1,0 +1,25 @@
+name: Storybook
+on:
+  push:
+    branches:
+      - main
+env:
+  cache-version: v1
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20.11.1"
+          registry-url: "https://registry.npmjs.org"
+      - run: pnpm install
+      - run: npm run storybook:build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static
