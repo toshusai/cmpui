@@ -1,6 +1,6 @@
 {
   "name": "@toshusai/cmpui",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "CmpUI is a component library designed for creating complex GUI applications in web browsers.",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
