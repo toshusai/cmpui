@@ -1,0 +1,7 @@
+.DS_Store
+.vscode/*
+*.local
+*.log
+dist
+node_modules
+storybook-static

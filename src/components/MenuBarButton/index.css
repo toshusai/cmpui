@@ -1,0 +1,68 @@
+.cmpui_menu-bar-button__root {
+  background-color: var(--cmpui-bg-color);
+  color: var(--cmpui-text-color);
+
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  height: 24px;
+  justify-content: center;
+  padding: 0 8px;
+  transition: border 0.1s ease-in-out;
+  width: fit-content;
+}
+
+.cmpui_menu-bar-button__root:hover {
+  border: 1px solid var(--cmpui-border-hover-color);
+}
+
+.cmpui_menu-bar-button__root:active {
+  background-color: var(--cmpui-bg-focus-color);
+  border: 1px solid transparent;
+
+  color: white;
+}
+
+.cmpui_menu-bar-button__root[data-highlighted],
+.cmpui_menu-bar-button__root[data-highlighted]:active,
+.cmpui_menu-bar-button__root[data-state="open"],
+.cmpui_menu-bar-button__root[data-state="open"]:active {
+  background-color: var(--cmpui-bg-focus-color);
+  border: 1px solid transparent;
+
+  color: white;
+  outline: none;
+}
+
+.cmpui_menu-bar-button__root:focus-visible {
+  background-color: var(--cmpui-bg-focus-color);
+  color: white;
+
+  outline: none;
+}
+
+.cmpui_menu-bar-button__root[data-selected] {
+  background-color: var(--cmpui-bg-focus-color);
+}
+
+.cmpui_menu-bar-item__shortcut {
+  color: var(--cmpui-text2-color);
+  font-family: var(--cmpui-font-mono);
+
+  font-size: 10px;
+  margin-left: 8px;
+}
+
+.cmpui_menu-bar__root {
+  display: flex;
+}
+
+.cmpui_menu-bar-sub-button__list-item {
+  display: flex;
+  justify-content: space-between;
+}

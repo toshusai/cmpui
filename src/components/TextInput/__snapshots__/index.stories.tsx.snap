@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Form/TextInput Basic smoke-test 1`] = `
+<div class="cmpui_text-input__root">
+  <label class="cmpui_text-input__label">
+    Label
+  </label>
+  <input type="text"
+         class="cmpui_text-input__input"
+         placeholder="Placeholder"
+         value
+  >
+</div>
+`;
+
+exports[`Components/Form/TextInput Disabled smoke-test 1`] = `
+<div class="cmpui_text-input__root"
+     aria-disabled="true"
+>
+  <label class="cmpui_text-input__label">
+    Label
+  </label>
+  <input type="text"
+         class="cmpui_text-input__input"
+         placeholder
+         disabled
+         value
+  >
+</div>
+`;
+
+exports[`Components/Form/TextInput Invalid smoke-test 1`] = `
+<div class="cmpui_text-input__root"
+     aria-invalid="true"
+>
+  <label class="cmpui_text-input__label">
+    Label
+  </label>
+  <input type="text"
+         class="cmpui_text-input__input"
+         placeholder
+         aria-invalid="true"
+         value
+  >
+</div>
+`;
+
+exports[`Components/Form/TextInput Label smoke-test 1`] = `
+<div class="cmpui_text-input__root">
+  <label class="cmpui_text-input__label"
+         for="text-input-label"
+  >
+    Label
+  </label>
+  <input type="text"
+         class="cmpui_text-input__input"
+         placeholder
+         id="text-input-label"
+         value
+  >
+</div>
+`;
+
+exports[`Components/Form/TextInput Placeholder smoke-test 1`] = `
+<div class="cmpui_text-input__root">
+  <label class="cmpui_text-input__label">
+  </label>
+  <input type="text"
+         class="cmpui_text-input__input"
+         placeholder="Placeholder"
+         value
+  >
+</div>
+`;
+
+exports[`Components/Form/TextInput Suffix smoke-test 1`] = `
+<div class="cmpui_text-input__root">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       height="24"
+       viewbox="0 -960 960 960"
+       width="24"
+       style="max-width: 16px; height: 16px;"
+  >
+    <title>
+      search
+    </title>
+    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z">
+    </path>
+  </svg>
+  <label class="cmpui_text-input__label">
+    Label
+  </label>
+  <input type="text"
+         class="cmpui_text-input__input"
+         placeholder
+         value
+  >
+</div>
+`;

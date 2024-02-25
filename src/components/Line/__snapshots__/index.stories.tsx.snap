@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Controls/Line Basic smoke-test 1`] = `
+<div style="width: 200px; height: 200px; position: relative;">
+  <svg width="201"
+       height="201"
+       viewbox="0 0 201 201"
+       style="position: absolute; overflow: visible; pointer-events: none; left: -0.5px; top: -0.5px;"
+  >
+    <line x1="0.5"
+          y1="0.5"
+          x2="200.5"
+          y2="200.5"
+          stroke-width="1"
+          stroke="var(--cmpui-primary-color)"
+    >
+    </line>
+  </svg>
+</div>
+`;

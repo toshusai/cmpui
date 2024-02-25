@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Float/Toast Basic smoke-test 1`] = `
+<div style="width: 100vw; height: 300px; justify-content: center; align-items: center; display: flex;">
+  <button type="button"
+          class="cmpui_button"
+          data-variant="primary"
+          data-size="M"
+  >
+    Open
+  </button>
+  <div role="region"
+       aria-label="Notifications (F8)"
+       tabindex="-1"
+       style="pointer-events: none;"
+  >
+    <ol tabindex="-1"
+        class="cmpui_toast__viewport"
+    >
+    </ol>
+  </div>
+</div>
+`;

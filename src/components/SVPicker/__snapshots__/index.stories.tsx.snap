@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Colors/SVPicker Default smoke-test 1`] = `
+<div class="cmpui_sv-picker__root"
+     tabindex="0"
+>
+  <canvas width="192"
+          height="192"
+          style="width: 192px; height: 192px;"
+  >
+  </canvas>
+  <div class="cmpui_circle__root cmpui_sv-picker__nob"
+       x="192"
+       y="0"
+       style="--cmpui-circle-nob-fill: rgb(255,0,0); --cmpui-circle-nob-radius: 8px; --cmpui-circle-nob-stroke-color: rgb(255,255,255); --cmpui-circle-nob-stroke-width: 2px; border: 2px solid rgb(255, 255, 255); left: 184px; top: -8px;"
+  >
+  </div>
+</div>
+`;

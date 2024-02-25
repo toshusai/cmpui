@@ -1,0 +1,80 @@
+.cmpui_text-input__root {
+  background-color: var(--cmpui-bg-color);
+  border: 1px solid var(--cmpui-border-color);
+
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 4px;
+  height: 32px;
+  justify-content: flex-start;
+  padding: 0px 8px;
+  position: relative;
+  text-decoration: none;
+}
+
+.cmpui_text-input__root:focus-within {
+  outline: var(--cmpui-primary-color) solid 1px;
+  outline-offset: 1px;
+}
+
+.cmpui_text-input__root[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.cmpui_text-input__root[aria-invalid="true"] {
+  border: 1px solid var(--cmpui-error-color);
+}
+.cmpui_text-input__root[aria-invalid="true"]:hover {
+  border: 1px solid var(--cmpui-error-color);
+}
+
+.cmpui_text-input__root:hover {
+  border: 1px solid var(--cmpui-border-hover-color);
+}
+
+.cmpui_text-input__root[aria-disabled="true"]:hover {
+  border: 1px solid var(--cmpui-border-color);
+}
+
+.cmpui_text-input__label {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    var(--cmpui-bg-color) 40%,
+    var(--cmpui-bg-color) 60%,
+    transparent 60%
+  );
+  color: var(--cmpui-text2-color);
+
+  font-size: 12px;
+  line-height: 14px;
+  padding: 0 4px;
+  position: absolute;
+  transform: translate(0, -16px);
+}
+.cmpui_text-input__root[aria-invalid="true"] > .cmpui_text-input__label {
+  color: var(--cmpui-error-color);
+}
+
+.cmpui_text-input__input {
+  color: var(--cmpui-text-color);
+  font-family: var(--cmpui-font-family);
+
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 16px;
+  height: 100%;
+  line-height: 16px;
+  outline: none;
+  padding: 0;
+  width: 100%;
+}
+
+.cmpui_text-input__input::placeholder {
+  color: var(--cmpui-text3-color);
+}

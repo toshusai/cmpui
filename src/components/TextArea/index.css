@@ -1,0 +1,60 @@
+.cmpui_textarea__root {
+  border: 1px solid var(--cmpui-border-color);
+  background-color: var(--cmpui-bg-color);
+
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+}
+
+.cmpui_textarea__root:focus-within {
+  outline: var(--cmpui-primary-color) solid 1px;
+  outline-offset: 1px;
+}
+
+.cmpui_textarea__root:hover {
+  border: 1px solid var(--cmpui-border-hover-color);
+}
+
+.cmpui_textarea__root[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.cmpui_textarea__root[aria-disabled="true"]:hover {
+  border: 1px solid var(--cmpui-border-color);
+}
+
+.cmpui_textarea__textarea {
+  color: var(--cmpui-text-color);
+
+  background: transparent;
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  outline: none;
+  overflow: auto;
+  padding: 8px;
+  resize: none;
+  white-space: none;
+  width: 100%;
+}
+
+.cmpui_textarea__textarea::placeholder {
+  color: var(--cmpui-text3-color);
+}
+
+.cmpui_textarea__label {
+  background-color: var(--cmpui-bg-color);
+  color: var(--cmpui-text2-color);
+
+  font-size: 12px;
+  line-height: 14px;
+  padding: 0 4px;
+  position: absolute;
+  transform: translate(8px, -8px);
+}

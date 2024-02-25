@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Colors/ColorLoupe Default smoke-test 1`] = `
+<div style="position: relative; width: 100px; height: 100px;">
+  <svg width="1"
+       height="25"
+       viewbox="0 0 1 25"
+       style="position: absolute; overflow: visible; pointer-events: none; left: 49.5px; top: 17.5px;"
+  >
+    <line stroke="var(--cmpui-border-color)"
+          stroke-width="1"
+          x1="0.5"
+          x2="0.5"
+          y1="24.5"
+          y2="0.5"
+    >
+    </line>
+  </svg>
+  <div x="50"
+       y="18"
+       class="cmpui_circle__root alpha-checker-board"
+       style="--cmpui-circle-nob-fill: white; --cmpui-circle-nob-radius: 16px; --cmpui-circle-nob-stroke-color: var(--cmpui-border-color); --cmpui-circle-nob-stroke-width: 1px; border: 1px solid var(--cmpui-border-color); left: 34px; top: 2px; z-index: 1; --block-size: 4px;"
+  >
+  </div>
+  <div x="50"
+       y="18"
+       class="cmpui_circle__root"
+       style="--cmpui-circle-nob-fill: #c649ba; --cmpui-circle-nob-radius: 16px; --cmpui-circle-nob-stroke-color: var(--cmpui-border-color); --cmpui-circle-nob-stroke-width: 1px; border: 1px solid var(--cmpui-border-color); left: 34px; top: 2px; z-index: 1;"
+  >
+  </div>
+</div>
+`;

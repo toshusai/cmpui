@@ -1,0 +1,17 @@
+.cmpui_circle__root {
+  background-color: var(--cmpui-circle-nob-fill);
+  width: calc(var(--cmpui-circle-nob-radius) * 2);
+  max-width: calc(var(--cmpui-circle-nob-radius) * 2);
+  min-width: calc(var(--cmpui-circle-nob-radius) * 2);
+  height: calc(var(--cmpui-circle-nob-radius) * 2);
+  max-height: calc(var(--cmpui-circle-nob-radius) * 2);
+  min-height: calc(var(--cmpui-circle-nob-radius) * 2);
+  position: absolute;
+  border-radius: var(--cmpui-circle-nob-radius);
+  /* transform: translate(
+    calc(-1 * var(--cmpui-circle-nob-radius)),
+    calc(-1 * var(--cmpui-circle-nob-radius))
+  ); */
+  border: var(--cmpui-circle-nob-stroke-width) solid var(--cmpui-circle-nob-stroke-color);
+  box-sizing: border-box;
+}

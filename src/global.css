@@ -1,0 +1,74 @@
+:root,
+[data-theme="light"] {
+  --cmpui-font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --cmpui-primary-color: #c649ba;
+  --cmpui-primary-hover-color: #c649ba;
+  --cmpui-primary-active-color: #b83dab;
+
+  --cmpui-secondary-color: #646464;
+  --cmpui-secondary-hover-color: #5b5b5b;
+  --cmpui-secondary-active-color: #434343;
+
+  --cmpui-text-color: #131313;
+  --cmpui-text2-color: #474747;
+  --cmpui-text3-color: #7a7a7a;
+
+  --cmpui-border-color: #dedede;
+  --cmpui-border-hover-color: #c4c4c4;
+
+  --cmpui-overlay-color: rgba(0, 0, 0, 0.1);
+
+  --cmpui-float-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  --cmpui-bg-color: white;
+  --cmpui-bg-hover-color: color-mix(
+    in srgb,
+    var(--cmpui-primary-color) 30%,
+    var(--cmpui-bg-color)
+  );
+  --cmpui-bg-active-color: color-mix(
+    in srgb,
+    var(--cmpui-primary-color) 50%,
+    var(--cmpui-bg-color)
+  );
+  --cmpui-bg-focus-color: color-mix(
+    in srgb,
+    var(--cmpui-primary-color) 80%,
+    var(--cmpui-bg-color)
+  );
+
+  --cmpui-contrast-bg-color: #000000;
+  --cmpui-contrast-text-color: #ffffff;
+
+  --cmpui-error-color: #ff4d4f;
+}
+
+[data-theme="dark"] {
+  --cmpui-contrast-bg-color: #ffffff;
+  --cmpui-contrast-text-color: #000000;
+  --cmpui-bg-color: black;
+  --cmpui-bg-hover-color: color-mix(
+    in srgb,
+    var(--cmpui-primary-color) 30%,
+    var(--cmpui-bg-color)
+  );
+  --cmpui-bg-active-color: color-mix(
+    in srgb,
+    var(--cmpui-primary-color) 50%,
+    var(--cmpui-bg-color)
+  );
+  --cmpui-bg-focus-color: color-mix(
+    in srgb,
+    var(--cmpui-primary-color) 80%,
+    var(--cmpui-bg-color)
+  );
+
+  --cmpui-text-color: #f1f1f1;
+  --cmpui-text2-color: #a1a1a1;
+  --cmpui-text3-color: #7a7a7a;
+
+  --cmpui-border-color: #3a3a3a;
+  --cmpui-border-hover-color: #474747;
+}

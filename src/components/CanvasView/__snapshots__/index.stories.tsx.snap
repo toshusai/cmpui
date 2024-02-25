@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/View/CanvasView Basic smoke-test 1`] = `
+<div style="width: 100vw; height: 512px;">
+  <div class="cmpui_canvas-view__root"
+       tabindex="-1"
+       style="cursor: auto;"
+  >
+    <div style="position: absolute; pointer-events: none; transform-origin: 0px 0px; top: 100px; left: 200px; transform: scale(1);">
+      <div style="width: 200px; height: 100px; background: white;">
+        <div class="alpha-checker-board"
+             style="width: 200px; height: 100px;"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/View/CanvasView Grab smoke-test 1`] = `
+<div style="width: 100vw; height: 512px;">
+  <div class="cmpui_canvas-view__root"
+       tabindex="-1"
+       style="cursor: grab;"
+  >
+    <div style="position: absolute; pointer-events: none; transform-origin: 0px 0px; top: 100px; left: 200px; transform: scale(1);">
+      <div style="width: 200px; height: 100px; background: white;">
+        <div class="alpha-checker-board"
+             style="width: 200px; height: 100px;"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/View/CanvasView Zoom smoke-test 1`] = `
+<div style="width: 100vw; height: 512px;">
+  <div class="cmpui_canvas-view__root"
+       tabindex="-1"
+       style="cursor: zoom-in;"
+  >
+    <div style="position: absolute; pointer-events: none; transform-origin: 0px 0px; top: 100px; left: 200px; transform: scale(1);">
+      <div style="width: 200px; height: 100px; background: white;">
+        <div class="alpha-checker-board"
+             style="width: 200px; height: 100px;"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

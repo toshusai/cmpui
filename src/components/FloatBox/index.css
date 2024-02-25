@@ -1,0 +1,19 @@
+.cmpui_float-box__root {
+  background-color: var(--cmpui-bg-color);
+  border: 1px solid var(--cmpui-border-color);
+  box-shadow: var(--cmpui-float-shadow);
+
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  height: fit-content;
+  padding: 4px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+  z-index: 1000;
+}
+

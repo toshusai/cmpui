@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Float/Popover Primary smoke-test 1`] = `
+<button type="button"
+        class="cmpui_button"
+        data-variant="primary"
+        data-size="M"
+>
+  Open Popover
+</button>
+`;

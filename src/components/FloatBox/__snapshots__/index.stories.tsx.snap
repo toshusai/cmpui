@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Float/FloatBox Basic smoke-test 1`] = `
+<div class="cmpui_float-box__root"
+     style="width: 128px;"
+>
+  <li class="cmpui_list-item__root shortcut-list-item"
+      data-size="S"
+      data-rounded="true"
+  >
+    <div style="width: 100%;">
+      Undo
+    </div>
+    <div style="font-size: 10px; margin-left: 16px; white-space: nowrap;">
+      ⌘ Z
+    </div>
+  </li>
+  <li class="cmpui_list-item__root shortcut-list-item"
+      data-size="S"
+      data-rounded="true"
+  >
+    <div style="width: 100%;">
+      Redo
+    </div>
+    <div style="font-size: 10px; margin-left: 16px; white-space: nowrap;">
+      ⇧ ⌘ Z
+    </div>
+  </li>
+  <li class="cmpui_list-item__root shortcut-list-item"
+      data-size="S"
+      data-rounded="true"
+  >
+    <div style="width: 100%;">
+      Cut
+    </div>
+    <div style="font-size: 10px; margin-left: 16px; white-space: nowrap;">
+      ⌘ X
+    </div>
+  </li>
+  <li class="cmpui_list-item__root shortcut-list-item"
+      data-size="S"
+      data-rounded="true"
+  >
+    <div style="width: 100%;">
+      Copy
+    </div>
+    <div style="font-size: 10px; margin-left: 16px; white-space: nowrap;">
+      ⌘ C
+    </div>
+  </li>
+  <li class="cmpui_list-item__root shortcut-list-item"
+      data-size="S"
+      data-rounded="true"
+  >
+    <div style="width: 100%;">
+      Paste
+    </div>
+    <div style="font-size: 10px; margin-left: 16px; white-space: nowrap;">
+      ⌘ V
+    </div>
+  </li>
+</div>
+`;

@@ -1,0 +1,55 @@
+.cmpui_hue-circle__hue {
+  border: 1px solid var(--cmpui-border-color);
+
+  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  border-radius: 50%;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+
+  mask-image: radial-gradient(
+    var(--cmpui-size) var(--cmpui-size),
+    rgba(0, 0, 0, 0) calc(var(--cmpui-size) / 2 - var(--cmpui-width)),
+    black calc(var(--cmpui-size) / 2 - var(--cmpui-width) + 1px)
+  );
+}
+
+.cmpui_hue-circle__hue:focus-visible {
+  outline: 1px solid var(--cmpui-primary-color);
+  outline-offset: 1px;
+}
+
+.cmpui_hue-circle__root {
+  --cmpui-width: 16px;
+
+  position: relative;
+}
+
+.cmpui_hue-circle__root:focus-visible {
+  outline: 1px solid var(--cmpui-primary-color);
+  outline-offset: 1px;
+  border-radius: 9999px;
+}
+
+.cmpui_hue-circle__nob {
+  cursor: grab;
+}
+
+.cmpui_hue-circle__nob:active {
+  cursor: grabbing;
+}
+
+.cmpui_hue-circle__inner {
+  background: transparent;
+  border: 1px solid var(--cmpui-border-color);
+  height: calc(100% - var(--cmpui-width) * 2);
+  left: calc(var(--cmpui-width));
+  top: calc(var(--cmpui-width));
+  width: calc(100% - var(--cmpui-width) * 2);
+
+  border-radius: 9999px;
+  box-sizing: border-box;
+  cursor: default;
+  position: absolute;
+}

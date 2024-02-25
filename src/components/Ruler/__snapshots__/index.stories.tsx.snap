@@ -1,0 +1,1474 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/View/Ruler Basic smoke-test 1`] = `
+<div class="cmpui_ruler__root"
+     data-orientation="horizontal"
+>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 4px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 14px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 24px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 34px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 44px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 54px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 64px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 74px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 84px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 94px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 104px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 114px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 124px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 134px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 144px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 154px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 164px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 174px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 184px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 194px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 204px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 214px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 224px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 234px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 244px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 254px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 264px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 274px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 284px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 294px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 304px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 314px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 324px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 334px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 344px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 354px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 364px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 374px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 384px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 394px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 404px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 414px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 424px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 434px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 444px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 454px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 464px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 474px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 484px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 494px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 504px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 514px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 524px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 534px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 544px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 554px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 564px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 574px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 584px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 594px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 604px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 614px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 624px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 634px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 644px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 654px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 664px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 674px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 684px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 694px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 704px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 714px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 724px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 734px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 744px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 754px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 764px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 774px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 784px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 794px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 804px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 814px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 824px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 834px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 844px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 854px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 864px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 874px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 884px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 894px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 904px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 914px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 924px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 934px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 944px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 954px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 964px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 974px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 984px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 994px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1004px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1014px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1024px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1034px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1044px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1054px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1064px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1074px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1084px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1094px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1104px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1114px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1124px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1134px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1144px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1154px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1164px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1174px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1184px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1194px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1204px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1214px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1224px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1234px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1244px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1254px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1264px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1274px;"
+  >
+  </div>
+  <div data-orientation="horizontal"
+       class="cmpui_ruler__point"
+       style="left: 1284px;"
+  >
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 24px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      0
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 74px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      50
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 124px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      100
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 174px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      150
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 224px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      200
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 274px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      250
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 324px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      300
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 374px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      350
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 424px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      400
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 474px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      450
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 524px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      500
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 574px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      550
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 624px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      600
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 674px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      650
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 724px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      700
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 774px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      750
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 824px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      800
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 874px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      850
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 924px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      900
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 974px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      950
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 1024px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      1000
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 1074px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      1050
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 1124px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      1100
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 1174px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      1150
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 1224px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      1200
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 1274px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      1250
+    </div>
+  </div>
+  <div class="cmpui_ruler-text__root"
+       data-orientation="horizontal"
+       style="left: 1324px;"
+  >
+    <div class="cmpui_ruler-text__line"
+         data-orientation="horizontal"
+    >
+    </div>
+    <div class="cmpui_ruler-text__text"
+         data-orientation="horizontal"
+    >
+      1300
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/View/Ruler Vertical smoke-test 1`] = `
+<div style="width: 100vh; height: 512px;">
+  <div class="cmpui_ruler__root"
+       data-orientation="vertical"
+       height="24"
+  >
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 4px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 14px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 24px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 34px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 44px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 54px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 64px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 74px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 84px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 94px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 104px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 114px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 124px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 134px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 144px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 154px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 164px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 174px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 184px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 194px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 204px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 214px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 224px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 234px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 244px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 254px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 264px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 274px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 284px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 294px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 304px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 314px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 324px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 334px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 344px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 354px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 364px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 374px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 384px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 394px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 404px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 414px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 424px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 434px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 444px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 454px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 464px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 474px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 484px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 494px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 504px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 514px;"
+    >
+    </div>
+    <div data-orientation="vertical"
+         class="cmpui_ruler__point"
+         style="top: 524px;"
+    >
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 24px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        0
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 74px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        50
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 124px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        100
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 174px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        150
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 224px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        200
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 274px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        250
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 324px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        300
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 374px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        350
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 424px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        400
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 474px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        450
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 524px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        500
+      </div>
+    </div>
+    <div class="cmpui_ruler-text__root"
+         data-orientation="vertical"
+         style="top: 574px;"
+    >
+      <div class="cmpui_ruler-text__line"
+           data-orientation="vertical"
+      >
+      </div>
+      <div class="cmpui_ruler-text__text"
+           data-orientation="vertical"
+      >
+        550
+      </div>
+    </div>
+  </div>
+</div>
+`;

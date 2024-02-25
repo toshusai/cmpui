@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Form/SliderNumberField Basic smoke-test 1`] = `
+<div class="cmpui_text-input__root cmpui_slider-number-input__root">
+  <label class="cmpui_text-input__label cmpui_slider-number-input__label">
+    value
+  </label>
+  <input type="text"
+         class="cmpui_text-input__input"
+         placeholder
+         inputmode="decimal"
+         value="0"
+  >
+</div>
+`;
+
+exports[`Components/Form/SliderNumberField Mixed smoke-test 1`] = `
+<div>
+  <div class="cmpui_text-input__root cmpui_slider-number-input__root">
+    <label class="cmpui_text-input__label cmpui_slider-number-input__label">
+      value
+    </label>
+    <input type="text"
+           class="cmpui_text-input__input"
+           placeholder
+           value="mixed"
+    >
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 8px;">
+    <div class="cmpui_text-input__root">
+      <input type="number"
+             class="cmpui_text-input__input"
+             placeholder
+             value="1"
+      >
+    </div>
+    <div class="cmpui_text-input__root">
+      <input type="number"
+             class="cmpui_text-input__input"
+             placeholder
+             value="2"
+      >
+    </div>
+    <div class="cmpui_text-input__root">
+      <input type="number"
+             class="cmpui_text-input__input"
+             placeholder
+             value="3"
+      >
+    </div>
+  </div>
+</div>
+`;

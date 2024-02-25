@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Form/TextArea Basic smoke-test 1`] = `
+<div class="cmpui_textarea__root">
+  <label class="cmpui_textarea__label">
+    Label
+  </label>
+  <textarea placeholder="Placeholder"
+            class="cmpui_textarea__textarea"
+  >
+  </textarea>
+</div>
+`;
+
+exports[`Components/Form/TextArea Disabled smoke-test 1`] = `
+<div class="cmpui_textarea__root"
+     aria-disabled="true"
+>
+  <label class="cmpui_textarea__label">
+    Label
+  </label>
+  <textarea disabled
+            class="cmpui_textarea__textarea"
+  >
+    Disabled
+  </textarea>
+</div>
+`;
+
+exports[`Components/Form/TextArea Label smoke-test 1`] = `
+<div class="cmpui_textarea__root">
+  <label class="cmpui_textarea__label"
+         for="text-area-label"
+  >
+    Label
+  </label>
+  <textarea id="text-area-label"
+            class="cmpui_textarea__textarea"
+  >
+  </textarea>
+</div>
+`;
+
+exports[`Components/Form/TextArea Placeholder smoke-test 1`] = `
+<div class="cmpui_textarea__root">
+  <label class="cmpui_textarea__label">
+    Label
+  </label>
+  <textarea placeholder="Placeholder"
+            class="cmpui_textarea__textarea"
+  >
+  </textarea>
+</div>
+`;

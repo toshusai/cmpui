@@ -1,0 +1,8 @@
+.cmpui_color-picker-rect__root {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: fit-content;
+  position: relative;
+  width: fit-content;
+}

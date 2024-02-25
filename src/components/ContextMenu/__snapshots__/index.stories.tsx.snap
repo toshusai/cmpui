@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Float/ContextMenu Basic smoke-test 1`] = `
+<div data-state="closed"
+     style="width: 200px; height: 200px; border-radius: 4px; border: 1px solid var(--cmpui-border-color); touch-action: none; user-select: none; display: flex; justify-content: center; align-items: center;"
+>
+  Right click me
+</div>
+`;
