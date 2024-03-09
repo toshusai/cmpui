@@ -4,10 +4,6 @@ code {
     "Liberation Mono", "Courier New", monospace;
 }
 
-.sbdocs {
-  background-color: var(--cmpui-bg-color) !important
-}
-
 #title {
   display: flex;
   align-items: center;
