@@ -76,7 +76,6 @@ export function TreeViewItem<T extends ITree>({
 
   const pointerMove = useCallback(
     (e: React.PointerEvent<HTMLLIElement>) => {
-      console.log("pointerMove");
       if (!treeId) return;
       const srcItem = map.get(treeId);
       if (!srcItem) return;
