@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ColorLoupe } from ".";
 
 const meta: Meta<typeof ColorLoupe> = {
-  title: "Components/Colors/ColorLoupe",
+  title: "Colors/ColorLoupe",
   component: ColorLoupe,
 };
 

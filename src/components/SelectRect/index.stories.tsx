@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { SelectRect, useSelectRectHandler } from ".";
 
 const meta: Meta<typeof SelectRect> = {
-  title: "Components/Controls/SelectRect",
+  title: "Controls/SelectRect",
   component: SelectRect,
   parameters: {
     layout: "fullscreen",

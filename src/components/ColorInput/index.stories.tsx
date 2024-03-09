@@ -4,7 +4,7 @@ import { ColorInput } from ".";
 import { hexToHsv } from "../../utils/colors/hexToHsv";
 
 const meta: Meta<typeof ColorInput> = {
-  title: "Components/Colors/ColorInput",
+  title: "Colors/ColorInput",
   component: ColorInput,
 };
 

@@ -5,7 +5,7 @@ import { HSVA } from "../..";
 import { hexToHsv } from "../../utils/colors/hexToHsv";
 
 const meta: Meta<typeof ColorPickerCircle> = {
-  title: "Components/Colors/ColorPickerCircle",
+  title: "Colors/ColorPickerCircle",
   component: ColorPickerCircle,
 };
 

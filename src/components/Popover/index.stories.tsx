@@ -6,7 +6,7 @@ import { SliderNumberField } from "../SliderNumberField";
 import { TextInput } from "../TextInput";
 
 const meta: Meta<typeof Popover> = {
-  title: "Components/Float/Popover",
+  title: "Float/Popover",
   component: Popover,
 };
 

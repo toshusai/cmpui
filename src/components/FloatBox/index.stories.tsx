@@ -3,7 +3,7 @@ import { FloatBox } from ".";
 import { ShortcutListItem } from "../../__stories__/ShortcutListItem";
 
 const meta: Meta<typeof FloatBox> = {
-  title: "Components/Float/FloatBox",
+  title: "Float/FloatBox",
   component: FloatBox,
 };
 

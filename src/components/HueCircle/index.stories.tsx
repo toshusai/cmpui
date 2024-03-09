@@ -3,7 +3,7 @@ import { useState } from "react";
 import { HueCircle } from ".";
 
 const meta: Meta<typeof HueCircle> = {
-  title: "Components/Colors/HueCircle",
+  title: "Colors/HueCircle",
   component: HueCircle,
 };
 

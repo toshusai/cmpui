@@ -4,7 +4,7 @@ import { Ruler } from ".";
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
 
 const meta: Meta<typeof Ruler> = {
-  title: "Components/View/Ruler",
+  title: "View/Ruler",
   component: Ruler,
   parameters: {
     layout: "fullscreen",

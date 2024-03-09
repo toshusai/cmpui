@@ -5,7 +5,7 @@ import { CubicControls } from "../CubicControls";
 import { Command, CubicCommand } from "./CubicCommand";
 
 const meta: Meta<typeof CubicControls> = {
-  title: "Components/Controls/CubicControls",
+  title: "Controls/CubicControls",
   component: CubicControls,
 };
 

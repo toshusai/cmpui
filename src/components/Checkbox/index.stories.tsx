@@ -4,7 +4,7 @@ import { Checkbox } from ".";
 import { Icon } from "../../__stories__/Icon";
 
 const meta: Meta<typeof Checkbox> = {
-  title: "Components/Form/Checkbox",
+  title: "Form/Checkbox",
   component: Checkbox,
 };
 

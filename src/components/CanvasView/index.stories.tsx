@@ -16,7 +16,7 @@ function usePointerEnterFocus() {
 }
 
 const meta: Meta<typeof CanvasView> = {
-  title: "Components/View/CanvasView",
+  title: "View/CanvasView",
   component: CanvasView,
   parameters: {
     layout: "fullscreen",
