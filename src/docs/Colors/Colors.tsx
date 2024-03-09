@@ -43,6 +43,7 @@ export function Colors() {
         >
           {bgColors.map((color) => (
             <div
+              key={color}
               style={{
                 display: "flex",
                 justifyContent: "space-between",
@@ -66,6 +67,7 @@ export function Colors() {
         >
           {bgColors.map((color) => (
             <div
+              key={color}
               style={{
                 display: "flex",
                 justifyContent: "space-between",
@@ -94,6 +96,7 @@ export function Colors() {
         >
           {colors.map((color) => (
             <div
+              key={color}
               style={{
                 display: "flex",
                 justifyContent: "space-between",
@@ -116,6 +119,7 @@ export function Colors() {
         >
           {colors.map((color) => (
             <div
+              key={color}
               style={{
                 display: "flex",
                 justifyContent: "space-between",
