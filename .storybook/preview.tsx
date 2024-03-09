@@ -2,10 +2,10 @@ import type { Decorator, Preview } from "@storybook/react";
 import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { useEffect } from "react";
 import React from "react";
-import { themes } from "@storybook/theming";
 
 import "../src/global.css";
 import "./storybook.css";
+import { DocsContainer } from "@storybook/blocks";
 
 const preview: Preview = {
   parameters: {
@@ -19,17 +19,24 @@ const preview: Preview = {
     },
     docs: {
       page: DocumentationTemplate,
-      theme: themes.dark,
+      container: ({ children, context }) => {
+        const theme = context.store.globals.globals.theme;
+        useTheme(theme);
+        return <DocsContainer context={context}>{children}</DocsContainer>;
+      },
     },
   },
 };
 
+function useTheme(theme: string) {
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
+}
+
 export const withTheme: Decorator = (StoryFn, context) => {
   const theme = context.globals.theme;
-
-  useEffect(() => {
-    document.body.dataset.theme = theme;
-  }, [theme]);
+  useTheme(theme);
 
   return <StoryFn />;
 };

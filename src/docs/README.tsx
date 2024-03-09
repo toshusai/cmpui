@@ -9,10 +9,6 @@ const HEIGHT = 30;
 export function README(props: {
   children?: React.ReactNode;
 }) {
-  useEffect(() => {
-    document.documentElement.dataset.theme = "dark";
-  }, []);
-
   const [points, setPoints] = useState({
     x: 0,
     y: 0,
@@ -152,7 +148,7 @@ function ColorChanger() {
       }}
     >
       <div style={{ display: "flex" }}>
-        <ColorInput value={color} onChange={handleChange} />;
+        <ColorInput value={color} onChange={handleChange} />
       </div>
     </div>
   );

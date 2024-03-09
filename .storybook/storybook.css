@@ -25,3 +25,75 @@ html {
 .docs-story {
   background-color: var(--cmpui-bg-color);
 }
+
+.docs-story > div {
+  background: transparent !important;
+}
+.docs-story > div > button {
+  background: var(--cmpui-bg-color) !important;
+  color: var(--cmpui-text-color) !important;
+  border: 1px solid var(--cmpui-border-color) !important;
+  border-bottom: none !important;
+  border-right: none !important;
+}
+
+body,
+.sbdocs {
+  background: var(--cmpui-bg-color) !important;
+}
+
+h1 {
+  color: var(--cmpui-text-color) !important;
+}
+
+h2 {
+  color: var(--cmpui-text2-color) !important;
+}
+
+h3 {
+  color: var(--cmpui-text2-color) !important;
+}
+
+p,
+.docblock-argstable-body * span,
+.docblock-argstable-head * span {
+  color: var(--cmpui-text2-color) !important;
+}
+
+.docblock-argstable-body {
+  filter: none !important;
+}
+
+.docblock-argstable-body > tr > td {
+  border: none !important;
+  border-bottom: 1px solid var(--cmpui-border-color) !important;
+}
+
+.docblock-argstable-body > tr > td > div > span,
+.docblock-argstable-body > tr > td > div > div > span {
+  background: transparent;
+  border: 1px solid var(--cmpui-border-color);
+}
+
+.sbdocs-preview {
+  box-shadow: none !important;
+  border: 1px solid var(--cmpui-border-color) !important;
+}
+
+.sbdocs-preview > div:nth-child(2) > div:first-child {
+  border: none;
+  border-top: 1px solid var(--cmpui-border-color) !important;
+}
+
+.sbdocs-preview > div:first-child > div {
+  background: var(--cmpui-bg-color) !important;
+}
+
+.prismjs {
+  background: #111 !important;
+}
+
+tbody,
+td {
+  background-color: var(--cmpui-bg-color) !important;
+}
