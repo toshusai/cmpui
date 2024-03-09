@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Path } from ".";
 
 const meta: Meta<typeof Path> = {
-  title: "Components/Controls/Path",
+  title: "Controls/Path",
   component: Path,
 };
 

@@ -4,7 +4,7 @@ import { Toast } from ".";
 import { Button } from "../Button";
 
 const meta: Meta<typeof Toast> = {
-  title: "Components/Float/Toast",
+  title: "Float/Toast",
   component: Toast,
   parameters: {
     layout: "fullscreen",

@@ -7,7 +7,7 @@ import { MenuBarSeparator } from "./MenuBarSeparator";
 import { MenuBarSubButton } from "./MenuBarSubButton";
 
 const meta: Meta<typeof MenuBarButton> = {
-  title: "Components/Float/MenuBarButton",
+  title: "Float/MenuBarButton",
   component: MenuBarButton,
 };
 

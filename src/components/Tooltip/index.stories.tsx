@@ -5,7 +5,7 @@ import { Button } from "../Button";
 import { IconButton } from "../IconButton";
 
 const meta: Meta<typeof Tooltip> = {
-  title: "Components/Float/Tooltip",
+  title: "Float/Tooltip",
   component: Tooltip,
 };
 

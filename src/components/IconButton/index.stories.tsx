@@ -4,7 +4,7 @@ import { Icon } from "../../__stories__/Icon";
 import { IconButtonGroup } from "./IconButtonGroup";
 
 const meta: Meta<typeof IconButton> = {
-  title: "Components/Actions/IconButton",
+  title: "Actions/IconButton",
   component: IconButton,
 };
 

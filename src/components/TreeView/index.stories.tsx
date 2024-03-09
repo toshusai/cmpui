@@ -12,7 +12,7 @@ import { OrderType } from "./types/OrderType";
 import { RenderProps } from "./types/RenderProps";
 
 const meta: Meta<typeof TreeView> = {
-  title: "Components/View/TreeView",
+  title: "View/TreeView",
   component: TreeView,
 };
 

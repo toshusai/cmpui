@@ -3,7 +3,7 @@ import { useState } from "react";
 import { TextArea } from ".";
 
 const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
+  title: "Form/TextArea",
   component: TextArea,
   args: {
     label: "Label",

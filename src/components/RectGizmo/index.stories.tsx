@@ -3,7 +3,7 @@ import { useState } from "react";
 import { RectGizmo } from ".";
 
 const meta: Meta<typeof RectGizmo> = {
-  title: "Components/Controls/RectGizmo",
+  title: "Controls/RectGizmo",
   component: RectGizmo,
   parameters: {
     layout: "fullscreen",

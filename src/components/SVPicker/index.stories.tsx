@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SVPicker } from ".";
 
 const meta: Meta<typeof SVPicker> = {
-  title: "Components/Colors/SVPicker",
+  title: "Colors/SVPicker",
   component: SVPicker,
 };
 

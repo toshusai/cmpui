@@ -5,7 +5,7 @@ import { Panel } from "../../__stories__/Panel";
 import { Root } from "../../__stories__/Root";
 
 const meta: Meta<typeof SplitPane> = {
-  title: "Components/Layout/SplitPane",
+  title: "Layout/SplitPane",
   component: SplitPane,
   parameters: {
     layout: "fullscreen",

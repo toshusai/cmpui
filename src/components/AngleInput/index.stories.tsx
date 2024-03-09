@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AngleInput } from ".";
 
 const meta: Meta<typeof AngleInput> = {
-  title: "Components/Form/AngleInput",
+  title: "Form/AngleInput",
   component: AngleInput,
 };
 

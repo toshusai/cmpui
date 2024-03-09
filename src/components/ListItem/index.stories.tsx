@@ -3,7 +3,7 @@ import { List, ListItem } from ".";
 import { FloatBox } from "../FloatBox";
 
 const meta: Meta<typeof ListItem> = {
-  title: "Components/View/ListItem",
+  title: "View/ListItem",
   component: ListItem,
 };
 

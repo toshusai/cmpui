@@ -4,7 +4,7 @@ import { SliderNumberField } from ".";
 import { TextInput } from "../TextInput";
 
 const meta: Meta<typeof SliderNumberField> = {
-  title: "Components/Form/SliderNumberField",
+  title: "Form/SliderNumberField",
   component: SliderNumberField,
 };
 

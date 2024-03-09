@@ -6,7 +6,7 @@ import { SliderNumberField } from "../SliderNumberField";
 import { TextInput } from "../TextInput";
 
 const meta: Meta<typeof Modal> = {
-  title: "Components/Float/Modal",
+  title: "Float/Modal",
   component: Modal,
 };
 

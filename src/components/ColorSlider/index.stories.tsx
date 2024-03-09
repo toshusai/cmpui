@@ -4,7 +4,7 @@ import { ColorSlider } from ".";
 import { hsvToRgb } from "../../utils/colors/hsvToRgb";
 
 const meta: Meta<typeof ColorSlider> = {
-  title: "Components/Colors/ColorSlider",
+  title: "Colors/ColorSlider",
   component: ColorSlider,
 };
 

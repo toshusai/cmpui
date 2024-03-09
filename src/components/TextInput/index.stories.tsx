@@ -3,7 +3,7 @@ import { useState } from "react";
 import { TextInput } from ".";
 
 const meta: Meta<typeof TextInput> = {
-  title: "Components/Form/TextInput",
+  title: "Form/TextInput",
   component: TextInput,
   args: {
     label: "Label",

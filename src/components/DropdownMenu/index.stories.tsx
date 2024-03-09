@@ -5,7 +5,7 @@ import { Button } from "../Button";
 import { DropdownMenuItem } from "./DropdownMenuItem";
 
 const meta: Meta<typeof DropdownMenu> = {
-  title: "Components/Float/DropdownMenu",
+  title: "Float/DropdownMenu",
   component: DropdownMenu,
 };
 

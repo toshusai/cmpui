@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ColorPickerRect } from ".";
 
 const meta: Meta<typeof ColorPickerRect> = {
-  title: "Components/Colors/ColorPickerRect",
+  title: "Colors/ColorPickerRect",
   component: ColorPickerRect,
 };
 

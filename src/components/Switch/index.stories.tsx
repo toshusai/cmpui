@@ -4,7 +4,7 @@ import { Switch } from ".";
 import { Icon } from "../../__stories__/Icon";
 
 const meta: Meta<typeof Switch> = {
-  title: "Components/Form/Switch",
+  title: "Form/Switch",
   component: Switch,
 };
 

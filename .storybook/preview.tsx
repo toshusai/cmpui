@@ -17,6 +17,20 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: [
+          "Actions",
+          "Colors",
+          "Controls",
+          "Float",
+          "Form",
+          "Layout",
+          "View",
+          "API",
+        ],
+      },
+    },
     docs: {
       page: DocumentationTemplate,
       container: ({ children, context }) => {

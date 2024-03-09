@@ -5,7 +5,7 @@ import { ShortcutListItem } from "../../__stories__/ShortcutListItem";
 import { ContextMenuItem } from "./ContextMenuItem";
 
 const meta: Meta<typeof ContextMenu> = {
-  title: "Components/Float/ContextMenu",
+  title: "Float/ContextMenu",
   component: ContextMenu,
 };
 
