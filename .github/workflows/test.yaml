@@ -2,7 +2,7 @@ name: Test
 on:
   push:
     paths-ignore:
-      - '.github/**'
+      - ".github/**"
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "20.11.1"
           registry-url: "https://registry.npmjs.org"
-          cache: 'pnpm'
+          cache: "pnpm"
       - uses: actions/cache@v3
         with:
           path: |
@@ -27,7 +27,7 @@ jobs:
       # https://github.com/microsoft/playwright/issues/7249#issuecomment-1385567519
       - name: Store Playwright's Version
         run: |
-          PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
+          PLAYWRIGHT_VERSION=$(pnpm ls @playwright/test | grep @playwright | sed 's/.* //')
           echo "Playwright's Version: $PLAYWRIGHT_VERSION"
           echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
       - name: Cache Playwright Browsers for Playwright's Version
