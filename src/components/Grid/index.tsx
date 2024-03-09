@@ -23,12 +23,12 @@ export function Grid({
 
   useLayoutEffect(() => {
     if (!ref.current) return;
-    ref.current.style.setProperty("--offset-x", `${offsetX}px`);
-    ref.current.style.setProperty("--offset-y", `${offsetY}px`);
-    ref.current.style.setProperty("--size-x", `${sizeX}px`);
-    ref.current.style.setProperty("--size-y", `${sizeY}px`);
+    ref.current.style.setProperty("--cmpui-offset-x", `${offsetX}px`);
+    ref.current.style.setProperty("--cmpui-offset-y", `${offsetY}px`);
+    ref.current.style.setProperty("--cmpui-size-x", `${sizeX}px`);
+    ref.current.style.setProperty("--cmpui-size-y", `${sizeY}px`);
     if (props.color) {
-      ref.current.style.setProperty("--color", props.color);
+      ref.current.style.setProperty("--cmpui-color", props.color);
     }
   });
 

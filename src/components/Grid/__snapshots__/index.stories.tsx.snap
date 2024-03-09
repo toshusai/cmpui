@@ -3,7 +3,16 @@
 exports[`View/Grid Basic smoke-test 1`] = `
 <div style="width: 100vh; height: 300px;">
   <div class="cmpui_grid__root"
-       style="--offset-x: 10px; --offset-y: 25px; --size-x: 50px; --size-y: 50px;"
+       style="--cmpui-offset-x: 10px; --cmpui-offset-y: 25px; --cmpui-size-x: 50px; --cmpui-size-y: 50px;"
+  >
+  </div>
+</div>
+`;
+
+exports[`View/Grid Size smoke-test 1`] = `
+<div style="width: 100vh; height: 300px;">
+  <div class="cmpui_grid__root"
+       style="--cmpui-offset-x: 10px; --cmpui-offset-y: 25px; --cmpui-size-x: 25px; --cmpui-size-y: 100px;"
   >
   </div>
 </div>
