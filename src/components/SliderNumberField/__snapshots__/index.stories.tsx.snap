@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Form/SliderNumberField Basic smoke-test 1`] = `
+exports[`Form/SliderNumberField Basic smoke-test 1`] = `
 <div class="cmpui_text-input__root cmpui_slider-number-input__root">
   <label class="cmpui_text-input__label cmpui_slider-number-input__label">
     value
@@ -14,7 +14,7 @@ exports[`Components/Form/SliderNumberField Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/SliderNumberField Mixed smoke-test 1`] = `
+exports[`Form/SliderNumberField Mixed smoke-test 1`] = `
 <div>
   <div class="cmpui_text-input__root cmpui_slider-number-input__root">
     <label class="cmpui_text-input__label cmpui_slider-number-input__label">

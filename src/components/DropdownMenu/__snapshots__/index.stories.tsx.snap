@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Float/DropdownMenu Basic smoke-test 1`] = `
+exports[`Float/DropdownMenu Basic smoke-test 1`] = `
 <div style="height: 128px;">
   <button type="button"
           class="cmpui_button"

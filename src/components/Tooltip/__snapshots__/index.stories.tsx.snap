@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Float/Tooltip Basic smoke-test 1`] = `
+exports[`Float/Tooltip Basic smoke-test 1`] = `
 <button type="button"
         class="cmpui_button"
         data-state="closed"
@@ -11,7 +11,7 @@ exports[`Components/Float/Tooltip Basic smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/Float/Tooltip Multiple smoke-test 1`] = `
+exports[`Float/Tooltip Multiple smoke-test 1`] = `
 <div style="display: flex;">
   <button type="button"
           class="cmpui_icon-button__root"
@@ -37,7 +37,7 @@ exports[`Components/Float/Tooltip Multiple smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Float/Tooltip Presenter smoke-test 1`] = `
+exports[`Float/Tooltip Presenter smoke-test 1`] = `
 <div class="cmpui_tooltip__root">
   Hello, World!
 </div>

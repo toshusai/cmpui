@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Float/MenuBarButton Basic smoke-test 1`] = `
+exports[`Float/MenuBarButton Basic smoke-test 1`] = `
 <div role="menubar"
      class="cmpui_menu-bar__root"
      tabindex="0"

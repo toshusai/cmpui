@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Form/AngleInput Basic smoke-test 1`] = `
+exports[`Form/AngleInput Basic smoke-test 1`] = `
 <div class="cmpui_angle-input__root"
      style="width: 64px; height: 64px;"
 >
@@ -214,7 +214,7 @@ exports[`Components/Form/AngleInput Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/AngleInput Size smoke-test 1`] = `
+exports[`Form/AngleInput Size smoke-test 1`] = `
 <div class="cmpui_angle-input__root"
      style="width: 128px; height: 128px;"
 >
@@ -428,7 +428,7 @@ exports[`Components/Form/AngleInput Size smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/AngleInput Step smoke-test 1`] = `
+exports[`Form/AngleInput Step smoke-test 1`] = `
 <div class="cmpui_angle-input__root"
      style="width: 64px; height: 64px;"
 >

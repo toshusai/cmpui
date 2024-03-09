@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/View/Grid Basic smoke-test 1`] = `
+exports[`View/Grid Basic smoke-test 1`] = `
 <div style="width: 100vh; height: 300px;">
   <div class="cmpui_grid__root"
        style="--offset-x: 10px; --offset-y: 25px; --size-x: 50px; --size-y: 50px;"

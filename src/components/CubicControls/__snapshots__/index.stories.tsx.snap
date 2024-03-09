@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Controls/CubicControls Default smoke-test 1`] = `
+exports[`Controls/CubicControls Default smoke-test 1`] = `
 <div style="width: 100px; height: 100px; position: relative;">
   <svg stroke="var(--cmpui-primary-color)"
        width="108"

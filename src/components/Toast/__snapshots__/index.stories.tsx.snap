@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Float/Toast Basic smoke-test 1`] = `
+exports[`Float/Toast Basic smoke-test 1`] = `
 <div style="width: 100vw; height: 300px; justify-content: center; align-items: center; display: flex;">
   <button type="button"
           class="cmpui_button"

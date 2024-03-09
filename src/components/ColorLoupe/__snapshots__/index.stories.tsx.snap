@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Colors/ColorLoupe Default smoke-test 1`] = `
+exports[`Colors/ColorLoupe Default smoke-test 1`] = `
 <div style="position: relative; width: 100px; height: 100px;">
   <svg width="1"
        height="25"

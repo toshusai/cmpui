@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/View/TreeView Basic smoke-test 1`] = `
+exports[`View/TreeView Basic smoke-test 1`] = `
 <div data-state="closed"
      style="height: 256px; width: 256px; overflow: auto;"
 >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Controls/Path Basic smoke-test 1`] = `
+exports[`Controls/Path Basic smoke-test 1`] = `
 <svg width="208"
      height="208"
      viewbox="-4 -4 208 208"

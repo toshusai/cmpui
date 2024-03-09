@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/View/Ruler Basic smoke-test 1`] = `
+exports[`View/Ruler Basic smoke-test 1`] = `
 <div class="cmpui_ruler__root"
      data-orientation="horizontal"
 >
@@ -1030,7 +1030,7 @@ exports[`Components/View/Ruler Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/View/Ruler Vertical smoke-test 1`] = `
+exports[`View/Ruler Vertical smoke-test 1`] = `
 <div style="width: 100vh; height: 512px;">
   <div class="cmpui_ruler__root"
        data-orientation="vertical"

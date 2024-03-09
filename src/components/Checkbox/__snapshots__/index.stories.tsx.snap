@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Form/Checkbox Basic smoke-test 1`] = `
+exports[`Form/Checkbox Basic smoke-test 1`] = `
 <div class="cmpui_checkbox__root">
   <div class="cmpui_checkbox__box">
     <input type="checkbox"
@@ -29,7 +29,7 @@ exports[`Components/Form/Checkbox Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/Checkbox Checked smoke-test 1`] = `
+exports[`Form/Checkbox Checked smoke-test 1`] = `
 <div class="cmpui_checkbox__root">
   <div class="cmpui_checkbox__box">
     <input type="checkbox"
@@ -59,7 +59,7 @@ exports[`Components/Form/Checkbox Checked smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/Checkbox Disabled smoke-test 1`] = `
+exports[`Form/Checkbox Disabled smoke-test 1`] = `
 <div class="cmpui_checkbox__root"
      aria-disabled="true"
 >
@@ -89,7 +89,7 @@ exports[`Components/Form/Checkbox Disabled smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/Checkbox Label smoke-test 1`] = `
+exports[`Form/Checkbox Label smoke-test 1`] = `
 <div class="cmpui_checkbox__root">
   <div class="cmpui_checkbox__box">
     <input type="checkbox"

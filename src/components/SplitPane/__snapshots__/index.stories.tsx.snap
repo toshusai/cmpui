@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Layout/SplitPane Horizontal smoke-test 1`] = `
+exports[`Layout/SplitPane Horizontal smoke-test 1`] = `
 <div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
   <div class="cmpui_split-pane__root"
        data-orientation="horizontal"
@@ -59,7 +59,7 @@ exports[`Components/Layout/SplitPane Horizontal smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Layout/SplitPane MinMax smoke-test 1`] = `
+exports[`Layout/SplitPane MinMax smoke-test 1`] = `
 <div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
   <div class="cmpui_split-pane__root"
        data-orientation="horizontal"
@@ -118,7 +118,7 @@ exports[`Components/Layout/SplitPane MinMax smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Layout/SplitPane Readonly smoke-test 1`] = `
+exports[`Layout/SplitPane Readonly smoke-test 1`] = `
 <div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
   <div class="cmpui_split-pane__root"
        data-orientation="horizontal"
@@ -177,7 +177,7 @@ exports[`Components/Layout/SplitPane Readonly smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Layout/SplitPane Vertical smoke-test 1`] = `
+exports[`Layout/SplitPane Vertical smoke-test 1`] = `
 <div style="height: 512px; width: 100vw; display: flex; padding: 4px; box-sizing: border-box;">
   <div class="cmpui_split-pane__root"
        data-orientation="vertical"

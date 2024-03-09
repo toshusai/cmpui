@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Colors/HueCircle Default smoke-test 1`] = `
+exports[`Colors/HueCircle Default smoke-test 1`] = `
 <div class="cmpui_hue-circle__root"
      tabindex="0"
      style="--cmpui-width: 24px; --cmpui-size: 192px;"
@@ -20,7 +20,7 @@ exports[`Components/Colors/HueCircle Default smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Colors/HueCircle ForMobile smoke-test 1`] = `
+exports[`Colors/HueCircle ForMobile smoke-test 1`] = `
 <div class="cmpui_hue-circle__root"
      tabindex="0"
      style="--cmpui-width: 32px; --cmpui-size: 192px;"
@@ -40,7 +40,7 @@ exports[`Components/Colors/HueCircle ForMobile smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Colors/HueCircle Size smoke-test 1`] = `
+exports[`Colors/HueCircle Size smoke-test 1`] = `
 <div class="cmpui_hue-circle__root"
      tabindex="0"
      style="--cmpui-width: 24px; --cmpui-size: 64px;"

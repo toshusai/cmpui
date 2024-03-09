@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Float/Modal Primary smoke-test 1`] = `
+exports[`Float/Modal Primary smoke-test 1`] = `
 <button type="button"
         class="cmpui_button"
         data-variant="primary"

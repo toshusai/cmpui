@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Colors/SVPicker Default smoke-test 1`] = `
+exports[`Colors/SVPicker Default smoke-test 1`] = `
 <div class="cmpui_sv-picker__root"
      tabindex="0"
 >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Colors/ColorSlider Default smoke-test 1`] = `
+exports[`Colors/ColorSlider Default smoke-test 1`] = `
 <div class="cmpui_color-slider__root"
      tabindex="0"
 >
@@ -27,7 +27,7 @@ exports[`Components/Colors/ColorSlider Default smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Colors/ColorSlider HeightAndNobSize smoke-test 1`] = `
+exports[`Colors/ColorSlider HeightAndNobSize smoke-test 1`] = `
 <div class="cmpui_color-slider__root"
      tabindex="0"
 >
@@ -54,7 +54,7 @@ exports[`Components/Colors/ColorSlider HeightAndNobSize smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Colors/ColorSlider Hue smoke-test 1`] = `
+exports[`Colors/ColorSlider Hue smoke-test 1`] = `
 <div class="cmpui_color-slider__root"
      tabindex="0"
 >
