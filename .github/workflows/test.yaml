@@ -2,7 +2,8 @@ name: Test
 on:
   push:
     paths-ignore:
-      - ".github/**"
+      - ".github/workflows/publish.yaml"
+      - ".github/workflows/storybook.yaml"
 jobs:
   test:
     runs-on: ubuntu-latest
