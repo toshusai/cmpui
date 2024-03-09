@@ -26,3 +26,18 @@ export const Basic: Story = {
     );
   },
 };
+
+export const Size: Story = {
+  render: function Render() {
+    return (
+      <div
+        style={{
+          width: "100vh",
+          height: 300,
+        }}
+      >
+        <Grid sizeX={25} sizeY={100} offsetX={10} offsetY={25} />
+      </div>
+    );
+  },
+};
