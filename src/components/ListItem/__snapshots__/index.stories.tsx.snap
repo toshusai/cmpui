@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/View/ListItem Basic smoke-test 1`] = `
+exports[`View/ListItem Basic smoke-test 1`] = `
 <ol class="cmpui_list-list__root">
   <li class="cmpui_list-item__root"
       data-size="M"
@@ -20,7 +20,7 @@ exports[`Components/View/ListItem Basic smoke-test 1`] = `
 </ol>
 `;
 
-exports[`Components/View/ListItem Commands smoke-test 1`] = `
+exports[`View/ListItem Commands smoke-test 1`] = `
 <div class="cmpui_float-box__root">
   <ol class="cmpui_list-list__root">
     <li class="cmpui_list-item__root"
@@ -78,7 +78,7 @@ exports[`Components/View/ListItem Commands smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/View/ListItem Selected smoke-test 1`] = `
+exports[`View/ListItem Selected smoke-test 1`] = `
 <ol class="cmpui_list-list__root">
   <li class="cmpui_list-item__root"
       aria-selected="true"
@@ -99,7 +99,7 @@ exports[`Components/View/ListItem Selected smoke-test 1`] = `
 </ol>
 `;
 
-exports[`Components/View/ListItem Small smoke-test 1`] = `
+exports[`View/ListItem Small smoke-test 1`] = `
 <ol class="cmpui_list-list__root">
   <li class="cmpui_list-item__root"
       data-size="S"

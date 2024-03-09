@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Actions/IconButton Basic smoke-test 1`] = `
+exports[`Actions/IconButton Basic smoke-test 1`] = `
 <div style="display: flex; gap: 4px;">
   <button type="button"
           class="cmpui_icon-button__root"
@@ -52,7 +52,7 @@ exports[`Components/Actions/IconButton Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Actions/IconButton Disabled smoke-test 1`] = `
+exports[`Actions/IconButton Disabled smoke-test 1`] = `
 <button type="button"
         class="cmpui_icon-button__root"
         data-size="M"
@@ -66,7 +66,7 @@ exports[`Components/Actions/IconButton Disabled smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/Actions/IconButton Group smoke-test 1`] = `
+exports[`Actions/IconButton Group smoke-test 1`] = `
 <div class="cmpui_icon-button__group">
   <button type="button"
           class="cmpui_icon-button__root"
@@ -103,7 +103,7 @@ exports[`Components/Actions/IconButton Group smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Actions/IconButton Selected smoke-test 1`] = `
+exports[`Actions/IconButton Selected smoke-test 1`] = `
 <button type="button"
         class="cmpui_icon-button__root"
         aria-selected="true"
@@ -117,7 +117,7 @@ exports[`Components/Actions/IconButton Selected smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/Actions/IconButton Small smoke-test 1`] = `
+exports[`Actions/IconButton Small smoke-test 1`] = `
 <button type="button"
         class="cmpui_icon-button__root"
         data-size="S"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Form/Switch Basic smoke-test 1`] = `
+exports[`Form/Switch Basic smoke-test 1`] = `
 <div class="cmpui_switch__root">
   <div class="cmpui_switch__box">
     <input class="cmpui_switch__input"
@@ -20,7 +20,7 @@ exports[`Components/Form/Switch Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/Switch Checked smoke-test 1`] = `
+exports[`Form/Switch Checked smoke-test 1`] = `
 <div class="cmpui_switch__root">
   <div class="cmpui_switch__box">
     <input class="cmpui_switch__input"
@@ -41,7 +41,7 @@ exports[`Components/Form/Switch Checked smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/Switch Disabled smoke-test 1`] = `
+exports[`Form/Switch Disabled smoke-test 1`] = `
 <div class="cmpui_switch__root"
      aria-disabled="true"
 >
@@ -64,7 +64,7 @@ exports[`Components/Form/Switch Disabled smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/Switch Label smoke-test 1`] = `
+exports[`Form/Switch Label smoke-test 1`] = `
 <div class="cmpui_switch__root">
   <div class="cmpui_switch__box">
     <input class="cmpui_switch__input"

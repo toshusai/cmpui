@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Float/FloatBox Basic smoke-test 1`] = `
+exports[`Float/FloatBox Basic smoke-test 1`] = `
 <div class="cmpui_float-box__root"
      style="width: 128px;"
 >

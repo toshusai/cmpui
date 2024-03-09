@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Colors/ColorPickerCircle Default smoke-test 1`] = `
+exports[`Colors/ColorPickerCircle Default smoke-test 1`] = `
 <div class="cmpui_color-picker-circle__root">
   <div>
     <div class="cmpui_hue-circle__root"

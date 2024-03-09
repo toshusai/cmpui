@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/View/CanvasView Basic smoke-test 1`] = `
+exports[`View/CanvasView Basic smoke-test 1`] = `
 <div style="width: 100vw; height: 512px;">
   <div class="cmpui_canvas-view__root"
        tabindex="-1"
@@ -18,7 +18,7 @@ exports[`Components/View/CanvasView Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/View/CanvasView Grab smoke-test 1`] = `
+exports[`View/CanvasView Grab smoke-test 1`] = `
 <div style="width: 100vw; height: 512px;">
   <div class="cmpui_canvas-view__root"
        tabindex="-1"
@@ -36,7 +36,7 @@ exports[`Components/View/CanvasView Grab smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/View/CanvasView Zoom smoke-test 1`] = `
+exports[`View/CanvasView Zoom smoke-test 1`] = `
 <div style="width: 100vw; height: 512px;">
   <div class="cmpui_canvas-view__root"
        tabindex="-1"

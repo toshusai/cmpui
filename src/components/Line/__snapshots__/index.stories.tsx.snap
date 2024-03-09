@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Controls/Line Basic smoke-test 1`] = `
+exports[`Controls/Line Basic smoke-test 1`] = `
 <div style="width: 200px; height: 200px; position: relative;">
   <svg width="201"
        height="201"

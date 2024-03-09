@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Form/TextInput Basic smoke-test 1`] = `
+exports[`Form/TextInput Basic smoke-test 1`] = `
 <div class="cmpui_text-input__root">
   <label class="cmpui_text-input__label">
     Label
@@ -13,7 +13,7 @@ exports[`Components/Form/TextInput Basic smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/TextInput Disabled smoke-test 1`] = `
+exports[`Form/TextInput Disabled smoke-test 1`] = `
 <div class="cmpui_text-input__root"
      aria-disabled="true"
 >
@@ -29,7 +29,7 @@ exports[`Components/Form/TextInput Disabled smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/TextInput Invalid smoke-test 1`] = `
+exports[`Form/TextInput Invalid smoke-test 1`] = `
 <div class="cmpui_text-input__root"
      aria-invalid="true"
 >
@@ -45,7 +45,7 @@ exports[`Components/Form/TextInput Invalid smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/TextInput Label smoke-test 1`] = `
+exports[`Form/TextInput Label smoke-test 1`] = `
 <div class="cmpui_text-input__root">
   <label class="cmpui_text-input__label"
          for="text-input-label"
@@ -61,7 +61,7 @@ exports[`Components/Form/TextInput Label smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/TextInput Placeholder smoke-test 1`] = `
+exports[`Form/TextInput Placeholder smoke-test 1`] = `
 <div class="cmpui_text-input__root">
   <label class="cmpui_text-input__label">
   </label>
@@ -73,7 +73,7 @@ exports[`Components/Form/TextInput Placeholder smoke-test 1`] = `
 </div>
 `;
 
-exports[`Components/Form/TextInput Suffix smoke-test 1`] = `
+exports[`Form/TextInput Suffix smoke-test 1`] = `
 <div class="cmpui_text-input__root">
   <svg xmlns="http://www.w3.org/2000/svg"
        height="24"

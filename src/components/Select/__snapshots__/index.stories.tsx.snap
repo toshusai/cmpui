@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Form/Select Basic smoke-test 1`] = `
+exports[`Form/Select Basic smoke-test 1`] = `
 <button type="button"
         role="combobox"
         aria-controls="radix-:r0:"
@@ -29,7 +29,7 @@ exports[`Components/Form/Select Basic smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/Form/Select Disabled smoke-test 1`] = `
+exports[`Form/Select Disabled smoke-test 1`] = `
 <button type="button"
         role="combobox"
         aria-controls="radix-:r5:"
@@ -60,7 +60,7 @@ exports[`Components/Form/Select Disabled smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/Form/Select DisabledItem smoke-test 1`] = `
+exports[`Form/Select DisabledItem smoke-test 1`] = `
 <button type="button"
         role="combobox"
         aria-controls="radix-:ra:"
@@ -89,7 +89,7 @@ exports[`Components/Form/Select DisabledItem smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/Form/Select Fonts smoke-test 1`] = `
+exports[`Form/Select Fonts smoke-test 1`] = `
 <button type="button"
         role="combobox"
         aria-controls="radix-:rf:"

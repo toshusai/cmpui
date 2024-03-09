@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Colors/ColorInput Primary smoke-test 1`] = `
+exports[`Colors/ColorInput Primary smoke-test 1`] = `
 <div style="width: 192px;">
   <div class="cmpui_color-input__root">
     <div class="cmpui_text-input__root">
