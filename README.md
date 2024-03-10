@@ -21,7 +21,7 @@ npm install @toshusai/cmpui
 ## Usage
 
 ```tsx
-import { Button } from "cmpui";
+import { Button } from "@toshusai/cmpui";
 import "@toshusai/cmpui/dist/index.css";
 
 export default function App() {
