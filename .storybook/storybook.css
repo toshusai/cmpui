@@ -37,7 +37,9 @@ html {
   border-right: none !important;
 }
 
-body,
+html {
+  background: var(--cmpui-bg-color);
+}
 .sbdocs {
   background: var(--cmpui-bg-color) !important;
 }
