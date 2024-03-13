@@ -21,15 +21,6 @@ export function Path({
 
   const offset = 4;
 
-  useEffect(() => {
-    if (!ref.current) return;
-    const bbox = ref.current.getBBox();
-    setX(bbox.x - offset);
-    setY(bbox.y - offset);
-    setWidth(bbox.width + offset * 2);
-    setHeight(bbox.height + offset * 2);
-  }, [ref.current, setX, setY, setWidth, setHeight]);
-
   function commandToD(command: Command[][0]) {
     switch (command.type) {
       case "move":
@@ -43,6 +34,28 @@ export function Path({
     }
   }
 
+  const pathRefs = React.useRef<SVGPathElement[]>([]);
+
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(() => {
+      if (ref.current) {
+        const bbox = ref.current.getBBox();
+        setX(bbox.x - offset);
+        setY(bbox.y - offset);
+        setWidth(bbox.width + offset * 2);
+        setHeight(bbox.height + offset * 2);
+      }
+    });
+
+    pathRefs.current.forEach((path) => {
+      resizeObserver.observe(path);
+    });
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [setX, setY, setWidth, setHeight, pathRefs, ref]);
+
   return (
     <svg
       {...props}
@@ -50,6 +63,7 @@ export function Path({
       height={height}
       style={{
         position: "absolute",
+        overflow: "visible",
         left: x,
         top: y,
         width,
@@ -76,6 +90,11 @@ export function Path({
             strokeWidth={1}
             fill="none"
             onClick={onClickCurve}
+            ref={(el) => {
+              if (el) {
+                pathRefs.current[i] = el;
+              }
+            }}
           />
         );
       })}
