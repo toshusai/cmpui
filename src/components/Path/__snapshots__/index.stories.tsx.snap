@@ -1,21 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Controls/Path Basic smoke-test 1`] = `
-<svg width="208"
-     height="208"
-     viewbox="-4 -4 208 208"
-     class="cmpui_curve-controls-svg"
-     style="position: absolute; left: -4px; top: -4px; width: 208px; height: 208px;"
->
-  <path d="M 0 0"
-        stroke-width="1"
-        fill="none"
+<div style="width: 200px; height: 200px; position: relative;">
+  <svg stroke="var(--cmpui-primary-color)"
+       width="0"
+       height="0"
+       viewbox="0 0 0 0"
+       class="cmpui_curve-controls-svg"
+       style="position: absolute; overflow: visible; left: 0px; top: 0px; width: 0px; height: 0px;"
   >
-  </path>
-  <path d="M 0 0 C 100 0 100 200 200 200"
-        stroke-width="1"
-        fill="none"
-  >
-  </path>
-</svg>
+    <path d="M 0 0"
+          stroke-width="1"
+          fill="none"
+    >
+    </path>
+    <path d="M 0 0 C 100 0 100 200 200 200"
+          stroke-width="1"
+          fill="none"
+    >
+    </path>
+  </svg>
+</div>
 `;
