@@ -7,7 +7,7 @@ exports[`Controls/CubicControls Default smoke-test 1`] = `
        height="108"
        viewbox="-4 -4 108 108"
        class="cmpui_curve-controls-svg"
-       style="position: absolute; left: -4px; top: -4px; width: 108px; height: 108px; pointer-events: none;"
+       style="position: absolute; overflow: visible; left: -4px; top: -4px; width: 108px; height: 108px; pointer-events: none;"
   >
     <path d="M 0 100"
           stroke-width="1"
