@@ -65,15 +65,16 @@ export function TreeView<T extends ITree>(props: TreeViewProps<T>) {
                 render={props.render}
                 onOrderChange={props.onOrderChange}
                 updateIndicator={props.updateIndicator}
-                onUpdateIndicator={(el, type, depth) => {
+                onUpdateIndicator={(el, type) => {
                   const rootRect = ref.current?.getBoundingClientRect();
                   if (!rootRect) return;
                   const rect = el.getBoundingClientRect();
-
-                  const padLeft = depth * 8;
+                  const child = el.firstElementChild;
+                  if (!child) return;
+                  const padLeft = parseInt(getComputedStyle(child).paddingLeft);
 
                   setX(padLeft);
-                  setWidth(rootRect.width - padLeft - 8);
+                  setWidth(rect.width - padLeft);
                   if (type === OrderType.Child) {
                     setY(rect.top - rootRect.top);
                     setHeight(rect.height);
