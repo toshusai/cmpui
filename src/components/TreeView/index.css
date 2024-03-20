@@ -10,7 +10,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: fit-content;
 }
 
 .cmpui_tree-view__item {
@@ -38,7 +38,7 @@
   pointer-events: none;
   position: absolute;
   top: 0;
-  width: 100px;
+  width: 100%;
   z-index: 100;
   box-sizing: border-box;
 }
