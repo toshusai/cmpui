@@ -414,3 +414,86 @@ export const Basic: Story = {
     );
   },
 };
+
+export const Scroll: Story = {
+  render: function Render() {
+    return (
+      <div
+        style={{
+          width: 256,
+          paddingBottom: 32,
+          overflow: "auto",
+        }}
+      >
+        <TreeView
+          items={[
+            {
+              id: "root",
+              children: [
+                {
+                  id: "child-1",
+                  children: [
+                    {
+                      id: "child-1-1",
+                      children: [
+                        {
+                          id: "child-1-1-1",
+                          children: [
+                            {
+                              id: "child-1-1-1-1",
+                              children: [
+                                {
+                                  id: "child-1-1-1-1-1",
+                                  children: [
+                                    {
+                                      id: "child-1-1-1-1-1-1",
+                                      children: [
+                                        {
+                                          id: "child-1-1-1-1-1-1-1",
+                                          children: [
+                                            {
+                                              id: "child-1-1-1-1-1-1-1-1",
+                                              children: [
+                                                {
+                                                  id: "child-1-1-1-1-1-1-1-1-1",
+                                                  children: [
+                                                    {
+                                                      id: "child-1-1-1-1-1-1-1-1-1-1",
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                    },
+                                  ],
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ]}
+          render={(props) => (
+            <div
+              style={{
+                backgroundColor: `rgba(0, 0, 0, ${0.05 + props.depth * 0.05})`,
+                paddingLeft: props.depth * 16,
+                whiteSpace: "nowrap",
+              }}
+            >
+              {props.item.id}
+            </div>
+          )}
+        />
+      </div>
+    );
+  },
+};

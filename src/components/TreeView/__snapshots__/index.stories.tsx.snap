@@ -204,3 +204,107 @@ exports[`View/TreeView Basic smoke-test 1`] = `
   </div>
 </div>
 `;
+
+exports[`View/TreeView Scroll smoke-test 1`] = `
+<div style="width: 256px; padding-bottom: 32px; overflow: auto;">
+  <div class="cmpui_tree-view__root">
+    <ol class="cmpui_tree-view__ol">
+      <li class="cmpui_tree-view__item">
+        <div style="background-color: rgba(0, 0, 0, 0.05); padding-left: 0px; white-space: nowrap;">
+          root
+        </div>
+      </li>
+      <li class="cmpui_tree-view__item-dir">
+        <ol class="cmpui_tree-view__item-dir-ol">
+          <li class="cmpui_tree-view__item">
+            <div style="background-color: rgba(0, 0, 0, 0.1); padding-left: 16px; white-space: nowrap;">
+              child-1
+            </div>
+          </li>
+          <li class="cmpui_tree-view__item-dir">
+            <ol class="cmpui_tree-view__item-dir-ol">
+              <li class="cmpui_tree-view__item">
+                <div style="background-color: rgba(0, 0, 0, 0.15); padding-left: 32px; white-space: nowrap;">
+                  child-1-1
+                </div>
+              </li>
+              <li class="cmpui_tree-view__item-dir">
+                <ol class="cmpui_tree-view__item-dir-ol">
+                  <li class="cmpui_tree-view__item">
+                    <div style="background-color: rgba(0, 0, 0, 0.2); padding-left: 48px; white-space: nowrap;">
+                      child-1-1-1
+                    </div>
+                  </li>
+                  <li class="cmpui_tree-view__item-dir">
+                    <ol class="cmpui_tree-view__item-dir-ol">
+                      <li class="cmpui_tree-view__item">
+                        <div style="background-color: rgba(0, 0, 0, 0.25); padding-left: 64px; white-space: nowrap;">
+                          child-1-1-1-1
+                        </div>
+                      </li>
+                      <li class="cmpui_tree-view__item-dir">
+                        <ol class="cmpui_tree-view__item-dir-ol">
+                          <li class="cmpui_tree-view__item">
+                            <div style="background-color: rgba(0, 0, 0, 0.3); padding-left: 80px; white-space: nowrap;">
+                              child-1-1-1-1-1
+                            </div>
+                          </li>
+                          <li class="cmpui_tree-view__item-dir">
+                            <ol class="cmpui_tree-view__item-dir-ol">
+                              <li class="cmpui_tree-view__item">
+                                <div style="background-color: rgba(0, 0, 0, 0.35); padding-left: 96px; white-space: nowrap;">
+                                  child-1-1-1-1-1-1
+                                </div>
+                              </li>
+                              <li class="cmpui_tree-view__item-dir">
+                                <ol class="cmpui_tree-view__item-dir-ol">
+                                  <li class="cmpui_tree-view__item">
+                                    <div style="background-color: rgba(0, 0, 0, 0.4); padding-left: 112px; white-space: nowrap;">
+                                      child-1-1-1-1-1-1-1
+                                    </div>
+                                  </li>
+                                  <li class="cmpui_tree-view__item-dir">
+                                    <ol class="cmpui_tree-view__item-dir-ol">
+                                      <li class="cmpui_tree-view__item">
+                                        <div style="background-color: rgba(0, 0, 0, 0.45); padding-left: 128px; white-space: nowrap;">
+                                          child-1-1-1-1-1-1-1-1
+                                        </div>
+                                      </li>
+                                      <li class="cmpui_tree-view__item-dir">
+                                        <ol class="cmpui_tree-view__item-dir-ol">
+                                          <li class="cmpui_tree-view__item">
+                                            <div style="background-color: rgba(0, 0, 0, 0.5); padding-left: 144px; white-space: nowrap;">
+                                              child-1-1-1-1-1-1-1-1-1
+                                            </div>
+                                          </li>
+                                          <li class="cmpui_tree-view__item-dir">
+                                            <ol class="cmpui_tree-view__item-dir-ol">
+                                              <li class="cmpui_tree-view__item">
+                                                <div style="background-color: rgba(0, 0, 0, 0.55); padding-left: 160px; white-space: nowrap;">
+                                                  child-1-1-1-1-1-1-1-1-1-1
+                                                </div>
+                                              </li>
+                                            </ol>
+                                          </li>
+                                        </ol>
+                                      </li>
+                                    </ol>
+                                  </li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+</div>
+`;
