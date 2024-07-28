@@ -23,7 +23,6 @@ exports[`Controls/CubicControls Default smoke-test 1`] = `
   <svg width="51"
        height="1"
        viewbox="0 0 51 1"
-       class="cmpui_cubic-controls__line"
        style="position: absolute; overflow: visible; pointer-events: none; left: -0.5px; top: 99.5px;"
   >
     <line class="cmpui_cubic-controls__line"
@@ -38,7 +37,6 @@ exports[`Controls/CubicControls Default smoke-test 1`] = `
   <svg width="51"
        height="1"
        viewbox="0 0 51 1"
-       class="cmpui_cubic-controls__line"
        style="position: absolute; overflow: visible; pointer-events: none; left: 49.5px; top: -0.5px;"
   >
     <line class="cmpui_cubic-controls__line"

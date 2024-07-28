@@ -2,370 +2,255 @@
 
 exports[`Controls/RectGizmo Basic smoke-test 1`] = `
 <div style="width: 100%; height: 512px; position: relative;">
-  <svg viewbox="0 0 100 50"
-       class="cmpui-rect-gizmo--movable-rect"
-       style="position: absolute; width: 100px; height: 50px; transform: rotate(0rad); top: 231px; left: 206px;"
-  >
-    <rect x="0"
-          y="0"
-          width="100"
-          height="50"
-          fill="transparent"
-    >
-    </rect>
-  </svg>
-  <svg width="101"
-       height="1"
-       viewbox="0 0 101 1"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="0.5"
-          x2="100.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="1"
-       height="51"
-       viewbox="0 0 1 51"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 305.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="0.5"
-          x2="0.5"
-          y2="50.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="101"
-       height="1"
-       viewbox="0 0 101 1"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 280.5px;"
-  >
-    <line x1="100.5"
-          y1="0.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="1"
-       height="51"
-       viewbox="0 0 1 51"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="50.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <div x="206"
-       y="231"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 200px; top: 225px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;"
+  <div class="cmpui_grid__root"
+       style="--cmpui-offset-x: 0px; --cmpui-offset-y: 0px; --cmpui-size-x: 50px; --cmpui-size-y: 50px;"
   >
   </div>
-  <div x="306"
-       y="231"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 300px; top: 225px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="306"
-       y="281"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 300px; top: 275px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="206"
-       y="281"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 200px; top: 275px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="256"
-       y="219"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 250px; top: 213px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDAgNDgwIC00ODApIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQ4IiBkPSJNMjkwLjc0LTI5MC4wNDIgMTAwLjc4Mi00ODAgMjkwLjc0LTY2OS45NThsNzQuNTIyIDc0LjY1My02MS43MzkgNjIuMzA0aDM1Mi45NTRsLTYxLjMwNS02Mi44NjkgNzQuMDg4LTc0LjA4OEw4NTkuMjE4LTQ4MCA2NjkuODI2LTI5MC42MDdsLTc0LjY1NC03NC4wODggNjEuMzA1LTYyLjMwNEgzMDIuOTU4bDYyLjQzNSA2Mi4zMDQtNzQuNjUzIDc0LjY1M1oiIC8+PC9zdmc+&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <svg width="1"
-       height="13"
-       viewbox="0 0 1 13"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 255.5px; top: 218.5px;"
-  >
-    <line x1="0.5"
-          y1="12.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
+  <div style="position: absolute; transform-origin: left top; left: 0px; top: 0px; transform: matrix(1, 0, 0, 1, 150, 150); width: 100px; height: 200px;">
+    <div style="left: 0px; height: 100%; box-sizing: border-box; display: flex; justify-content: center; align-items: center;">
+    </div>
+    <div style="position: absolute; pointer-events: none; left: 50px; top: 50px; transform: matrix(1, 0, 0, 1, 0, 0);">
+      <div style="position: absolute; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 1px solid var(--cmpui-primary-color); border-radius: 50%;">
+        <div style="position: absolute; width: 1px; height: 16px; background: var(--cmpui-primary-color); left: 7.5px;">
+        </div>
+        <div style="position: absolute; width: 16px; height: 1px; background: var(--cmpui-primary-color); top: 7.5px;">
+        </div>
+      </div>
+    </div>
+    <div style="position: absolute; pointer-events: none; left: 50px; top: 50px; transform: matrix(1, 0, 0, 1, 0, 0);">
+      <div style="position: absolute; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 1px solid var(--cmpui-primary-color); border-radius: 50%;">
+        <div style="position: absolute; width: 1px; height: 16px; background: var(--cmpui-primary-color); left: 7.5px;">
+        </div>
+        <div style="position: absolute; width: 16px; height: 1px; background: var(--cmpui-primary-color); top: 7.5px;">
+        </div>
+      </div>
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 1px; height: 200px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, -0.5, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 8px; height: 200px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDAgNDgwIC00ODApIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQ4IiBkPSJNMjkwLjc0LTI5MC4wNDIgMTAwLjc4Mi00ODAgMjkwLjc0LTY2OS45NThsNzQuNTIyIDc0LjY1My02MS43MzkgNjIuMzA0aDM1Mi45NTRsLTYxLjMwNS02Mi44NjkgNzQuMDg4LTc0LjA4OEw4NTkuMjE4LTQ4MCA2NjkuODI2LTI5MC42MDdsLTc0LjY1NC03NC4wODggNjEuMzA1LTYyLjMwNEgzMDIuOTU4bDYyLjQzNSA2Mi4zMDQtNzQuNjUzIDc0LjY1M1oiIC8+PC9zdmc+&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, -4, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 200px; width: 100px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, 0, -0.5);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 200px; width: 100px; height: 8px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDkwIDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, 0, -4);">
+    </div>
+    <div style="position: absolute; left: 100px; top: 0px; width: 1px; height: 200px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, -0.5, 0);">
+    </div>
+    <div style="position: absolute; left: 100px; top: 0px; width: 8px; height: 200px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, -4, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 100px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, 0, -0.5);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 100px; height: 8px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDI3MCA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, 0, -4);">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, 4); left: -16px; top: -16px; position: absolute; width: 16px; height: 16px; transform-origin: right bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKC00NSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, -4); left: -16px; top: 200px; position: absolute; width: 16px; height: 16px; transform-origin: right top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, -4); left: 100px; top: 200px; position: absolute; width: 16px; height: 16px; transform-origin: left top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, 4); left: 100px; top: -16px; position: absolute; width: 16px; height: 16px; transform-origin: left bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="0"
+         y="0"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -4px; top: -4px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;"
     >
-    </line>
-  </svg>
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, 4); left: -8px; top: -8px; position: absolute; width: 8px; height: 8px; transform-origin: right bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="0"
+         y="200"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -4px; top: 196px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, -4); left: -8px; top: 200px; position: absolute; width: 8px; height: 8px; transform-origin: right top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="100"
+         y="200"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 96px; top: 196px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, -4); left: 100px; top: 200px; position: absolute; width: 8px; height: 8px; transform-origin: left top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="100"
+         y="0"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 96px; top: -4px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, 4); left: 100px; top: -8px; position: absolute; width: 8px; height: 8px; transform-origin: left bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+  </div>
 </div>
 `;
 
-exports[`Controls/RectGizmo Debug smoke-test 1`] = `
+exports[`Controls/RectGizmo CornerOrigin smoke-test 1`] = `
 <div style="width: 100%; height: 512px; position: relative;">
-  <div class="cmpui_mono"
-       style="position: absolute; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace; top: 231px; left: 206px; padding: 8px; box-sizing: border-box; width: 100px; height: 50px; background: rgba(0, 0, 0, 0.5); transform: rotate(0rad) scale(1, 1); transform-origin: center center; color: white; white-space: nowrap;"
+  <div class="cmpui_grid__root"
+       style="--cmpui-offset-x: 0px; --cmpui-offset-y: 0px; --cmpui-size-x: 50px; --cmpui-size-y: 50px;"
   >
-    <div>
-      x: 256.00
+  </div>
+  <div style="position: absolute; transform-origin: left top; left: 0px; top: 0px; transform: matrix(1, 0, 0, 1, 200, 200); width: 100px; height: 200px;">
+    <div style="left: 0px; height: 100%; box-sizing: border-box; display: flex; justify-content: center; align-items: center;">
     </div>
-    <div>
-      y: 256.00
+    <div style="position: absolute; pointer-events: none; left: 0px; top: 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+      <div style="position: absolute; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 1px solid var(--cmpui-primary-color); border-radius: 50%;">
+        <div style="position: absolute; width: 1px; height: 16px; background: var(--cmpui-primary-color); left: 7.5px;">
+        </div>
+        <div style="position: absolute; width: 16px; height: 1px; background: var(--cmpui-primary-color); top: 7.5px;">
+        </div>
+      </div>
     </div>
-    <div>
-      w: 100.00
+    <div style="position: absolute; pointer-events: none; left: 0px; top: 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+      <div style="position: absolute; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 1px solid var(--cmpui-primary-color); border-radius: 50%;">
+        <div style="position: absolute; width: 1px; height: 16px; background: var(--cmpui-primary-color); left: 7.5px;">
+        </div>
+        <div style="position: absolute; width: 16px; height: 1px; background: var(--cmpui-primary-color); top: 7.5px;">
+        </div>
+      </div>
     </div>
-    <div>
-      h: 50.00
+    <div style="position: absolute; left: 0px; top: 0px; width: 1px; height: 200px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, -0.5, 0);">
     </div>
-    <div>
-      a: 0.00
+    <div style="position: absolute; left: 0px; top: 0px; width: 8px; height: 200px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDAgNDgwIC00ODApIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQ4IiBkPSJNMjkwLjc0LTI5MC4wNDIgMTAwLjc4Mi00ODAgMjkwLjc0LTY2OS45NThsNzQuNTIyIDc0LjY1My02MS43MzkgNjIuMzA0aDM1Mi45NTRsLTYxLjMwNS02Mi44NjkgNzQuMDg4LTc0LjA4OEw4NTkuMjE4LTQ4MCA2NjkuODI2LTI5MC42MDdsLTc0LjY1NC03NC4wODggNjEuMzA1LTYyLjMwNEgzMDIuOTU4bDYyLjQzNSA2Mi4zMDQtNzQuNjUzIDc0LjY1M1oiIC8+PC9zdmc+&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, -4, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 200px; width: 100px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, 0, -0.5);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 200px; width: 100px; height: 8px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDkwIDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, 0, -4);">
+    </div>
+    <div style="position: absolute; left: 100px; top: 0px; width: 1px; height: 200px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, -0.5, 0);">
+    </div>
+    <div style="position: absolute; left: 100px; top: 0px; width: 8px; height: 200px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, -4, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 100px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 1, 0, -0.5);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 100px; height: 8px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDI3MCA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 1, 0, -4);">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, 4); left: -16px; top: -16px; position: absolute; width: 16px; height: 16px; transform-origin: right bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKC00NSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, -4); left: -16px; top: 200px; position: absolute; width: 16px; height: 16px; transform-origin: right top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, -4); left: 100px; top: 200px; position: absolute; width: 16px; height: 16px; transform-origin: left top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, 4); left: 100px; top: -16px; position: absolute; width: 16px; height: 16px; transform-origin: left bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="0"
+         y="0"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -4px; top: -4px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, 4); left: -8px; top: -8px; position: absolute; width: 8px; height: 8px; transform-origin: right bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="0"
+         y="200"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -4px; top: 196px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, 4, -4); left: -8px; top: 200px; position: absolute; width: 8px; height: 8px; transform-origin: right top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="100"
+         y="200"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 96px; top: 196px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, -4); left: 100px; top: 200px; position: absolute; width: 8px; height: 8px; transform-origin: left top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="100"
+         y="0"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 96px; top: -4px; transform: matrix(1, 0, 0, 1, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(1, 0, 0, 1, -4, 4); left: 100px; top: -8px; position: absolute; width: 8px; height: 8px; transform-origin: left bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
     </div>
   </div>
-  <svg viewbox="0 0 100 50"
-       class="cmpui-rect-gizmo--movable-rect"
-       style="position: absolute; width: 100px; height: 50px; transform: rotate(0rad); top: 231px; left: 206px;"
-  >
-    <rect x="0"
-          y="0"
-          width="100"
-          height="50"
-          fill="transparent"
-    >
-    </rect>
-  </svg>
-  <svg width="101"
-       height="1"
-       viewbox="0 0 101 1"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="0.5"
-          x2="100.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="1"
-       height="51"
-       viewbox="0 0 1 51"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 305.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="0.5"
-          x2="0.5"
-          y2="50.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="101"
-       height="1"
-       viewbox="0 0 101 1"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 280.5px;"
-  >
-    <line x1="100.5"
-          y1="0.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="1"
-       height="51"
-       viewbox="0 0 1 51"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="50.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <div x="206"
-       y="231"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 200px; top: 225px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="306"
-       y="231"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 300px; top: 225px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="306"
-       y="281"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 300px; top: 275px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="206"
-       y="281"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 200px; top: 275px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="256"
-       y="219"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 6px; --cmpui-circle-nob-stroke-width: 0px; left: 250px; top: 213px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDAgNDgwIC00ODApIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQ4IiBkPSJNMjkwLjc0LTI5MC4wNDIgMTAwLjc4Mi00ODAgMjkwLjc0LTY2OS45NThsNzQuNTIyIDc0LjY1My02MS43MzkgNjIuMzA0aDM1Mi45NTRsLTYxLjMwNS02Mi44NjkgNzQuMDg4LTc0LjA4OEw4NTkuMjE4LTQ4MCA2NjkuODI2LTI5MC42MDdsLTc0LjY1NC03NC4wODggNjEuMzA1LTYyLjMwNEgzMDIuOTU4bDYyLjQzNSA2Mi4zMDQtNzQuNjUzIDc0LjY1M1oiIC8+PC9zdmc+&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <svg width="1"
-       height="13"
-       viewbox="0 0 1 13"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 255.5px; top: 218.5px;"
-  >
-    <line x1="0.5"
-          y1="12.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
 </div>
 `;
 
-exports[`Controls/RectGizmo NobSize smoke-test 1`] = `
+exports[`Controls/RectGizmo NormalizedSize smoke-test 1`] = `
 <div style="width: 100%; height: 512px; position: relative;">
-  <svg viewbox="0 0 100 50"
-       class="cmpui-rect-gizmo--movable-rect"
-       style="position: absolute; width: 100px; height: 50px; transform: rotate(0rad); top: 231px; left: 206px;"
-  >
-    <rect x="0"
-          y="0"
-          width="100"
-          height="50"
-          fill="transparent"
-    >
-    </rect>
-  </svg>
-  <svg width="101"
-       height="1"
-       viewbox="0 0 101 1"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="0.5"
-          x2="100.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="1"
-       height="51"
-       viewbox="0 0 1 51"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 305.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="0.5"
-          x2="0.5"
-          y2="50.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="101"
-       height="1"
-       viewbox="0 0 101 1"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 280.5px;"
-  >
-    <line x1="100.5"
-          y1="0.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <svg width="1"
-       height="51"
-       viewbox="0 0 1 51"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 205.5px; top: 230.5px;"
-  >
-    <line x1="0.5"
-          y1="50.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
-    >
-    </line>
-  </svg>
-  <div x="206"
-       y="231"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 202px; top: 227px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;"
+  <div class="cmpui_grid__root"
+       style="--cmpui-offset-x: 0px; --cmpui-offset-y: 0px; --cmpui-size-x: 50px; --cmpui-size-y: 50px;"
   >
   </div>
-  <div x="306"
-       y="231"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 302px; top: 227px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="306"
-       y="281"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 302px; top: 277px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="206"
-       y="281"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 202px; top: 277px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <div x="256"
-       y="223"
-       class="cmpui_circle__root"
-       style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: 252px; top: 219px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDAgNDgwIC00ODApIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQ4IiBkPSJNMjkwLjc0LTI5MC4wNDIgMTAwLjc4Mi00ODAgMjkwLjc0LTY2OS45NThsNzQuNTIyIDc0LjY1My02MS43MzkgNjIuMzA0aDM1Mi45NTRsLTYxLjMwNS02Mi44NjkgNzQuMDg4LTc0LjA4OEw4NTkuMjE4LTQ4MCA2NjkuODI2LTI5MC42MDdsLTc0LjY1NC03NC4wODggNjEuMzA1LTYyLjMwNEgzMDIuOTU4bDYyLjQzNSA2Mi4zMDQtNzQuNjUzIDc0LjY1M1oiIC8+PC9zdmc+&quot;) 8 8, ew-resize;"
-  >
-  </div>
-  <svg width="1"
-       height="9"
-       viewbox="0 0 1 9"
-       style="position: absolute; overflow: visible; pointer-events: none; left: 255.5px; top: 222.5px;"
-  >
-    <line x1="0.5"
-          y1="8.5"
-          x2="0.5"
-          y2="0.5"
-          stroke-width="1"
-          stroke="var(--cmpui-primary-color)"
+  <div style="position: absolute; transform-origin: left top; left: 0px; top: 0px; transform: matrix(200, 0, 0, 200, 100, 100); width: 1px; height: 1px;">
+    <div style="left: 0px; height: 100%; box-sizing: border-box; display: flex; justify-content: center; align-items: center;">
+    </div>
+    <div style="position: absolute; pointer-events: none; left: 0.5px; top: 0.5px; transform: matrix(0.005, 0, 0, 0.005, 0, 0);">
+      <div style="position: absolute; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 1px solid var(--cmpui-primary-color); border-radius: 50%;">
+        <div style="position: absolute; width: 1px; height: 16px; background: var(--cmpui-primary-color); left: 7.5px;">
+        </div>
+        <div style="position: absolute; width: 16px; height: 1px; background: var(--cmpui-primary-color); top: 7.5px;">
+        </div>
+      </div>
+    </div>
+    <div style="position: absolute; pointer-events: none; left: 0.5px; top: 0.5px; transform: matrix(0.005, 0, 0, 0.005, 0, 0);">
+      <div style="position: absolute; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 1px solid var(--cmpui-primary-color); border-radius: 50%;">
+        <div style="position: absolute; width: 1px; height: 16px; background: var(--cmpui-primary-color); left: 7.5px;">
+        </div>
+        <div style="position: absolute; width: 16px; height: 1px; background: var(--cmpui-primary-color); top: 7.5px;">
+        </div>
+      </div>
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(0.005, 0, 0, 1, -0.5, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 8px; height: 1px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDAgNDgwIC00ODApIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQ4IiBkPSJNMjkwLjc0LTI5MC4wNDIgMTAwLjc4Mi00ODAgMjkwLjc0LTY2OS45NThsNzQuNTIyIDc0LjY1My02MS43MzkgNjIuMzA0aDM1Mi45NTRsLTYxLjMwNS02Mi44NjkgNzQuMDg4LTc0LjA4OEw4NTkuMjE4LTQ4MCA2NjkuODI2LTI5MC42MDdsLTc0LjY1NC03NC4wODggNjEuMzA1LTYyLjMwNEgzMDIuOTU4bDYyLjQzNSA2Mi4zMDQtNzQuNjUzIDc0LjY1M1oiIC8+PC9zdmc+&quot;) 8 8, ew-resize; transform: matrix(0.005, 0, 0, 1, -4, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 1px; width: 1px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 0.005, 0, -0.5);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 1px; width: 1px; height: 8px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDkwIDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 0.005, 0, -4);">
+    </div>
+    <div style="position: absolute; left: 1px; top: 0px; width: 1px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(0.005, 0, 0, 1, -0.5, 0);">
+    </div>
+    <div style="position: absolute; left: 1px; top: 0px; width: 8px; height: 1px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize; transform: matrix(0.005, 0, 0, 1, -4, 0);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; background: var(--cmpui-primary-color); transform: matrix(1, 0, 0, 0.005, 0, -0.5);">
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 1px; height: 8px; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDI3MCA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize; transform: matrix(1, 0, 0, 0.005, 0, -4);">
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, 0.02, 0.02); left: -16px; top: -16px; position: absolute; width: 16px; height: 16px; transform-origin: right bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKC00NSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, 0.02, -0.02); left: -16px; top: 1px; position: absolute; width: 16px; height: 16px; transform-origin: right top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, -0.02, -0.02); left: 1px; top: 1px; position: absolute; width: 16px; height: 16px; transform-origin: left top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, -0.02, 0.02); left: 1px; top: -16px; position: absolute; width: 16px; height: 16px; transform-origin: left bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="0"
+         y="0"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -4px; top: -4px; transform: matrix(0.005, 0, 0, 0.005, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;"
     >
-    </line>
-  </svg>
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, 0.02, 0.02); left: -8px; top: -8px; position: absolute; width: 8px; height: 8px; transform-origin: right bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDQ4MCAtNDgwKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0OCIgZD0iTTI5MC43NC0yOTAuMDQyIDEwMC43ODItNDgwIDI5MC43NC02NjkuOTU4bDc0LjUyMiA3NC42NTMtNjEuNzM5IDYyLjMwNGgzNTIuOTU0bC02MS4zMDUtNjIuODY5IDc0LjA4OC03NC4wODhMODU5LjIxOC00ODAgNjY5LjgyNi0yOTAuNjA3bC03NC42NTQtNzQuMDg4IDYxLjMwNS02Mi4zMDRIMzAyLjk1OGw2Mi40MzUgNjIuMzA0LTc0LjY1MyA3NC42NTNaIiAvPjwvc3ZnPg==&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="0"
+         y="1"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -4px; top: -3px; transform: matrix(0.005, 0, 0, 0.005, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, 0.02, -0.02); left: -8px; top: 1px; position: absolute; width: 8px; height: 8px; transform-origin: right top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDEzNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="1"
+         y="1"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -3px; top: -3px; transform: matrix(0.005, 0, 0, 0.005, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, -0.02, -0.02); left: 1px; top: 1px; position: absolute; width: 8px; height: 8px; transform-origin: left top; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDIyNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+    <div x="1"
+         y="0"
+         class="cmpui_circle__root"
+         style="--cmpui-circle-nob-fill: var(--cmpui-primary-color); --cmpui-circle-nob-radius: 4px; --cmpui-circle-nob-stroke-width: 0px; left: -3px; top: -4px; transform: matrix(0.005, 0, 0, 0.005, 0, 0); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;"
+    >
+    </div>
+    <div style="transform: matrix(0.005, 0, 0, 0.005, -0.02, 0.02); left: 1px; top: -8px; position: absolute; width: 8px; height: 8px; transform-origin: left bottom; cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjAiIHN0ZERldmlhdGlvbj0iMzIiIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iMSIvPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBzdHlsZT0iZmlsdGVyOnVybCgjc2hhZG93KTsiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA0ODAgLTQ4MCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIGQ9Ik0yOTAuNzQtMjkwLjA0MiAxMDAuNzgyLTQ4MCAyOTAuNzQtNjY5Ljk1OGw3NC41MjIgNzQuNjUzLTYxLjczOSA2Mi4zMDRoMzUyLjk1NGwtNjEuMzA1LTYyLjg2OSA3NC4wODgtNzQuMDg4TDg1OS4yMTgtNDgwIDY2OS44MjYtMjkwLjYwN2wtNzQuNjU0LTc0LjA4OCA2MS4zMDUtNjIuMzA0SDMwMi45NThsNjIuNDM1IDYyLjMwNC03NC42NTMgNzQuNjUzWiIgLz48L3N2Zz4=&quot;) 8 8, ew-resize;">
+    </div>
+  </div>
 </div>
 `;
