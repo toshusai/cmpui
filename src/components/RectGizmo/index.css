@@ -1,7 +1,0 @@
-.cmpui_rect-gizmo__movable-rect {
-  cursor: grab;
-}
-
-.cmpui_rect-gizmo__movable-rect:active {
-  cursor: grabbing;
-}
