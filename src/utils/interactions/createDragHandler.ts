@@ -6,7 +6,7 @@ export type OnMoveHandler<T = undefined> = (
     dy: number;
     deltaX: number;
     deltaY: number;
-  },
+  }
 ) => void;
 
 export function createDragHandler<T>({
@@ -23,16 +23,18 @@ export function createDragHandler<T>({
   onUp?: (e: PointerEvent, ctx?: T, moveEvent?: PointerEvent) => void;
   options?: {
     disableCapture?: boolean;
+    pointerMoveOnWindow?: boolean;
   };
 }) {
   const handlePointerDown = (
-    downEvent: React.PointerEvent<HTMLElement | SVGElement>,
+    downEvent: React.PointerEvent<HTMLElement | SVGElement>
   ) => {
     if (downEvent.button !== 0) return;
     const el = downEvent.currentTarget;
 
     const result = onDown?.(downEvent);
     let prevEvent: PointerEvent | undefined = undefined;
+    const moveTarget = options?.pointerMoveOnWindow ? window : el;
     const handlePointerMove = (e: Event) => {
       if (!(e instanceof PointerEvent)) return;
       if (result === false) return;
@@ -50,7 +52,7 @@ export function createDragHandler<T>({
     const handlePointerUp = (e: Event) => {
       if (!(e instanceof PointerEvent)) return;
       if (result === false) return;
-      el.removeEventListener("pointermove", handlePointerMove);
+      moveTarget.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerup", handlePointerUp);
       if (options?.disableCapture !== true) {
         el.releasePointerCapture(e.pointerId);
@@ -63,7 +65,7 @@ export function createDragHandler<T>({
     if (options?.disableCapture !== true) {
       el.setPointerCapture(downEvent.pointerId);
     }
-    el.addEventListener("pointermove", handlePointerMove, {
+    moveTarget.addEventListener("pointermove", handlePointerMove, {
       passive: false,
     });
     window.addEventListener("pointerup", handlePointerUp);

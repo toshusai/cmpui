@@ -25,6 +25,7 @@ export function useSelectRectHandler() {
     () =>
       createDragHandler({
         onDown: (e) => {
+          e.preventDefault();
           const el = e.currentTarget as HTMLElement;
           const rect = el.getBoundingClientRect();
           return {
@@ -60,9 +61,10 @@ export function useSelectRectHandler() {
         },
         options: {
           disableCapture: true,
+          pointerMoveOnWindow: true,
         },
       }),
-    [],
+    []
   );
 
   return {
