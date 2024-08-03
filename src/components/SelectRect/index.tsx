@@ -64,7 +64,7 @@ export function useSelectRectHandler() {
           pointerMoveOnWindow: true,
         },
       }),
-    []
+    [],
   );
 
   return {
