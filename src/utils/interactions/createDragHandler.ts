@@ -6,7 +6,7 @@ export type OnMoveHandler<T = undefined> = (
     dy: number;
     deltaX: number;
     deltaY: number;
-  }
+  },
 ) => void;
 
 export function createDragHandler<T>({
@@ -27,7 +27,7 @@ export function createDragHandler<T>({
   };
 }) {
   const handlePointerDown = (
-    downEvent: React.PointerEvent<HTMLElement | SVGElement>
+    downEvent: React.PointerEvent<HTMLElement | SVGElement>,
   ) => {
     if (downEvent.button !== 0) return;
     const el = downEvent.currentTarget;
