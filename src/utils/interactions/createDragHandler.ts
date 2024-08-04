@@ -23,6 +23,7 @@ export function createDragHandler<T>({
   onUp?: (e: PointerEvent, ctx?: T, moveEvent?: PointerEvent) => void;
   options?: {
     disableCapture?: boolean;
+    pointerMoveOnWindow?: boolean;
   };
 }) {
   const handlePointerDown = (
@@ -33,6 +34,7 @@ export function createDragHandler<T>({
 
     const result = onDown?.(downEvent);
     let prevEvent: PointerEvent | undefined = undefined;
+    const moveTarget = options?.pointerMoveOnWindow ? window : el;
     const handlePointerMove = (e: Event) => {
       if (!(e instanceof PointerEvent)) return;
       if (result === false) return;
@@ -50,7 +52,7 @@ export function createDragHandler<T>({
     const handlePointerUp = (e: Event) => {
       if (!(e instanceof PointerEvent)) return;
       if (result === false) return;
-      el.removeEventListener("pointermove", handlePointerMove);
+      moveTarget.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerup", handlePointerUp);
       if (options?.disableCapture !== true) {
         el.releasePointerCapture(e.pointerId);
@@ -63,7 +65,7 @@ export function createDragHandler<T>({
     if (options?.disableCapture !== true) {
       el.setPointerCapture(downEvent.pointerId);
     }
-    el.addEventListener("pointermove", handlePointerMove, {
+    moveTarget.addEventListener("pointermove", handlePointerMove, {
       passive: false,
     });
     window.addEventListener("pointerup", handlePointerUp);
