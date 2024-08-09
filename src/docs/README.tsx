@@ -1,14 +1,12 @@
 import { memo, useCallback, useEffect, useRef, useState } from "react";
-import { Button, ColorInput, Grid, RectGizmo } from "..";
+import { Button, ColorInput, Grid, RectGizmo, Vector2 } from "..";
 import { HSVA, hexToHsv, hsvaToRgba, rgbaToCss } from "../utils/colors";
 
 import "./README.css";
 
 const WIDTH = 128;
 const HEIGHT = 30;
-export function README(props: {
-  children?: React.ReactNode;
-}) {
+export function README(props: { children?: React.ReactNode }) {
   const [points, setPoints] = useState({
     x: 0,
     y: 0,
@@ -19,6 +17,8 @@ export function README(props: {
   const [init, setInit] = useState(false);
 
   const h1Ref = useRef<HTMLHeadingElement>(null);
+
+  const [scale, setScale] = useState(new Vector2(1, 1));
 
   useEffect(() => {
     if (init) {
@@ -58,9 +58,7 @@ export function README(props: {
                   left: points.x - WIDTH / 2,
                   width: WIDTH,
                   height: HEIGHT,
-                  transform: `rotate(${points.angle}rad) scale(${
-                    points.width / WIDTH
-                  }, ${points.height / HEIGHT})`,
+                  transform: `rotate(${points.angle}rad) scale(${scale.x}, ${scale.y})`,
 
                   pointerEvents: "none",
                   position: "absolute",
@@ -111,16 +109,36 @@ export function README(props: {
           angle={points.angle}
           height={points.height}
           width={points.width}
-          x={points.x}
-          y={points.y}
-          onMove={(args) => {
-            setPoints((points) => ({
+          origin={{ x: points.width / 2, y: points.height / 2 }}
+          setPosition={(point) => {
+            setPoints({
               ...points,
-              ...args,
+              ...point,
+            });
+          }}
+          canResize
+          canRotate
+          scaleX={scale.x}
+          scaleY={scale.y}
+          setScaleX={(scaleX) => {
+            setScale((prev) => ({
+              x: scaleX,
+              y: prev.y,
             }));
           }}
-          isResizable
-          isRotatable
+          setScaleY={(scaleY) => {
+            setScale((prev) => ({
+              x: prev.x,
+              y: scaleY,
+            }));
+          }}
+          onChangeAngle={(angle) => {
+            setPoints({
+              ...points,
+              angle,
+            });
+          }}
+          position={points}
         />
       )}
     </>

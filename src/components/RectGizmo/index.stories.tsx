@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { RectGizmo } from ".";
+import { Grid } from "../Grid";
 
 const meta: Meta<typeof RectGizmo> = {
   title: "Controls/RectGizmo",
@@ -15,13 +16,13 @@ type Story = StoryObj<typeof RectGizmo>;
 
 export const Basic: Story = {
   render: function Render() {
-    const [points, setPoints] = useState({
-      x: 256,
-      y: 256,
-      width: 100,
-      height: 50,
-      angle: 0,
-    });
+    const origin = { x: 50, y: 50 };
+
+    const [position, setPosition] = useState({ x: 200, y: 200 });
+
+    const [scaleX, setScaleX] = useState(1);
+    const [scaleY, setScaleY] = useState(1);
+    const [angle, setAngle] = useState(0);
     return (
       <div
         style={{
@@ -30,35 +31,37 @@ export const Basic: Story = {
           position: "relative",
         }}
       >
+        <Grid sizeX={50} sizeY={50} offsetX={0} offsetY={0} />
         <RectGizmo
-          angle={points.angle}
-          width={points.width}
-          height={points.height}
-          x={points.x}
-          y={points.y}
-          onMove={(args) => {
-            setPoints({
-              ...points,
-              ...args,
-            });
-          }}
-          isResizable
-          isRotatable
+          angle={angle}
+          onChangeAngle={setAngle}
+          position={position}
+          origin={origin}
+          scaleX={scaleX}
+          setScaleX={setScaleX}
+          scaleY={scaleY}
+          setScaleY={setScaleY}
+          width={100}
+          height={200}
+          setPosition={setPosition}
+          canResize
+          canRotate
+          showOrigin
         />
       </div>
     );
   },
 };
 
-export const NobSize: Story = {
+export const NormalizedSize: Story = {
   render: function Render() {
-    const [points, setPoints] = useState({
-      x: 256,
-      y: 256,
-      width: 100,
-      height: 50,
-      angle: 0,
-    });
+    const origin = { x: 0.5, y: 0.5 };
+
+    const [position, setPosition] = useState({ x: 200, y: 200 });
+
+    const [scaleX, setScaleX] = useState(200);
+    const [scaleY, setScaleY] = useState(200);
+    const [angle, setAngle] = useState(0);
     return (
       <div
         style={{
@@ -67,36 +70,35 @@ export const NobSize: Story = {
           position: "relative",
         }}
       >
+        <Grid sizeX={50} sizeY={50} offsetX={0} offsetY={0} />
         <RectGizmo
-          angle={points.angle}
-          width={points.width}
-          height={points.height}
-          x={points.x}
-          y={points.y}
-          nobRadius={4}
-          onMove={(args) => {
-            setPoints({
-              ...points,
-              ...args,
-            });
-          }}
-          isResizable
-          isRotatable
+          angle={angle}
+          onChangeAngle={setAngle}
+          position={position}
+          origin={origin}
+          scaleX={scaleX}
+          setScaleX={setScaleX}
+          scaleY={scaleY}
+          setScaleY={setScaleY}
+          width={1}
+          height={1}
+          setPosition={setPosition}
+          canResize
+          canRotate
+          showOrigin
         />
       </div>
     );
   },
 };
 
-export const Debug: Story = {
+export const CornerOrigin: Story = {
   render: function Render() {
-    const [points, setPoints] = useState({
-      x: 256,
-      y: 256,
-      width: 100,
-      height: 50,
-      angle: 0,
-    });
+    const origin = { x: 0, y: 0 };
+    const [position, setPosition] = useState({ x: 200, y: 200 });
+    const [scaleX, setScaleX] = useState(1);
+    const [scaleY, setScaleY] = useState(1);
+    const [angle, setAngle] = useState(0);
     return (
       <div
         style={{
@@ -105,47 +107,22 @@ export const Debug: Story = {
           position: "relative",
         }}
       >
-        <div
-          className="cmpui_mono"
-          style={{
-            position: "absolute",
-            fontFamily:
-              'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-            top: points.y - Math.abs(points.height) / 2,
-            left: points.x - Math.abs(points.width) / 2,
-            padding: 8,
-            boxSizing: "border-box",
-            width: Math.abs(points.width),
-            height: Math.abs(points.height),
-            background: "rgba(0, 0, 0, 0.5)",
-            transform: `rotate(${points.angle}rad) scale(${
-              points.width > 0 ? 1 : -1
-            }, ${points.height > 0 ? 1 : -1})`,
-            transformOrigin: "center",
-            color: "white",
-            whiteSpace: "nowrap",
-          }}
-        >
-          <div>x: {points.x.toFixed(2)}</div>
-          <div>y: {points.y.toFixed(2)}</div>
-          <div>w: {points.width.toFixed(2)}</div>
-          <div>h: {points.height.toFixed(2)}</div>
-          <div>a: {points.angle.toFixed(2)}</div>
-        </div>
+        <Grid sizeX={50} sizeY={50} offsetX={0} offsetY={0} />
         <RectGizmo
-          angle={points.angle}
-          width={points.width}
-          height={points.height}
-          x={points.x}
-          y={points.y}
-          onMove={(args) => {
-            setPoints({
-              ...points,
-              ...args,
-            });
-          }}
-          isResizable
-          isRotatable
+          angle={angle}
+          onChangeAngle={setAngle}
+          setPosition={setPosition}
+          position={position}
+          origin={origin}
+          scaleX={scaleX}
+          setScaleX={setScaleX}
+          scaleY={scaleY}
+          setScaleY={setScaleY}
+          width={100}
+          height={200}
+          canResize
+          canRotate
+          showOrigin
         />
       </div>
     );

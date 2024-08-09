@@ -1,11 +1,8 @@
 import { RectGizmoProps } from "..";
 import { Vector2, createDragHandler, rotateVector } from "../../../utils";
+import { corners } from "../corners";
 
-export function createResizeHandler(
-  props: RectGizmoProps,
-  w: 0 | 1 = 0,
-  h: 0 | 1 = 0,
-) {
+export function createEdgeHandler(props: RectGizmoProps, w: 0 | 1, h: 0 | 1) {
   return createDragHandler({
     onDown() {
       const originRateX = props.origin.x / props.width;
@@ -55,10 +52,14 @@ export function createResizeHandler(
       const scaleY =
         (DY + originToCornerWithoutScale.y) / originToCornerWithoutScale.y;
 
-      if (Number.isFinite(scaleX)) {
+      if (
+        (w === corners[0][0] && h === corners[0][1]) ||
+        (w === corners[2][0] && h === corners[2][1])
+      ) {
+        if (!Number.isFinite(scaleX)) return;
         props.setScaleX?.(scaleX);
-      }
-      if (Number.isFinite(scaleY)) {
+      } else {
+        if (!Number.isFinite(scaleY)) return;
         props.setScaleY?.(scaleY);
       }
     },
