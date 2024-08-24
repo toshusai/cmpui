@@ -1,0 +1,28 @@
+{
+  "name": "@toshusai/cmpui-css",
+  "version": "1.0.0-alpha.8",
+  "description": "CmpUI is a component library designed for creating complex GUI applications in web browsers.",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "scripts": {
+   "build": "tsup",
+   "dev": "tsup --watch"
+ },
+  "dependencies": {
+  },
+  "peerDependencies": {
+
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "components",
+    "ui",
+    "gui"
+  ],
+  "author": "toshusai",
+  "license": "MIT"
+}

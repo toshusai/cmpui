@@ -2,8 +2,6 @@ import { forwardRef } from "react";
 import { CustomJSXElement } from "../../types/CustomJSXElement";
 import { classNames } from "../../utils/classNames";
 
-import "./index.css";
-
 export type ButtonProps<T extends CustomJSXElement = "button"> = {
   as?: T;
   size?: "S" | "M";
