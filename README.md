@@ -1,8 +1,6 @@
 # Cmp UI
 
-![CmpUI](image.png)
-
-[![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)]()
+![CmpUI](./packages/react/image.png)
 
 **This project is still in the early stage of development.**
 
@@ -11,6 +9,14 @@ CmpUI is a component library designed for creating complex GUI applications in w
 - [Docs](https://toshusai.github.io/cmpui/iframe.html?args=&id=readme--documentation&viewMode=docs)
 
 - [Demo project](https://toshusai.github.io/yeti) / [Repository of the demo](https://github.com/toshusai/yeti)
+
+# Packages
+
+| package name        | framework | support            | NPM                                                                                                               |
+| ------------------- | --------- | ------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| @toshusai/cmpui-css | CSS       | :construction:     |                                                                                                                   |
+| @toshusai/cmpui     | React     | :white_check_mark: |                                                                                                                   |
+| @toshusai/cmpui-vue | Vue       | :construction:     | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui) |
 
 ## Installation
 
@@ -22,7 +28,7 @@ npm install @toshusai/cmpui
 
 ```tsx
 import { Button } from "@toshusai/cmpui";
-import "@toshusai/cmpui/dist/index.css";
+import "@toshusai/cmpui-css/dist/index.css";
 
 export default function App() {
   return (
