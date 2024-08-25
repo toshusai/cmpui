@@ -11,9 +11,10 @@
   "devDependencies": {
     "tsup": "^8.0.1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
-    "react",
-    "typescript",
     "components",
     "ui",
     "gui"
