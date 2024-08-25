@@ -2,7 +2,7 @@ name: Publish
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -19,6 +19,6 @@ jobs:
       - run: pnpm -r typecheck
       - run: pnpm -r test
       - run: pnpm -r build
-      - run: pnpm yarn lerna publish from-git --yes --no-private
+      - run: pnpm yarn lerna publish from-git --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
