@@ -1,9 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { CanvasView, CanvasViewProps } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { createKeyDownUpHandler } from "../../utils/interactions/createKeyDownUpHandler";
-import { View } from "./View";
+
 import { ViewMode } from "./ViewMode";
+import { View } from "./View";
+
+import { CanvasView, CanvasViewProps } from ".";
 
 import "../../styles/alpha-checker-board.css";
 

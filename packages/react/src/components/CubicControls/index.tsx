@@ -1,8 +1,10 @@
 import { useCallback, useMemo } from "react";
+
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
 import { Circle } from "../Circle";
 import { Line } from "../Line";
 import { Path } from "../Path";
+
 import { Command, CubicCommand, MoveCommand } from "./CubicCommand";
 
 import "./index.css";

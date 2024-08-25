@@ -1,11 +1,12 @@
-import type { Decorator, Preview } from "@storybook/react";
-import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { useEffect } from "react";
 import React from "react";
+import { DocsContainer } from "@storybook/blocks";
+import type { Decorator, Preview } from "@storybook/react";
+
+import DocumentationTemplate from "./DocumentationTemplate.mdx";
 
 import "@toshusai/cmpui-css/dist/index.css";
 import "./storybook.css";
-import { DocsContainer } from "@storybook/blocks";
 
 const preview: Preview = {
   parameters: {

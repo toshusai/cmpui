@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useMemo, useState } from "react";
-import { ColorSlider } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { hsvToRgb } from "../../utils/colors/hsvToRgb";
+
+import { ColorSlider } from ".";
 
 const meta: Meta<typeof ColorSlider> = {
   title: "Colors/ColorSlider",

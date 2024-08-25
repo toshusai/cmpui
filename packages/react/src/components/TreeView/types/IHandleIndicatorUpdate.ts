@@ -1,4 +1,5 @@
 import { ITree } from "../../../types";
+
 import { OrderType } from "./OrderType";
 
 export type IHandleIndicatorUpdate = (

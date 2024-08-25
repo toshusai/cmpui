@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useEffect, useState } from "react";
-import { Select } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { SelectItem } from "./SelectItem";
+
+import { Select } from ".";
 
 const meta: Meta<typeof Select> = {
   title: "Form/Select",

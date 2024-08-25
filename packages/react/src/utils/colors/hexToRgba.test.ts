@@ -1,4 +1,5 @@
 import { expect, test } from "vitest";
+
 import { hexToRgba } from "./hexToRgba";
 
 test("HEX to RGB", () => {

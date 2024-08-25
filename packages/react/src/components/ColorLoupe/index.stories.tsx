@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { ColorLoupe } from ".";
 
 const meta: Meta<typeof ColorLoupe> = {

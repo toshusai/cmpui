@@ -1,5 +1,6 @@
-import * as Dialog from "@radix-ui/react-dialog";
 import React from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+
 import { classNames } from "../../utils/classNames";
 import { FloatBox } from "../FloatBox";
 import { IconButton } from "../IconButton";

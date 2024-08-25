@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useEffect, useState } from "react";
-import { Ruler } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
+
+import { Ruler } from ".";
 
 const meta: Meta<typeof Ruler> = {
   title: "View/Ruler",

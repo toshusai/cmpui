@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { SliderNumberField } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { TextInput } from "../TextInput";
+
+import { SliderNumberField } from ".";
 
 const meta: Meta<typeof SliderNumberField> = {
   title: "Form/SliderNumberField",

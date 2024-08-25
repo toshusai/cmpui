@@ -1,10 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MenuBarButton } from ".";
+
 import { ShortcutListItem } from "../../__stories__/ShortcutListItem";
+
 import { MenuBar } from "./MenuBar";
 import { MenuBarItem } from "./MenuBarItem";
 import { MenuBarSeparator } from "./MenuBarSeparator";
 import { MenuBarSubButton } from "./MenuBarSubButton";
+
+import { MenuBarButton } from ".";
 
 const meta: Meta<typeof MenuBarButton> = {
   title: "Float/MenuBarButton",

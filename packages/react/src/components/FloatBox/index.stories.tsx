@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { FloatBox } from ".";
+
 import { ShortcutListItem } from "../../__stories__/ShortcutListItem";
+
+import { FloatBox } from ".";
 
 const meta: Meta<typeof FloatBox> = {
   title: "Float/FloatBox",

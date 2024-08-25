@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+
 import { CheckSVG } from "./CheckSVG";
 
 export type CheckboxProps = {

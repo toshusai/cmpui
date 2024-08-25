@@ -1,8 +1,10 @@
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Tooltip, TooltipPresenter } from ".";
+
 import { Button } from "../Button";
 import { IconButton } from "../IconButton";
+
+import { Tooltip, TooltipPresenter } from ".";
 
 const meta: Meta<typeof Tooltip> = {
   title: "Float/Tooltip",

@@ -1,5 +1,6 @@
 import { ITree } from "../../../types";
 import { OrderType } from "../types/OrderType";
+
 import { inChildren } from "./inChildren";
 
 export function defaultIndicatorUpdate(

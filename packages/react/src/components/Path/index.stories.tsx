@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { Path } from ".";
 
 const meta: Meta<typeof Path> = {

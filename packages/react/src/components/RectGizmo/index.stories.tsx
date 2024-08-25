@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { RectGizmo } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { Grid } from "../Grid";
+
+import { RectGizmo } from ".";
 
 const meta: Meta<typeof RectGizmo> = {
   title: "Controls/RectGizmo",

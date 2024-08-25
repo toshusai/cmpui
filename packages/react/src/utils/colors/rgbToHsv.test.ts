@@ -1,4 +1,5 @@
 import { expect, test } from "vitest";
+
 import { rgbToHsv } from "./rgbToHsv";
 
 test("RGB TO HSV", () => {

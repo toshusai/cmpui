@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { Switch } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { Icon } from "../../__stories__/Icon";
+
+import { Switch } from ".";
 
 const meta: Meta<typeof Switch> = {
   title: "Form/Switch",

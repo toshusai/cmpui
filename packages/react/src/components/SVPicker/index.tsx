@@ -1,4 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
+
 import { hsvToRgb } from "../../utils/colors/hsvToRgb";
 import { rgbToCss } from "../../utils/colors/rgbToCss";
 import { useHighContrastColor } from "../../utils/colors/useHighContrastColor";
@@ -7,6 +8,7 @@ import { useKeyDownStartEnd } from "../../utils/interactions/useKeyDownStartEnd"
 import { clamp } from "../../utils/math/clamp";
 import { Circle } from "../Circle";
 import { ColorLoupe } from "../ColorLoupe";
+
 import { SVCanvas } from "./lib/SVCanvas";
 
 import "./index.css";

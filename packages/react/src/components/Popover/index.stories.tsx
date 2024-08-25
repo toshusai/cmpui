@@ -1,9 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useCallback, useState } from "react";
-import { Popover } from ".";
+
 import { Button } from "../Button";
 import { SliderNumberField } from "../SliderNumberField";
 import { TextInput } from "../TextInput";
+
+import { Popover } from ".";
 
 const meta: Meta<typeof Popover> = {
   title: "Float/Popover",

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { Line } from ".";
 
 const meta: Meta<typeof Line> = {

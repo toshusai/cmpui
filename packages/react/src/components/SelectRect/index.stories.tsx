@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { SelectRect, useSelectRectHandler } from ".";
 
 const meta: Meta<typeof SelectRect> = {

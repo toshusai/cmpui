@@ -1,9 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useCallback, useState } from "react";
-import { Modal } from ".";
+
 import { Button } from "../Button";
 import { SliderNumberField } from "../SliderNumberField";
 import { TextInput } from "../TextInput";
+
+import { Modal } from ".";
 
 const meta: Meta<typeof Modal> = {
   title: "Float/Modal",

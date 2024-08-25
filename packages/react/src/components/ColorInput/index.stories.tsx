@@ -1,7 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { ColorInput } from ".";
+
 import { hexToHsv } from "../../utils/colors/hexToHsv";
+
+import { ColorInput } from ".";
 
 const meta: Meta<typeof ColorInput> = {
   title: "Colors/ColorInput",

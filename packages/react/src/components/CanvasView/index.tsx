@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
 import { useAddEventListener } from "../../utils/interactions/useAddEventListener";
-import { View } from "./View";
+
 import { ViewMode } from "./ViewMode";
+import { View } from "./View";
 
 import "./index.css";
 

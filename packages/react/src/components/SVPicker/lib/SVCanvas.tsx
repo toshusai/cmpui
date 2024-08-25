@@ -1,8 +1,10 @@
 import { memo, useEffect, useMemo, useRef } from "react";
+
 import { SVPickerProps } from "..";
 import { createDragHandler } from "../../../utils/interactions/createDragHandler";
 import { useTouchStartPrevent } from "../../../utils/interactions/useTouchStartPrevent";
 import { clamp } from "../../../utils/math/clamp";
+
 import { drawSV } from "./drawSV";
 
 export const SVCanvas = memo(function SVCanvas(

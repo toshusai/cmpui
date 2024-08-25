@@ -1,5 +1,7 @@
 import React, { forwardRef } from "react";
+
 import { mergeRefs } from "../../utils/mergeRefs";
+
 import { useSplitPane } from "./useSplitPane";
 
 import "./index.css";

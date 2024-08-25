@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { IconButton } from ".";
+
 import { Icon } from "../../__stories__/Icon";
+
 import { IconButtonGroup } from "./IconButtonGroup";
+
+import { IconButton } from ".";
 
 const meta: Meta<typeof IconButton> = {
   title: "Actions/IconButton",

@@ -1,4 +1,5 @@
 import { expect, test } from "vitest";
+
 import { hexToHsv } from "./hexToHsv";
 
 test("HEX to HSV", () => {

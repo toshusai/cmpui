@@ -1,4 +1,5 @@
 import * as RadixToast from "@radix-ui/react-toast";
+
 import { FloatBox } from "../FloatBox";
 
 import "./index.css";

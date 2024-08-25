@@ -1,8 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useCallback, useState } from "react";
-import { ColorPickerCircle } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { HSVA } from "../..";
 import { hexToHsv } from "../../utils/colors/hexToHsv";
+
+import { ColorPickerCircle } from ".";
 
 const meta: Meta<typeof ColorPickerCircle> = {
   title: "Colors/ColorPickerCircle",

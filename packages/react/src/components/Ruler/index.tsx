@@ -1,7 +1,9 @@
 import { forwardRef, memo, useMemo } from "react";
-import { classNames } from "../../utils/classNames";
-import { useRectResizeObserver } from "../../utils/interactions/useRectResizeObserver";
+
 import { mergeRefs } from "../../utils/mergeRefs";
+import { useRectResizeObserver } from "../../utils/interactions/useRectResizeObserver";
+import { classNames } from "../../utils/classNames";
+
 import { TimeText } from "./TimeText";
 import { defaultRenderText } from "./defaultRenderText";
 import { defaultSteps } from "./defaultSteps";

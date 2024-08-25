@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { List, ListItem } from ".";
+
 import { FloatBox } from "../FloatBox";
+
+import { List, ListItem } from ".";
 
 const meta: Meta<typeof ListItem> = {
   title: "View/ListItem",

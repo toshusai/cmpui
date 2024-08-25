@@ -1,4 +1,5 @@
 import { expect, test } from "vitest";
+
 import { isEvalSafe } from "./isEvalSafe";
 
 test("sEvalSafe returns true for safe expressions", () => {

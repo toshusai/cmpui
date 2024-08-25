@@ -1,8 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { SplitPane } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { Panel } from "../../__stories__/Panel";
 import { Root } from "../../__stories__/Root";
+
+import { SplitPane } from ".";
 
 const meta: Meta<typeof SplitPane> = {
   title: "Layout/SplitPane",

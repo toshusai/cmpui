@@ -1,9 +1,11 @@
 import { forwardRef, memo, useCallback, useMemo, useState } from "react";
+
 import { classNames } from "../..";
 import { TextInput } from "../TextInput";
 import { createWindowDragHandler } from "../TreeView/lib/createWindowDragHandler";
-import { inputEval } from "./lib/inputEval";
+
 import { parseCursorStyle } from "./lib/parseCursorStyle";
+import { inputEval } from "./lib/inputEval";
 
 import "./index.css";
 

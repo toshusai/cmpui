@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import { Command } from "../CubicControls/CubicCommand";
 
 export type PathProps = {
