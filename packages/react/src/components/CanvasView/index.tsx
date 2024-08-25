@@ -25,8 +25,6 @@ export type CanvasViewProps = {
 } & Omit<React.HTMLAttributes<HTMLDivElement>, "onChange" | "content">;
 
 export function CanvasView({
-  mouseZoomScale = 0.04,
-  trackPadZoomScale = -0.02,
   trackPadMoveScaleX = 1,
   trackPadMoveScaleY = 1,
   pointerDownZoomScale = 100,

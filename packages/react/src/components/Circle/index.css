@@ -12,6 +12,7 @@
     calc(-1 * var(--cmpui-circle-nob-radius)),
     calc(-1 * var(--cmpui-circle-nob-radius))
   ); */
-  border: var(--cmpui-circle-nob-stroke-width) solid var(--cmpui-circle-nob-stroke-color);
+  border: var(--cmpui-circle-nob-stroke-width) solid
+    var(--cmpui-circle-nob-stroke-color);
   box-sizing: border-box;
 }

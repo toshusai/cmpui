@@ -23,29 +23,28 @@ export function CubicControls({ prev, cubic, onChange }: CubicControlsProps) {
     y: prev.y,
   };
 
-  const getPointerDownHandler = useCallback((
-    x: number,
-    y: number,
-    onChange: (x: number, y: number) => void,
-  ) => {
-    return createDragHandler({
-      onDown: (e) => {
-        return {
-          x: e.clientX,
-          y: e.clientY,
-        };
-      },
-      onMove: (e, ctx) => {
-        if (!ctx) return;
-        const dx = e.clientX - ctx.x;
-        const dy = e.clientY - ctx.y;
+  const getPointerDownHandler = useCallback(
+    (x: number, y: number, onChange: (x: number, y: number) => void) => {
+      return createDragHandler({
+        onDown: (e) => {
+          return {
+            x: e.clientX,
+            y: e.clientY,
+          };
+        },
+        onMove: (e, ctx) => {
+          if (!ctx) return;
+          const dx = e.clientX - ctx.x;
+          const dy = e.clientY - ctx.y;
 
-        const x1 = x + dx;
-        const y1 = y + dy;
-        onChange(x1, y1);
-      },
-    });
-  }, []);
+          const x1 = x + dx;
+          const y1 = y + dy;
+          onChange(x1, y1);
+        },
+      });
+    },
+    [],
+  );
 
   const handleP1 = useMemo(() => {
     return getPointerDownHandler(x1, y1, (x1, y1) => {

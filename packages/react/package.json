@@ -8,12 +8,16 @@
     "typecheck": "tsc -p tsconfig.ci.json",
     "test:watch": "vitest",
     "test": "vitest run",
-    "biome:check": "biome check src",
     "build": "tsup",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "storybook:test": "test-storybook",
-    "storybook:test:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"pnpm storybook:build && npx http-server storybook-static --port 6006 --silent\" \"wait-on http://127.0.0.1:6006 && pnpm storybook:test\""
+    "storybook:test:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"pnpm storybook:build && npx http-server storybook-static --port 6006 --silent\" \"wait-on http://127.0.0.1:6006 && pnpm storybook:test\"",
+    "format": "prettier .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "fix": "npm run format:fix && npm run lint:fix"
   },
   "dependencies": {
     "@radix-ui/react-context-menu": "^2.1.5",
@@ -31,7 +35,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.4.1",
     "@playwright/test": "^1.41.2",
     "@storybook/addon-essentials": "8.2.6",
     "@storybook/addon-interactions": "8.2.6",
@@ -49,6 +52,8 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "concurrently": "^8.2.2",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "8.2.6",

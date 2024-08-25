@@ -4,15 +4,9 @@ import { Command } from "../CubicControls/CubicCommand";
 export type PathProps = {
   commands: Command[];
   onClickCurve?: (event: React.MouseEvent<SVGPathElement>) => void;
-  onChange?: (commands: Command[]) => void;
 } & Omit<React.SVGProps<SVGSVGElement>, "onChange">;
 
-export function Path({
-  commands,
-  onClickCurve,
-  onChange,
-  ...props
-}: PathProps) {
+export function Path({ commands, onClickCurve, ...props }: PathProps) {
   const ref = React.useRef<SVGSVGElement>(null);
   const [x, setX] = React.useState(0);
   const [y, setY] = React.useState(0);

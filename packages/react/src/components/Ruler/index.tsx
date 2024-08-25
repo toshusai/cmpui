@@ -37,8 +37,8 @@ export const Ruler = memo(
     ) => {
       const [rect, ref] = useRectResizeObserver();
 
-
-      const length  =(orientation === "horizontal" ? rect?.width : rect?.height) ?? 0;
+      const length =
+        (orientation === "horizontal" ? rect?.width : rect?.height) ?? 0;
 
       const steps = useMemo(
         () =>
@@ -63,7 +63,6 @@ export const Ruler = memo(
         [pxPerUnit, minInterval, propsSteps, length, offset],
       );
 
-
       return (
         <div
           className={classNames("cmpui_ruler__root", className)}
@@ -77,7 +76,7 @@ export const Ruler = memo(
           {subSteps.map((v) => {
             return (
               <div
-              data-orientation={orientation}
+                data-orientation={orientation}
                 className="cmpui_ruler__point"
                 key={v}
                 style={{

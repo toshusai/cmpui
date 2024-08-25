@@ -24,9 +24,11 @@
     "build": "npm run typecheck && vite build && vue-tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "format": "prettier --write .",
-    "lint": "eslint --fix .",
-    "fix": "npm run format && npm run lint"
+    "format": "prettier .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "fix": "npm run format:fix && npm run lint:fix"
   },
   "dependencies": {
     "@toshusai/cmpui-css": "link:../css"

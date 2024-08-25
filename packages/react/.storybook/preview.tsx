@@ -3,7 +3,7 @@ import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { useEffect } from "react";
 import React from "react";
 
-import "@toshusai/cmpui-css/dist/index.css"
+import "@toshusai/cmpui-css/dist/index.css";
 import "./storybook.css";
 import { DocsContainer } from "@storybook/blocks";
 
