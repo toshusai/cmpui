@@ -1,5 +1,6 @@
 {
-  "name": "@toshusai/cmpui",
+  "name": "@toshusai/cmpui-monorepo",
+  "private": true,
   "version": "1.0.0-alpha.8",
   "description": "CmpUI is a component library designed for creating complex GUI applications in web browsers.",
   "main": "dist/index.mjs",
@@ -15,7 +16,9 @@
     "storybook:test": "test-storybook",
     "storybook:test:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"pnpm storybook:build && npx http-server storybook-static --port 6006 --silent\" \"wait-on http://127.0.0.1:6006 && pnpm storybook:test\""
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "lerna": "^8.1.8"
+  },
   "keywords": [
     "react",
     "typescript",
@@ -24,5 +27,6 @@
     "gui"
   ],
   "author": "toshusai",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
