@@ -29,7 +29,9 @@
     "fix": "npm run format && npm run lint"
   },
   "dependencies": {
-    "@toshusai/cmpui-css": "link:../css",
+    "@toshusai/cmpui-css": "link:../css"
+  },
+  "peerDependencies": {
     "vue": "^3.4.38"
   },
   "devDependencies": {
