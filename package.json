@@ -2,25 +2,13 @@
   "name": "@toshusai/cmpui-monorepo",
   "private": true,
   "version": "1.0.0-alpha.13",
-  "description": "CmpUI is a component library designed for creating complex GUI applications in web browsers.",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
-  "scripts": {
-    "typecheck": "tsc -p tsconfig.ci.json",
-    "test:watch": "vitest",
-    "test": "vitest run",
-    "biome:check": "biome check src",
-    "build": "tsup",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build",
-    "storybook:test": "test-storybook",
-    "storybook:test:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"pnpm storybook:build && npx http-server storybook-static --port 6006 --silent\" \"wait-on http://127.0.0.1:6006 && pnpm storybook:test\""
-  },
+  "scripts": {},
   "devDependencies": {
     "lerna": "^8.1.8"
   },
   "keywords": [
-    "react",
     "typescript",
     "components",
     "ui",
