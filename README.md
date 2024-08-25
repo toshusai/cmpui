@@ -12,11 +12,11 @@ CmpUI is a component library designed for creating complex GUI applications in w
 
 # Packages
 
-| package name        | framework | support            | NPM                                                                                                               |
-| ------------------- | --------- | ------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| @toshusai/cmpui-css | CSS       | :construction:     |                                                                                                                   |
-| @toshusai/cmpui     | React     | :white_check_mark: |                                                                                                                   |
-| @toshusai/cmpui-vue | Vue       | :construction:     | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui) |
+| package name        | framework | support            | NPM                                                                                                                   |
+| ------------------- | --------- | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| @toshusai/cmpui-css | CSS       | :construction:     | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui-css) |
+| @toshusai/cmpui     | React     | :white_check_mark: |                                                                                                                       |
+| @toshusai/cmpui-vue | Vue       | :construction:     | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui)     |
 
 ## Installation
 
