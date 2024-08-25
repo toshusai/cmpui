@@ -168,6 +168,9 @@ importers:
       '@storybook/vue3-vite':
         specifier: ^8.2.9
         version: 8.2.9(storybook@8.2.6)(vite@5.4.2)(vue@3.4.38)
+      '@tabler/icons-vue':
+        specifier: ^3.12.0
+        version: 3.12.0(vue@3.4.38)
       '@types/jest':
         specifier: ^29.5.11
         version: 29.5.12
@@ -4138,6 +4141,19 @@ packages:
     resolution: {integrity: sha512-wBJA+SdtkbFhHjTMYH+dEH1y4VpfGdAc2Kw/LK09i9bXd/K6j6PkDcFCEzb6iVfZMkPRrl/q0e3toqTAJdkIVA==}
     dependencies:
       '@swc/counter': 0.1.3
+    dev: true
+
+  /@tabler/icons-vue@3.12.0(vue@3.4.38):
+    resolution: {integrity: sha512-NLmDhX8hQdRlg11eZUKBtF5ZNUFnvh/I1iTmPqBFEBmrE9uo6blqabDy0XocOzEg/8Q5dw1AWqJlKJEn4TZF+Q==}
+    peerDependencies:
+      vue: '>=3.0.1'
+    dependencies:
+      '@tabler/icons': 3.12.0
+      vue: 3.4.38(typescript@5.5.4)
+    dev: true
+
+  /@tabler/icons@3.12.0:
+    resolution: {integrity: sha512-Im37ar/mQkqLb6XUXsU7nOc4/66VB9/3KLuZ+6tUsJKHHNLaDUkYfCTNG3pnGDI03laByxVf5+umSNK2yPTx8A==}
     dev: true
 
   /@testing-library/dom@10.1.0:

@@ -70,6 +70,14 @@
   background-color: transparent;
 }
 
+/* additional styles */
+.cmpui_icon-button__root[data-rounded="true"] {
+  border-radius: 9999px;
+}
+.cmpui_icon-button__root[data-border="true"] {
+  border: 1px solid var(--cmpui-border-color);
+}
+
 .cmpui_icon-button__group {
   border: 1px solid var(--cmpui-border-color);
   background-color: var(--cmpui-bg-color);
