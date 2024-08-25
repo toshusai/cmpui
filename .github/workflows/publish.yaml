@@ -1,7 +1,8 @@
 name: Publish
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -15,12 +16,9 @@ jobs:
           node-version: "20.11.1"
           registry-url: "https://registry.npmjs.org"
       - run: pnpm install
-      - run: pnpm typecheck
-      - run: pnpm biome:check
-      - run: pnpm test
-      - run: npx playwright install --with-deps
-      - run: pnpm storybook:test:ci
-      - run: pnpm run build
-      - run: npm publish --access=public
+      - run: pnpm -r typecheck
+      - run: pnpm -r test
+      - run: pnpm -r build
+      - run: pnpm yarn lerna publish from-git --yes --no-private
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
