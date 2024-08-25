@@ -1,0 +1,70 @@
+{
+  "name": "@toshusai/cmpui-vue",
+  "version": "1.0.0-alpha.8",
+  "description": "CmpUI is a component library designed for creating complex GUI applications in web browsers.",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.es.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.umd.js",
+        "types": "./dist/index.d.ts"
+      }
+    }
+  },
+  "scripts": {
+    "typecheck": "vue-tsc -p tsconfig.ci.json",
+    "test:watch": "vitest",
+    "test": "vitest run",
+    "build": "npm run typecheck && vite build && vue-tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "format": "prettier --write .",
+    "lint": "eslint --fix .",
+    "fix": "npm run format && npm run lint"
+  },
+  "dependencies": {
+    "@toshusai/cmpui-css": "link:../css",
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.7.0",
+    "@storybook/addon-essentials": "8.2.6",
+    "@storybook/addon-interactions": "8.2.6",
+    "@storybook/addon-links": "8.2.6",
+    "@storybook/addon-mdx-gfm": "8.2.6",
+    "@storybook/addon-onboarding": "8.2.6",
+    "@storybook/addon-themes": "8.2.6",
+    "@storybook/blocks": "8.2.6",
+    "@storybook/test": "8.2.6",
+    "@storybook/test-runner": "^0.17.0",
+    "@storybook/theming": "8.2.6",
+    "@storybook/vue3": "^8.2.9",
+    "@storybook/vue3-vite": "^8.2.9",
+    "@types/jest": "^29.5.11",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vue/compiler-sfc": "^3.4.38",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "storybook": "8.2.6",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^8.2.0",
+    "vitest": "^1.1.0",
+    "vue-tsc": "^2.0.29"
+  },
+  "keywords": [
+    "typescript",
+    "components",
+    "ui",
+    "gui"
+  ],
+  "author": "toshusai",
+  "license": "MIT"
+}
