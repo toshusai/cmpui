@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { clamp } from "../../utils/math/clamp";
 import { CubicControls } from ".";
+import { clamp } from "../../utils/math/clamp";
 import { Command, CubicCommand } from "./CubicCommand";
 
 const meta: Meta<typeof CubicControls> = {

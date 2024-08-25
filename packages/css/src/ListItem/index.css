@@ -1,0 +1,60 @@
+.cmpui_list-item__root {
+  color: var(--cmpui-text-color);
+
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  min-height: 32px;
+  padding: 0 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cmpui_list-item__root:hover {
+  background-color: var(--cmpui-bg-hover-color);
+}
+
+.cmpui_list-item__root:active {
+  background-color: var(--cmpui-bg-active-color);
+}
+
+.cmpui_list-item__root[data-highlighted],
+.cmpui_list-item__root[data-highlighted]:active,
+.cmpui_list-item__root[data-highlighted]:active,
+.cmpui_list-item__root[data-highlighted]:hover,
+.cmpui_list-item__root:focus-visible {
+  background-color: var(--cmpui-bg-focus-color);
+  color: white;
+  outline: none;
+}
+
+.cmpui_list-item__root[aria-selected="true"] {
+  background-color: var(--cmpui-bg-focus-color);
+
+  color: white;
+}
+
+.cmpui_list-item__root[aria-disabled="true"],
+.cmpui_list-item__root[aria-disabled="true"]:hover,
+.cmpui_list-item__root[aria-disabled="true"]:active {
+  background-color: transparent;
+  cursor: default;
+  opacity: 0.7;
+}
+
+.cmpui_list-item__root[data-size="S"] {
+  font-size: 12px;
+  height: 24px;
+  min-height: 24px;
+}
+
+.cmpui_list-item__root[data-rounded="true"] {
+  border-radius: 4px;
+}
+
+.cmpui_list-list__root {
+  margin: 0;
+  padding: 0;
+}

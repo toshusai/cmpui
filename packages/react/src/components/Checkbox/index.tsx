@@ -1,8 +1,6 @@
 import { useCallback } from "react";
 import { CheckSVG } from "./CheckSVG";
 
-import "./index.css";
-
 export type CheckboxProps = {
   label?: React.ReactNode;
   checked?: boolean;

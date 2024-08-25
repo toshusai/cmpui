@@ -1,8 +1,6 @@
 import { forwardRef } from "react";
 import { classNames } from "../../utils/classNames";
 
-import "./index.css";
-
 export type IconButton = {
   selected?: boolean;
   size?: "S" | "M";

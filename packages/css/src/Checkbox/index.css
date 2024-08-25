@@ -60,6 +60,8 @@
   width: 100%;
 }
 
+.cmpui_checkbox__box:has(.cmpui_checkbox__input:checked)
+  > .cmpui_checkbox__indicator,
 .cmpui_checkbox__indicator[data-checked="true"] {
   display: flex;
 }

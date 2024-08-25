@@ -12,13 +12,8 @@ export default [
   {
     rules: {
       "vue/multi-word-component-names": "off",
-      "no-unused-vars": [
-        "error",
-        {
-          varsIgnorePattern: "^_",
-          argsIgnorePattern: "^_",
-        },
-      ],
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["error"],
     },
     languageOptions: {
       parserOptions: { parser: tseslint.parser, sourceType: "module" },

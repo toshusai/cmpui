@@ -1,5 +1,3 @@
-import "./global.css";
-
 export * from "./components/AngleInput";
 export * from "./components/Button";
 export * from "./components/CanvasView";
