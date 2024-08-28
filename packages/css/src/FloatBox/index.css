@@ -12,8 +12,6 @@
   height: fit-content;
   padding: 4px;
   position: relative;
-  transition: all 0.2s ease-in-out;
   width: fit-content;
   z-index: 1000;
 }
-

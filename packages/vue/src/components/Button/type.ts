@@ -14,7 +14,7 @@ export const ButtonSize = {
 export type ButtonSize = (typeof ButtonSize)[keyof typeof ButtonSize];
 
 export type ButtonProps = {
-  variant: ButtonVariant;
-  size: ButtonSize;
-  disabled: boolean;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  disabled?: boolean;
 };

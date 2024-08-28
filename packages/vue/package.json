@@ -31,6 +31,7 @@
     "fix": "npm run format:fix && npm run lint:fix"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.6.10",
     "@toshusai/cmpui-css": "link:../css"
   },
   "peerDependencies": {

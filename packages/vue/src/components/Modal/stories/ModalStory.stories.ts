@@ -1,18 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import Checkbox from "./Checkbox.vue";
+import ModalStory from "./ModalStory.vue";
 
 const meta = {
-  component: Checkbox,
+  title: "components/Modal",
+  component: ModalStory,
   tags: ["autodocs"],
-} satisfies Meta<typeof Checkbox>;
+} satisfies Meta<typeof ModalStory>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
-
-export const Label: Story = {
-  args: {
-    default: "Label",
-  },
-};

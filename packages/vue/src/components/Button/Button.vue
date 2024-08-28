@@ -14,6 +14,7 @@ withDefaults(defineProps<ButtonProps>(), {
     :data-variant="variant"
     :data-size="size"
     :disabled="disabled"
+    v-bind="$attrs"
   >
     <slot></slot>
   </button>

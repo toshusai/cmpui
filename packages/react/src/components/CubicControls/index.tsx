@@ -5,7 +5,7 @@ import { Circle } from "../Circle";
 import { Line } from "../Line";
 import { Path } from "../Path";
 
-import { Command, CubicCommand, MoveCommand } from "./CubicCommand";
+import { CubicCommand, MoveCommand } from "./CubicCommand";
 
 import "./index.css";
 
@@ -60,23 +60,12 @@ export function CubicControls({ prev, cubic, onChange }: CubicControlsProps) {
     });
   }, [cubic, x2, y2, onChange, getPointerDownHandler]);
 
-  const handlePathChange = useCallback(
-    (commands: Command[]) => {
-      commands.forEach((command) => {
-        if (command.type !== "cubic") return;
-        onChange?.(command);
-      });
-    },
-    [onChange],
-  );
-
   const commands = useMemo(() => [move, cubic], [move, cubic]);
 
   return (
     <>
       <Path
         commands={commands}
-        onChange={handlePathChange}
         stroke="var(--cmpui-primary-color)"
         style={{
           pointerEvents: "none",

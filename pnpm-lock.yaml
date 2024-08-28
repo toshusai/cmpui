@@ -132,6 +132,9 @@ importers:
 
   packages/vue:
     dependencies:
+      '@floating-ui/dom':
+        specifier: ^1.6.10
+        version: 1.6.10
       '@toshusai/cmpui-css':
         specifier: link:../css
         version: link:../css

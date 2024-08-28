@@ -5,8 +5,6 @@ import { classNames } from "../../utils/classNames";
 import { FloatBox } from "../FloatBox";
 import { IconButton } from "../IconButton";
 
-import "./index.css";
-
 export type ModalProps = {
   children: React.ReactNode;
   container?: HTMLElement | null;

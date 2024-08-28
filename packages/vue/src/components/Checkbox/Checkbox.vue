@@ -1,20 +1,22 @@
 <script setup lang="ts">
+import { useId } from "../../lib/useId";
+
 withDefaults(
   defineProps<{
-    id?: string;
     label?: string;
     checked?: boolean;
     disabled?: boolean;
     onChange?: (checked: boolean) => void;
   }>(),
   {
-    id: undefined,
     checked: false,
     disabled: false,
     label: undefined,
     onChange: undefined,
   },
 );
+
+const id = useId();
 </script>
 
 <template>

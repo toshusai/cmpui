@@ -4,8 +4,6 @@ import { mergeRefs } from "../..";
 import { classNames } from "../../utils/classNames";
 import { useNativeOnChange } from "../../utils/interactions/useNativeOnChange";
 
-import "./index.css";
-
 export type TextInputProps = {
   htmlPrefix?: string;
   invalid?: boolean;
