@@ -2,12 +2,14 @@
 import { onMounted, onUnmounted, ref } from "vue";
 import { useKeyboardNavigation } from "../../lib/menuItem";
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
     is?: string;
+    defaultValue?: string;
   }>(),
   {
     is: "ul",
+    defaultValue: undefined,
   },
 );
 
@@ -21,9 +23,15 @@ let cleanup = () => {};
 
 onMounted(() => {
   if (!el.value) return;
-  cleanup = useKeyboardNavigation(el.value, (value) => {
-    emit("select", value);
-  });
+  cleanup = useKeyboardNavigation(
+    el.value,
+    (value) => {
+      emit("select", value);
+    },
+    {
+      defaultValue: props.defaultValue,
+    },
+  );
 });
 
 onUnmounted(() => {

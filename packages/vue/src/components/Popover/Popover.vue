@@ -7,6 +7,7 @@ const divRef = ref<HTMLElement | null>(null);
 const props = defineProps<{
   trigger: HTMLElement | null;
   show: boolean;
+  disabledTriggerClickClose?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -32,8 +33,19 @@ watch(
         emit("close");
       },
       (pos) => {
-        style.value.transform = `translate(${pos.left}px, ${pos.top}px)`;
+        if (pos.left !== undefined && pos.top !== undefined) {
+          style.value.transform = `translate(${pos.left}px, ${pos.top}px)`;
+        }
+        if (pos.maxWidth !== undefined) {
+          style.value.maxWidth = `${pos.maxWidth}px`;
+        }
+        if (pos.maxHeight !== undefined) {
+          style.value.maxHeight = `${pos.maxHeight}px`;
+        }
         style.value.display = "";
+      },
+      {
+        disabledTriggerClickClose: props.disabledTriggerClickClose,
       },
     );
 

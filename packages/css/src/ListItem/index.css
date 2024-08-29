@@ -20,10 +20,10 @@
   background-color: var(--cmpui-bg-active-color);
 }
 
-.cmpui_list-item__root[data-highlighted],
-.cmpui_list-item__root[data-highlighted]:active,
-.cmpui_list-item__root[data-highlighted]:active,
-.cmpui_list-item__root[data-highlighted]:hover,
+.cmpui_list-item__root[data-highlighted="true"],
+.cmpui_list-item__root[data-highlighted="true"]:active,
+.cmpui_list-item__root[data-highlighted="true"]:active,
+.cmpui_list-item__root[data-highlighted="true"]:hover,
 .cmpui_list-item__root:focus-visible {
   background-color: var(--cmpui-bg-focus-color);
   color: white;

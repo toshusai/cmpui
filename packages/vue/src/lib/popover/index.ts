@@ -4,18 +4,27 @@ import {
   flip,
   offset,
   shift,
+  size,
 } from "@floating-ui/dom";
 
 const defaultOptions = {
   offset: 4,
+  padding: 8,
 };
 export function setPopover(
   popoverElement: HTMLElement,
   triggerElement: HTMLElement,
   onCleanUp: () => void,
-  callback: (position: { top: number; left: number }) => void,
+  callback: (position: {
+    top?: number;
+    left?: number;
+    maxWidth?: number;
+    maxHeight?: number;
+  }) => void,
   options?: {
     offset?: number;
+    padding?: number;
+    disabledTriggerClickClose?: boolean;
   },
 ) {
   const handlePointerDown = (e: PointerEvent) => {
@@ -34,7 +43,6 @@ export function setPopover(
   };
 
   const handleClick = () => {
-    console.log("Click event");
     cleanUp();
   };
 
@@ -44,8 +52,19 @@ export function setPopover(
       strategy: "fixed",
       middleware: [
         offset(options?.offset ?? defaultOptions.offset),
-        flip(),
         shift(),
+        size({
+          apply(args) {
+            callback({
+              maxWidth: Math.max(100, args.availableWidth),
+              maxHeight: Math.max(100, args.availableHeight),
+            });
+          },
+          padding: options?.padding ?? defaultOptions.padding,
+        }),
+        flip({
+          fallbackStrategy: "initialPlacement",
+        }),
       ],
     }).then((position) => {
       callback({
@@ -61,12 +80,16 @@ export function setPopover(
     onCleanUp();
     window.removeEventListener("pointerdown", handlePointerDown);
     window.removeEventListener("keydown", handleKeyDown);
-    triggerElement?.removeEventListener("click", handleClick);
+    if (!options?.disabledTriggerClickClose) {
+      triggerElement?.removeEventListener("click", handleClick);
+    }
   };
 
   const open = () => {
     cleanupUpdate = autoUpdate(triggerElement, popoverElement, updatePosition);
-    triggerElement?.addEventListener("click", handleClick);
+    if (!options?.disabledTriggerClickClose) {
+      triggerElement?.addEventListener("click", handleClick);
+    }
 
     window.addEventListener("pointerdown", handlePointerDown);
     window.addEventListener("keydown", handleKeyDown);

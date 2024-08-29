@@ -5,11 +5,12 @@ withDefaults(
   defineProps<{
     rounded?: boolean;
     selected?: boolean;
-    value: string;
+    value?: string;
     size?: "S" | "M";
   }>(),
   {
     size: "M",
+    value: undefined,
   },
 );
 </script>

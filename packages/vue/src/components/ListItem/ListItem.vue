@@ -18,7 +18,7 @@ withDefaults(
     :is="is"
     class="cmpui_list-item__root"
     :data-size="size"
-    :daat-rounded="rounded"
+    :data-rounded="rounded"
     :aria-selected="selected"
     v-bind="$attrs"
   >

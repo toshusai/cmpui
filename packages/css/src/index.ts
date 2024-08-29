@@ -6,4 +6,5 @@ import "./FloatBox/index.css";
 import "./IconButton/index.css";
 import "./ListItem/index.css";
 import "./Modal/index.css";
+import "./Select/index.css";
 import "./TextInput/index.css";
