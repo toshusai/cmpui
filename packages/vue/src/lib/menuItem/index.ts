@@ -25,7 +25,7 @@ export function useKeyboardNavigation(
         prev.focus();
       }
       e.preventDefault();
-    } else if (e.key === "Enter") {
+    } else if (e.key === "Enter" || e.key === " ") {
       const current = document.activeElement;
       if (current instanceof HTMLElement) {
         const value = current.dataset.value;
@@ -130,7 +130,7 @@ function typeAheadSearch(
       return;
     }
 
-    if (e.key.length === 1) {
+    if (e.key.length === 1 && e.key.match(/[a-zA-Z0-9]/)) {
       search += e.key;
       const result = keywords.find((keyword) => {
         const a = keyword.toLowerCase();
