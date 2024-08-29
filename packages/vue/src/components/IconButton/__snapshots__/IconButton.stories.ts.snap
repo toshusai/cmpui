@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/IconButton Border smoke-test 1`] = `
+<button class="cmpui_icon-button__root"
+        aria-selected="false"
+        data-size="M"
+        data-rounded="false"
+        data-border="true"
+        default="() => h(IconHome, {
+  size: 20
+})"
+>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="20"
+       height="20"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       size="20"
+       class="tabler-icon tabler-icon-home"
+  >
+    <path d="M5 12l-2 0l9 -9l9 9l-2 0">
+    </path>
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7">
+    </path>
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6">
+    </path>
+  </svg>
+</button>
+`;
+
+exports[`components/IconButton Disabled smoke-test 1`] = `
+<button class="cmpui_icon-button__root"
+        aria-selected="false"
+        data-size="M"
+        disabled
+        data-rounded="false"
+        data-border="false"
+        default="() => h(IconHome, {
+  size: 20
+})"
+>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="20"
+       height="20"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       size="20"
+       class="tabler-icon tabler-icon-home"
+  >
+    <path d="M5 12l-2 0l9 -9l9 9l-2 0">
+    </path>
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7">
+    </path>
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6">
+    </path>
+  </svg>
+</button>
+`;
+
+exports[`components/IconButton Rounded smoke-test 1`] = `
+<button class="cmpui_icon-button__root"
+        aria-selected="false"
+        data-size="M"
+        data-rounded="true"
+        data-border="false"
+        default="() => h(IconHome, {
+  size: 20
+})"
+>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="20"
+       height="20"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       size="20"
+       class="tabler-icon tabler-icon-home"
+  >
+    <path d="M5 12l-2 0l9 -9l9 9l-2 0">
+    </path>
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7">
+    </path>
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6">
+    </path>
+  </svg>
+</button>
+`;
+
+exports[`components/IconButton Selected smoke-test 1`] = `
+<button class="cmpui_icon-button__root"
+        aria-selected="true"
+        data-size="M"
+        data-rounded="false"
+        data-border="false"
+        default="() => h(IconHome, {
+  size: 20
+})"
+>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="20"
+       height="20"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       size="20"
+       class="tabler-icon tabler-icon-home"
+  >
+    <path d="M5 12l-2 0l9 -9l9 9l-2 0">
+    </path>
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7">
+    </path>
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6">
+    </path>
+  </svg>
+</button>
+`;
+
+exports[`components/IconButton Small smoke-test 1`] = `
+<button class="cmpui_icon-button__root"
+        aria-selected="false"
+        data-size="S"
+        data-rounded="false"
+        data-border="false"
+        default="() => h(IconHome, {
+      size: 16
+    })"
+>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="16"
+       height="16"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       size="16"
+       class="tabler-icon tabler-icon-home"
+  >
+    <path d="M5 12l-2 0l9 -9l9 9l-2 0">
+    </path>
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7">
+    </path>
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6">
+    </path>
+  </svg>
+</button>
+`;

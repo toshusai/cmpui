@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Button Default smoke-test 1`] = `
+<button class="cmpui_button"
+        data-variant="primary"
+        data-size="M"
+        default="Button"
+>
+  Button
+</button>
+`;
+
+exports[`components/Button Disabled smoke-test 1`] = `
+<button class="cmpui_button"
+        data-variant="primary"
+        data-size="M"
+        disabled
+        default="Button"
+>
+  Button
+</button>
+`;
+
+exports[`components/Button Secondary smoke-test 1`] = `
+<button class="cmpui_button"
+        data-variant="secondary"
+        data-size="M"
+        default="Button"
+>
+  Button
+</button>
+`;
+
+exports[`components/Button Small smoke-test 1`] = `
+<button class="cmpui_button"
+        data-variant="primary"
+        data-size="S"
+        default="Button"
+>
+  Button
+</button>
+`;

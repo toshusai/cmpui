@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Popover Default smoke-test 1`] = `
+<button class="cmpui_button"
+        data-variant="primary"
+        data-size="M"
+>
+  Select
+</button>
+`;

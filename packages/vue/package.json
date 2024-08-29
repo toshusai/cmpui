@@ -23,6 +23,7 @@
     "test:watch": "vitest",
     "build": "npm run typecheck && vite build && vue-tsc",
     "storybook": "storybook dev -p 6006",
+    "storybook:test": "test-storybook",
     "build-storybook": "storybook build",
     "format": "prettier .",
     "format:fix": "prettier --write .",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.7.0",
+    "@playwright/test": "^1.41.2",
     "@storybook/addon-essentials": "8.2.6",
     "@storybook/addon-interactions": "8.2.6",
     "@storybook/addon-links": "8.2.6",

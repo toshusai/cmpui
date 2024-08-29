@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Select Default smoke-test 1`] = `
+<button class="cmpui_select__root">
+  <span>
+    India
+  </span>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       height="16"
+       viewbox="0 -960 960 960"
+       width="16"
+       fill="currentColor"
+  >
+    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z">
+    </path>
+  </svg>
+</button>
+`;
+
+exports[`Components/Select Show smoke-test 1`] = `
+<button class="cmpui_select__root">
+  <span>
+    India
+  </span>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       height="16"
+       viewbox="0 -960 960 960"
+       width="16"
+       fill="currentColor"
+  >
+    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z">
+    </path>
+  </svg>
+</button>
+<div class="cmpui_float-box__root"
+     tabindex="-1"
+     style="position: fixed; top: 0px; left: 0px; max-width: 1264px; max-height: 332px; transform: translate(589.445px, 380px);"
+>
+  <ul data-v-7e910436>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Alfa"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Alfa
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Bravo"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Bravo
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Charlie"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Charlie
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Delta"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Delta
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Echo"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Echo
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Foxtrot"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Foxtrot
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Golf"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Golf
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Hotel"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Hotel
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="India"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+        data-highlighted="true"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg"
+           height="12"
+           viewbox="0 -960 960 960"
+           width="12"
+           fill="currentColor"
+           style="position: absolute; left: 8px;"
+      >
+        <path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z">
+        </path>
+      </svg>
+      India
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Juliett"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Juliett
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Kilo"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Kilo
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Lima"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Lima
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Mike"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Mike
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="November"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      November
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Oscar"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Oscar
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Papa"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Papa
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Quebec"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Quebec
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Romeo"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Romeo
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Sierra"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Sierra
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Tango"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Tango
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Uniform"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Uniform
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Victor"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Victor
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Whiskey"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Whiskey
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="X-ray"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      X-ray
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Yankee"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Yankee
+    </li>
+    <li class="cmpui_list-item__root"
+        data-size="M"
+        data-rounded="true"
+        aria-selected="false"
+        data-value="Zulu"
+        tabindex="0"
+        role="option"
+        style="padding-left: 24px; position: relative;"
+    >
+      Zulu
+    </li>
+  </ul>
+</div>
+`;

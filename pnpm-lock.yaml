@@ -142,6 +142,9 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^1.7.0
         version: 1.7.0(react@18.3.1)
+      '@playwright/test':
+        specifier: ^1.41.2
+        version: 1.46.1
       '@storybook/addon-essentials':
         specifier: 8.2.6
         version: 8.2.6(storybook@8.2.6)
@@ -4557,7 +4560,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.4.38(typescript@5.5.4)
-      vue-component-type-helpers: 2.0.29
+      vue-component-type-helpers: 2.1.2
     dev: true
 
   /@swc/core-darwin-arm64@1.7.18:
@@ -13650,6 +13653,10 @@ packages:
 
   /vue-component-type-helpers@2.0.29:
     resolution: {integrity: sha512-58i+ZhUAUpwQ+9h5Hck0D+jr1qbYl4voRt5KffBx8qzELViQ4XdT/Tuo+mzq8u63teAG8K0lLaOiL5ofqW38rg==}
+    dev: true
+
+  /vue-component-type-helpers@2.1.2:
+    resolution: {integrity: sha512-URuxnrOhO9lUG4LOAapGWBaa/WOLDzzyAbL+uKZqT7RS+PFy0cdXI2mUSh7GaMts6vtHaeVbGk7trd0FPJi65Q==}
     dev: true
 
   /vue-docgen-api@4.79.2(vue@3.4.38):

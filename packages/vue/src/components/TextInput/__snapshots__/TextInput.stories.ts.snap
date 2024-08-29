@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/TextInput Default smoke-test 1`] = `
+<div class="cmpui_text-input__root"
+     aria-disabled="false"
+     aria-invalid="false"
+     default="Label"
+     placeholder="Placeholder"
+>
+  <label class="cmpui_text-input__label"
+         for="id-1"
+  >
+    Label
+  </label>
+  <input id="id-1"
+         default="Label"
+         placeholder="Placeholder"
+         aria-invalid="false"
+         class="cmpui_text-input__input"
+         type="text"
+  >
+</div>
+`;
