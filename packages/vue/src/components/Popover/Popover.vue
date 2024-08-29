@@ -69,7 +69,6 @@ watch(
   <div
     ref="divRef"
     class="cmpui_float-box__root"
-    role="listbox"
     tabindex="-1"
     v-bind="$attrs"
     :style="style"

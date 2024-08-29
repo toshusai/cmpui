@@ -53,3 +53,33 @@
   cursor: default;
   opacity: 0.5;
 }
+
+.cmpui_select__keyboard-arrow-down-icon::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  /* https://fonts.google.com/icons?selected=Material+Symbols+Outlined:keyboard_arrow_down:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%235f6368&icon.query=Keyboard+Arrow+Down */
+  mask-image: url("data:image/svg+xml;charset=utf8,%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%20-960%20960%20960%22%20%3E%20%3Cpath%20d%3D%22M480-345%20240-585l56-56%20184%20184%20184-184%2056%2056-240%20240Z%22%20%2F%3E%20%3C%2Fsvg%3E");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: currentColor;
+}
+
+.cmpui_select_check-icon {
+  position: absolute;
+  left: 8px;
+}
+
+.cmpui_select_check-icon::before {
+  content: "";
+  display: flex;
+  width: 12px;
+  height: 12px;
+  /* https://fonts.google.com/icons?selected=Material+Symbols+Outlined:check:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%235f6368&icon.query=check */
+  mask-image: url("data:image/svg+xml;charset=utf8,%20%3Csvg%20v-if%3D%22option.value%20%3D%3D%3D%20props.value%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%20-960%20960%20960%22%20fill%3D%22currentColor%22%20%3E%20%3Cpath%20d%3D%22M382-208%20122-468l90-90%20170%20170%20366-366%2090%2090-456%20456Z%22%20%2F%3E%20%3C%2Fsvg%3E");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: currentColor;
+}

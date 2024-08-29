@@ -5,15 +5,8 @@ exports[`Components/Select Default smoke-test 1`] = `
   <span>
     India
   </span>
-  <svg xmlns="http://www.w3.org/2000/svg"
-       height="16"
-       viewbox="0 -960 960 960"
-       width="16"
-       fill="currentColor"
-  >
-    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z">
-    </path>
-  </svg>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
 </button>
 `;
 
@@ -22,15 +15,8 @@ exports[`Components/Select Show smoke-test 1`] = `
   <span>
     India
   </span>
-  <svg xmlns="http://www.w3.org/2000/svg"
-       height="16"
-       viewbox="0 -960 960 960"
-       width="16"
-       fill="currentColor"
-  >
-    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z">
-    </path>
-  </svg>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
 </button>
 <div class="cmpui_float-box__root"
      tabindex="-1"
@@ -135,16 +121,10 @@ exports[`Components/Select Show smoke-test 1`] = `
         style="padding-left: 24px; position: relative;"
         data-highlighted="true"
     >
-      <svg xmlns="http://www.w3.org/2000/svg"
-           height="12"
-           viewbox="0 -960 960 960"
-           width="12"
-           fill="currentColor"
+      <div class="cmpui_select_check-icon"
            style="position: absolute; left: 8px;"
       >
-        <path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z">
-        </path>
-      </svg>
+      </div>
       India
     </li>
     <li class="cmpui_list-item__root"

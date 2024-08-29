@@ -126,15 +126,17 @@ function typeAheadSearch(
       search = "";
     }, 1000)();
 
+    if (e.metaKey || e.ctrlKey || e.altKey) {
+      return;
+    }
+
     if (e.key.length === 1) {
       search += e.key;
-      console.log(search);
       const result = keywords.find((keyword) => {
         const a = keyword.toLowerCase();
         const b = search.toLowerCase();
         return a.startsWith(b);
       });
-      console.log(result, keywords);
       if (result) {
         onHit(keywords.indexOf(result));
       }

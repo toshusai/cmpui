@@ -77,15 +77,7 @@ const handleClick = () => {
   >
     <span v-if="isChildString">{{ selectedChild }}</span>
     <component :is="selectedChild" v-else />
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="16"
-      viewBox="0 -960 960 960"
-      width="16"
-      fill="currentColor"
-    >
-      <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-    </svg>
+    <div class="cmpui_select__keyboard-arrow-down-icon"></div>
   </button>
 
   <Popover v-if="show" :show="show" :trigger="trigger" @close="show = false">
@@ -99,17 +91,12 @@ const handleClick = () => {
         role="option"
         @click="handleSelect(option.value)"
       >
-        <svg
+        <div
           v-if="option.value === props.value"
+          class="cmpui_select_check-icon"
           style="position: absolute; left: 8px"
-          xmlns="http://www.w3.org/2000/svg"
-          height="12"
-          viewBox="0 -960 960 960"
-          width="12"
-          fill="currentColor"
-        >
-          <path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z" />
-        </svg>
+        ></div>
+
         {{ option.label }}
       </MenuListItem>
     </MenuList>
