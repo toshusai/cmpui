@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components/Select Default smoke-test 1`] = `
-<button class="cmpui_select__root">
+<button id="id-1"
+        class="cmpui_select__root"
+        role="combobox"
+        aria-expanded="false"
+        aria-labelledby="id-2"
+        aria-controls="id-3"
+        aria-haspopup="listbox"
+>
   <span>
     India
   </span>
@@ -10,8 +17,38 @@ exports[`Components/Select Default smoke-test 1`] = `
 </button>
 `;
 
+exports[`Components/Select Label smoke-test 1`] = `
+<button id="id-4"
+        class="cmpui_select__root"
+        role="combobox"
+        aria-expanded="false"
+        aria-labelledby="id-5"
+        aria-controls="id-6"
+        aria-haspopup="listbox"
+>
+  <span>
+    India
+  </span>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
+  <label id="id-5"
+         class="cmpui_select__label"
+         for="id-4"
+  >
+    Label
+  </label>
+</button>
+`;
+
 exports[`Components/Select Show smoke-test 1`] = `
-<button class="cmpui_select__root">
+<button id="id-7"
+        class="cmpui_select__root"
+        role="combobox"
+        aria-expanded="true"
+        aria-labelledby="id-8"
+        aria-controls="id-9"
+        aria-haspopup="listbox"
+>
   <span>
     India
   </span>
@@ -22,7 +59,11 @@ exports[`Components/Select Show smoke-test 1`] = `
      tabindex="-1"
      style="position: fixed; top: 0px; left: 0px; max-width: 1264px; max-height: 332px; transform: translate(589.445px, 380px);"
 >
-  <ul data-v-7e910436>
+  <div role="listbox"
+       tabindex="0"
+       id="id-9"
+       aria-labelledby="id-8"
+  >
     <li class="cmpui_list-item__root"
         data-size="M"
         data-rounded="true"
@@ -314,6 +355,6 @@ exports[`Components/Select Show smoke-test 1`] = `
     >
       Zulu
     </li>
-  </ul>
+  </div>
 </div>
 `;
