@@ -41,6 +41,7 @@
   animation: overlayShow 100ms;
   inset: 0;
   position: absolute;
+  z-index: 1;
 }
 
 .cmpui_modal__close-button {
