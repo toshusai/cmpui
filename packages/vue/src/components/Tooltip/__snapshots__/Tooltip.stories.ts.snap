@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Toast AutoPlacement smoke-test 1`] = `
+exports[`components/Tooltip AutoPlacement smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="M"
@@ -10,7 +10,7 @@ exports[`components/Toast AutoPlacement smoke-test 1`] = `
 </button>
 `;
 
-exports[`components/Toast Default smoke-test 1`] = `
+exports[`components/Tooltip Default smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="M"
@@ -19,7 +19,7 @@ exports[`components/Toast Default smoke-test 1`] = `
 </button>
 `;
 
-exports[`components/Toast Flip smoke-test 1`] = `
+exports[`components/Tooltip Flip smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="M"
@@ -29,7 +29,7 @@ exports[`components/Toast Flip smoke-test 1`] = `
 </button>
 `;
 
-exports[`components/Toast MultipleItems smoke-test 1`] = `
+exports[`components/Tooltip MultipleItems smoke-test 1`] = `
 <div class="cmpui_icon-button__group">
   <button class="cmpui_icon-button__root"
           aria-selected="false"

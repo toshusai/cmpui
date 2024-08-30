@@ -9,10 +9,10 @@ import {
   useSlots,
   watch,
 } from "vue";
-import { toast } from "../../lib/toast";
+import { tooltip } from "../../lib/tooltip";
 import { useId } from "../../lib/useId";
 import { isValidVNode, TOAST_PROVIDER_KEY } from "./lib";
-import { ToastProvide } from "./ToastProvider.vue";
+import { TooltipProvide } from "./TooltipProvider.vue";
 
 const props = withDefaults(
   defineProps<{
@@ -33,7 +33,7 @@ const style = ref<CSSProperties>({
   left: "0",
 });
 
-const provider = inject<ToastProvide | undefined>(
+const provider = inject<TooltipProvide | undefined>(
   TOAST_PROVIDER_KEY,
   undefined,
 );
@@ -44,7 +44,7 @@ onMounted(() => {
   const children = slots.default?.().filter(isValidVNode) ?? [];
   if (children.length === 0) return;
   if (children.length > 1) {
-    console.error("Toast can only have one child");
+    console.error("Tooltip can only have one child");
     return;
   }
 });
@@ -97,7 +97,7 @@ watch(
     if (!tooltipRef.value) return;
     if (!slotElement.value) return;
     if (!arrowRef.value) return;
-    const { cleanUp, open } = toast(
+    const { cleanUp, open } = tooltip(
       tooltipRef.value,
       slotElement.value,
       arrowRef.value,

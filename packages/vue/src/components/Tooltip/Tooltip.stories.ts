@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import IconButton from "../IconButton/IconButton.vue";
 import CButton from "../CButton/CButton.vue";
-import ToastProvider from "./ToastProvider.vue";
-import Toast from "./Toast.vue";
+import TooltipProvider from "./TooltipProvider.vue";
+import Tooltip from "./Tooltip.vue";
 
 const meta = {
-  component: Toast,
+  component: Tooltip,
   args: {
     text: "tooltip",
   },
-} satisfies Meta<typeof Toast>;
+} satisfies Meta<typeof Tooltip>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -18,66 +18,66 @@ const html = String.raw;
 
 export const Default: Story = {
   render: () => ({
-    components: { CButton, Toast, ToastProvider },
+    components: { CButton, Tooltip, TooltipProvider },
     template: `
-        <Toast text="Tooltip">
+        <Tooltip text="Tooltip">
           <CButton>
             Hover me
           </CButton>
-        </Toast>
+        </Tooltip>
     `,
   }),
 };
 
 export const Flip: Story = {
   render: () => ({
-    components: { CButton, Toast, ToastProvider },
+    components: { CButton, Tooltip, TooltipProvider },
     template: `
-        <Toast text="Tooltip">
+        <Tooltip text="Tooltip">
           <CButton style="position: absolute; bottom: 4px; transform: translateX(-50%);">
             Hover me
           </CButton>
-        </Toast>
+        </Tooltip>
     `,
   }),
 };
 
 export const AutoPlacement: Story = {
   render: () => ({
-    components: { CButton, Toast, ToastProvider },
+    components: { CButton, Tooltip, TooltipProvider },
     template: `
-        <Toast text="Tooltip can be placed anywhere">
+        <Tooltip text="Tooltip can be placed anywhere">
           <CButton style="position: absolute; bottom: 4px; right: 4px">
             Hover me
           </CButton>
-        </Toast>
+        </Tooltip>
     `,
   }),
 };
 
 export const MultipleItems: Story = {
   render: () => ({
-    components: { IconButton, Toast, ToastProvider },
+    components: { IconButton, Tooltip, TooltipProvider },
     template: html`
-      <ToastProvider>
+      <TooltipProvider>
         <div class="cmpui_icon-button__group">
-          <Toast text="pointer">
+          <Tooltip text="pointer">
             <IconButton>
               <i class="ti ti-pointer"></i>
             </IconButton>
-          </Toast>
-          <Toast text="typography">
+          </Tooltip>
+          <Tooltip text="typography">
             <IconButton>
               <i class="ti ti-typography"></i>
             </IconButton>
-          </Toast>
-          <Toast text="italic">
+          </Tooltip>
+          <Tooltip text="italic">
             <IconButton>
               <i class="ti ti-italic"></i>
             </IconButton>
-          </Toast>
+          </Tooltip>
         </div>
-      </ToastProvider>
+      </TooltipProvider>
     `,
   }),
 };

@@ -26,7 +26,7 @@ const setShow = (v: boolean) => {
   }
 };
 
-export type ToastProvide = {
+export type TooltipProvide = {
   show: typeof show;
   setShow: typeof setShow;
 };

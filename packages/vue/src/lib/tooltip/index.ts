@@ -14,7 +14,7 @@ const defaultOptions = {
   padding: 8,
 };
 
-export function toast(
+export function tooltip(
   tooltipElement: HTMLElement,
   triggerElement: HTMLElement,
   arrowElement: HTMLElement,
