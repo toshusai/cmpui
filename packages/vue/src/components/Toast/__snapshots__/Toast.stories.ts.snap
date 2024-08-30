@@ -1,18 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/Toast AutoPlacement smoke-test 1`] = `
-<cbutton aria-describedby="id-3"
-         style="position: absolute; bottom: 4px; right: 4px;"
+<button class="cmpui_button"
+        data-variant="primary"
+        data-size="M"
+        style="position: absolute; bottom: 4px; right: 4px;"
 >
   Hover me
-</cbutton>
+</button>
 `;
 
 exports[`components/Toast Default smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="M"
-        aria-describedby="id-1"
 >
   Hover me
 </button>
@@ -22,7 +23,6 @@ exports[`components/Toast Flip smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="M"
-        aria-describedby="id-2"
         style="position: absolute; bottom: 4px; transform: translateX(-50%);"
 >
   Hover me
@@ -36,7 +36,6 @@ exports[`components/Toast MultipleItems smoke-test 1`] = `
           data-size="M"
           data-rounded="false"
           data-border="false"
-          aria-describedby="id-4"
   >
     <i class="ti ti-pointer">
     </i>
@@ -46,7 +45,6 @@ exports[`components/Toast MultipleItems smoke-test 1`] = `
           data-size="M"
           data-rounded="false"
           data-border="false"
-          aria-describedby="id-5"
   >
     <i class="ti ti-typography">
     </i>
@@ -56,7 +54,6 @@ exports[`components/Toast MultipleItems smoke-test 1`] = `
           data-size="M"
           data-rounded="false"
           data-border="false"
-          aria-describedby="id-6"
   >
     <i class="ti ti-italic">
     </i>

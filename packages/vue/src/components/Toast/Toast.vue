@@ -172,7 +172,7 @@ const id = useId();
   <component
     :is="slots.default?.()[0]"
     ref="slotRef"
-    :aria-describedby="id"
+    :aria-describedby="show || forceShow ? id : undefined"
     @pointerenter="handleMouseEnter"
     @pointerleave="handleMouseLeave"
   />

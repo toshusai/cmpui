@@ -44,7 +44,7 @@ export const Flip: Story = {
 
 export const AutoPlacement: Story = {
   render: () => ({
-    components: { Button: CButton, Toast, ToastProvider },
+    components: { CButton, Toast, ToastProvider },
     template: `
         <Toast text="Tooltip can be placed anywhere">
           <CButton style="position: absolute; bottom: 4px; right: 4px">
