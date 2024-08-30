@@ -82,7 +82,6 @@ export const Label: Story = {
   }),
 };
 
-
 export const Disabled: Story = {
   render: () => ({
     setup() {

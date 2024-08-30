@@ -1,3 +1,3 @@
-import Button from "./components/Button/Button.vue";
+import CButton from "./components/CButton/CButton.vue";
 
-export { Button };
+export { CButton };

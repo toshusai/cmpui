@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Button Default smoke-test 1`] = `
+exports[`components/CButton Default smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="M"
@@ -10,7 +10,7 @@ exports[`components/Button Default smoke-test 1`] = `
 </button>
 `;
 
-exports[`components/Button Disabled smoke-test 1`] = `
+exports[`components/CButton Disabled smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="M"
@@ -21,7 +21,7 @@ exports[`components/Button Disabled smoke-test 1`] = `
 </button>
 `;
 
-exports[`components/Button Secondary smoke-test 1`] = `
+exports[`components/CButton Secondary smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="secondary"
         data-size="M"
@@ -31,7 +31,7 @@ exports[`components/Button Secondary smoke-test 1`] = `
 </button>
 `;
 
-exports[`components/Button Small smoke-test 1`] = `
+exports[`components/CButton Small smoke-test 1`] = `
 <button class="cmpui_button"
         data-variant="primary"
         data-size="S"

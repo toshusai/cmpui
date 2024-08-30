@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { ref } from "vue";
 import Modal from "./Modal.vue";
-import Button from "../Button/Button.vue";
+import CButton from "../CButton/CButton.vue";
 
 const meta = {
   title: "Components/Modal",
@@ -21,7 +21,7 @@ export const Default: Story = {
         show,
       };
     },
-    components: { Modal, Button },
+    components: { Modal, CButton },
     template: html`
       <Modal :show="show" title="Confirm" @close="show = false">
         <div style="padding: 8px">
@@ -31,14 +31,14 @@ export const Default: Story = {
           <div
             style="display: flex; gap: 8px; justify-content: right; margin-top: 8px"
           >
-            <Button size="S" variant="secondary" @click="show = false">
+            <CButton size="S" variant="secondary" @click="show = false">
               Cancel
-            </Button>
-            <Button size="S" @click="show = false">OK</Button>
+            </CButton>
+            <CButton size="S" @click="show = false">OK</CButton>
           </div>
         </div>
       </Modal>
-      <Button @click="show = true">Open</Button>
+      <CButton @click="show = true">Open</CButton>
     `,
   }),
 };

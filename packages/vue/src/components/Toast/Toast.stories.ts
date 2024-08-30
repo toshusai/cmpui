@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import IconButton from "../IconButton/IconButton.vue";
-import Button from "../Button/Button.vue";
+import CButton from "../CButton/CButton.vue";
 import ToastProvider from "./ToastProvider.vue";
 import Toast from "./Toast.vue";
 
@@ -19,12 +19,12 @@ const html = String.raw;
 
 export const Default: Story = {
   render: () => ({
-    components: { Button, Toast, ToastProvider },
+    components: { CButton, Toast, ToastProvider },
     template: `
         <Toast text="Tooltip">
-          <Button>
+          <CButton>
             Hover me
-          </Button>
+          </CButton>
         </Toast>
     `,
   }),
@@ -32,12 +32,12 @@ export const Default: Story = {
 
 export const Flip: Story = {
   render: () => ({
-    components: { Button, Toast, ToastProvider },
+    components: { CButton, Toast, ToastProvider },
     template: `
         <Toast text="Tooltip">
-          <Button style="position: absolute; bottom: 4px; transform: translateX(-50%);">
+          <CButton style="position: absolute; bottom: 4px; transform: translateX(-50%);">
             Hover me
-          </Button>
+          </CButton>
         </Toast>
     `,
   }),
@@ -45,12 +45,12 @@ export const Flip: Story = {
 
 export const AutoPlacement: Story = {
   render: () => ({
-    components: { Button, Toast, ToastProvider },
+    components: { Button: CButton, Toast, ToastProvider },
     template: `
         <Toast text="Tooltip can be placed anywhere">
-          <Button style="position: absolute; bottom: 4px; right: 4px">
+          <CButton style="position: absolute; bottom: 4px; right: 4px">
             Hover me
-          </Button>
+          </CButton>
         </Toast>
     `,
   }),

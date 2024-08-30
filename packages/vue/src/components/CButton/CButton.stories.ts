@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import Button from "./Button.vue";
+import CButton from "./CButton.vue";
 
 const meta = {
-  component: Button,
+  component: CButton,
   tags: ["autodocs"],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof CButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

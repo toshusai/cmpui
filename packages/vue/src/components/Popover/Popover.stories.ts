@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { ref } from "vue";
-import Button from "../Button/Button.vue";
+import CButton from "../CButton/CButton.vue";
 import Popover from "./Popover.vue";
 import MenuList from "../MenuList/MenuList.vue";
 import MenuListItem from "../MenuListItem/MenuListItem.vue";
@@ -18,7 +18,7 @@ const html = String.raw;
 export const Default: Story = {
   render: () => ({
     setup() {
-      const trigger = ref<InstanceType<typeof Button> | null>(null);
+      const trigger = ref<InstanceType<typeof CButton> | null>(null);
 
       const show = ref(false);
 
@@ -36,11 +36,11 @@ export const Default: Story = {
         handleSelect,
       };
     },
-    components: { Popover, Button, MenuList, MenuListItem },
+    components: { Popover, CButton, MenuList, MenuListItem },
     template: html`
-      <Button ref="trigger" @click="show = true">
+      <CButton ref="trigger" @click="show = true">
         {{ selected || "Select" }}
-      </Button>
+      </CButton>
       <Popover
         v-if="show"
         :trigger="trigger?.$el"

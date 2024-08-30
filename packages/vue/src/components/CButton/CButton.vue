@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ButtonProps } from "./type";
+import { CButtonProps } from "./type";
 
-withDefaults(defineProps<ButtonProps>(), {
+withDefaults(defineProps<CButtonProps>(), {
   variant: "primary",
   size: "M",
   disabled: false,
