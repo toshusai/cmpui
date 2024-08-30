@@ -8,3 +8,4 @@ import "./ListItem/index.css";
 import "./Modal/index.css";
 import "./Select/index.css";
 import "./TextInput/index.css";
+import "./Tooltip/index.css";
