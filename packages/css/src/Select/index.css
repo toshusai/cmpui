@@ -18,12 +18,13 @@
   text-decoration: none;
 }
 
-.cmpui_select__root[aria-disabled="true"] {
+.cmpui_select__root[aria-disabled="true"],
+.cmpui_select__root:disabled {
   cursor: default;
   opacity: 0.5;
 }
 
-.cmpui_select__root:hover {
+.cmpui_select__root:not(:disabled):not([aria-disabled="true"]):hover {
   border: 1px solid var(--cmpui-border-hover-color);
 }
 
@@ -47,11 +48,6 @@
 .cmpui_select__root:focus-visible {
   outline: var(--cmpui-primary-color) solid 1px;
   outline-offset: 1px;
-}
-
-.cmpui_select__root:disabled {
-  cursor: default;
-  opacity: 0.5;
 }
 
 .cmpui_select__keyboard-arrow-down-icon::before {
