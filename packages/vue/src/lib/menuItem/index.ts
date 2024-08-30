@@ -1,5 +1,5 @@
 export function useKeyboardNavigation(
-  element: HTMLUListElement,
+  element: HTMLDivElement,
   onSelect: (value: string) => void,
   options?: {
     defaultValue?: string;
@@ -13,6 +13,8 @@ export function useKeyboardNavigation(
       )?.nextElementSibling;
       if (next && next instanceof HTMLElement) {
         next.focus();
+      } else if (document.activeElement === element) {
+        items[0].focus();
       }
       e.preventDefault();
     } else if (e.key === "ArrowUp") {
@@ -23,6 +25,8 @@ export function useKeyboardNavigation(
       )?.previousElementSibling;
       if (prev && prev instanceof HTMLElement) {
         prev.focus();
+      } else if (document.activeElement === element) {
+        items[items.length - 1].focus();
       }
       e.preventDefault();
     } else if (e.key === "Enter" || e.key === " ") {
@@ -72,6 +76,7 @@ export function useKeyboardNavigation(
   };
 
   const items = element.querySelectorAll("li");
+
   items.forEach((item) => {
     item.addEventListener("click", handleClick);
     item.addEventListener("focus", handleFocus);

@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import Select from "../Select.vue";
 import { ref } from "vue";
+import { SelectProps } from "../types";
 
-defineProps<{
-  defaultShow?: boolean;
-}>();
+defineProps<SelectProps>();
 
 const names = [
   "Alfa",
@@ -43,6 +42,8 @@ const value = ref<string>(names[8]);
     :value="value"
     :options="names.map((name) => ({ label: name, value: name }))"
     :default-show="defaultShow"
+    :label="label"
+    v-bind="$attrs"
     @change="(v) => (value = v)"
   >
   </Select>

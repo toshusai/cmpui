@@ -12,6 +12,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
+export const Label: Story = {
+  args: {
+    label: "Label",
+  },
+};
+
 export const Show: Story = {
   args: {
     defaultShow: true,

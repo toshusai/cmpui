@@ -1,27 +1,19 @@
 <script setup lang="ts">
-import { computed, onUnmounted, ref, VNode, watch } from "vue";
+import { computed, onUnmounted, ref, watch } from "vue";
 import Popover from "../Popover/Popover.vue";
 import MenuList from "../MenuList/MenuList.vue";
 import MenuListItem from "../MenuListItem/MenuListItem.vue";
 import { lockScroll } from "../../lib/dialog/lockScroll";
+import { SelectProps } from "./types";
+import { useId } from "../../lib/useId";
 
-const props = withDefaults(
-  defineProps<{
-    disabled?: boolean;
-    value?: string;
-    defaultShow?: boolean;
-    options?: {
-      label: string | VNode;
-      value: string;
-    }[];
-  }>(),
-  {
-    disabled: false,
-    defaultShow: undefined,
-    value: undefined,
-    options: undefined,
-  },
-);
+const props = withDefaults(defineProps<SelectProps>(), {
+  disabled: false,
+  defaultShow: undefined,
+  value: undefined,
+  label: undefined,
+  options: undefined,
+});
 
 const emit = defineEmits<{
   (_e: "change", v: string): void;
@@ -65,23 +57,42 @@ onUnmounted(() => {
 const handleClick = () => {
   show.value = true;
 };
+
+const id = useId();
+const labelId = useId();
+const popupId = useId();
 </script>
 
 <template>
   <button
+    :id="id"
     ref="trigger"
     class="cmpui_select__root"
     :disabled="disabled"
     v-bind="$attrs"
+    role="combobox"
+    :aria-expanded="show"
+    :aria-labelledby="labelId"
+    :aria-controls="popupId"
+    aria-haspopup="listbox"
     @click="handleClick"
   >
     <span v-if="isChildString">{{ selectedChild }}</span>
     <component :is="selectedChild" v-else />
     <div class="cmpui_select__keyboard-arrow-down-icon"></div>
+    <label v-if="label" :id="labelId" className="cmpui_select__label" :for="id">
+      {{ label }}
+    </label>
   </button>
 
   <Popover v-if="show" :show="show" :trigger="trigger" @close="show = false">
-    <MenuList :default-value="props.value" @select="handleSelect">
+    <MenuList
+      :id="popupId"
+      :default-value="props.value"
+      :aria-labelledby="labelId"
+      role="listbox"
+      @select="handleSelect"
+    >
       <MenuListItem
         v-for="option in options"
         :key="option.value"
