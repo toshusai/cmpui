@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/CSelect Default smoke-test 1`] = `
+<button id="id-1"
+        class="cmpui_select__root"
+        role="combobox"
+        aria-expanded="false"
+        aria-labelledby="id-2"
+        aria-controls="id-3"
+        aria-haspopup="listbox"
+>
+  <span>
+    India
+  </span>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
+</button>
+`;
+
+exports[`Components/CSelect Disabled smoke-test 1`] = `
+<button id="id-7"
+        class="cmpui_select__root"
+        disabled
+        role="combobox"
+        aria-expanded="false"
+        aria-labelledby="id-8"
+        aria-controls="id-9"
+        aria-haspopup="listbox"
+>
+  <span>
+    India
+  </span>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
+  <label id="id-8"
+         class="cmpui_select__label"
+         for="id-7"
+  >
+    Label
+  </label>
+</button>
+`;
+
+exports[`Components/CSelect Label smoke-test 1`] = `
+<button id="id-4"
+        class="cmpui_select__root"
+        role="combobox"
+        aria-expanded="false"
+        aria-labelledby="id-5"
+        aria-controls="id-6"
+        aria-haspopup="listbox"
+>
+  <span>
+    India
+  </span>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
+  <label id="id-5"
+         class="cmpui_select__label"
+         for="id-4"
+  >
+    Label
+  </label>
+</button>
+`;

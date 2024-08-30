@@ -1,14 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import ToastStory from "./ToastStory.vue";
-import IconButton from "../../IconButton/IconButton.vue";
-import Button from "../../Button/Button.vue";
-import ToastProvider from "../ToastProvider.vue";
-import Toast from "../Toast.vue";
+import IconButton from "../IconButton/IconButton.vue";
+import Button from "../Button/Button.vue";
+import ToastProvider from "./ToastProvider.vue";
+import Toast from "./Toast.vue";
 
 const meta = {
   title: "components/Toast",
-  component: ToastStory,
-} satisfies Meta<typeof ToastStory>;
+  component: Toast,
+  args: {
+    text: "tooltip",
+  },
+} satisfies Meta<typeof Toast>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
