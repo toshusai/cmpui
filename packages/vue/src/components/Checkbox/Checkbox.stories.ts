@@ -3,7 +3,6 @@ import Checkbox from "./Checkbox.vue";
 
 const meta = {
   component: Checkbox,
-  tags: ["autodocs"],
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;

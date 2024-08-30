@@ -6,9 +6,7 @@ import MenuList from "../MenuList/MenuList.vue";
 import MenuListItem from "../MenuListItem/MenuListItem.vue";
 
 const meta = {
-  title: "Components/Popover",
   component: Popover,
-  tags: ["autodocs"],
 } satisfies Meta<typeof Popover>;
 
 export default meta;

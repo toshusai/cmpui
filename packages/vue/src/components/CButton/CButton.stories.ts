@@ -3,7 +3,6 @@ import CButton from "./CButton.vue";
 
 const meta = {
   component: CButton,
-  tags: ["autodocs"],
 } satisfies Meta<typeof CButton>;
 
 export default meta;

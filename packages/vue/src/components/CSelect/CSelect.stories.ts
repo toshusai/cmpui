@@ -3,9 +3,7 @@ import CSelect from "./CSelect.vue";
 import { ref } from "vue";
 
 const meta = {
-  title: "Components/CSelect",
   component: CSelect,
-  tags: ["autodocs"],
 } satisfies Meta<typeof CSelect>;
 
 export default meta;

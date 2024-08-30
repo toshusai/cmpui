@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/CSelect Default smoke-test 1`] = `
+exports[`components/CSelect Default smoke-test 1`] = `
 <button id="id-1"
         class="cmpui_select__root"
         role="combobox"
@@ -17,7 +17,7 @@ exports[`Components/CSelect Default smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/CSelect Disabled smoke-test 1`] = `
+exports[`components/CSelect Disabled smoke-test 1`] = `
 <button id="id-7"
         class="cmpui_select__root"
         disabled
@@ -41,7 +41,7 @@ exports[`Components/CSelect Disabled smoke-test 1`] = `
 </button>
 `;
 
-exports[`Components/CSelect Label smoke-test 1`] = `
+exports[`components/CSelect Label smoke-test 1`] = `
 <button id="id-4"
         class="cmpui_select__root"
         role="combobox"

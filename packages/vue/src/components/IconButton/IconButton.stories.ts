@@ -5,7 +5,6 @@ import { h } from "vue";
 
 const meta = {
   component: IconButton,
-  tags: ["autodocs"],
   argTypes: {
     rounded: {
       control: { type: "boolean" },

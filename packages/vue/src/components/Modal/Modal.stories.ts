@@ -4,9 +4,7 @@ import Modal from "./Modal.vue";
 import CButton from "../CButton/CButton.vue";
 
 const meta = {
-  title: "Components/Modal",
   component: Modal,
-  tags: ["autodocs"],
 } satisfies Meta<typeof Modal>;
 
 export default meta;

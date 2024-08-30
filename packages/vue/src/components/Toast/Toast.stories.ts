@@ -5,7 +5,6 @@ import ToastProvider from "./ToastProvider.vue";
 import Toast from "./Toast.vue";
 
 const meta = {
-  title: "components/Toast",
   component: Toast,
   args: {
     text: "tooltip",
