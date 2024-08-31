@@ -41,7 +41,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="el" role="listbox" tabindex="0">
+  <div ref="el" class="menu-list" role="listbox" tabindex="-1">
     <slot></slot>
   </div>
 </template>
+
+<style scoped>
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.menu-list:focus-visible {
+  outline: var(--cmpui-primary-color) solid 1px;
+  outline-offset: 1px;
+}
+</style>

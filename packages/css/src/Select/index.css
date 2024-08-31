@@ -18,6 +18,14 @@
   text-decoration: none;
 }
 
+.cmpui_select__preview {
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
 .cmpui_select__root[aria-disabled="true"],
 .cmpui_select__root:disabled {
   cursor: default;

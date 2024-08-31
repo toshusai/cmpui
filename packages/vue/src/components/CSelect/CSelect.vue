@@ -22,11 +22,17 @@ const emit = defineEmits<{
 const show = ref(props.defaultShow ?? false);
 const trigger = ref<HTMLElement | null>(null);
 
-const selectedChild = computed(() => {
+const preview = computed(() => {
   const option = props.options?.find((o) => o.value === props.value);
-  return option?.label;
+  if (option) {
+    if (option?.render) {
+      const v = option.render(props.value);
+      return v;
+    }
+    return option.label;
+  }
+  return null;
 });
-const isChildString = computed(() => typeof selectedChild.value === "string");
 
 const handleSelect = (v: string) => {
   emit("change", v);
@@ -77,8 +83,8 @@ const popupId = useId();
     aria-haspopup="listbox"
     @click="handleClick"
   >
-    <span v-if="isChildString">{{ selectedChild }}</span>
-    <component :is="selectedChild" v-else />
+    <span v-if="typeof preview === 'string'">{{ preview }}</span>
+    <component :is="preview" v-else />
     <div class="cmpui_select__keyboard-arrow-down-icon"></div>
     <label v-if="label" :id="labelId" className="cmpui_select__label" :for="id">
       {{ label }}
@@ -97,9 +103,9 @@ const popupId = useId();
         v-for="option in options"
         :key="option.value"
         rounded
-        :value="option.value"
         style="padding-left: 24px; position: relative"
         role="option"
+        :value="option.value"
         @click="handleSelect(option.value)"
       >
         <div
@@ -107,7 +113,6 @@ const popupId = useId();
           class="cmpui_select_check-icon"
           style="position: absolute; left: 8px"
         ></div>
-
         {{ option.label }}
       </MenuListItem>
     </MenuList>

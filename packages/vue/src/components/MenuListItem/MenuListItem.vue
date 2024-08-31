@@ -3,12 +3,14 @@ import ListItem from "../ListItem/ListItem.vue";
 
 withDefaults(
   defineProps<{
+    is?: string;
     rounded?: boolean;
     selected?: boolean;
     value?: string;
     size?: "S" | "M";
   }>(),
   {
+    is: "li",
     size: "M",
     value: undefined,
   },
@@ -17,6 +19,7 @@ withDefaults(
 
 <template>
   <ListItem
+    :is="is"
     :data-size="size"
     :data-rounded="rounded"
     :aria-selected="selected"

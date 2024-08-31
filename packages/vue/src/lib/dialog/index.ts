@@ -3,7 +3,7 @@
  * MIT License
  * Copyright (c) 2017 Indrashish Ghosh
  */
-const FOCUSABLE_ELEMENTS = [
+export const FOCUSABLE_ELEMENTS = [
   "a[href]",
   "area[href]",
   'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',
@@ -16,6 +16,8 @@ const FOCUSABLE_ELEMENTS = [
   "[contenteditable]",
   '[tabindex]:not([tabindex^="-"])',
 ];
+
+export const FOCUSABLE_ELEMENTS_SELECTOR = FOCUSABLE_ELEMENTS.join(", ");
 
 export function focusTrap(element: HTMLElement) {
   const focusableElements = [

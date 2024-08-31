@@ -2,11 +2,12 @@ import { VNode } from "vue";
 
 export type SelectProps = {
   disabled?: boolean;
-  value?: string;
+  value: string;
   defaultShow?: boolean;
   label?: string;
   options?: {
     label: string | VNode;
     value: string;
+    render?: (value: string) => VNode;
   }[];
 };

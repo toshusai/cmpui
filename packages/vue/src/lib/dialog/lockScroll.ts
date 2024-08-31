@@ -1,6 +1,9 @@
 import { getScrollBarWidth } from "./getScrollBarWidth";
 
 export const lockScroll = () => {
+  if (document.body.dataset.lockScroll) {
+    return () => {};
+  }
   const scrollLeft = document.documentElement.scrollLeft;
   const scrollTop = document.documentElement.scrollTop;
   const bodyStyle: Pick<
@@ -37,11 +40,14 @@ export const lockScroll = () => {
     document.body.style[key as keyof typeof bodyStyle] = value;
   });
 
+  document.body.dataset.lockScroll = "true";
+
   return () => {
     Object.keys(bodyStyle).forEach((key) => {
       document.body.style[key as keyof typeof bodyStyle] =
         prevStyle[key as keyof typeof bodyStyle];
     });
+    delete document.body.dataset.lockScroll;
     window.scrollTo(scrollLeft, scrollTop);
   };
 };

@@ -27,11 +27,19 @@ export function setPopover(
     disabledTriggerClickClose?: boolean;
   },
 ) {
+  let prevPopover: string | undefined = undefined;
   const handlePointerDown = (e: PointerEvent) => {
+    const el = e.target as HTMLElement;
+    const current = document.getElementById(
+      document.body.dataset.popover ?? "",
+    );
     if (
-      !popoverElement?.contains(e.target as Node) &&
-      !triggerElement?.contains(e.target as Node)
+      (current && current.contains(el)) ||
+      popoverElement.contains(el) ||
+      triggerElement.contains(el)
     ) {
+      return;
+    } else {
       cleanUp();
     }
   };
@@ -52,7 +60,10 @@ export function setPopover(
       strategy: "fixed",
       middleware: [
         offset(options?.offset ?? defaultOptions.offset),
-        shift(),
+        shift({
+          padding: options?.padding ?? defaultOptions.padding,
+          boundary: document.body,
+        }),
         size({
           apply(args) {
             callback({
@@ -61,6 +72,7 @@ export function setPopover(
             });
           },
           padding: options?.padding ?? defaultOptions.padding,
+          boundary: document.body,
         }),
         flip({
           fallbackStrategy: "initialPlacement",
@@ -83,10 +95,13 @@ export function setPopover(
     if (!options?.disabledTriggerClickClose) {
       triggerElement?.removeEventListener("click", handleClick);
     }
+    document.body.dataset.popover = prevPopover;
   };
 
   const open = () => {
     cleanupUpdate = autoUpdate(triggerElement, popoverElement, updatePosition);
+    prevPopover = document.body.dataset.popover;
+    document.body.dataset.popover = popoverElement.id;
     if (!options?.disabledTriggerClickClose) {
       triggerElement?.addEventListener("click", handleClick);
     }

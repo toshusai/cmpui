@@ -1,11 +1,18 @@
 <script lang="ts" setup>
 import { useId } from "../../lib/useId";
 
-defineProps<{
-  label: HTMLElement | null;
-  invalid: boolean;
-  disabled: boolean;
-}>();
+withDefaults(
+  defineProps<{
+    label?: HTMLElement | null;
+    invalid?: boolean;
+    disabled?: boolean;
+  }>(),
+  {
+    label: null,
+    invalid: false,
+    disabled: false,
+  },
+);
 
 const value = defineModel<string>();
 

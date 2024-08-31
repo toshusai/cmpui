@@ -11,8 +11,7 @@ import {
 } from "vue";
 import { tooltip } from "../../lib/tooltip";
 import { useId } from "../../lib/useId";
-import { isValidVNode, TOAST_PROVIDER_KEY } from "./lib";
-import { TooltipProvide } from "./TooltipProvider.vue";
+import { isValidVNode, TOAST_PROVIDER_KEY, TooltipProvide } from "./lib";
 
 const props = withDefaults(
   defineProps<{

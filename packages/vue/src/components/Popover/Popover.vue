@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { CSSProperties, ref, watch } from "vue";
+import { CSSProperties, onMounted, onUnmounted, ref, watch } from "vue";
 import { setPopover } from "../../lib/popover";
+import { useId } from "../../lib/useId";
+import { lockScroll } from "../../lib/dialog/lockScroll";
 
 const divRef = ref<HTMLElement | null>(null);
 
@@ -20,6 +22,8 @@ const style = ref<CSSProperties>({
   top: "0",
   left: "0",
 });
+
+let componentCleanUp = () => {};
 
 watch(
   () => [props.trigger, divRef.value, props.show],
@@ -61,18 +65,42 @@ watch(
     handleOpenChange(props.show);
 
     watch(() => props.show, handleOpenChange);
+
+    componentCleanUp = cleanUp;
   },
 );
+
+let cleanUp = () => {};
+onMounted(() => {
+  if (props.show) {
+    const cleanUpLockScroll = lockScroll();
+    cleanUp = () => {
+      cleanUpLockScroll();
+    };
+  } else {
+    cleanUp();
+  }
+});
+
+onUnmounted(() => {
+  componentCleanUp();
+  cleanUp();
+});
+
+const id = useId();
 </script>
 
 <template>
-  <div
-    ref="divRef"
-    class="cmpui_float-box__root"
-    tabindex="-1"
-    v-bind="$attrs"
-    :style="style"
-  >
-    <slot></slot>
-  </div>
+  <Teleport to="body">
+    <div
+      :id="id"
+      ref="divRef"
+      class="cmpui_float-box__root"
+      tabindex="-1"
+      v-bind="$attrs"
+      :style="style"
+    >
+      <slot></slot>
+    </div>
+  </Teleport>
 </template>

@@ -1,3 +1,5 @@
+import { FOCUSABLE_ELEMENTS_SELECTOR } from "../dialog";
+
 export function useKeyboardNavigation(
   element: HTMLDivElement,
   onSelect: (value: string) => void,
@@ -5,28 +7,34 @@ export function useKeyboardNavigation(
     defaultValue?: string;
   },
 ) {
+  const items = [
+    ...element.querySelectorAll(FOCUSABLE_ELEMENTS_SELECTOR),
+  ].filter((el) => el instanceof HTMLElement) as HTMLElement[];
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "ArrowDown") {
-      const items = element.querySelectorAll("li");
-      const next = Array.from(items).find(
-        (item) => item === document.activeElement,
-      )?.nextElementSibling;
+      const index = items.findIndex((item) => item === document.activeElement);
+      const next = items[index + 1];
       if (next && next instanceof HTMLElement) {
         next.focus();
       } else if (document.activeElement === element) {
-        items[0].focus();
+        if (items[0] instanceof HTMLElement) {
+          items[0].focus();
+        }
       }
       e.preventDefault();
     } else if (e.key === "ArrowUp") {
       if (!element) return;
-      const items = element.querySelectorAll("li");
-      const prev = Array.from(items).find(
-        (item) => item === document.activeElement,
-      )?.previousElementSibling;
+      const index = items.findIndex((item) => item === document.activeElement);
+      const prev = items[index - 1];
       if (prev && prev instanceof HTMLElement) {
         prev.focus();
       } else if (document.activeElement === element) {
-        items[items.length - 1].focus();
+        if (items.length > 0) {
+          const item = items[items.length - 1];
+          if (item instanceof HTMLElement) {
+            item.focus();
+          }
+        }
       }
       e.preventDefault();
     } else if (e.key === "Enter" || e.key === " ") {
@@ -39,11 +47,10 @@ export function useKeyboardNavigation(
         }
       }
     } else if (e.key === "Home") {
-      const items = element.querySelectorAll("li");
-      items[0].focus();
+      if (items[0] instanceof HTMLElement) items[0].focus();
     } else if (e.key === "End") {
-      const items = element.querySelectorAll("li");
-      items[items.length - 1].focus();
+      const item = items[items.length - 1];
+      if (item instanceof HTMLElement) item.focus();
     }
   };
 
@@ -75,13 +82,19 @@ export function useKeyboardNavigation(
     }
   };
 
-  const items = element.querySelectorAll("li");
+  const handleMouseLeave = (e: MouseEvent) => {
+    const target = e.target;
+    if (target instanceof HTMLElement) {
+      target.blur();
+    }
+  };
 
   items.forEach((item) => {
     item.addEventListener("click", handleClick);
     item.addEventListener("focus", handleFocus);
     item.addEventListener("blur", handleBlur);
     item.addEventListener("mouseenter", handleMouseEnter);
+    item.addEventListener("mouseleave", handleMouseLeave);
 
     if (options?.defaultValue && item.dataset.value === options.defaultValue) {
       item.dataset.highlighted = "true";
@@ -91,7 +104,7 @@ export function useKeyboardNavigation(
     }
   });
 
-  window.addEventListener("keydown", handleKeyDown);
+  element.addEventListener("keydown", handleKeyDown);
 
   const keywords = Array.from(items).map(
     (item) => item.textContent?.trim() ?? "",
@@ -102,12 +115,13 @@ export function useKeyboardNavigation(
   });
 
   return () => {
-    window.removeEventListener("keydown", handleKeyDown);
+    element.removeEventListener("keydown", handleKeyDown);
     items.forEach((item) => {
       item.removeEventListener("click", handleClick);
       item.removeEventListener("focus", handleFocus);
       item.removeEventListener("blur", handleBlur);
       item.removeEventListener("mouseenter", handleMouseEnter);
+      item.removeEventListener("mouseleave", handleMouseLeave);
     });
   };
 }
@@ -127,6 +141,9 @@ function typeAheadSearch(
 ) {
   let search = "";
   const handleKeyDown = (e: KeyboardEvent) => {
+    if (document.activeElement instanceof HTMLInputElement) return;
+    if (document.activeElement instanceof HTMLTextAreaElement) return;
+
     debounce(() => {
       search = "";
     }, 1000)();

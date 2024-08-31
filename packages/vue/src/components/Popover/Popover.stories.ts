@@ -13,6 +13,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const html = String.raw;
+
 export const Default: Story = {
   render: () => ({
     setup() {
@@ -46,11 +47,57 @@ export const Default: Story = {
         @close="show = false"
       >
         <MenuList @select="handleSelect">
-          <MenuListItem value="Option A">Option A</MenuListItem>
-          <MenuListItem value="Option B">Option B</MenuListItem>
-          <MenuListItem value="Option C">Option C</MenuListItem>
+          <MenuListItem is="button" value="Alpha">Alpha</MenuListItem>
+          <MenuListItem is="button" value="Beta">Beta</MenuListItem>
+          <MenuListItem is="button" value="Gamma">Gamma</MenuListItem>
+          <input type="text" />
         </MenuList>
       </Popover>
+    `,
+  }),
+};
+
+export const Scroll: Story = {
+  render: () => ({
+    setup() {
+      const trigger = ref<InstanceType<typeof CButton> | null>(null);
+
+      const show = ref(false);
+
+      const selected = ref<string | null>(null);
+
+      const handleSelect = (v: string) => {
+        selected.value = v;
+        show.value = false;
+      };
+
+      return {
+        trigger,
+        show,
+        selected,
+        handleSelect,
+      };
+    },
+    components: { Popover, CButton, MenuList, MenuListItem },
+    template: html`
+      <div style="height: 400px; overflow: auto;"></div>
+      <CButton ref="trigger" @click="show = true">
+        {{ selected || "Select" }}
+      </CButton>
+      <Popover
+        v-if="show"
+        :trigger="trigger?.$el"
+        :show="show"
+        @close="show = false"
+      >
+        <MenuList @select="handleSelect">
+          <MenuListItem is="button" value="Alpha">Alpha</MenuListItem>
+          <MenuListItem is="button" value="Beta">Beta</MenuListItem>
+          <MenuListItem is="button" value="Gamma">Gamma</MenuListItem>
+          <input type="text" />
+        </MenuList>
+      </Popover>
+      <div style="height: 400px; overflow: auto;"></div>
     `,
   }),
 };

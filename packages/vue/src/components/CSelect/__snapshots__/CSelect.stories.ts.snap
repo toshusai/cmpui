@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`components/CSelect Custom smoke-test 1`] = `
+<button id="id-13"
+        class="cmpui_select__root"
+        role="combobox"
+        aria-expanded="false"
+        aria-labelledby="id-14"
+        aria-controls="id-15"
+        aria-haspopup="listbox"
+        style="width: 128px;"
+>
+  <strong>
+    India
+  </strong>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
+</button>
+`;
+
 exports[`components/CSelect Default smoke-test 1`] = `
 <button id="id-1"
         class="cmpui_select__root"
@@ -61,5 +79,23 @@ exports[`components/CSelect Label smoke-test 1`] = `
   >
     Label
   </label>
+</button>
+`;
+
+exports[`components/CSelect Overflow smoke-test 1`] = `
+<button id="id-10"
+        class="cmpui_select__root"
+        role="combobox"
+        aria-expanded="false"
+        aria-labelledby="id-11"
+        aria-controls="id-12"
+        aria-haspopup="listbox"
+        style="width: 128px;"
+>
+  <span>
+    IndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndiaIndia
+  </span>
+  <div class="cmpui_select__keyboard-arrow-down-icon">
+  </div>
 </button>
 `;

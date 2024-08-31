@@ -1,4 +1,4 @@
-import { Static, Transition, VNode } from "vue";
+import { Ref, Static, Transition, VNode } from "vue";
 
 export function isValidVNode(node: VNode): node is VNode {
   switch (node.type) {
@@ -14,3 +14,8 @@ export function isValidVNode(node: VNode): node is VNode {
 }
 
 export const TOAST_PROVIDER_KEY = Symbol("toast-provider");
+
+export type TooltipProvide = {
+  show: Ref<boolean>;
+  setShow: (show: boolean) => void;
+};

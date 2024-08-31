@@ -26,11 +26,6 @@ const setShow = (v: boolean) => {
   }
 };
 
-export type TooltipProvide = {
-  show: typeof show;
-  setShow: typeof setShow;
-};
-
 provide(TOAST_PROVIDER_KEY, {
   show: show,
   setShow: setShow,
