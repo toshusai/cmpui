@@ -18,6 +18,7 @@
 
 .cmpui_list-item__root:active {
   background-color: var(--cmpui-bg-active-color);
+  color: var(--cmpui-bg-color);
 }
 
 .cmpui_list-item__root[data-highlighted="true"],
@@ -48,6 +49,12 @@
   font-size: 12px;
   height: 24px;
   min-height: 24px;
+}
+
+.cmpui_list-item__root[data-size="L"] {
+  font-size: 14px;
+  height: 40px;
+  min-height: 40px;
 }
 
 .cmpui_list-item__root[data-rounded="true"] {
