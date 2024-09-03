@@ -1,0 +1,40 @@
+.cmpui_drawer {
+  background-color: var(--cmpui-bg-color);
+
+  animation: drawerOpen 250ms;
+  animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  left: 0;
+  min-width: 256px;
+  max-width: 256px;
+  height: 100%;
+  position: absolute;
+}
+
+.cmpui_drawer__overlay {
+  background-color: var(--cmpui-overlay-color);
+
+  animation: overlayOpen 250ms;
+  inset: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+@keyframes overlayOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawerOpen {
+  from {
+    opacity: 0;
+    transform: translate(-100%, 0%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}

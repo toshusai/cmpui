@@ -3,14 +3,11 @@ import { ref, watch } from "vue";
 import { focusTrap } from "../../lib/dialog";
 import { ariaHiddenOthers } from "../../lib/dialog/ariaHiddenOthers";
 import { lockScroll } from "../../lib/dialog/lockScroll";
-import IconButton from "../IconButton/IconButton.vue";
-import { useId } from "../../lib/useId";
 
 const el = ref<HTMLElement | null>(null);
 
 const props = defineProps<{
   show: boolean;
-  title: string;
 }>();
 
 const emit = defineEmits<{
@@ -41,38 +38,17 @@ watch(
     if (!show) cleanUp();
   },
 );
-const id = useId();
 </script>
 
 <template>
   <Teleport v-if="show" to="body">
     <div
       ref="el"
-      class="cmpui_modal__overlay"
-      aria-modal="true"
-      :aria-labelledby="id"
+      class="cmpui_drawer__overlay"
       @keydown.esc="emit('close')"
+      @click="emit('close')"
     >
-      <div role="dialog" class="cmpui_float-box__root cmpui_modal__root">
-        <div class="cmpui_modal__header">
-          <div :id="id" class="cmpui_modal__title">{{ title }}</div>
-          <IconButton
-            class="cmpui_modal__close-button"
-            size="S"
-            @click="emit('close')"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              viewBox="0 -960 960 960"
-              width="20"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              />
-            </svg>
-          </IconButton>
-        </div>
+      <div class="cmpui_drawer">
         <slot></slot>
       </div>
     </div>

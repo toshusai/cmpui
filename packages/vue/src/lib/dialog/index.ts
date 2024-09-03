@@ -60,7 +60,7 @@ export function focusTrap(element: HTMLElement) {
   const autoFocusElement = focusableElements.find((el) => el.autofocus);
   if (autoFocusElement) {
     autoFocusElement.focus();
-  } else {
+  } else if (focusableElements.length > 0) {
     focusableElements[0].focus();
   }
 
