@@ -1,0 +1,10 @@
+.cmpui_menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.cmpui_menu-list:focus-visible {
+  outline: var(--cmpui-primary-color) solid 1px;
+  outline-offset: 1px;
+}
