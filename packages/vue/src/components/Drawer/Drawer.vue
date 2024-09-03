@@ -48,7 +48,7 @@ watch(
       @keydown.esc="emit('close')"
       @click="emit('close')"
     >
-      <div class="cmpui_drawer">
+      <div class="cmpui_drawer" @click.stop>
         <slot></slot>
       </div>
     </div>
