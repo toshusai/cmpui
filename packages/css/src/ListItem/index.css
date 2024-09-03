@@ -12,11 +12,11 @@
   cursor: pointer;
 }
 
-.cmpui_list-item__root:hover {
+.cmpui_list-item__root:not([data-no-interaction="true"]):hover {
   background-color: var(--cmpui-bg-hover-color);
 }
 
-.cmpui_list-item__root:active {
+.cmpui_list-item__root:not([data-no-interaction="true"]):active {
   background-color: var(--cmpui-bg-active-color);
   color: var(--cmpui-bg-color);
 }

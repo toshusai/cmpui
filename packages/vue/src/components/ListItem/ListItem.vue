@@ -4,7 +4,7 @@ withDefaults(
     is?: string;
     rounded?: boolean;
     selected?: boolean;
-    size?: "S" | "M";
+    size?: "S" | "M" | "L";
   }>(),
   {
     is: "li",

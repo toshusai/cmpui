@@ -7,7 +7,7 @@ withDefaults(
     rounded?: boolean;
     selected?: boolean;
     value?: string;
-    size?: "S" | "M";
+    size?: "S" | "M" | "L";
   }>(),
   {
     is: "li",
