@@ -31,10 +31,14 @@
   outline: none;
 }
 
-.cmpui_list-item__root[aria-selected="true"] {
+.cmpui_list-item__root[aria-selected="true"],
+.cmpui_list-item__root:not([data-no-interaction="true"])[aria-selected="true"] {
   background-color: var(--cmpui-bg-focus-color);
-
   color: white;
+}
+
+.cmpui_list-item__root[data-no-interaction="true"] {
+  cursor: default;
 }
 
 .cmpui_list-item__root[aria-disabled="true"],
