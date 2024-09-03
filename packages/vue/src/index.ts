@@ -11,10 +11,16 @@ import TextInput from "./components/TextInput/TextInput.vue";
 import Tooltip from "./components/Tooltip/Tooltip.vue";
 import TooltipProvider from "./components/Tooltip/TooltipProvider.vue";
 import SelectItem from "./components/CSelect/SelectItem.vue";
+import CRadioGroup from "./components/CRadioGroup/CRadioGroup.vue";
+import CRadioInput from "./components/CRadioGroup/CRadioInput.vue";
+import CRadioInputWithLabel from "./components/CRadioGroup/CRadioInputWithLabel.vue";
 
 export {
   CButton,
   Checkbox,
+  CRadioGroup,
+  CRadioInput,
+  CRadioInputWithLabel,
   SelectItem,
   CSelect,
   IconButton,
