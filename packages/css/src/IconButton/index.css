@@ -34,7 +34,6 @@
 .cmpui_icon-button__root:focus-visible {
   background-color: var(--cmpui-bg-active-color);
   outline: var(--cmpui-primary-color) solid 1px;
-
   outline-offset: 1px;
 }
 

@@ -52,7 +52,6 @@ const id = useId();
       aria-modal="true"
       :aria-labelledby="id"
       @keydown.esc="emit('close')"
-      @click="(e) => e.target == el && emit('close')"
     >
       <div role="dialog" class="cmpui_float-box__root cmpui_modal__root">
         <div class="cmpui_modal__header">

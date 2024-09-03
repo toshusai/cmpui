@@ -20,11 +20,23 @@ export const FOCUSABLE_ELEMENTS = [
 export const FOCUSABLE_ELEMENTS_SELECTOR = FOCUSABLE_ELEMENTS.join(", ");
 
 export function focusTrap(element: HTMLElement) {
-  const focusableElements = [
+  let focusableElements = [
     ...element.querySelectorAll(FOCUSABLE_ELEMENTS.join(", ")),
   ].filter((el) => el instanceof HTMLElement) as HTMLElement[];
 
   const prevActiveElement = document.activeElement;
+
+  const observer = new MutationObserver(() => {
+    focusableElements = [
+      ...element.querySelectorAll(FOCUSABLE_ELEMENTS.join(", ")),
+    ].filter((el) => el instanceof HTMLElement) as HTMLElement[];
+  });
+
+  observer.observe(element, {
+    attributes: true,
+    childList: true,
+    subtree: true,
+  });
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Tab") {
@@ -45,12 +57,18 @@ export function focusTrap(element: HTMLElement) {
     }
   };
 
-  focusableElements[0].focus();
+  const autoFocusElement = focusableElements.find((el) => el.autofocus);
+  if (autoFocusElement) {
+    autoFocusElement.focus();
+  } else {
+    focusableElements[0].focus();
+  }
 
   window.addEventListener("keydown", handleKeyDown);
 
   return () => {
     window.removeEventListener("keydown", handleKeyDown);
+    observer.disconnect();
     if (prevActiveElement instanceof HTMLElement) {
       prevActiveElement.focus();
     }
