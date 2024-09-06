@@ -1,7 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 
 import { useTouchStartPrevent } from "../..";
-import "../../styles/alpha-checker-board.css";
 import { classNames } from "../../utils/classNames";
 import { blendColors } from "../../utils/colors/blendColors";
 import { WHITE } from "../../utils/colors/const";

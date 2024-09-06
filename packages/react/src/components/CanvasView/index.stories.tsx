@@ -1,14 +1,12 @@
+import { CanvasViewCursor } from "@toshusai/cmpui-core";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { createKeyDownUpHandler } from "../../utils/interactions/createKeyDownUpHandler";
 
-import { ViewMode } from "./ViewMode";
 import { View } from "./View";
 
 import { CanvasView, CanvasViewProps } from ".";
-
-import "../../styles/alpha-checker-board.css";
 
 function usePointerEnterFocus() {
   return useCallback((e: React.PointerEvent<HTMLElement>) => {
@@ -93,17 +91,20 @@ export const Basic: Story = {
       handleKeyDowns.map((handler) => handler(e));
     };
 
-    const mode = useMemo(() => {
+    const [cursor, setCursor] = useState<CanvasViewCursor>(
+      CanvasViewCursor.Auto,
+    );
+
+    useEffect(() => {
       if (keyStack.includes(" ")) {
-        return "pan";
+        setCursor(CanvasViewCursor.Grab);
+      } else if (keyStack.includes("Alt") && keyStack.includes("Shift")) {
+        setCursor(CanvasViewCursor.ZoomOut);
+      } else if (keyStack.includes("Alt")) {
+        setCursor(CanvasViewCursor.ZoomIn);
+      } else {
+        setCursor(CanvasViewCursor.Auto);
       }
-      if (keyStack.includes("Alt") && keyStack.includes("Shift")) {
-        return "zoom-out";
-      }
-      if (keyStack.includes("Alt")) {
-        return "zoom-in";
-      }
-      return "default";
     }, [keyStack]);
 
     const handlePointerEnter = usePointerEnterFocus();
@@ -113,7 +114,8 @@ export const Basic: Story = {
         onKeyDown={handleKeyDown}
         onChangeView={setView}
         view={view}
-        mode={mode}
+        cursor={cursor}
+        setCursor={setCursor}
         onPointerEnter={handlePointerEnter}
       />
     );
@@ -128,7 +130,13 @@ export const Grab: Story = {
       scale: 1,
     });
 
-    return <BaseStory onChangeView={setView} view={view} mode={"pan"} />;
+    return (
+      <BaseStory
+        onChangeView={setView}
+        view={view}
+        cursor={CanvasViewCursor.Grab}
+      />
+    );
   },
 };
 
@@ -140,18 +148,20 @@ export const Zoom: Story = {
       scale: 1,
     });
 
-    const [mode, setMode] = useState<ViewMode>("zoom-in");
+    const [cursor, setCursor] = useState<CanvasViewCursor>(
+      CanvasViewCursor.ZoomIn,
+    );
 
     useEffect(() => {
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === "Alt") {
-          setMode("zoom-out");
+          setCursor(CanvasViewCursor.ZoomOut);
           window.addEventListener("keyup", handleKeyUp);
         }
       };
       const handleKeyUp = (e: KeyboardEvent) => {
         if (e.key === "Alt") {
-          setMode("zoom-in");
+          setCursor(CanvasViewCursor.ZoomIn);
         }
         window.removeEventListener("keyup", handleKeyUp);
       };
@@ -163,6 +173,6 @@ export const Zoom: Story = {
       };
     }, []);
 
-    return <BaseStory onChangeView={setView} view={view} mode={mode} />;
+    return <BaseStory onChangeView={setView} view={view} cursor={cursor} />;
   },
 };

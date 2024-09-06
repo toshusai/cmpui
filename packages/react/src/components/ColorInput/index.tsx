@@ -12,7 +12,6 @@ import { Popover } from "../Popover";
 import { SliderNumberField } from "../SliderNumberField";
 import { TextInput } from "../TextInput";
 
-import "../../styles/alpha-checker-board.css";
 import "./index.css";
 
 export type ColorInputProps = {

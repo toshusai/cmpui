@@ -1,10 +1,16 @@
-export function OriginMarker(props: {
-  x: number;
-  y: number;
-  transform: string;
-}) {
+import { forwardRef } from "react";
+
+export const OriginMarker = forwardRef<
+  HTMLDivElement,
+  {
+    x: number;
+    y: number;
+    transform: string;
+  }
+>(function OriginMarker(props, ref) {
   return (
     <div
+      ref={ref}
       style={{
         position: "absolute",
         pointerEvents: "none",
@@ -45,4 +51,4 @@ export function OriginMarker(props: {
       </div>
     </div>
   );
-}
+});

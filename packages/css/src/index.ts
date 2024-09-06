@@ -1,6 +1,8 @@
 import "./global.css";
+import "./alpha-checker-board.css";
 
 import "./Button/index.css";
+import "./CanvasView/index.css";
 import "./Checkbox/index.css";
 import "./Drawer/index.css";
 import "./FloatBox/index.css";

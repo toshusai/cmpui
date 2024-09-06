@@ -1,4 +1,5 @@
 import CButton from "./components/CButton/CButton.vue";
+import CCanvasView from "./components/CCanvasView/CCanvasView.vue";
 import Checkbox from "./components/Checkbox/Checkbox.vue";
 import CRadioGroup from "./components/CRadioGroup/CRadioGroup.vue";
 import CRadioInput from "./components/CRadioGroup/CRadioInput.vue";
@@ -18,6 +19,7 @@ import TooltipProvider from "./components/Tooltip/TooltipProvider.vue";
 
 export {
   CButton,
+  CCanvasView,
   Checkbox,
   CRadioGroup,
   CRadioInput,

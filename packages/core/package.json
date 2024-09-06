@@ -1,0 +1,35 @@
+{
+  "name": "@toshusai/cmpui-core",
+  "version": "1.0.0-alpha.13",
+  "type": "module",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.es.js",
+        "types": "./types/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.umd.js",
+        "types": "./types/index.d.ts"
+      }
+    }
+  },
+  "files": [
+    "/dist",
+    "/types"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.ci.json",
+    "dev": "concurrently \"tsc --watch\" \"vite build --watch\"",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "concurrently": "^8.2.2"
+  }
+}

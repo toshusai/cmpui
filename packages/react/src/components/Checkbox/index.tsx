@@ -1,7 +1,5 @@
 import { useCallback } from "react";
 
-import { CheckSVG } from "./CheckSVG";
-
 export type CheckboxProps = {
   label?: React.ReactNode;
   checked?: boolean;
@@ -19,19 +17,14 @@ export function Checkbox(props: CheckboxProps) {
   );
   return (
     <div className="cmpui_checkbox__root" aria-disabled={props.disabled}>
-      <div className="cmpui_checkbox__box">
-        <input
-          type="checkbox"
-          className="cmpui_checkbox__input"
-          id={props.id}
-          disabled={props.disabled}
-          checked={props.checked}
-          onChange={handleChange}
-        />
-        <div className="cmpui_checkbox__indicator" data-checked={props.checked}>
-          <CheckSVG />
-        </div>
-      </div>
+      <input
+        type="checkbox"
+        className="cmpui_checkbox__input"
+        id={props.id}
+        disabled={props.disabled}
+        checked={props.checked}
+        onChange={handleChange}
+      />
       {props.label && (
         <label className="cmpui_checkbox__label" htmlFor={props.id}>
           {props.label}

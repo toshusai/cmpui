@@ -25,7 +25,7 @@ const rendered = props.render({
       <TreeViewItem
         v-for="child in item.children"
         :key="child.id"
-        :item="child"
+        :item="child as T"
         :render="render"
         :depth="depth + 1"
       />

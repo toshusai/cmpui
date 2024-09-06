@@ -9,8 +9,6 @@ import { IHandleIndicatorUpdate } from "./types/IHandleIndicatorUpdate";
 import { OrderType } from "./types/OrderType";
 import { RenderProps } from "./types/RenderProps";
 
-import "./index.css";
-
 export type { IHandleIndicatorUpdate } from "./types/IHandleIndicatorUpdate";
 export type { RenderProps } from "./types/RenderProps";
 export type { OrderType } from "./types/OrderType";

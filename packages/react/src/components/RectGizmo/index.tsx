@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useMemo, useRef } from "react";
 
 import { Circle } from "../Circle";
 import { matrixToCss } from "../../utils/matrixToCss";
@@ -70,6 +70,8 @@ export function RectGizmo(props: RectGizmoProps) {
     });
   }, [steppedAngle, props.scaleX, props.scaleY]);
 
+  const centerRef = useRef<HTMLDivElement>(null);
+
   return (
     <div
       style={{
@@ -106,6 +108,7 @@ export function RectGizmo(props: RectGizmoProps) {
         x={props.origin.x}
         y={props.origin.y}
         transform={invertScaleCss}
+        ref={centerRef}
       />
 
       {props.showOrigin && (
@@ -256,15 +259,20 @@ export function RectGizmo(props: RectGizmoProps) {
               }}
               onPointerDown={createDragHandler({
                 onDown(e) {
+                  const originEl = centerRef.current;
+                  if (!originEl) return;
+                  const rect = originEl.getBoundingClientRect();
                   const globalCenter = new Vector2(
-                    props.position.x,
-                    props.position.y,
+                    rect.left + rect.width / 2,
+                    rect.top + rect.height / 2,
                   );
+
                   const globalCursor = new Vector2(e.clientX, e.clientY);
                   return {
                     startX: e.clientX,
                     startY: e.clientY,
                     startAngle: props.angle,
+                    globalCenter,
                     diffAngle:
                       Math.atan2(
                         globalCenter.y - globalCursor.y,
@@ -275,12 +283,8 @@ export function RectGizmo(props: RectGizmoProps) {
                 },
                 onMove(e, ctx) {
                   if (!ctx) return;
-                  const center = new Vector2(
-                    props.position.x,
-                    props.position.y,
-                  );
-                  const deltaX = e.clientX - center.x;
-                  const deltaY = e.clientY - center.y;
+                  const deltaX = e.clientX - ctx.globalCenter.x;
+                  const deltaY = e.clientY - ctx.globalCenter.y;
                   const newAngle = Math.atan2(deltaY, deltaX) + Math.PI / 2;
                   props.onChangeAngle?.(
                     newAngle - ctx.diffAngle + ctx.startAngle,

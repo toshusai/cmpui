@@ -1,8 +1,8 @@
 {
   "name": "@toshusai/cmpui-vue",
   "version": "1.0.0-alpha.13",
-  "private": true,
   "description": "CmpUI is a component library designed for creating complex GUI applications in web browsers.",
+  "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -10,17 +10,22 @@
     ".": {
       "import": {
         "default": "./dist/index.es.js",
-        "types": "./dist/index.d.ts"
+        "types": "./types/index.d.ts"
       },
       "require": {
         "default": "./dist/index.umd.js",
-        "types": "./dist/index.d.ts"
+        "types": "./types/index.d.ts"
       }
     }
   },
+  "files": [
+    "/dist",
+    "/types"
+  ],
   "scripts": {
     "typecheck": "vue-tsc -p tsconfig.ci.json",
     "test:watch": "vitest",
+    "dev": "concurrently \"vue-tsc --watch\" \"vite build --watch\"",
     "build": "npm run typecheck && vite build && vue-tsc",
     "storybook": "storybook dev -p 6006",
     "storybook:test": "test-storybook",
@@ -33,6 +38,7 @@
   },
   "dependencies": {
     "@floating-ui/dom": "^1.6.10",
+    "@toshusai/cmpui-core": "link:../core",
     "@toshusai/cmpui-css": "link:../css"
   },
   "peerDependencies": {

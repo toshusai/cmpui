@@ -3,6 +3,7 @@
   height: 100%;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .cmpui_canvas-view__root:focus {

@@ -1,25 +1,26 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  CanvasViewCursor,
+  createPanDragHandler,
+  handleWheelZoom,
+  zoomView,
+} from "@toshusai/cmpui-core";
+import { useCallback, useMemo, useRef } from "react";
 
-import { createDragHandler } from "../../utils/interactions/createDragHandler";
 import { useAddEventListener } from "../../utils/interactions/useAddEventListener";
 
-import { ViewMode } from "./ViewMode";
 import { View } from "./View";
 
-import "./index.css";
-
 export * from "./View";
-export * from "./ViewMode";
 
 export type CanvasViewProps = {
   children?: React.ReactNode;
   content?: React.ReactNode;
   onChangeView: (view: View) => void;
   view: View;
-  mode?: ViewMode;
+  cursor?: CanvasViewCursor;
+  setCursor?: (cursor: CanvasViewCursor) => void;
   minScale?: number;
   maxScale?: number;
-  mouseZoomScale?: number;
   trackPadZoomScale?: number;
   trackPadMoveScaleX?: number;
   trackPadMoveScaleY?: number;
@@ -35,44 +36,27 @@ export function CanvasView({
   children,
   content,
   view,
-  mode,
+  cursor,
+  setCursor,
   onChangeView,
   style,
   ...props
 }: CanvasViewProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [cursor, setCursor] = useState<
-    "auto" | "grab" | "grabbing" | "zoom-in" | "zoom-out"
-  >("auto");
-  const modeRef = useRef(mode);
 
-  const zoom = useCallback(
+  const memoZoom = useCallback(
     (clientX: number, clientY: number, delta: number) => {
       if (!ref.current) return;
-      let rate = 1 + delta / 200;
-
-      const rect = ref.current.getBoundingClientRect();
-      const parentRect = ref.current.parentElement?.getBoundingClientRect();
-      if (!parentRect) return;
-      const offsetX = clientX - rect.left;
-      const offsetY = clientY - rect.top;
-
-      const NX = offsetX - view.x;
-      const NY = offsetY - view.y;
-
-      if (maxScale !== undefined && view.scale * rate > maxScale) {
-        rate = maxScale / view.scale;
-      } else if (minScale !== undefined && view.scale * rate < minScale) {
-        rate = minScale / view.scale;
-      }
-
-      onChangeView({
-        x: view.x + NX - NX * rate,
-        y: view.y + NY - NY * rate,
-        scale: view.scale * rate,
-      });
+      zoomView(
+        ref.current,
+        clientX,
+        clientY,
+        delta,
+        { view, maxScale, minScale },
+        onChangeView,
+      );
     },
-    [view, onChangeView, maxScale, minScale],
+    [ref.current, view, maxScale, minScale, onChangeView],
   );
 
   useAddEventListener(
@@ -80,94 +64,32 @@ export function CanvasView({
     "wheel",
     useCallback(
       (e) => {
-        const isTrackpad = Number.isInteger(e.deltaY);
-        const isZoom = e.ctrlKey || e.metaKey;
-
-        if (isTrackpad && !isZoom) {
-          onChangeView({
-            x: view.x - e.deltaX * trackPadMoveScaleX,
-            y: view.y - e.deltaY * trackPadMoveScaleY,
-            scale: view.scale,
-          });
-          e.preventDefault();
-          return;
-        }
-
-        zoom(e.clientX, e.clientY, -e.deltaY);
-        e.preventDefault();
+        handleWheelZoom(e, view, onChangeView, memoZoom, {
+          trackPadMoveScaleX,
+          trackPadMoveScaleY,
+        });
       },
-      [view, onChangeView, zoom, trackPadMoveScaleY, trackPadMoveScaleX],
+      [view, onChangeView, zoomView, trackPadMoveScaleY, trackPadMoveScaleX],
     ),
     useMemo(() => ({ passive: false }), []),
   );
 
-  useEffect(() => {
-    if (mode === "pan") {
-      setCursor("grab");
-    } else if (mode === "zoom-in") {
-      setCursor("zoom-in");
-    } else if (mode === "zoom-out") {
-      setCursor("zoom-out");
-    } else {
-      setCursor("auto");
-    }
-    modeRef.current = mode;
-  }, [mode]);
-
-  const handlePointerDownForPan = useMemo(
-    () =>
-      createDragHandler<
-        | {
-            startX: number;
-            startY: number;
-            startOSX: number;
-            startOSY: number;
-          }
-        | undefined
-      >({
-        onDown: (e: React.PointerEvent<HTMLElement | SVGElement>) => {
-          if (mode !== "pan") return false;
-          setCursor("grabbing");
-          return {
-            startX: e.clientX,
-            startY: e.clientY,
-            startOSX: view.x,
-            startOSY: view.y,
-          };
-        },
-        onMove: (e, ctx) => {
-          if (ctx === undefined) return;
-          const deltaX = ctx.startX - e.clientX;
-          const deltaY = ctx.startY - e.clientY;
-
-          onChangeView({
-            x: ctx.startOSX - deltaX,
-            y: ctx.startOSY - deltaY,
-            scale: view.scale,
-          });
-        },
-        onUp: () => {
-          if (modeRef.current === "pan") {
-            setCursor("grab");
-          } else {
-            setCursor("auto");
-          }
-        },
-      }),
-    [mode, view, onChangeView],
-  );
+  const handlePointerDownForPan = useMemo(() => {
+    if (!ref.current) return undefined;
+    return createPanDragHandler(ref.current, view, onChangeView, setCursor);
+  }, [view, onChangeView, ref.current]);
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent<HTMLElement>) => {
-      if (mode === "zoom-in") {
-        zoom(e.pageX, e.pageY, pointerDownZoomScale);
-      } else if (mode === "zoom-out") {
-        zoom(e.pageX, e.pageY, -pointerDownZoomScale);
+      if (cursor === CanvasViewCursor.ZoomIn) {
+        memoZoom(e.pageX, e.pageY, pointerDownZoomScale);
+      } else if (cursor === CanvasViewCursor.ZoomOut) {
+        memoZoom(e.pageX, e.pageY, -pointerDownZoomScale);
       } else {
-        handlePointerDownForPan(e);
+        handlePointerDownForPan?.(e.nativeEvent);
       }
     },
-    [mode, handlePointerDownForPan, pointerDownZoomScale, zoom],
+    [handlePointerDownForPan, pointerDownZoomScale, zoomView, cursor],
   );
 
   const contentParentStyle = useMemo(

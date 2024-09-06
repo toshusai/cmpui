@@ -8,8 +8,9 @@
     "typecheck": "tsc -p tsconfig.ci.json",
     "test:watch": "vitest",
     "test": "vitest run",
+    "dev": "tsup --watch",
     "build": "tsup",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6007",
     "storybook:build": "storybook build",
     "storybook:test": "test-storybook",
     "storybook:test:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"pnpm storybook:build && npx http-server storybook-static --port 6006 --silent\" \"wait-on http://127.0.0.1:6006 && pnpm storybook:test\"",
@@ -28,6 +29,7 @@
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@toshusai/cmpui-core": "link:../core",
     "@toshusai/cmpui-css": "link:../css"
   },
   "peerDependencies": {
