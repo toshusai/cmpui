@@ -28,14 +28,11 @@ npm install @toshusai/cmpui
 
 ```tsx
 import { Button } from "@toshusai/cmpui";
+import "@toshusai/cmpui/dist/index.css";
 import "@toshusai/cmpui-css/dist/index.css";
 
 export default function App() {
-  return (
-    <div>
-      <Button>Click me</Button>
-    </div>
-  );
+  return <Button>Hello world</Button>;
 }
 ```
 
