@@ -13,12 +13,12 @@ const props = withDefaults(
 
 const show = ref(false);
 
-let i = 0;
+let i: ReturnType<typeof setTimeout> | null = null;
 
 const setShow = (v: boolean) => {
   if (v) {
     show.value = v;
-    clearTimeout(i);
+    if (i !== null) clearTimeout(i);
   } else {
     i = setTimeout(() => {
       show.value = v;
