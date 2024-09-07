@@ -19,7 +19,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "typeRoots": ["node_modules/@types", ".storybook/@types"]
+    "typeRoots": ["node_modules/@types", ".storybook/@types", "./node_modules"],
+    "types": ["@vitest/browser/providers/playwright"]
   },
   "include": ["src"],
   "exclude": ["src/**/*.stories.ts"]

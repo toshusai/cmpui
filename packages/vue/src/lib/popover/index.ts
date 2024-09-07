@@ -56,7 +56,7 @@ export function setPopover(
 
   const updatePosition = () => {
     computePosition(triggerElement, popoverElement, {
-      placement: "bottom",
+      placement: "bottom-start",
       strategy: "fixed",
       middleware: [
         offset(options?.offset ?? defaultOptions.offset),

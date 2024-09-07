@@ -60,8 +60,27 @@ onUnmounted(() => {
   cleanUp();
 });
 
-const handleClick = () => {
+const enablePointerUpSelect = ref(false);
+
+const handlePointerDown = () => {
   show.value = true;
+
+  enablePointerUpSelect.value = false;
+  let distance = 0;
+  const pointerMove = (e: PointerEvent) => {
+    distance += Math.abs(e.movementX) + Math.abs(e.movementY);
+    if (distance > 10) {
+      enablePointerUpSelect.value = true;
+    }
+  };
+
+  const pUp = () => {
+    window.removeEventListener("pointermove", pointerMove);
+    window.removeEventListener("pointerup", pUp);
+  };
+
+  window.addEventListener("pointermove", pointerMove);
+  window.addEventListener("pointerup", pUp);
 };
 
 const id = useId();
@@ -81,7 +100,7 @@ const popupId = useId();
     :aria-labelledby="labelId"
     :aria-controls="popupId"
     aria-haspopup="listbox"
-    @click="handleClick"
+    @pointerdown="handlePointerDown"
   >
     <span v-if="typeof preview === 'string'">{{ preview }}</span>
     <component :is="preview" v-else />
@@ -90,8 +109,13 @@ const popupId = useId();
       {{ label }}
     </label>
   </button>
-
-  <Popover v-if="show" :show="show" :trigger="trigger" @close="show = false">
+  <Popover
+    v-if="show"
+    disabled-trigger-click-close
+    :show="show"
+    :trigger="trigger"
+    @close="show = false"
+  >
     <MenuList
       :id="popupId"
       :default-value="props.value"
@@ -106,7 +130,9 @@ const popupId = useId();
         style="padding-left: 24px; position: relative"
         role="option"
         :value="option.value"
+        :data-value="option.value"
         @click="handleSelect(option.value)"
+        @pointerup="enablePointerUpSelect ? handleSelect(option.value) : null"
       >
         <div
           v-if="option.value === props.value"
