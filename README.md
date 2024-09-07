@@ -12,11 +12,12 @@ CmpUI is a component library designed for creating complex GUI applications in w
 
 # Packages
 
-| package name        | framework | support            | NPM                                                                                                                   |
-| ------------------- | --------- | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| @toshusai/cmpui-css | CSS       | :construction:     | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui-css) |
-| @toshusai/cmpui     | React     | :white_check_mark: | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui)     |
-| @toshusai/cmpui-vue | Vue       | :construction:     |                                                                                                                       |
+| package name         | framework | NPM                                                                                                                   |
+| -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------- |
+| @toshusai/cmpui-css  | CSS       | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui-css) |
+| @toshusai/cmpui      | React     | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui)     |
+| @toshusai/cmpui-vue  | Vue       | WIP                                                                                                                   |
+| @toshusai/cmpui-core | Vanilla   | WIP                                                                                                                   |
 
 ## Installation
 
@@ -25,6 +26,8 @@ npm install @toshusai/cmpui
 ```
 
 ## Usage
+
+### React
 
 ```tsx
 import { Button } from "@toshusai/cmpui";
@@ -35,6 +38,23 @@ export default function App() {
   return <Button>Hello world</Button>;
 }
 ```
+
+## Development
+
+```
+pnpm install
+```
+
+```
+pnpm -r dev
+```
+
+```
+pnpm -r storybook
+```
+
+React: http://localhost:6007/
+Vue: http://localhost:6006/
 
 ## License
 
