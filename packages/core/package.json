@@ -28,8 +28,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "typescript": "^5.5.3",
-    "vite": "^5.4.1",
-    "concurrently": "^8.2.2"
+    "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.6.10"
   }
 }

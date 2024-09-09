@@ -1,11 +1,11 @@
-import { FOCUSABLE_ELEMENTS_SELECTOR } from "../dialog";
+import { FOCUSABLE_ELEMENTS_SELECTOR } from "../dialog/focusTrap";
 
 export function useKeyboardNavigation(
   element: HTMLDivElement,
   onSelect: (value: string) => void,
   options?: {
     defaultValue?: string;
-  },
+  }
 ) {
   const items = [
     ...element.querySelectorAll(FOCUSABLE_ELEMENTS_SELECTOR),
@@ -107,7 +107,7 @@ export function useKeyboardNavigation(
   element.addEventListener("keydown", handleKeyDown);
 
   const keywords = Array.from(items).map(
-    (item) => item.textContent?.trim() ?? "",
+    (item) => item.textContent?.trim() ?? ""
   );
 
   typeAheadSearch(element, keywords, (index) => {
@@ -137,7 +137,7 @@ export function debounce(fn: () => void, delay: number) {
 function typeAheadSearch(
   el: HTMLElement,
   keywords: string[],
-  onHit: (index: number) => void,
+  onHit: (index: number) => void
 ) {
   let search = "";
   const handleKeyDown = (e: KeyboardEvent) => {

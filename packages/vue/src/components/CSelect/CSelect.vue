@@ -3,7 +3,7 @@ import { computed, onUnmounted, ref, watch } from "vue";
 import Popover from "../Popover/Popover.vue";
 import MenuList from "../MenuList/MenuList.vue";
 import MenuListItem from "../MenuListItem/MenuListItem.vue";
-import { lockScroll } from "../../lib/dialog/lockScroll";
+import { lockScroll } from "../../../../core/src/dialog/lockScroll";
 import { SelectProps } from "./types";
 import { useId } from "../../lib/useId";
 

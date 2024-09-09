@@ -9,7 +9,7 @@ import {
   useSlots,
   watch,
 } from "vue";
-import { tooltip } from "../../lib/tooltip";
+import { tooltip } from "../../../../core/src/tooltip/tooltip";
 import { useId } from "../../lib/useId";
 import { isValidVNode, TOAST_PROVIDER_KEY, TooltipProvide } from "./lib";
 

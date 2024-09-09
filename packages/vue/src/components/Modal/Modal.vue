@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import { focusTrap } from "../../lib/dialog";
-import { ariaHiddenOthers } from "../../lib/dialog/ariaHiddenOthers";
-import { lockScroll } from "../../lib/dialog/lockScroll";
 import IconButton from "../IconButton/IconButton.vue";
 import { useId } from "../../lib/useId";
+import { ariaHiddenOthers, focusTrap, lockScroll } from "@toshusai/cmpui-core";
 
 const el = ref<HTMLElement | null>(null);
 

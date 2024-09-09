@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { CSSProperties, onMounted, onUnmounted, ref, watch } from "vue";
-import { setPopover } from "../../lib/popover";
+import { setPopover } from "../../../../core/src/popover/setPopover";
 import { useId } from "../../lib/useId";
-import { lockScroll } from "../../lib/dialog/lockScroll";
 import { Placement } from "@floating-ui/dom";
+import { lockScroll } from "@toshusai/cmpui-core";
 
 const divRef = ref<HTMLElement | null>(null);
 

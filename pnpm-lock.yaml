@@ -13,6 +13,10 @@ importers:
         version: 8.1.8
 
   packages/core:
+    dependencies:
+      '@floating-ui/dom':
+        specifier: ^1.6.10
+        version: 1.6.10
     devDependencies:
       concurrently:
         specifier: ^8.2.2
