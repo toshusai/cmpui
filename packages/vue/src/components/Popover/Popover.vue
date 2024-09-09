@@ -3,13 +3,16 @@ import { CSSProperties, onMounted, onUnmounted, ref, watch } from "vue";
 import { setPopover } from "../../lib/popover";
 import { useId } from "../../lib/useId";
 import { lockScroll } from "../../lib/dialog/lockScroll";
+import { Placement } from "@floating-ui/dom";
 
 const divRef = ref<HTMLElement | null>(null);
 
 const props = defineProps<{
-  trigger: HTMLElement | null;
-  show: boolean;
   disabledTriggerClickClose?: boolean;
+  id?: string;
+  placement?: Placement;
+  show: boolean;
+  trigger: HTMLElement | null;
 }>();
 
 const emit = defineEmits<{
@@ -50,6 +53,7 @@ watch(
       },
       {
         disabledTriggerClickClose: props.disabledTriggerClickClose,
+        placement: props.placement,
       },
     );
 
@@ -87,7 +91,7 @@ onUnmounted(() => {
   cleanUp();
 });
 
-const id = useId();
+const id = useId(props.id);
 </script>
 
 <template>

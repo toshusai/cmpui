@@ -3,14 +3,25 @@ import {
   computePosition,
   flip,
   offset,
+  Placement,
   shift,
   size,
 } from "@floating-ui/dom";
 
-const defaultOptions = {
+const defaultOptions: Option = {
   offset: 4,
   padding: 8,
+  placement: "bottom-start",
+  disabledTriggerClickClose: false,
 };
+
+type Option = {
+  placement?: Placement;
+  offset?: number;
+  padding?: number;
+  disabledTriggerClickClose?: boolean;
+};
+
 export function setPopover(
   popoverElement: HTMLElement,
   triggerElement: HTMLElement,
@@ -21,12 +32,12 @@ export function setPopover(
     maxWidth?: number;
     maxHeight?: number;
   }) => void,
-  options?: {
-    offset?: number;
-    padding?: number;
-    disabledTriggerClickClose?: boolean;
-  },
+  options?: Option,
 ) {
+  const finalOptions = {
+    ...defaultOptions,
+    ...options,
+  };
   let prevPopover: string | undefined = undefined;
   const handlePointerDown = (e: PointerEvent) => {
     const el = e.target as HTMLElement;
@@ -56,12 +67,12 @@ export function setPopover(
 
   const updatePosition = () => {
     computePosition(triggerElement, popoverElement, {
-      placement: "bottom-start",
+      placement: finalOptions.placement,
       strategy: "fixed",
       middleware: [
-        offset(options?.offset ?? defaultOptions.offset),
+        offset(finalOptions.offset),
         shift({
-          padding: options?.padding ?? defaultOptions.padding,
+          padding: finalOptions.padding,
           boundary: document.body,
         }),
         size({
@@ -71,7 +82,7 @@ export function setPopover(
               maxHeight: Math.max(100, args.availableHeight),
             });
           },
-          padding: options?.padding ?? defaultOptions.padding,
+          padding: finalOptions.padding,
           boundary: document.body,
         }),
         flip({
@@ -86,13 +97,13 @@ export function setPopover(
     });
   };
 
-  let cleanupUpdate: () => void;
+  let cleanupUpdate: () => void = () => {};
   const cleanUp = () => {
     cleanupUpdate();
     onCleanUp();
     window.removeEventListener("pointerdown", handlePointerDown);
     window.removeEventListener("keydown", handleKeyDown);
-    if (!options?.disabledTriggerClickClose) {
+    if (!finalOptions.disabledTriggerClickClose) {
       triggerElement?.removeEventListener("click", handleClick);
     }
     document.body.dataset.popover = prevPopover;
@@ -102,7 +113,7 @@ export function setPopover(
     cleanupUpdate = autoUpdate(triggerElement, popoverElement, updatePosition);
     prevPopover = document.body.dataset.popover;
     document.body.dataset.popover = popoverElement.id;
-    if (!options?.disabledTriggerClickClose) {
+    if (!finalOptions.disabledTriggerClickClose) {
       triggerElement?.addEventListener("click", handleClick);
     }
 

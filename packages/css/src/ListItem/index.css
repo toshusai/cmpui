@@ -1,15 +1,19 @@
 .cmpui_list-item__root {
   color: var(--cmpui-text-color);
+  font-family: var(--cmpui-font-family);
 
   align-items: center;
+  background-color: transparent;
+  border: none;
   box-sizing: border-box;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   font-size: 14px;
+  margin: 0;
   min-height: 32px;
   padding: 0 8px;
   width: 100%;
-  cursor: pointer;
 }
 
 .cmpui_list-item__root:not([data-no-interaction="true"]):hover {

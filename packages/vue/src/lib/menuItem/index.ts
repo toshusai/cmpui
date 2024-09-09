@@ -126,7 +126,7 @@ export function useKeyboardNavigation(
   };
 }
 
-function debounce(fn: () => void, delay: number) {
+export function debounce(fn: () => void, delay: number) {
   let timeout: ReturnType<typeof setTimeout> | null = null;
   return () => {
     if (timeout !== null) clearTimeout(timeout);

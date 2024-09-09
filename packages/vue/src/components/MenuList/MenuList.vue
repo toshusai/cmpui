@@ -5,8 +5,10 @@ import { useKeyboardNavigation } from "../../lib/menuItem";
 const props = withDefaults(
   defineProps<{
     defaultValue?: string;
+    autoFocus?: boolean;
   }>(),
   {
+    autoFocus: true,
     defaultValue: undefined,
   },
 );
@@ -21,9 +23,11 @@ let cleanup = () => {};
 
 onMounted(() => {
   if (!el.value) return;
-  setTimeout(() => {
-    el.value?.focus();
-  }, 0);
+  if (props.autoFocus) {
+    setTimeout(() => {
+      el.value?.focus();
+    }, 0);
+  }
   cleanup = useKeyboardNavigation(
     el.value,
     (value) => {

@@ -7,6 +7,11 @@ import MenuListItem from "../MenuListItem/MenuListItem.vue";
 
 const meta = {
   component: Popover,
+  args: {
+    trigger: null,
+    show: false,
+    disabledTriggerClickClose: false,
+  },
 } satisfies Meta<typeof Popover>;
 
 export default meta;
