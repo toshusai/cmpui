@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { ariaHiddenOthers, focusTrap, lockScroll } from "@toshusai/cmpui-core";
+import { CSSTransition } from "react-transition-group";
 
 import { classNames } from "../../utils/classNames";
 import { FloatBox } from "../FloatBox";
@@ -34,23 +35,37 @@ export function Modal(props: ModalProps) {
     };
   }, [props.open]);
 
-  if (!props.open) return null;
-
   return createPortal(
-    <div ref={ref} className="cmpui_modal__overlay">
-      <FloatBox className={classNames("cmpui_modal__root", props.className)}>
-        <div className="cmpui_modal__header">
-          <div className="cmpui_modal__title">{props.title}</div>
-          <IconButton
-            className="cmpui_modal__close-button"
-            size="S"
-            onClick={props.onClose}
-          ></IconButton>
-        </div>
-        <hr className="cmpui_modal__divider" />
-        <div>{props.children}</div>
-      </FloatBox>
-    </div>,
+    <CSSTransition
+      nodeRef={ref}
+      addEndListener={() => {}}
+      classNames={{
+        enter: "cmpui_modal_transition-enter-from",
+        enterActive: "cmpui_modal_transition-enter-to cmpui_modal_transition-enter-active",
+        enterDone: "cmpui_modal_transition-enter-to",
+        exit: "cmpui_modal_transition-leave-from",
+        exitActive: "cmpui_modal_transition-leave-to cmpui_modal_transition-leave-active",
+        exitDone: "cmpui_modal_transition-leave-to",
+      }}
+      unmountOnExit
+      timeout={300}
+      in={props.open}
+    >
+      <div ref={ref} className="cmpui_modal__overlay">
+        <FloatBox className={classNames("cmpui_modal__root", props.className)}>
+          <div className="cmpui_modal__header">
+            <div className="cmpui_modal__title">{props.title}</div>
+            <IconButton
+              className="cmpui_modal__close-button"
+              size="S"
+              onClick={props.onClose}
+            ></IconButton>
+          </div>
+          <hr className="cmpui_modal__divider" />
+          <div>{props.children}</div>
+        </FloatBox>
+      </div>
+    </CSSTransition>,
     document.body,
   );
 }

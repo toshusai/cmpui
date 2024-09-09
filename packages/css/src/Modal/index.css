@@ -64,32 +64,50 @@
   background-color: currentColor;
 }
 
-.cmpui_modal_transition-enter-active,
-.cmpui_modal_transition-leave-active {
+.cmpui_modal_transition-enter-from {
+  opacity: 0;
+}
+
+.cmpui_modal_transition-enter-active {
   transition: opacity 175ms;
 }
 
-.cmpui_modal_transition-enter-to,
+.cmpui_modal_transition-enter-to {
+  opacity: 1;
+}
+
 .cmpui_modal_transition-leave-from {
   opacity: 1;
 }
 
-.cmpui_modal_transition-enter-from,
+.cmpui_modal_transition-leave-active {
+  transition: opacity 175ms;
+}
+
 .cmpui_modal_transition-leave-to {
   opacity: 0;
 }
 
-.cmpui_modal_transition-enter-active > .cmpui_modal__root,
-.cmpui_modal_transition-leave-active > .cmpui_modal__root {
+.cmpui_modal_transition-enter-from > .cmpui_modal__root {
+  transform: translate(-50%, -48%);
+}
+
+.cmpui_modal_transition-enter-active > .cmpui_modal__root {
   transition: transform 175ms;
 }
 
-.cmpui_modal_transition-enter-to > .cmpui_modal__root,
+.cmpui_modal_transition-enter-to > .cmpui_modal__root {
+  transform: translate(-50%, -50%);
+}
+
 .cmpui_modal_transition-leave-from > .cmpui_modal__root {
   transform: translate(-50%, -50%);
 }
 
-.cmpui_modal_transition-enter-from > .cmpui_modal__root,
+.cmpui_modal_transition-leave-active > .cmpui_modal__root {
+  transition: transform 175ms;
+}
+
 .cmpui_modal_transition-leave-to > .cmpui_modal__root {
   transform: translate(-50%, -48%);
 }
