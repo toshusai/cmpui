@@ -41,16 +41,18 @@ watch(
 </script>
 
 <template>
-  <Teleport v-if="show" to="body">
-    <div
-      ref="el"
-      class="cmpui_drawer__overlay"
-      @keydown.esc="emit('close')"
-      @click="emit('close')"
-    >
-      <div class="cmpui_drawer" @click.stop>
-        <slot></slot>
+  <Transition name="cmpui_drawer_transition">
+    <Teleport v-if="show" to="body">
+      <div
+        ref="el"
+        class="cmpui_drawer__overlay"
+        @keydown.esc="emit('close')"
+        @click="emit('close')"
+      >
+        <div class="cmpui_drawer" @click.stop>
+          <slot></slot>
+        </div>
       </div>
-    </div>
-  </Teleport>
+    </Teleport>
+  </Transition>
 </template>

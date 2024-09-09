@@ -45,36 +45,28 @@ const id = useId();
 </script>
 
 <template>
-  <Teleport v-if="show" to="body">
-    <div
-      ref="el"
-      class="cmpui_modal__overlay"
-      aria-modal="true"
-      :aria-labelledby="id"
-      @keydown.esc="emit('close')"
-    >
-      <div role="dialog" class="cmpui_float-box__root cmpui_modal__root">
-        <div class="cmpui_modal__header">
-          <div :id="id" class="cmpui_modal__title">{{ title }}</div>
-          <IconButton
-            class="cmpui_modal__close-button"
-            size="S"
-            @click="emit('close')"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              viewBox="0 -960 960 960"
-              width="20"
+  <Transition name="cmpui_modal_transition">
+    <Teleport v-if="show" to="body">
+      <div
+        ref="el"
+        class="cmpui_modal__overlay"
+        aria-modal="true"
+        :aria-labelledby="id"
+        @keydown.esc="emit('close')"
+      >
+        <div role="dialog" class="cmpui_float-box__root cmpui_modal__root">
+          <div class="cmpui_modal__header">
+            <div :id="id" class="cmpui_modal__title">{{ title }}</div>
+            <IconButton
+              class="cmpui_modal__close-button"
+              size="S"
+              @click="emit('close')"
             >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              />
-            </svg>
-          </IconButton>
+            </IconButton>
+          </div>
+          <slot></slot>
         </div>
-        <slot></slot>
       </div>
-    </div>
-  </Teleport>
+    </Teleport>
+  </Transition>
 </template>

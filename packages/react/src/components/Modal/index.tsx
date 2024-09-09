@@ -45,16 +45,7 @@ export function Modal(props: ModalProps) {
                     className="cmpui_modal__close-button"
                     size="S"
                     onClick={props.onClose}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="20"
-                      viewBox="0 -960 960 960"
-                      width="20"
-                    >
-                      <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg>
-                  </IconButton>
+                  ></IconButton>
                 </Dialog.Close>
               )}
             </div>
