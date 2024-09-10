@@ -24,12 +24,11 @@
   ],
   "scripts": {
     "typecheck": "vue-tsc -p tsconfig.ci.json",
-    "test:watch": "vitest",
+    "test": "vitest",
     "test:browser": "vitest --browser=chromium",
     "dev": "concurrently \"vue-tsc --watch\" \"vite build --watch\"",
     "build": "npm run typecheck && vite build && vue-tsc",
     "storybook": "storybook dev -p 6006",
-    "storybook:test": "test-storybook",
     "build-storybook": "storybook build",
     "format": "prettier .",
     "format:fix": "prettier --write .",
