@@ -1,4 +1,9 @@
 .cmpui_circle__root {
+  --cmpui-circle-nob-radius: 8px;
+  --cmpui-circle-nob-stroke-width: 2px;
+  --cmpui-circle-nob-stroke-color: var(--cmpui-border-color);
+  --cmpui-circle-nob-fill: var(--cmpui-primary-color);
+
   background-color: var(--cmpui-circle-nob-fill);
   width: calc(var(--cmpui-circle-nob-radius) * 2);
   max-width: calc(var(--cmpui-circle-nob-radius) * 2);
@@ -8,10 +13,6 @@
   min-height: calc(var(--cmpui-circle-nob-radius) * 2);
   position: absolute;
   border-radius: var(--cmpui-circle-nob-radius);
-  /* transform: translate(
-    calc(-1 * var(--cmpui-circle-nob-radius)),
-    calc(-1 * var(--cmpui-circle-nob-radius))
-  ); */
   border: var(--cmpui-circle-nob-stroke-width) solid
     var(--cmpui-circle-nob-stroke-color);
   box-sizing: border-box;

@@ -3,8 +3,6 @@ import { forwardRef } from "react";
 import { classNames } from "../../utils/classNames";
 import { px } from "../../utils/px";
 
-import "./index.css";
-
 export type CircleProps = {
   x: number;
   y: number;
