@@ -14,6 +14,10 @@
   min-height: 32px;
   padding: 0 8px;
   width: 100%;
+
+  transition:
+    color 0.1s,
+    background-color 0.1s;
 }
 
 .cmpui_list-item__root:not([data-no-interaction="true"]):hover {
@@ -22,7 +26,6 @@
 
 .cmpui_list-item__root:not([data-no-interaction="true"]):active {
   background-color: var(--cmpui-bg-active-color);
-  color: var(--cmpui-bg-color);
 }
 
 .cmpui_list-item__root[data-highlighted="true"],
