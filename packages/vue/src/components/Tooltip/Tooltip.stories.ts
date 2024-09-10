@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import IconButton from "../IconButton/IconButton.vue";
+import CIconButton from "../CIconButton/CIconButton.vue";
 import CButton from "../CButton/CButton.vue";
 import TooltipProvider from "./TooltipProvider.vue";
 import Tooltip from "./Tooltip.vue";
@@ -57,24 +57,24 @@ export const AutoPlacement: Story = {
 
 export const MultipleItems: Story = {
   render: () => ({
-    components: { IconButton, Tooltip, TooltipProvider },
+    components: { CIconButton, Tooltip, TooltipProvider },
     template: html`
       <TooltipProvider>
         <div class="cmpui_icon-button__group">
           <Tooltip text="pointer">
-            <IconButton>
+            <CIconButton>
               <i class="ti ti-pointer"></i>
-            </IconButton>
+            </CIconButton>
           </Tooltip>
           <Tooltip text="typography">
-            <IconButton>
+            <CIconButton>
               <i class="ti ti-typography"></i>
-            </IconButton>
+            </CIconButton>
           </Tooltip>
           <Tooltip text="italic">
-            <IconButton>
+            <CIconButton>
               <i class="ti ti-italic"></i>
-            </IconButton>
+            </CIconButton>
           </Tooltip>
         </div>
       </TooltipProvider>
