@@ -48,6 +48,7 @@
 .cmpui_list-item__root[aria-disabled="true"],
 .cmpui_list-item__root[aria-disabled="true"]:hover,
 .cmpui_list-item__root[aria-disabled="true"]:active {
+  color: var(--cmpui-text-color);
   background-color: transparent;
   cursor: default;
   opacity: 0.7;

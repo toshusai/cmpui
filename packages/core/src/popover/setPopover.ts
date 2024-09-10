@@ -15,6 +15,8 @@ export const defaultOptions: Option = {
   disabledTriggerClickClose: false,
   disabledTabClose: false,
   flip: true,
+  autoResize: false,
+  boundary: undefined,
 } as const;
 
 type Option = {
@@ -24,6 +26,8 @@ type Option = {
   disabledTriggerClickClose?: boolean;
   disabledTabClose?: boolean;
   flip?: boolean;
+  autoResize?: boolean;
+  boundary?: HTMLElement;
 };
 
 export function setPopover(
@@ -83,16 +87,18 @@ export function setPopover(
           padding: finalOptions.padding,
           boundary: document.body,
         }),
-        size({
-          apply(args) {
-            callback({
-              maxWidth: Math.max(50, args.availableWidth),
-              maxHeight: Math.max(50, args.availableHeight),
-            });
-          },
-          padding: finalOptions.padding,
-          boundary: document.body,
-        }),
+        finalOptions.autoResize
+          ? size({
+              apply(args) {
+                callback({
+                  maxWidth: args.availableWidth,
+                  maxHeight: args.availableHeight,
+                });
+              },
+              padding: finalOptions.padding,
+              boundary: finalOptions.boundary ?? document.body,
+            })
+          : undefined,
         finalOptions.flip
           ? flip({
               fallbackStrategy: "initialPlacement",

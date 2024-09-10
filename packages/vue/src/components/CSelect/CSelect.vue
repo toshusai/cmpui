@@ -63,6 +63,7 @@ onUnmounted(() => {
 const enablePointerUpSelect = ref(false);
 
 const handlePointerDown = () => {
+  if (props.disabled) return;
   show.value = true;
 
   enablePointerUpSelect.value = false;
@@ -102,8 +103,10 @@ const popupId = useId();
     aria-haspopup="listbox"
     @pointerdown="handlePointerDown"
   >
-    <span v-if="typeof preview === 'string'">{{ preview }}</span>
-    <component :is="preview" v-else />
+    <div class="cmpui_select__preview">
+      <span v-if="typeof preview === 'string'">{{ preview }}</span>
+      <component :is="preview" v-else />
+    </div>
     <div class="cmpui_select__keyboard-arrow-down-icon"></div>
     <label v-if="label" :id="labelId" className="cmpui_select__label" :for="id">
       {{ label }}
@@ -112,6 +115,7 @@ const popupId = useId();
   <Popover
     v-if="show"
     disabled-trigger-click-close
+    auto-resize
     :show="show"
     :trigger="trigger"
     @close="show = false"

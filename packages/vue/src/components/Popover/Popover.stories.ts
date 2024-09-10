@@ -8,6 +8,7 @@ import FocusTrapExample from "./stories/FocusTrapExample.vue";
 import PlacementExample from "./stories/PlacementExample.vue";
 import NestExample from "./stories/NestExample.vue";
 import AutoFlipExample from "./stories/AutoFlipExample.vue";
+import DropdownExample from "./stories/DropdownExample.vue";
 
 const meta = {
   component: Popover,
@@ -23,47 +24,8 @@ type Story = StoryObj<typeof meta>;
 
 const html = String.raw;
 
-export const Default: Story = {
-  render: () => ({
-    setup() {
-      const trigger = ref<InstanceType<typeof CButton> | null>(null);
-
-      const show = ref(false);
-
-      const selected = ref<string | null>(null);
-
-      const handleSelect = (v: string) => {
-        selected.value = v;
-        show.value = false;
-      };
-
-      return {
-        trigger,
-        show,
-        selected,
-        handleSelect,
-      };
-    },
-    components: { Popover, CButton, MenuList, MenuListItem },
-    template: html`
-      <CButton ref="trigger" @click="show = true">
-        {{ selected || "Select" }}
-      </CButton>
-      <Popover
-        v-if="show"
-        :trigger="trigger?.$el"
-        :show="show"
-        @close="show = false"
-      >
-        <MenuList @select="handleSelect">
-          <MenuListItem is="button" value="Alpha">Alpha</MenuListItem>
-          <MenuListItem is="button" value="Beta">Beta</MenuListItem>
-          <MenuListItem is="button" value="Gamma">Gamma</MenuListItem>
-          <input type="text" />
-        </MenuList>
-      </Popover>
-    `,
-  }),
+export const Dropdown: Story = {
+  render: () => h(DropdownExample),
 };
 
 export const FocusTrap: Story = {
@@ -119,7 +81,6 @@ export const Scroll: Story = {
           <MenuListItem is="button" value="Alpha">Alpha</MenuListItem>
           <MenuListItem is="button" value="Beta">Beta</MenuListItem>
           <MenuListItem is="button" value="Gamma">Gamma</MenuListItem>
-          <input type="text" />
         </MenuList>
       </Popover>
       <div style="height: 400px; overflow: auto;"></div>

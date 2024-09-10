@@ -27,7 +27,7 @@ export const Rounded: Story = {
 export const Border: Story = {
   args: {
     default: defaultSlot,
-    border: true,
+    bordered: true,
   },
 };
 

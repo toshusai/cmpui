@@ -57,7 +57,10 @@ export function useKeyboardNavigation(
   const handleClick = (e: MouseEvent) => {
     const target = e.target;
     if (target instanceof HTMLElement) {
-      onSelect(target.dataset.value ?? "");
+      if (target instanceof HTMLInputElement) return;
+      if (target instanceof HTMLTextAreaElement) return;
+      if (target.dataset.value === undefined) return;
+      onSelect(target.dataset.value);
     }
   };
 

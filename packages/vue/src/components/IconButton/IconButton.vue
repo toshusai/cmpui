@@ -13,7 +13,7 @@ withDefaults(defineProps<IconButtonProps>(), {
     :data-size="size"
     :disabled="disabled"
     :data-rounded="rounded"
-    :data-border="border"
+    :data-bordered="bordered"
     v-bind="$attrs"
   >
     <slot></slot>

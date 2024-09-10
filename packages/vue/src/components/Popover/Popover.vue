@@ -21,15 +21,19 @@ const props = withDefaults(
     show: boolean;
     flip?: boolean;
     trigger: HTMLElement | null;
+    boundary?: HTMLElement;
+    autoResize?: boolean;
   }>(),
   {
     id: undefined,
     disabledTabClose: defaultOptions.disabledTabClose,
     disabledTriggerClickClose: defaultOptions.disabledTriggerClickClose,
     placement: defaultOptions.placement,
+    autoResize: defaultOptions.autoResize,
     flip: defaultOptions.flip,
     show: false,
     trigger: null,
+    boundary: undefined,
   },
 );
 
@@ -77,6 +81,10 @@ watch(
         placement: props.placement,
         disabledTabClose: props.disabledTabClose,
         flip: props.flip,
+        autoResize: props.autoResize,
+        boundary: props.boundary,
+        offset: defaultOptions.offset,
+        padding: defaultOptions.padding,
       },
     );
     componentCleanUp = cleanUpPopover;
@@ -125,7 +133,7 @@ const id = useId(props.id);
 </script>
 
 <template>
-  <Teleport to="body">
+  <Teleport :to="boundary ?? 'body'">
     <div
       :id="id"
       ref="divRef"
