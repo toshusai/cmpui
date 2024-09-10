@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import CDrawer from "../CDrawer.vue";
-import ListItem from "../../ListItem/ListItem.vue";
+import ListItem from "../../CListItem/CListItem.vue";
 import CIconButton from "../../CIconButton/CIconButton.vue";
 import {
   IconX,

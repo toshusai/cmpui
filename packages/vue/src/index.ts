@@ -3,19 +3,20 @@ import CCanvasView from "./components/CCanvasView/CCanvasView.vue";
 import CDrawer from "./components/CDrawer/CDrawer.vue";
 import Checkbox from "./components/CCheckbox/CCheckbox.vue";
 import CIconButton from "./components/CIconButton/CIconButton.vue";
+import CListItem from "./components/CListItem/CListItem.vue";
+import CMenuList from "./components/CMenuList/CMenuList.vue";
+import CMenuListItem from "./components/CMenuListItem/CMenuListItem.vue";
+import CModal from "./components/CModal/CModal.vue";
+import CPopover from "./components/CPopover/CPopover.vue";
 import CRadioGroup from "./components/CRadioGroup/CRadioGroup.vue";
 import CRadioInput from "./components/CRadioGroup/CRadioInput.vue";
-import CRadioInputWithLabel from "./components/CRadioGroup/CRadioInputWithLabel.vue";
+import CRadio from "./components/CRadioGroup/CRadio.vue";
 import CSelect from "./components/CSelect/CSelect.vue";
 import CTextInput from "./components/CTextInput/CTextInput.vue";
-import ListItem from "./components/ListItem/ListItem.vue";
-import MenuList from "./components/MenuList/MenuList.vue";
-import MenuListItem from "./components/MenuListItem/MenuListItem.vue";
-import Modal from "./components/Modal/Modal.vue";
-import Popover from "./components/Popover/Popover.vue";
-import SelectItem from "./components/CSelect/SelectItem.vue";
-import Tooltip from "./components/Tooltip/Tooltip.vue";
-import TooltipProvider from "./components/Tooltip/TooltipProvider.vue";
+import CTooltip from "./components/CTooltip/CTooltip.vue";
+import CTooltipProvider from "./components/CTooltip/CTooltipProvider.vue";
+import CTreeView from "./components/CTreeView/CTreeView.vue";
+import CTreeViewItem from "./components/CTreeView/CTreeViewItem.vue";
 
 export {
   CButton,
@@ -23,17 +24,18 @@ export {
   CDrawer,
   Checkbox,
   CIconButton,
+  CListItem,
+  CMenuList,
+  CMenuListItem,
+  CModal,
+  CPopover,
   CRadioGroup,
   CRadioInput,
-  CRadioInputWithLabel,
+  CRadio,
   CSelect,
   CTextInput,
-  ListItem,
-  MenuList,
-  MenuListItem,
-  Modal,
-  Popover,
-  SelectItem,
-  Tooltip,
-  TooltipProvider,
+  CTooltip,
+  CTooltipProvider,
+  CTreeView,
+  CTreeViewItem,
 };

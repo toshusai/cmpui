@@ -4,6 +4,7 @@ import { onMounted, onUnmounted, ref, watch } from "vue";
 import { CanvasViewCursor, CanvasViewTransform } from "@toshusai/cmpui-core";
 
 const meta = {
+  title: "data display/CCanvasView",
   component: CCanvasView,
   parameters: {
     layout: "fullscreen",

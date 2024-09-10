@@ -23,13 +23,18 @@
   cursor: pointer;
 }
 
+.cmpui_radio__input-root[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .cmpui_radio__input-root[data-size="L"] {
   font-size: 16px;
 }
 
-.cmpui_radio__input-root:hover > .cmpui_radio__input {
-  outline: var(--cmpui-primary-color) solid 1px;
-  outline-offset: 1px;
+.cmpui_radio__input-root:not([aria-disabled="true"]):hover
+  > .cmpui_radio__input {
+  box-shadow: 0px 0px 0px 2px var(--cmpui-bg-hover-color);
 }
 
 .cmpui_radio__input {
@@ -45,6 +50,10 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+
+.cmpui_radio__input:not(:disabled):hover {
+  box-shadow: 0px 0px 0px 2px var(--cmpui-bg-hover-color);
 }
 
 .cmpui_radio__input[data-size="L"] {

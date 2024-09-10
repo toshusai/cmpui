@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import CRadioInputWithLabel from "./CRadioInputWithLabel.vue";
+import { VNode } from "vue";
+import CRadio from "./CRadio.vue";
 
 const value = defineModel<string>();
+
+export type RadioInputOption = {
+  id?: string;
+  autofocus?: boolean;
+  label: string | (() => VNode);
+  disabled?: boolean;
+  value: string;
+};
 
 defineProps<{
   name: string;
   size?: "M" | "L";
-  options: {
-    id?: string;
-    autofocus?: boolean;
-    label: string;
-    value: string;
-  }[];
+  options: RadioInputOption[];
 }>();
 </script>
 
@@ -23,16 +27,18 @@ defineProps<{
     :data-size="size"
     v-bind="$attrs"
   >
-    <CRadioInputWithLabel
-      v-for="option in options"
-      :key="option.label"
+    <CRadio
+      v-for="(option, i) in options"
+      :key="i"
       v-model="value"
       :data-size="size"
       :autofocus="option.autofocus"
       :name="name"
+      :disabled="option.disabled"
       :value="option.value"
     >
-      {{ option.label }}
-    </CRadioInputWithLabel>
+      <span v-if="typeof option.label === 'string'">{{ option.label }}</span>
+      <component :is="option.label()" v-else />
+    </CRadio>
   </div>
 </template>

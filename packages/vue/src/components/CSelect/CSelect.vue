@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, onUnmounted, ref, watch } from "vue";
-import Popover from "../Popover/Popover.vue";
-import MenuList from "../MenuList/MenuList.vue";
-import MenuListItem from "../MenuListItem/MenuListItem.vue";
+import Popover from "../CPopover/CPopover.vue";
+import CMenuList from "../CMenuList/CMenuList.vue";
+import CMenuListItem from "../CMenuListItem/CMenuListItem.vue";
 import { lockScroll } from "../../../../core/src/dialog/lockScroll";
 import { SelectProps } from "./types";
 import { useId } from "../../lib/useId";
@@ -120,14 +120,14 @@ const popupId = useId();
     :trigger="trigger"
     @close="show = false"
   >
-    <MenuList
+    <CMenuList
       :id="popupId"
       :default-value="props.value"
       :aria-labelledby="labelId"
       role="listbox"
       @select="handleSelect"
     >
-      <MenuListItem
+      <CMenuListItem
         v-for="option in options"
         :key="option.value"
         rounded
@@ -144,7 +144,7 @@ const popupId = useId();
           style="position: absolute; left: 8px"
         ></div>
         {{ option.label }}
-      </MenuListItem>
-    </MenuList>
+      </CMenuListItem>
+    </CMenuList>
   </Popover>
 </template>

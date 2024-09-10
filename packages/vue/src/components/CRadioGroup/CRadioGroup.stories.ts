@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { ref } from "vue";
+import { h } from "vue";
 import CRadioGroup from "./CRadioGroup.vue";
+
+import StoryCRadioGroupBasic from "./stories/StoryCRadioGroupBasic.vue";
+import { IconBuildingBank, IconCash, IconCreditCard } from "@tabler/icons-vue";
 
 const meta = {
   title: "inputs/CRadioGroup",
@@ -10,60 +13,81 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const html = String.raw;
-
 export const Default: Story = {
-  render: () => ({
-    setup() {
-      const picked = ref("");
-      const options = [
+  render: () =>
+    h(StoryCRadioGroupBasic, {
+      options: [
         {
-          label: "A",
-          value: "A",
+          label: "Daily",
+          value: "daily",
         },
         {
-          label: "B",
-          value: "B",
+          label: "Weekly",
+          value: "weekly",
         },
-      ];
-      return {
-        picked,
-        options,
-      };
-    },
-    components: { CRadioGroup },
-    template: html`
-      picked:{{picked}}
-      <CRadioGroup name="radio" v-model="picked" :options="options" />
-    `,
-  }),
+        {
+          label: "Monthly",
+          value: "monthly",
+        },
+      ],
+    }),
+};
+
+export const Disabled: Story = {
+  render: () =>
+    h(StoryCRadioGroupBasic, {
+      options: [
+        {
+          label: "Daily",
+          value: "daily",
+        },
+        {
+          label: "Weekly",
+          value: "weekly",
+          disabled: true,
+        },
+        {
+          label: "Monthly",
+          value: "monthly",
+        },
+      ],
+    }),
 };
 
 export const CustomOptions: Story = {
-  render: () => ({
-    setup() {
-      const picked = ref("");
-      const options = [
+  render: () => {
+    const spanStyle = {
+      display: "flex",
+      alignItems: "center",
+      gap: "4px",
+    };
+    return h(StoryCRadioGroupBasic, {
+      options: [
         {
-          id: "id-a",
-          label: "A",
-          value: "A",
+          label: () =>
+            h("span", { style: spanStyle }, [
+              h(IconCash, { size: 16 }),
+              "Cash",
+            ]),
+          value: "cash",
         },
         {
-          id: "id-b",
-          label: "B",
-          value: "B",
+          label: () =>
+            h("span", { style: spanStyle }, [
+              h(IconBuildingBank, { size: 16 }),
+              "Bank",
+            ]),
+          value: "bank",
         },
-      ];
-      return {
-        picked,
-        options,
-      };
-    },
-    components: { CRadioGroup },
-    template: html`
-      picked:{{picked}}
-      <CRadioGroup name="radio" v-model="picked" :options="options" />
-    `,
-  }),
+        {
+          label: () =>
+            h("span", { style: spanStyle }, [
+              h(IconCreditCard, { size: 16 }),
+              "Credit card",
+            ]),
+          value: "credit",
+        },
+      ],
+    });
+  },
 };

@@ -3,12 +3,12 @@ import { useId } from "../../lib/useId";
 
 withDefaults(
   defineProps<{
-    label?: HTMLElement | null;
+    label?: string;
     invalid?: boolean;
     disabled?: boolean;
   }>(),
   {
-    label: null,
+    label: undefined,
     invalid: false,
     disabled: false,
   },
@@ -26,7 +26,7 @@ const id = useId();
     :aria-invalid="invalid"
   >
     <label class="cmpui_text-input__label" :for="id">
-      <slot></slot>
+      {{ label }}
     </label>
     <slot name="prefix" />
     <input
