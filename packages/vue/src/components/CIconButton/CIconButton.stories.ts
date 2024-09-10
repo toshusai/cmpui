@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import IconButton from "./IconButton.vue";
+import CIconButton from "./CIconButton.vue";
 import { IconHome } from "@tabler/icons-vue";
 import { h } from "vue";
 
 const meta = {
-  title: "inputs/IconButton",
-  component: IconButton,
+  title: "inputs/CIconButton",
+  component: CIconButton,
   argTypes: {
     rounded: {
       control: { type: "boolean" },
     },
   },
-} satisfies Meta<typeof IconButton>;
+} satisfies Meta<typeof CIconButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

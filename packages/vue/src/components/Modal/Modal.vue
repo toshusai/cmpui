@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import IconButton from "../IconButton/IconButton.vue";
+import IconButton from "../CIconButton/CIconButton.vue";
 import { useId } from "../../lib/useId";
 import { ariaHiddenOthers, focusTrap, lockScroll } from "@toshusai/cmpui-core";
 

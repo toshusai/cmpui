@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import CButton from "../../CButton/CButton.vue";
 import Popover from "../Popover.vue";
-import IconButton from "../../IconButton/IconButton.vue";
+import IconButton from "../../CIconButton/CIconButton.vue";
 import { IconMessage2 } from "@tabler/icons-vue";
 
 const trigger1 = ref<InstanceType<typeof CButton> | null>(null);

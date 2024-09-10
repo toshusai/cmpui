@@ -24,17 +24,17 @@ export const Default: Story = {
 };
 
 export const Disabled: Story = {
-    render: () => ({
-      components: { ListItem },
-      template: html`
-        <ListItem>Neil Armstrong</ListItem>
-        <ListItem aria-disabled="true">Alan Bean</ListItem>
-        <ListItem>Peter Conrad</ListItem>
-        <ListItem>Edgar Mitchell</ListItem>
-        <ListItem>Alan Shepard</ListItem>
-      `,
-    }),
-  };
+  render: () => ({
+    components: { ListItem },
+    template: html`
+      <ListItem>Neil Armstrong</ListItem>
+      <ListItem aria-disabled="true">Alan Bean</ListItem>
+      <ListItem>Peter Conrad</ListItem>
+      <ListItem>Edgar Mitchell</ListItem>
+      <ListItem>Alan Shepard</ListItem>
+    `,
+  }),
+};
 
 export const Small: Story = {
   render: () => ({

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { IconDots } from "@tabler/icons-vue";
-import IconButton from "../../IconButton/IconButton.vue";
+import IconButton from "../../CIconButton/CIconButton.vue";
 import { ref } from "vue";
 import Popover from "../Popover.vue";
 import MenuList from "../../MenuList/MenuList.vue";

@@ -7,7 +7,7 @@ import CRadioInputWithLabel from "./components/CRadioGroup/CRadioInputWithLabel.
 import CSelect from "./components/CSelect/CSelect.vue";
 import CTextInput from "./components/CTextInput/CTextInput.vue";
 import Drawer from "./components/Drawer/Drawer.vue";
-import IconButton from "./components/IconButton/IconButton.vue";
+import IconButton from "./components/CIconButton/CIconButton.vue";
 import ListItem from "./components/ListItem/ListItem.vue";
 import MenuList from "./components/MenuList/MenuList.vue";
 import MenuListItem from "./components/MenuListItem/MenuListItem.vue";

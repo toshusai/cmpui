@@ -50,7 +50,7 @@ export function useSubMenuPopover(): {
       }
       if (el.$el instanceof HTMLElement) {
         trigger.value = el.$el;
-        return
+        return;
       }
       console.log(el.$el);
       throw new Error("Invalid element");

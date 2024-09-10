@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import CButton from "../../CButton/CButton.vue";
 import Popover from "../Popover.vue";
-import IconButton from "../../IconButton/IconButton.vue";
+import IconButton from "../../CIconButton/CIconButton.vue";
 import {
   IconArrowDown,
   IconArrowLeft,
