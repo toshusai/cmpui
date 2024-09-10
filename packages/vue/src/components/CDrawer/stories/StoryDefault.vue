@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Drawer from ".././Drawer.vue";
+import CDrawer from "../CDrawer.vue";
 import ListItem from "../../ListItem/ListItem.vue";
 import CIconButton from "../../CIconButton/CIconButton.vue";
 import {
@@ -20,7 +20,7 @@ const show = ref(false);
 </script>
 
 <template>
-  <Drawer :show="show" :position="props.position" @close="show = false">
+  <CDrawer :show="show" :position="props.position" @close="show = false">
     <div
       style="
         display: flex;
@@ -54,7 +54,7 @@ const show = ref(false);
       <IconFlame size="16" style="margin-right: 8px" />
       Trend
     </ListItem>
-  </Drawer>
+  </CDrawer>
   <CIconButton @click="show = true">
     <IconLayoutSidebarLeftExpand
       v-if="position === undefined || position === 'left'"
