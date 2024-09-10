@@ -1,6 +1,6 @@
 import CButton from "./components/CButton/CButton.vue";
 import CCanvasView from "./components/CCanvasView/CCanvasView.vue";
-import Checkbox from "./components/Checkbox/Checkbox.vue";
+import Checkbox from "./components/CCheckbox/CCheckbox.vue";
 import CRadioGroup from "./components/CRadioGroup/CRadioGroup.vue";
 import CRadioInput from "./components/CRadioGroup/CRadioInput.vue";
 import CRadioInputWithLabel from "./components/CRadioGroup/CRadioInputWithLabel.vue";

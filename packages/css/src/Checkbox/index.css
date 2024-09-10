@@ -1,7 +1,12 @@
 .cmpui_checkbox__root {
   align-items: center;
   display: flex;
-  gap: 8px;
+}
+
+.cmpui_checkbox__root:hover > .cmpui_checkbox__input {
+  box-shadow: 0px 0px 0px 2px var(--cmpui-bg-hover-color);
+
+  outline-offset: 1px;
 }
 
 .cmpui_checkbox__root[aria-disabled="true"] {
@@ -24,14 +29,20 @@
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
-  height: 24px;
+  height: 20px;
   margin: 0;
   padding: 0;
   position: relative;
   transition: background-color 100ms;
-  width: 24px;
+  width: 20px;
   will-change: background-color;
   color: white;
+}
+
+.cmpui_checkbox__input:hover {
+  box-shadow: 0px 0px 0px 2px var(--cmpui-bg-hover-color);
+
+  outline-offset: 1px;
 }
 
 .cmpui_checkbox__input:focus-visible {
@@ -43,6 +54,11 @@
   background-color: var(--cmpui-primary-color);
 }
 
+.cmpui_checkbox__input[data-size="S"] {
+  height: 16px;
+  width: 16px;
+}
+
 /* 
  * Apache License Version 2.0
  * https://github.com/google/material-design-icons/blob/e9da2194e65080a829d670ae39a99c7b5fc09548/symbols/web/check/materialsymbolssharp/check_24px.svg
@@ -51,12 +67,15 @@
   content: "";
   width: 100%;
   height: 100%;
-  transform: scale(calc(5 / 6));
   display: flex;
-  mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224%22%3E%3Cpath%20d%3D%22M382-240%20154-468l57-57%20171%20171%20367-367%2057%2057-424%20424Z%22%2F%3E%3C%2Fsvg%3E");
-  mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2216%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2216%22%3E%3Cpath%20d%3D%22M382-240%20154-468l57-57%20171%20171%20367-367%2057%2057-424%20424Z%22%2F%3E%3C%2Fsvg%3E");
+  /* mask-repeat: no-repeat; */
   mask-position: center;
   background-color: currentColor;
+}
+
+.cmpui_checkbox__input[data-size="S"]:checked::before {
+  mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2212%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2212%22%3E%3Cpath%20d%3D%22M382-208%20122-468l90-90%20170%20170%20366-366%2090%2090-456%20456Z%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .cmpui_checkbox__input:disabled {
@@ -67,5 +86,8 @@
 .cmpui_checkbox__label {
   color: var(--cmpui-text-color);
 
+  cursor: pointer;
+  padding-left: 8px;
+  line-height: 20px;
   font-size: 14px;
 }

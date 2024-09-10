@@ -4,6 +4,7 @@ import { IconHome } from "@tabler/icons-vue";
 import { h } from "vue";
 
 const meta = {
+  title: "inputs/IconButton",
   component: IconButton,
   argTypes: {
     rounded: {

@@ -3,6 +3,7 @@ import CSelect from "./CSelect.vue";
 import { h, ref } from "vue";
 
 const meta = {
+  title: "inputs/CSelect",
   component: CSelect,
 } satisfies Meta<typeof CSelect>;
 

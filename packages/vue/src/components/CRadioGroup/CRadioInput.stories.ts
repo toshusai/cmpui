@@ -3,6 +3,7 @@ import { ref } from "vue";
 import CRadioInput from "./CRadioInput.vue";
 
 const meta = {
+  title: "inputs/CRadioInput",
   component: CRadioInput,
 } satisfies Meta<typeof CRadioInput>;
 

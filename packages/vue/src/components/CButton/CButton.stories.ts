@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import CButton from "./CButton.vue";
 
 const meta = {
+  title: "inputs/CButton",
   component: CButton,
 } satisfies Meta<typeof CButton>;
 

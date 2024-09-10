@@ -1,34 +1,38 @@
 <script setup lang="ts">
 import { useId } from "../../lib/useId";
+import CCheckboxInput from "./CCheckboxInput.vue";
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
-    label?: string;
+    inputId?: string;
     checked?: boolean;
     disabled?: boolean;
-    onChange?: (checked: boolean) => void;
+    size?: "S" | "M" | "L";
   }>(),
   {
+    inputId: undefined,
     checked: false,
     disabled: false,
-    label: undefined,
-    onChange: undefined,
+    size: "M",
   },
 );
 
-const id = useId();
+const emit = defineEmits<{
+  (_e: "change", v: boolean, e: Event): void;
+}>();
+
+const id = useId(props.inputId);
 </script>
 
 <template>
   <div class="cmpui_checkbox__root" :aria-disabled="disabled">
-    <input
+    <CCheckboxInput
       :id="id"
-      type="checkbox"
-      class="cmpui_checkbox__input"
       :disabled="disabled"
       :checked="checked"
-      :on-change="checked"
+      :size="size"
       v-bind="$attrs"
+      @change="(v, e) => emit('change', v, e)"
     />
     <label v-if="$slots.default" class="cmpui_checkbox__label" :for="id">
       <slot></slot>

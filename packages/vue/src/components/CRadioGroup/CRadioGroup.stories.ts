@@ -3,6 +3,7 @@ import { ref } from "vue";
 import CRadioGroup from "./CRadioGroup.vue";
 
 const meta = {
+  title: "inputs/CRadioGroup",
   component: CRadioGroup,
 } satisfies Meta<typeof CRadioGroup>;
 
