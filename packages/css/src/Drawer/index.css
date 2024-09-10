@@ -8,6 +8,11 @@
   position: absolute;
 }
 
+.cmpui_drawer[data-position="right"] {
+  right: 0;
+  left: auto;
+}
+
 .cmpui_drawer__overlay {
   background-color: var(--cmpui-overlay-color);
 
@@ -46,4 +51,9 @@
 .cmpui_drawer_transition-enter-from > .cmpui_drawer,
 .cmpui_drawer_transition-leave-to > .cmpui_drawer {
   transform: translate(-100%, 0%);
+}
+
+.cmpui_drawer_transition-enter-from > .cmpui_drawer[data-position="right"],
+.cmpui_drawer_transition-leave-to > .cmpui_drawer[data-position="right"] {
+  transform: translate(100%, 0%);
 }

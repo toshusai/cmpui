@@ -4,9 +4,16 @@ import { ref, watch } from "vue";
 
 const el = ref<HTMLElement | null>(null);
 
-const props = defineProps<{
-  show: boolean;
-}>();
+const props = withDefaults(
+  defineProps<{
+    show: boolean;
+    position?: "left" | "right";
+  }>(),
+  {
+    show: false,
+    position: "left",
+  },
+);
 
 const emit = defineEmits<{
   (_e: "close"): void;
@@ -47,7 +54,7 @@ watch(
         @keydown.esc="emit('close')"
         @click="emit('close')"
       >
-        <div class="cmpui_drawer" @click.stop>
+        <div class="cmpui_drawer" :data-position="position" @click.stop>
           <slot></slot>
         </div>
       </div>

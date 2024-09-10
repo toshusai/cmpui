@@ -2,7 +2,6 @@
   background-color: var(--cmpui-bg-color);
 
   left: 50%;
-  min-width: 256px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
