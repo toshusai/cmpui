@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import CButton from "../../CButton/CButton.vue";
-import TextInput from "../../TextInput/TextInput.vue";
+import TextInput from "../../CTextInput/CTextInput.vue";
 import Popover from "../Popover.vue";
 
 const trigger = ref<InstanceType<typeof CButton> | null>(null);

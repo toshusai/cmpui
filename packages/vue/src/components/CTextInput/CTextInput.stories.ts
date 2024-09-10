@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import TextInput from "./TextInput.vue";
+import CTextInput from "./CTextInput.vue";
 
 const meta = {
-  title: "inputs/TextInput",
-  component: TextInput,
-} satisfies Meta<typeof TextInput>;
+  title: "inputs/CTextInput",
+  component: CTextInput,
+} satisfies Meta<typeof CTextInput>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
