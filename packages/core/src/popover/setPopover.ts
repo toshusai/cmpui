@@ -8,18 +8,22 @@ import {
   size,
 } from "@floating-ui/dom";
 
-const defaultOptions: Option = {
+export const defaultOptions: Option = {
   offset: 4,
   padding: 8,
   placement: "bottom-start",
   disabledTriggerClickClose: false,
-};
+  disabledTabClose: false,
+  flip: true,
+} as const;
 
 type Option = {
   placement?: Placement;
   offset?: number;
   padding?: number;
   disabledTriggerClickClose?: boolean;
+  disabledTabClose?: boolean;
+  flip?: boolean;
 };
 
 export function setPopover(
@@ -31,8 +35,9 @@ export function setPopover(
     left?: number;
     maxWidth?: number;
     maxHeight?: number;
+    placement?: Placement;
   }) => void,
-  options?: Option,
+  options?: Option
 ) {
   const finalOptions = {
     ...defaultOptions,
@@ -42,7 +47,7 @@ export function setPopover(
   const handlePointerDown = (e: PointerEvent) => {
     const el = e.target as HTMLElement;
     const current = document.getElementById(
-      document.body.dataset.popover ?? "",
+      document.body.dataset.popover ?? ""
     );
     if (
       (current && current.contains(el)) ||
@@ -56,7 +61,10 @@ export function setPopover(
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === "Escape" || e.key === "Tab") {
+    if (
+      e.key === "Escape" ||
+      (!finalOptions.disabledTabClose && e.key === "Tab")
+    ) {
       cleanUp();
     }
   };
@@ -78,21 +86,24 @@ export function setPopover(
         size({
           apply(args) {
             callback({
-              maxWidth: Math.max(100, args.availableWidth),
-              maxHeight: Math.max(100, args.availableHeight),
+              maxWidth: Math.max(50, args.availableWidth),
+              maxHeight: Math.max(50, args.availableHeight),
             });
           },
           padding: finalOptions.padding,
           boundary: document.body,
         }),
-        flip({
-          fallbackStrategy: "initialPlacement",
-        }),
+        finalOptions.flip
+          ? flip({
+              fallbackStrategy: "initialPlacement",
+            })
+          : undefined,
       ],
     }).then((position) => {
       callback({
         top: position.y,
         left: position.x,
+        placement: position.placement,
       });
     });
   };

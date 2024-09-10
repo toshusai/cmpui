@@ -3,17 +3,35 @@ import { CSSProperties, onMounted, onUnmounted, ref, watch } from "vue";
 import { setPopover } from "../../../../core/src/popover/setPopover";
 import { useId } from "../../lib/useId";
 import { Placement } from "@floating-ui/dom";
-import { lockScroll } from "@toshusai/cmpui-core";
+import {
+  focusTrap as cmpUiFocusTrap,
+  defaultOptions,
+  lockScroll,
+} from "@toshusai/cmpui-core";
 
 const divRef = ref<HTMLElement | null>(null);
 
-const props = defineProps<{
-  disabledTriggerClickClose?: boolean;
-  id?: string;
-  placement?: Placement;
-  show: boolean;
-  trigger: HTMLElement | null;
-}>();
+const props = withDefaults(
+  defineProps<{
+    disabledTriggerClickClose?: boolean;
+    disabledTabClose?: boolean;
+    focusTrap?: boolean;
+    id?: string;
+    placement?: Placement;
+    show: boolean;
+    flip?: boolean;
+    trigger: HTMLElement | null;
+  }>(),
+  {
+    id: undefined,
+    disabledTabClose: defaultOptions.disabledTabClose,
+    disabledTriggerClickClose: defaultOptions.disabledTriggerClickClose,
+    placement: defaultOptions.placement,
+    flip: defaultOptions.flip,
+    show: false,
+    trigger: null,
+  },
+);
 
 const emit = defineEmits<{
   (_e: "close"): void;
@@ -26,6 +44,8 @@ const style = ref<CSSProperties>({
   left: "0",
 });
 
+const dataPlacement = ref<Placement | undefined>(undefined);
+
 let componentCleanUp = () => {};
 
 watch(
@@ -33,7 +53,7 @@ watch(
   () => {
     if (!props.trigger) return;
     if (!divRef.value) return;
-    const { cleanUp, open } = setPopover(
+    const { cleanUp: cleanUpPopover, open } = setPopover(
       divRef.value,
       props.trigger,
       () => {
@@ -50,12 +70,24 @@ watch(
           style.value.maxHeight = `${pos.maxHeight}px`;
         }
         style.value.display = "";
+        dataPlacement.value = pos.placement;
       },
       {
         disabledTriggerClickClose: props.disabledTriggerClickClose,
         placement: props.placement,
+        disabledTabClose: props.disabledTabClose,
+        flip: props.flip,
       },
     );
+    componentCleanUp = cleanUpPopover;
+
+    if (props.focusTrap) {
+      const cleanUpFocusTrap = cmpUiFocusTrap(divRef.value);
+      componentCleanUp = () => {
+        cleanUpFocusTrap();
+        cleanUpPopover();
+      };
+    }
 
     const handleOpenChange = (show: boolean) => {
       if (show) {
@@ -69,8 +101,6 @@ watch(
     handleOpenChange(props.show);
 
     watch(() => props.show, handleOpenChange);
-
-    componentCleanUp = cleanUp;
   },
 );
 
@@ -102,6 +132,7 @@ const id = useId(props.id);
       class="cmpui_float-box__root"
       tabindex="-1"
       v-bind="$attrs"
+      :data-placement="dataPlacement"
       :style="style"
     >
       <slot></slot>

@@ -1,9 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { ref } from "vue";
+import { h, ref } from "vue";
 import CButton from "../CButton/CButton.vue";
 import Popover from "./Popover.vue";
 import MenuList from "../MenuList/MenuList.vue";
 import MenuListItem from "../MenuListItem/MenuListItem.vue";
+import FocusTrapExample from "./stories/FocusTrapExample.vue";
+import PlacementExample from "./stories/PlacementExample.vue";
+import NestExample from "./stories/NestExample.vue";
+import AutoFlipExample from "./stories/AutoFlipExample.vue";
 
 const meta = {
   component: Popover,
@@ -60,6 +64,22 @@ export const Default: Story = {
       </Popover>
     `,
   }),
+};
+
+export const FocusTrap: Story = {
+  render: () => h(FocusTrapExample),
+};
+
+export const Placement: Story = {
+  render: () => h(PlacementExample),
+};
+
+export const Nest: Story = {
+  render: () => h(NestExample),
+};
+
+export const AutoFlip: Story = {
+  render: () => h(AutoFlipExample),
 };
 
 export const Scroll: Story = {
