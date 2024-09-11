@@ -3,10 +3,14 @@ import { h } from "vue";
 import CRadioGroup from "./CRadioGroup.vue";
 
 import StoryCRadioGroupBasic from "./stories/StoryCRadioGroupBasic.vue";
+import StoryCRadioGroupUnControlled from "./stories/StoryCRadioGroupUnControlled.vue";
 import { IconBuildingBank, IconCash, IconCreditCard } from "@tabler/icons-vue";
 
 const meta = {
   title: "inputs/CRadioGroup",
+  args: {
+    options: [],
+  },
   component: CRadioGroup,
 } satisfies Meta<typeof CRadioGroup>;
 
@@ -51,6 +55,27 @@ export const Disabled: Story = {
           value: "monthly",
         },
       ],
+    }),
+};
+
+export const Uncontrolled: Story = {
+  render: () =>
+    h(StoryCRadioGroupUnControlled, {
+      options: [
+        {
+          label: "Daily",
+          value: "daily",
+        },
+        {
+          label: "Weekly",
+          value: "weekly",
+        },
+        {
+          label: "Monthly",
+          value: "monthly",
+        },
+      ],
+      uncontrolled: true,
     }),
 };
 

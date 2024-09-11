@@ -5,6 +5,7 @@ import CRadioGroup, { RadioInputOption } from "../CRadioGroup.vue";
 const picked = ref("");
 const props = defineProps<{
   options: RadioInputOption[];
+  size?: "M" | "L";
 }>();
 </script>
 
@@ -19,6 +20,11 @@ const props = defineProps<{
     "
   >
     <div>Picked: {{ picked }}</div>
-    <CRadioGroup v-model="picked" name="radio" :options="props.options" />
+    <CRadioGroup
+      v-model="picked"
+      name="radio"
+      :options="props.options"
+      :size="size"
+    />
   </div>
 </template>
