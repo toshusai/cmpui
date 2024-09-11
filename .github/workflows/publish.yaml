@@ -19,6 +19,6 @@ jobs:
       - run: pnpm -r typecheck
       - run: pnpm -r test
       - run: pnpm -r build
-      - run: pnpm yarn lerna publish from-git --yes
+      - run: pnpm lerna publish from-git --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

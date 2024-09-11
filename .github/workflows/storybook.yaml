@@ -18,6 +18,8 @@ jobs:
           node-version: "20.11.1"
           registry-url: "https://registry.npmjs.org"
       - run: pnpm install
+      - run: pnpm build
+        working-directory: packages/core
       - run: pnpm -r build
       - run: pnpm -r storybook:build
       - uses: peaceiris/actions-gh-pages@v3
