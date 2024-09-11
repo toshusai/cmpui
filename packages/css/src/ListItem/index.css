@@ -35,7 +35,8 @@
 .cmpui_list-item__root:focus-visible {
   background-color: var(--cmpui-bg-focus-color);
   color: white;
-  outline: none;
+  outline: 1px solid var(--cmpui-primary-color);
+  outline-offset: 1px;
 }
 
 .cmpui_list-item__root[aria-selected="true"],
