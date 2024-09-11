@@ -1,41 +1,41 @@
 <script setup lang="ts">
+import { useAttrs, VNode } from "vue";
 import { useId } from "../../lib/useId";
 import CCheckboxInput from "./CCheckboxInput.vue";
 
-const props = withDefaults(
+defineOptions({
+  inheritAttrs: false,
+});
+
+withDefaults(
   defineProps<{
-    inputId?: string;
-    checked?: boolean;
+    label: string | (() => VNode);
     disabled?: boolean;
     size?: "S" | "M" | "L";
   }>(),
   {
-    inputId: undefined,
-    checked: false,
-    disabled: false,
-    size: "M",
+    disabled: undefined,
+    size: undefined,
   },
 );
 
-const emit = defineEmits<{
-  (_e: "change", v: boolean, e: Event): void;
-}>();
-
-const id = useId(props.inputId);
+const attrs = useAttrs() as { id?: string };
+const id = useId(attrs.id);
+const value = defineModel<boolean>("checked");
 </script>
 
 <template>
   <div class="cmpui_checkbox__root" :aria-disabled="disabled">
     <CCheckboxInput
       :id="id"
+      v-model:checked="value"
       :disabled="disabled"
-      :checked="checked"
       :size="size"
       v-bind="$attrs"
-      @change="(v, e) => emit('change', v, e)"
     />
-    <label v-if="$slots.default" class="cmpui_checkbox__label" :for="id">
-      <slot></slot>
+    <label class="cmpui_checkbox__label" :for="id">
+      <template v-if="typeof label === 'string'">{{ label }}</template>
+      <component :is="label()" v-else></component>
     </label>
   </div>
 </template>

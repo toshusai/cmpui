@@ -3,7 +3,8 @@
   display: flex;
 }
 
-.cmpui_checkbox__root:hover > .cmpui_checkbox__input {
+.cmpui_checkbox__root:not([aria-disabled="true"]):hover
+  > .cmpui_checkbox__input {
   box-shadow: 0px 0px 0px 2px var(--cmpui-bg-hover-color);
 
   outline-offset: 1px;
@@ -39,7 +40,7 @@
   color: white;
 }
 
-.cmpui_checkbox__input:hover {
+.cmpui_checkbox__input:not(:disabled):hover {
   box-shadow: 0px 0px 0px 2px var(--cmpui-bg-hover-color);
 
   outline-offset: 1px;
@@ -90,4 +91,8 @@
   padding-left: 8px;
   line-height: 20px;
   font-size: 14px;
+}
+
+.cmpui_checkbox__root[aria-disabled="true"] > .cmpui_checkbox__label {
+  cursor: default;
 }

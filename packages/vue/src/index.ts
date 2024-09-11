@@ -1,7 +1,8 @@
 import CButton from "./components/CButton/CButton.vue";
 import CCanvasView from "./components/CCanvasView/CCanvasView.vue";
 import CDrawer from "./components/CDrawer/CDrawer.vue";
-import Checkbox from "./components/CCheckbox/CCheckbox.vue";
+import CCheckbox from "./components/CCheckbox/CCheckbox.vue";
+import CCheckboxInput from "./components/CCheckbox/CCheckboxInput.vue";
 import CIconButton from "./components/CIconButton/CIconButton.vue";
 import CListItem from "./components/CListItem/CListItem.vue";
 import CMenuList from "./components/CMenuList/CMenuList.vue";
@@ -22,7 +23,8 @@ export {
   CButton,
   CCanvasView,
   CDrawer,
-  Checkbox,
+  CCheckbox,
+  CCheckboxInput,
   CIconButton,
   CListItem,
   CMenuList,

@@ -1,30 +1,25 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    checked?: boolean;
     disabled?: boolean;
     size?: "S" | "M" | "L";
   }>(),
   {
-    checked: false,
-    disabled: false,
-    size: "M",
+    disabled: undefined,
+    size: undefined,
   },
 );
-
-const emit = defineEmits<{
-  (_e: "change", v: boolean, e: Event): void;
-}>();
+const value = defineModel<boolean>("checked");
 </script>
 
 <template>
   <input
+    v-model="value"
     type="checkbox"
     class="cmpui_checkbox__input"
     :disabled="disabled"
-    :checked="checked"
-    v-bind="$attrs"
     :data-size="size"
-    @change="(e) => emit('change', (e.target as HTMLInputElement).checked, e)"
+    :checked="value"
+    v-bind="$attrs"
   />
 </template>
