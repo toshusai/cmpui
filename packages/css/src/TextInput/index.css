@@ -6,10 +6,8 @@
   border-radius: 4px;
   box-sizing: border-box;
   display: flex;
-  gap: 4px;
   height: 32px;
   justify-content: flex-start;
-  padding: 0px 8px;
   position: relative;
   text-decoration: none;
 }
@@ -53,10 +51,14 @@
   line-height: 14px;
   padding: 0 4px;
   position: absolute;
-  transform: translate(0, -16px);
+  transform: translate(4px, -16px);
 }
 .cmpui_text-input__root[aria-invalid="true"] > .cmpui_text-input__label {
   color: var(--cmpui-error-color);
+}
+
+.cmpui_text-input__input:nth-child(3) {
+  padding-left: 0px;
 }
 
 .cmpui_text-input__input {
@@ -71,10 +73,11 @@
   height: 100%;
   line-height: 16px;
   outline: none;
-  padding: 0;
+  padding: 0 8px;
   width: 100%;
 }
 
 .cmpui_text-input__input::placeholder {
   color: var(--cmpui-text3-color);
+  font-style: italic;
 }

@@ -6,11 +6,15 @@ withDefaults(
     label?: string;
     invalid?: boolean;
     disabled?: boolean;
+    type?: string;
+    placeholder?: string;
   }>(),
   {
     label: undefined,
     invalid: false,
     disabled: false,
+    type: "text",
+    placeholder: undefined,
   },
 );
 
@@ -31,11 +35,12 @@ const id = useId();
     <slot name="prefix" />
     <input
       :id="id"
-      v-bind="$attrs"
       v-model="value"
       :aria-invalid="invalid"
+      :disabled="disabled"
+      :placeholder="placeholder"
+      :type="type"
       class="cmpui_text-input__input"
-      type="text"
     />
     <slot name="suffix" />
   </div>

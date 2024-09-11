@@ -1,7 +1,9 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { IconCurrencyDollar, IconEye, IconEyeOff } from "@tabler/icons-react";
 
 import { TextInput } from ".";
+import { IconButton } from "../IconButton";
 
 const meta: Meta<typeof TextInput> = {
   title: "Form/TextInput",
@@ -56,26 +58,54 @@ export const Placeholder: Story = {
   },
 };
 
-export const Suffix: Story = {
+export const Prefix: Story = {
   render: function Render() {
     const [value, setValue] = useState("");
     return (
       <TextInput
-        label="Label"
+        label="Amount"
+        placeholder="1.0"
+        type="number"
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
         prefix={
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 -960 960 960"
-            width="24"
-            style={{
-              maxWidth: 16,
-              height: 16,
-            }}
+          <IconCurrencyDollar
+            size={16}
+            style={{ margin: "0 4px", minWidth: "16px" }}
+          />
+        }
+      />
+    );
+  },
+};
+
+export const Suffix: Story = {
+  render: function Render() {
+    const [showPassword, setShowPassword] = useState(false);
+    const [value, setValue] = useState("NN2mdJec,Ff+^[a");
+    return (
+      <TextInput
+        label="Password"
+        placeholder="password"
+        type={showPassword ? "text" : "password"}
+        suffix={
+          <IconButton
+            onClick={() => setShowPassword((v) => !v)}
+            size="S"
+            style={{ marginRight: "4px" }}
           >
-            <title>search</title>
-            <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
-          </svg>
+            {showPassword ? (
+              <IconEyeOff
+                size={16}
+                style={{ margin: "0 4px", minWidth: "16px" }}
+              />
+            ) : (
+              <IconEye
+                size={16}
+                style={{ margin: "0 4px", minWidth: "16px" }}
+              />
+            )}
+          </IconButton>
         }
         value={value}
         onChange={(event) => setValue(event.target.value)}
