@@ -6,7 +6,8 @@ export default defineConfig({
   test: {
     browser: {
       enabled: true,
-      name: "chrome",
+      name: "chromium",
+      provider: "playwright",
     },
   },
 });
