@@ -67,14 +67,12 @@ export function useKeyboardNavigation(
   const handleFocus = (e: FocusEvent) => {
     const target = e.target;
     if (target instanceof HTMLElement) {
-      target.dataset.highlighted = "true";
     }
   };
 
   const handleBlur = (e: FocusEvent) => {
     const target = e.target;
     if (target instanceof HTMLElement) {
-      target.dataset.highlighted = "false";
     }
   };
 
@@ -100,7 +98,6 @@ export function useKeyboardNavigation(
     item.addEventListener("mouseleave", handleMouseLeave);
 
     if (options?.defaultValue && item.dataset.value === options.defaultValue) {
-      item.dataset.highlighted = "true";
       setTimeout(() => {
         item.focus();
       }, 0);

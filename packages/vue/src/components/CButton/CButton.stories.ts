@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import CButton from "./CButton.vue";
+import { h } from "vue";
 
 const meta = {
   title: "inputs/CButton",
+  tags: ["autodocs"],
   component: CButton,
 } satisfies Meta<typeof CButton>;
 
@@ -16,38 +18,35 @@ export const Default: Story = {
   },
 };
 
-export const Secondary: Story = {
-  args: {
-    default: "Button",
-    variant: "secondary",
-  },
+export const Variants: Story = {
+  render: () =>
+    h(() => [
+      h(CButton, { variant: "primary" }, () => "Primary"),
+      h(CButton, { variant: "secondary" }, () => "Secondary"),
+      h(CButton, { variant: "transparent" }, () => "Transparent"),
+    ]),
 };
 
-export const Transparent: Story = {
-  args: {
-    default: "Button",
-    variant: "transparent",
-  },
-};
-
-export const Small: Story = {
-  args: {
-    default: "Button",
-    size: "S",
-  },
+export const Sizes: Story = {
+  render: () =>
+    h(() => [
+      h(CButton, { size: "M" }, () => "Medium"),
+      h(CButton, { size: "S" }, () => "Small"),
+    ]),
 };
 
 export const Disabled: Story = {
-  args: {
-    default: "Button",
-    disabled: true,
-  },
+  render: () =>
+    h(() => [
+      h(CButton, { variant: "primary", disabled: true }, () => "Primary"),
+      h(CButton, { variant: "secondary", disabled: true }, () => "Secondary"),
+    ]),
 };
 
 export const Bordered: Story = {
-  args: {
-    default: "Bordered",
-    bordered: true,
-    variant: "secondary",
-  },
+  render: () =>
+    h(() => [
+      h(CButton, { variant: "primary", bordered: true }, () => "Primary"),
+      h(CButton, { variant: "secondary", bordered: true }, () => "Secondary"),
+    ]),
 };

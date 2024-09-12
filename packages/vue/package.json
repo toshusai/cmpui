@@ -29,7 +29,7 @@
     "dev": "concurrently \"vue-tsc --watch\" \"vite build --watch\"",
     "build": "npm run typecheck && vite build && vue-tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -o ../docs/public/storybook/vue",
     "format": "prettier .",
     "format:fix": "prettier --write .",
     "lint": "eslint .",

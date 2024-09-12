@@ -16,39 +16,50 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultSlot = () => h(IconHome, { size: 20 });
-
-export const Rounded: Story = {
-  args: {
-    default: defaultSlot,
-    rounded: true,
-  },
+export const Default: Story = {
+  render: () => h(CIconButton, () => h(IconHome, { size: 20 })),
 };
 
-export const Border: Story = {
-  args: {
-    default: defaultSlot,
-    bordered: true,
-  },
-};
-
-export const Selected: Story = {
-  args: {
-    default: defaultSlot,
-    selected: true,
-  },
-};
-
-export const Small: Story = {
-  args: {
-    default: () => h(IconHome, { size: 16 }),
-    size: "S",
-  },
+export const Bordered: Story = {
+  render: () =>
+    h(CIconButton, { bordered: true }, () => h(IconHome, { size: 20 })),
 };
 
 export const Disabled: Story = {
-  args: {
-    default: defaultSlot,
-    disabled: true,
-  },
+  render: () =>
+    h(() => [
+      h(CIconButton, { disabled: true }, () => h(IconHome, { size: 20 })),
+      h(CIconButton, { disabled: true, selected: true }, () =>
+        h(IconHome, { size: 20 }),
+      ),
+      h(CIconButton, { disabled: true, bordered: true }, () =>
+        h(IconHome, { size: 20 }),
+      ),
+    ]),
+};
+
+export const Rounded: Story = {
+  render: () =>
+    h(() => [
+      h(CIconButton, { rounded: true }, () => h(IconHome, { size: 20 })),
+      h(CIconButton, { rounded: true, bordered: true }, () =>
+        h(IconHome, { size: 20 }),
+      ),
+      h(CIconButton, { rounded: true, selected: true }, () =>
+        h(IconHome, { size: 20 }),
+      ),
+    ]),
+};
+
+export const Selected: Story = {
+  render: () =>
+    h(CIconButton, { selected: true }, () => h(IconHome, { size: 20 })),
+};
+
+export const Sizes: Story = {
+  render: () =>
+    h(() => [
+      h(CIconButton, { size: "S" }, () => h(IconHome, { size: 16 })),
+      h(CIconButton, {}, () => h(IconHome, { size: 20 })),
+    ]),
 };

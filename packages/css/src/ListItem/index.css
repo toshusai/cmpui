@@ -30,13 +30,11 @@
 
 .cmpui_list-item__root[data-highlighted="true"],
 .cmpui_list-item__root[data-highlighted="true"]:active,
-.cmpui_list-item__root[data-highlighted="true"]:active,
-.cmpui_list-item__root[data-highlighted="true"]:hover,
 .cmpui_list-item__root:focus-visible {
-  background-color: var(--cmpui-bg-focus-color);
-  color: white;
+  background-color: var(--cmpui-bg-hover-color);
   outline: 1px solid var(--cmpui-primary-color);
   outline-offset: 1px;
+  z-index: 1;
 }
 
 .cmpui_list-item__root[aria-selected="true"],

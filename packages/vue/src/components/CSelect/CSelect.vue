@@ -10,23 +10,20 @@ import { useId } from "../../lib/useId";
 const props = withDefaults(defineProps<SelectProps>(), {
   disabled: false,
   defaultShow: undefined,
-  value: undefined,
   label: undefined,
   options: undefined,
 });
 
-const emit = defineEmits<{
-  (_e: "change", v: string): void;
-}>();
+const value = defineModel<string>();
 
-const show = ref(props.defaultShow ?? false);
+const show = ref(false);
 const trigger = ref<HTMLElement | null>(null);
 
 const preview = computed(() => {
-  const option = props.options?.find((o) => o.value === props.value);
+  const option = props.options?.find((o) => o.value === value.value);
   if (option) {
-    if (option?.render) {
-      const v = option.render(props.value);
+    if (option?.render && value.value) {
+      const v = option.render(value.value);
       return v;
     }
     return option.label;
@@ -35,7 +32,7 @@ const preview = computed(() => {
 });
 
 const handleSelect = (v: string) => {
-  emit("change", v);
+  value.value = v;
   show.value = false;
   trigger.value?.focus();
 };
@@ -128,7 +125,7 @@ const popupId = useId();
   >
     <CMenuList
       :id="popupId"
-      :default-value="props.value"
+      :default-value="value"
       :aria-labelledby="labelId"
       role="listbox"
       @select="handleSelect"
@@ -146,11 +143,14 @@ const popupId = useId();
         @keydown.tab="handleSelect(option.value)"
       >
         <div
-          v-if="option.value === props.value"
+          v-if="option.value === value"
           class="cmpui_select_check-icon"
           style="position: absolute; left: 8px"
         ></div>
-        {{ option.label }}
+        <component :is="option.render(option.value)" v-if="option.render" />
+        <template v-else>
+          {{ option.label }}
+        </template>
       </CMenuListItem>
     </CMenuList>
   </Popover>

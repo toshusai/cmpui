@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import CCheckbox from "./CCheckbox.vue";
-import { h } from "vue";
-import StoryCCheckboxControlled from "./stories/StoryCCheckboxControlled.vue";
+import { h, ref } from "vue";
 
 const meta = {
   title: "inputs/CCheckbox",
@@ -17,26 +16,46 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Controlled: Story = {
-  render: () => h(StoryCCheckboxControlled),
+  render: () => {
+    return {
+      setup() {
+        const checked = ref(true);
+        return () =>
+          h(() => [
+            h("div", `Checked: ${checked.value}`),
+            h(CCheckbox, {
+              checked: checked.value,
+              "onUpdate:checked": (v) => {
+                checked.value = v;
+              },
+              label: "Controlled",
+            }),
+          ]);
+      },
+    };
+  },
 };
 
 export const Checked: Story = {
-  args: {
-    checked: true,
-    label: "Checked",
-  },
+  render: () => h(CCheckbox, { checked: true, label: "Checked" }),
 };
 
 export const CustomLabel: Story = {
-  args: {
-    checked: true,
-    label: h("span", [h("b", "Custom"), " Label"]),
-  },
+  render: () =>
+    h(CCheckbox, {
+      checked: true,
+      label: h("span", [h("b", "Custom"), " Label"]),
+    }),
 };
 
-export const Small: Story = {
-  args: {
-    size: "S",
-    label: "Small",
-  },
+export const Disabled: Story = {
+  render: () => h(CCheckbox, { disabled: true, label: "Disabled" }),
+};
+
+export const Sizes: Story = {
+  render: () =>
+    h(() => [
+      h(CCheckbox, { size: "S", label: "Small" }),
+      h(CCheckbox, { size: "M", label: "Medium" }),
+    ]),
 };

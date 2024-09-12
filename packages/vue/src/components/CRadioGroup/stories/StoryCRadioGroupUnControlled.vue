@@ -16,17 +16,7 @@ const handleSubmit = (e: Event) => {
 
 <template>
   <form @submit="handleSubmit">
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-      "
-    >
-      <CRadioGroup name="radio" :options="props.options" />
-      <CButton type="submit" size="S">Submit</CButton>
-    </div>
+    <CRadioGroup name="radio" :options="props.options" />
+    <CButton type="submit" size="S" style="margin-top: 16px;">Submit</CButton>
   </form>
 </template>

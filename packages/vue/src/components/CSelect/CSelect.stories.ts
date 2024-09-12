@@ -10,7 +10,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const html = String.raw;
 const names = [
   "Alfa",
   "Bravo",
@@ -40,23 +39,23 @@ const names = [
   "Zulu",
 ];
 
+const style = {
+  transform: `translateY(-64px)`,
+};
+
 export const Default: Story = {
   render: () => ({
     setup() {
       const value = ref<string>(names[8]);
-      return {
-        names,
-        value,
-      };
+
+      return () =>
+        h(CSelect, {
+          style,
+          modelValue: value.value,
+          options: names.map((name) => ({ label: name, value: name })),
+          "onUpdate:value": (v: string) => (value.value = v),
+        });
     },
-    components: { CSelect },
-    template: html`
-      <CSelect
-        :value="value"
-        :options="names.map((name) => ({ label: name, value: name }))"
-        @change="(v) => (value = v)"
-      ></CSelect>
-    `,
   }),
 };
 
@@ -64,20 +63,16 @@ export const Label: Story = {
   render: () => ({
     setup() {
       const value = ref<string>(names[8]);
-      return {
-        names,
-        value,
-      };
+
+      return () =>
+        h(CSelect, {
+          style,
+          modelValue: value.value,
+          options: names.map((name) => ({ label: name, value: name })),
+          label: "Label",
+          "onUpdate:value": (v: string) => (value.value = v),
+        });
     },
-    components: { CSelect },
-    template: html`
-      <CSelect
-        :value="value"
-        :options="names.map((name) => ({ label: name, value: name }))"
-        label="Label"
-        @change="(v) => (value = v)"
-      ></CSelect>
-    `,
   }),
 };
 
@@ -85,42 +80,17 @@ export const Disabled: Story = {
   render: () => ({
     setup() {
       const value = ref<string>(names[8]);
-      return {
-        names,
-        value,
-      };
-    },
-    components: { CSelect },
-    template: html`
-      <CSelect
-        disabled
-        :value="value"
-        :options="names.map((name) => ({ label: name, value: name }))"
-        label="Label"
-        @change="(v) => (value = v)"
-      ></CSelect>
-    `,
-  }),
-};
 
-export const Overflow: Story = {
-  render: () => ({
-    setup() {
-      const value = ref<string>(names[8]);
-      return {
-        names,
-        value,
-      };
+      return () =>
+        h(CSelect, {
+          style,
+          modelValue: value.value,
+          options: names.map((name) => ({ label: name, value: name })),
+          disabled: true,
+          label: "Label",
+          "onUpdate:value": (v: string) => (value.value = v),
+        });
     },
-    components: { CSelect },
-    template: html`
-      <CSelect
-        style="width: 128px"
-        :value="value"
-        :options="names.map((name) => ({ label: name.repeat(16), value: name }))"
-        @change="(v) => (value = v)"
-      ></CSelect>
-    `,
   }),
 };
 
@@ -133,20 +103,15 @@ export const Custom: Story = {
         value: name,
         render: (value) => h("strong", value),
       }));
-      return {
-        names,
-        value,
-        options,
-      };
+
+      return () =>
+        h(CSelect, {
+          style,
+          modelValue: value.value,
+          options,
+          label: "Label",
+          "onUpdate:value": (v: string) => (value.value = v),
+        });
     },
-    components: { CSelect },
-    template: html`
-      <CSelect
-        style="width: 128px"
-        :value="value"
-        :options="options"
-        @change="(v) => (value = v)"
-      ></CSelect>
-    `,
   }),
 };

@@ -36,16 +36,6 @@ const options = [
 </script>
 
 <template>
-  <div
-    style="
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    "
-  >
-    <div>Picked: {{ picked }}</div>
-    <CRadioGroup v-model="picked" name="radio" :options="options" />
-  </div>
+  <div>Picked: {{ picked }}</div>
+  <CRadioGroup v-model="picked" name="radio" :options="options" />
 </template>

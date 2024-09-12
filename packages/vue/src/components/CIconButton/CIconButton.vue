@@ -2,6 +2,10 @@
 import { IconButtonProps } from "./type";
 
 withDefaults(defineProps<IconButtonProps>(), {
+  bordered: undefined,
+  disabled: undefined,
+  rounded: undefined,
+  selected: undefined,
   size: "M",
 });
 </script>

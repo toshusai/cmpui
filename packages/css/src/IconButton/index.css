@@ -23,11 +23,12 @@
   will-change: background-color;
 }
 
-.cmpui_icon-button__root:hover {
+.cmpui_icon-button__root:not(:disabled):hover {
   background-color: var(--cmpui-bg-hover-color);
+  cursor: pointer;
 }
 
-.cmpui_icon-button__root:active {
+.cmpui_icon-button__root:not(:disabled):active {
   background-color: var(--cmpui-bg-active-color);
 }
 
@@ -43,11 +44,11 @@
   color: white;
 }
 
-.cmpui_icon-button__root[aria-selected="true"]:hover {
+.cmpui_icon-button__root:not(:disabled)[aria-selected="true"]:hover {
   background-color: var(--cmpui-bg-focus-color);
 }
 
-.cmpui_icon-button__root[aria-selected="true"]:active {
+.cmpui_icon-button__root:not(:disabled)[aria-selected="true"]:active {
   background-color: var(--cmpui-bg-focus-color);
 }
 
@@ -63,14 +64,6 @@
 .cmpui_icon-button__root:disabled {
   opacity: 0.5;
   cursor: default;
-}
-
-.cmpui_icon-button__root:disabled:hover {
-  background-color: transparent;
-}
-
-.cmpui_icon-button__root:disabled:active {
-  background-color: transparent;
 }
 
 /* additional styles */
