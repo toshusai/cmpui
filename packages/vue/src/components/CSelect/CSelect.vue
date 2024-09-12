@@ -64,6 +64,7 @@ const enablePointerUpSelect = ref(false);
 
 const handlePointerDown = () => {
   if (props.disabled) return;
+  let firstState = show.value;
   show.value = true;
 
   enablePointerUpSelect.value = false;
@@ -76,6 +77,9 @@ const handlePointerDown = () => {
   };
 
   const pUp = () => {
+    if (firstState) {
+      show.value = false;
+    }
     window.removeEventListener("pointermove", pointerMove);
     window.removeEventListener("pointerup", pUp);
   };
@@ -102,6 +106,8 @@ const popupId = useId();
     :aria-controls="popupId"
     aria-haspopup="listbox"
     @pointerdown="handlePointerDown"
+    @keydown.enter="show = true"
+    @keydown.space="show = true"
   >
     <div class="cmpui_select__preview">
       <span v-if="typeof preview === 'string'">{{ preview }}</span>
@@ -137,6 +143,7 @@ const popupId = useId();
         :data-value="option.value"
         @click="handleSelect(option.value)"
         @pointerup="enablePointerUpSelect ? handleSelect(option.value) : null"
+        @keydown.tab="handleSelect(option.value)"
       >
         <div
           v-if="option.value === props.value"

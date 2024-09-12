@@ -70,6 +70,7 @@ export function setPopover(
       (!finalOptions.disabledTabClose && e.key === "Tab")
     ) {
       cleanUp();
+      triggerElement.focus();
     }
   };
 
