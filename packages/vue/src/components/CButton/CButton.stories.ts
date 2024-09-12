@@ -23,6 +23,13 @@ export const Secondary: Story = {
   },
 };
 
+export const Transparent: Story = {
+  args: {
+    default: "Button",
+    variant: "transparent",
+  },
+};
+
 export const Small: Story = {
   args: {
     default: "Button",
@@ -34,5 +41,13 @@ export const Disabled: Story = {
   args: {
     default: "Button",
     disabled: true,
+  },
+};
+
+export const Bordered: Story = {
+  args: {
+    default: "Bordered",
+    bordered: true,
+    variant: "secondary",
   },
 };

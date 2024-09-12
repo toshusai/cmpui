@@ -36,7 +36,7 @@ const id = useId();
           margin-top: 16px;
         "
       >
-        <CButton size="S" variant="secondary" @click="show = false">
+        <CButton size="S" variant="transparent" @click="show = false">
           Cancel
         </CButton>
         <CButton :disabled="!message" size="S" @click="show = false">

@@ -38,7 +38,7 @@ const id = useId();
     <div
       style="display: flex; gap: 8px; justify-content: right; margin-top: 16px"
     >
-      <CButton size="S" variant="secondary" @click="show = false">
+      <CButton size="S" variant="transparent" @click="show = false">
         Cancel
       </CButton>
       <CButton :disabled="!message" size="S" @click="show2 = true">
@@ -60,7 +60,7 @@ const id = useId();
           <CButton
             autofocus
             size="S"
-            variant="secondary"
+            variant="transparent"
             @click="show2 = false"
           >
             Cancel

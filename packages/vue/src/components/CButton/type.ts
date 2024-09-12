@@ -1,6 +1,7 @@
 export const CButtonVariant = {
   primary: "primary",
   secondary: "secondary",
+  transparent: "transparent",
 } as const;
 
 export type CButtonVariant =
@@ -18,4 +19,5 @@ export type CButtonProps = {
   variant?: CButtonVariant;
   size?: CButtonSize;
   disabled?: boolean;
+  bordered?: boolean;
 };
