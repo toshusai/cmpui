@@ -1,0 +1,37 @@
+.cmpui_toast__root {
+  position: fixed;
+
+  right: 16px;
+  bottom: 16px;
+
+  border: 1px solid var(--cmpui-primary-color);
+  padding: 8px;
+}
+
+.cmpui_toast_transition-enter-from {
+  transform: translateY(16px);
+  opacity: 0;
+}
+
+.cmpui_toast_transition-enter-active {
+  transition: opacity 175ms, transform 175ms;
+}
+
+.cmpui_toast_transition-enter-to {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.cmpui_toast_transition-leave-from {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.cmpui_toast_transition-leave-active {
+  transition: opacity 175ms, transform 175ms;
+}
+
+.cmpui_toast_transition-leave-to {
+  transform: translateY(16px);
+  opacity: 0;
+}
