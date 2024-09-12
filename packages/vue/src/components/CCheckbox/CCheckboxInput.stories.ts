@@ -17,12 +17,6 @@ export const Disabled: Story = {
   },
 };
 
-export const Checked: Story = {
-  args: {
-    checked: true,
-  },
-};
-
 export const Small: Story = {
   args: {
     size: "S",

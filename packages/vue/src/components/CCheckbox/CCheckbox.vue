@@ -21,17 +21,18 @@ withDefaults(
 
 const attrs = useAttrs() as { id?: string };
 const id = useId(attrs.id);
-const value = defineModel<boolean>("checked");
+const value = defineModel<boolean>();
 </script>
 
 <template>
   <div class="cmpui_checkbox__root" :aria-disabled="disabled">
     <CCheckboxInput
       :id="id"
-      v-model:checked="value"
+      :checked="value"
       :disabled="disabled"
       :size="size"
       v-bind="$attrs"
+      @change="(e) => (value = e.target.checked)"
     />
     <label class="cmpui_checkbox__label" :for="id">
       <template v-if="typeof label === 'string'">{{ label }}</template>

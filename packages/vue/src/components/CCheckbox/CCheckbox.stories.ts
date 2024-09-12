@@ -24,8 +24,8 @@ export const Controlled: Story = {
           h(() => [
             h("div", `Checked: ${checked.value}`),
             h(CCheckbox, {
-              checked: checked.value,
-              "onUpdate:checked": (v) => {
+              modelValue: checked.value,
+              "onUpdate:modelValue": (v) => {
                 checked.value = v;
               },
               label: "Controlled",
