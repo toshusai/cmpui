@@ -2,6 +2,7 @@ import "./global.css";
 import "./alpha-checker-board.css";
 
 import "./Button/index.css";
+import "./Chip/index.css";
 import "./CanvasView/index.css";
 import "./Checkbox/index.css";
 import "./Circle/index.css";

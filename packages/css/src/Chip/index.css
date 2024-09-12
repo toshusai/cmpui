@@ -1,0 +1,29 @@
+.cmpui__chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--cmpui-border-color);
+  color: var(--cmpui-text-color);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.cmpui__chip[data-rounded] {
+  border-radius: 9999px;
+}
+
+.cmpui__chip[data-size="S"] {
+  height: 20px;
+  font-size: 10px;
+}
+
+.cmpui__chip[data-size="L"] {
+  height: 32px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
