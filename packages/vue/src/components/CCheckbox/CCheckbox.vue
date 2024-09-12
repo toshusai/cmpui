@@ -9,7 +9,7 @@ defineOptions({
 
 withDefaults(
   defineProps<{
-    label: string | (() => VNode);
+    label: string | VNode;
     disabled?: boolean;
     size?: "S" | "M" | "L";
   }>(),
@@ -35,7 +35,7 @@ const value = defineModel<boolean>("checked");
     />
     <label class="cmpui_checkbox__label" :for="id">
       <template v-if="typeof label === 'string'">{{ label }}</template>
-      <component :is="label()" v-else></component>
+      <component :is="label" v-else></component>
     </label>
   </div>
 </template>

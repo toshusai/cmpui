@@ -27,6 +27,13 @@ export const Checked: Story = {
   },
 };
 
+export const CustomLabel: Story = {
+  args: {
+    checked: true,
+    label: h("span", [h("b", "Custom"), " Label"]),
+  },
+};
+
 export const Small: Story = {
   args: {
     size: "S",
