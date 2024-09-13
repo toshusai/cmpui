@@ -23,6 +23,7 @@ const props = withDefaults(
     trigger: HTMLElement | null;
     boundary?: HTMLElement;
     autoResize?: boolean;
+    fitTrigger?: boolean;
   }>(),
   {
     id: undefined,
@@ -34,6 +35,7 @@ const props = withDefaults(
     show: false,
     trigger: null,
     boundary: undefined,
+    fitTrigger: false,
   },
 );
 
@@ -51,6 +53,21 @@ const style = ref<CSSProperties>({
 const dataPlacement = ref<Placement | undefined>(undefined);
 
 let componentCleanUp = () => {};
+
+onMounted(() => {
+  if (props.trigger && divRef.value) {
+    divRef.value.style.width = `${props.trigger.getBoundingClientRect().width}px`;
+  }
+});
+
+watch(
+  () => props.trigger,
+  (trigger) => {
+    if (trigger && divRef.value) {
+      divRef.value.style.width = `${trigger.getBoundingClientRect().width}px`;
+    }
+  },
+);
 
 watch(
   () => [props.trigger, divRef.value, props.show],

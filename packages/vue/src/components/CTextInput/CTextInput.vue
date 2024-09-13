@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import { useId } from "../../lib/useId";
 
+defineOptions({
+  inheritAttrs: false,
+});
+
 withDefaults(
   defineProps<{
     label?: string;
@@ -40,6 +44,7 @@ const id = useId();
       :disabled="disabled"
       :placeholder="placeholder"
       :type="type"
+      v-bind="$attrs"
       class="cmpui_text-input__input"
     />
     <slot name="suffix" />
