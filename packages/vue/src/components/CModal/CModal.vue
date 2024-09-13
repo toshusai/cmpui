@@ -48,9 +48,10 @@ const modalOptions = inject("modalOptions", {
 </script>
 
 <template>
-  <Transition name="cmpui_modal_transition">
-    <Teleport v-if="show" to="body">
+  <Teleport to="body">
+    <Transition name="cmpui_modal_transition">
       <div
+        v-if="show"
         ref="el"
         class="cmpui_modal__overlay"
         aria-modal="true"
@@ -71,6 +72,6 @@ const modalOptions = inject("modalOptions", {
           <slot></slot>
         </div>
       </div>
-    </Teleport>
-  </Transition>
+    </Transition>
+  </Teleport>
 </template>

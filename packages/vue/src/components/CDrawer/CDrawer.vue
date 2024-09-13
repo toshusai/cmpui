@@ -46,9 +46,10 @@ watch(
 </script>
 
 <template>
-  <Transition name="cmpui_drawer_transition">
-    <Teleport v-if="show" to="body">
+  <Teleport to="body">
+    <Transition name="cmpui_drawer_transition" :duration="1000">
       <div
+        v-if="show"
         ref="el"
         class="cmpui_drawer__overlay"
         @keydown.esc="emit('close')"
@@ -58,6 +59,6 @@ watch(
           <slot></slot>
         </div>
       </div>
-    </Teleport>
-  </Transition>
+    </Transition>
+  </Teleport>
 </template>
