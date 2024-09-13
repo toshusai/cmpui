@@ -11,3 +11,4 @@ export * from "./dialog/lockScroll";
 export * from "./menuItem";
 export * from "./popover/setPopover";
 export * from "./tooltip/tooltip";
+export * from "./Button";

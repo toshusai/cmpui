@@ -1,18 +1,24 @@
+import {
+  CButtonProps,
+  CButtonSize,
+  CButtonVariant,
+} from "@toshusai/cmpui-core";
 import { forwardRef } from "react";
 
 import { CustomJSXElement } from "../../types/CustomJSXElement";
 import { classNames } from "../../utils/classNames";
 
-export type ButtonProps<T extends CustomJSXElement = "button"> = {
-  as?: T;
-  size?: "S" | "M";
-  variant?: "primary" | "secondary";
-} & Omit<React.ComponentProps<T>, "as">;
+export type ButtonProps<T extends CustomJSXElement = "button"> =
+  CButtonProps & {
+    as?: T;
+  } & Omit<React.ComponentProps<T>, keyof CButtonProps | "as">;
 
 export const Button = forwardRef(function Button<T extends CustomJSXElement>(
   {
-    variant = "primary",
-    size = "M",
+    variant = CButtonVariant.primary,
+    size = CButtonSize.M,
+    bordered = false,
+    disabled = false,
     children,
     className,
     as,
@@ -24,11 +30,13 @@ export const Button = forwardRef(function Button<T extends CustomJSXElement>(
   return (
     <Component
       ref={ref}
-      type="button"
       className={classNames("cmpui_button", className)}
-      {...props}
-      data-variant={variant}
+      data-bordered={bordered}
       data-size={size}
+      data-variant={variant}
+      disabled={disabled}
+      type="button"
+      {...props}
     >
       {children}
     </Component>

@@ -4,7 +4,6 @@ import { h } from "vue";
 
 const meta = {
   title: "inputs/CButton",
-  tags: ["autodocs"],
   component: CButton,
 } satisfies Meta<typeof CButton>;
 
@@ -49,4 +48,9 @@ export const Bordered: Story = {
       h(CButton, { variant: "primary", bordered: true }, () => "Primary"),
       h(CButton, { variant: "secondary", bordered: true }, () => "Secondary"),
     ]),
+};
+
+export const Link: Story = {
+  render: () =>
+    h(CButton, { is: "a", href: "", variant: "primary" }, () => "Link Button"),
 };
