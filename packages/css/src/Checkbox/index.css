@@ -15,6 +15,10 @@
   opacity: 0.5;
 }
 
+.cmpui_checkbox__root[aria-disabled="true"] > .cmpui_checkbox__input:disabled {
+  opacity: 1;
+}
+
 .cmpui_checkbox__box {
   display: flex;
   height: min-content;

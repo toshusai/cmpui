@@ -1,0 +1,108 @@
+.cmpui_switch__root {
+  align-items: center;
+  display: flex;
+}
+
+.cmpui_switch__root[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.cmpui_switch__input {
+  background-color: var(--cmpui-bg-color);
+  border: 1px solid var(--cmpui-border-color);
+
+  align-items: center;
+  display: flex;
+  height: 24px;
+  min-width: 44px;
+  max-width: 44px;
+  padding: 0 2px;
+  position: relative;
+  width: 44px;
+
+  appearance: none;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+
+.cmpui_switch__input:focus-visible {
+  outline: var(--cmpui-primary-color) solid 1px;
+
+  outline-offset: 1px;
+}
+
+.cmpui_switch__input:checked {
+  background-color: var(--cmpui-primary-color);
+}
+
+.cmpui_switch__input:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.cmpui_switch__root[aria-disabled="true"] > .cmpui_switch__input:disabled {
+  opacity: 1;
+}
+
+.cmpui_switch__input::after {
+  content: "";
+
+  background-color: gray;
+  border-radius: 9999px;
+  display: block;
+  height: 18px;
+  left: 3px;
+  pointer-events: none;
+  position: absolute;
+  transition: transform 100ms;
+  width: 18px;
+  will-change: transform;
+}
+
+.cmpui_switch__input:checked::after {
+  background-color: white;
+  transform: translateX(18px);
+}
+
+.cmpui_switch__input:not(:disabled):hover {
+  box-shadow: 0px 0px 0px 2px var(--cmpui-bg-hover-color);
+
+  outline-offset: 1px;
+}
+
+/* Size */
+
+.cmpui_switch__input[data-size="S"] {
+  height: 16px;
+  width: 28px;
+  min-width: 28px;
+  max-width: 28px;
+}
+
+.cmpui_switch__input[data-size="S"]::after {
+  height: 12px;
+  width: 12px;
+  left: 1px;
+}
+
+.cmpui_switch__input[data-size="S"]:checked::after {
+  transform: translateX(12px);
+}
+
+.cmpui_switch__label {
+  color: var(--cmpui-text-color);
+
+  cursor: pointer;
+  padding-left: 8px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.cmpui_switch__root[aria-disabled="true"] > .cmpui_switch__label {
+  cursor: default;
+}

@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "outDir": "dist",
+    "declarationDir": "./types",
 
     "strict": true,
     "noUnusedLocals": true,
@@ -22,6 +22,6 @@
     "typeRoots": ["node_modules/@types", ".storybook/@types", "./node_modules"],
     "types": ["@vitest/browser/providers/playwright"]
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.stories.ts"]
+  "include": ["./src"],
+  "exclude": ["src/**/*.stories.ts", "node_modules", "types"]
 }
