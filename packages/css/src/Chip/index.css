@@ -14,12 +14,12 @@
   width: fit-content;
 }
 
-.cmpui__chip[data-clickable]:hover {
+.cmpui__chip[data-clickable="true"]:hover {
   cursor: pointer;
   background-color: var(--cmpui-bg-hover-color);
 }
 
-.cmpui__chip[data-clickable]:active {
+.cmpui__chip[data-clickable="true"]:active {
   background-color: var(--cmpui-bg-active-color);
 }
 
