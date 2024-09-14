@@ -3,7 +3,7 @@ import { h } from "vue";
 import CLoading from "./CLoading.vue";
 
 const meta = {
-  title: "data display/Loading",
+  title: "data display/CLoading",
   component: CLoading,
 } satisfies Meta<typeof CLoading>;
 
@@ -12,4 +12,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: () => h(CLoading),
+};
+
+export const Size: Story = {
+  render: () =>
+    h(() => [
+      h(CLoading, { size: "S" }),
+      h(CLoading, {}),
+      h(CLoading, { size: "L" }),
+    ]),
 };
