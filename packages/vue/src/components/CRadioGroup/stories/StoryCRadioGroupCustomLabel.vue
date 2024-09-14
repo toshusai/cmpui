@@ -12,24 +12,21 @@ const spanStyle = {
 
 const options = [
   {
-    label: () =>
-      h("span", { style: spanStyle }, [h(IconCash, { size: 16 }), "Cash"]),
+    label: h("span", { style: spanStyle }, [h(IconCash, { size: 16 }), "Cash"]),
     value: "cash",
   },
   {
-    label: () =>
-      h("span", { style: spanStyle }, [
-        h(IconBuildingBank, { size: 16 }),
-        "Bank",
-      ]),
+    label: h("span", { style: spanStyle }, [
+      h(IconBuildingBank, { size: 16 }),
+      "Bank",
+    ]),
     value: "bank",
   },
   {
-    label: () =>
-      h("span", { style: spanStyle }, [
-        h(IconCreditCard, { size: 16 }),
-        "Credit card",
-      ]),
+    label: h("span", { style: spanStyle }, [
+      h(IconCreditCard, { size: 16 }),
+      "Credit card",
+    ]),
     value: "credit",
   },
 ];

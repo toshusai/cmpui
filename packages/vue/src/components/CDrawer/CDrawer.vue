@@ -6,8 +6,7 @@ const elRef = ref<HTMLElement | null>(null);
 
 const props = defineProps<{
   show: boolean;
-  title: string;
-  position: "left" | "right";
+  position?: "left" | "right";
 }>();
 
 const emit = defineEmits<{
