@@ -3,6 +3,9 @@ import CIconButton from "../CIconButton/CIconButton.vue";
 import CButton from "../CButton/CButton.vue";
 import TooltipProvider from "./CTooltipProvider.vue";
 import Tooltip from "./CTooltip.vue";
+import { h } from "vue";
+import StoryTooltipPlacement from "./stories/StoryTooltipPlacement.vue";
+import { IconInfoCircle } from "@tabler/icons-vue";
 
 const meta = {
   component: Tooltip,
@@ -18,12 +21,33 @@ const html = String.raw;
 
 export const Default: Story = {
   render: () => ({
-    components: { CButton, Tooltip, TooltipProvider },
+    components: {
+      CButton,
+      CIconButton,
+      IconInfoCircle,
+      Tooltip,
+      TooltipProvider,
+    },
     template: `
         <Tooltip text="Tooltip">
-          <CButton>
-            Hover me
-          </CButton>
+            <IconInfoCircle size="20" />
+        </Tooltip>
+    `,
+  }),
+};
+
+export const Placement: Story = {
+  render: () => h(StoryTooltipPlacement),
+};
+
+export const ForceShow: Story = {
+  render: () => ({
+    components: { CIconButton, IconInfoCircle, Tooltip, TooltipProvider },
+    template: `
+        <Tooltip text="Tooltip" force-show>
+          <CIconButton>
+            <IconInfoCircle size="20" />
+          </CIconButton>
         </Tooltip>
     `,
   }),
@@ -31,12 +55,12 @@ export const Default: Story = {
 
 export const Flip: Story = {
   render: () => ({
-    components: { CButton, Tooltip, TooltipProvider },
+    components: { CIconButton, IconInfoCircle, Tooltip, TooltipProvider },
     template: `
         <Tooltip text="Tooltip">
-          <CButton style="position: absolute; bottom: 4px; transform: translateX(-50%);">
-            Hover me
-          </CButton>
+          <CIconButton style="position: absolute; bottom: 4px;">
+            <IconInfoCircle size="20" />
+          </CIconButton>
         </Tooltip>
     `,
   }),
@@ -44,12 +68,17 @@ export const Flip: Story = {
 
 export const AutoPlacement: Story = {
   render: () => ({
-    components: { CButton, Tooltip, TooltipProvider },
+    components: {
+      Tooltip,
+      TooltipProvider,
+      IconInfoCircle,
+      CIconButton,
+    },
     template: `
         <Tooltip text="Tooltip can be placed anywhere">
-          <CButton style="position: absolute; bottom: 4px; right: 4px">
-            Hover me
-          </CButton>
+          <CIconButton style="position: absolute; bottom: 4px; right: 4px">
+            <IconInfoCircle size="20" />
+          </CIconButton>
         </Tooltip>
     `,
   }),

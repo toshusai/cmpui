@@ -6,17 +6,25 @@ import {
   offset,
   Placement,
   shift,
+  Side,
   size,
 } from "@floating-ui/dom";
 
-const defaultOptions = {
-  offset: 7,
+type TooltipOptions = {
+  offset?: number;
+  padding?: number;
+  placement?: Side;
+};
+
+const defaultOptions: TooltipOptions = {
+  offset: 8,
   padding: 8,
+  placement: "top",
 };
 
 export function tooltip(
   tooltipElement: HTMLElement,
-  triggerElement: HTMLElement,
+  triggerElement: HTMLElement | SVGElement,
   arrowElement: HTMLElement,
   onCleanUp: () => void,
   callback: (position: {
@@ -30,12 +38,12 @@ export function tooltip(
     };
     placement?: Placement;
   }) => void,
-  options?: {
-    offset?: number;
-    padding?: number;
-    disabledTriggerClickClose?: boolean;
-  },
+  options?: TooltipOptions
 ) {
+  const finalOptions = {
+    ...defaultOptions,
+    ...options,
+  };
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Escape" || e.key === "Tab") {
       cleanUp();
@@ -44,12 +52,12 @@ export function tooltip(
 
   const updatePosition = () => {
     computePosition(triggerElement, tooltipElement, {
-      placement: "bottom",
+      placement: finalOptions.placement,
       strategy: "fixed",
       middleware: [
-        offset(options?.offset ?? defaultOptions.offset),
+        offset(finalOptions.offset),
         shift({
-          padding: options?.padding ?? defaultOptions.padding,
+          padding: finalOptions.padding,
         }),
         size({
           apply(args) {
@@ -58,7 +66,7 @@ export function tooltip(
               maxHeight: Math.max(100, args.availableHeight),
             });
           },
-          padding: options?.padding ?? defaultOptions.padding,
+          padding: finalOptions.padding,
         }),
         flip({
           fallbackStrategy: "initialPlacement",

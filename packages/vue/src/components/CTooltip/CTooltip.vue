@@ -5,23 +5,28 @@ import {
   CSSProperties,
   inject,
   onMounted,
+  onUnmounted,
   ref,
   useSlots,
   watch,
+  watchEffect,
 } from "vue";
 import { tooltip } from "../../../../core/src/tooltip/tooltip";
 import { useId } from "../../lib/useId";
 import { isValidVNode, TOAST_PROVIDER_KEY, TooltipProvide } from "./lib";
+import { Side } from "@floating-ui/dom";
 
 const props = withDefaults(
   defineProps<{
     text: string;
     forceShow?: boolean;
     delay?: number;
+    placement?: Side;
   }>(),
   {
     forceShow: false,
     delay: 300,
+    placement: "top",
   },
 );
 
@@ -57,9 +62,9 @@ const show = ref(false);
 const slotElement = computed(() => {
   let el = slotRef.value;
   if (!el) return;
-  if (!(el instanceof HTMLElement)) {
+  if (!(el instanceof HTMLElement || el instanceof SVGElement)) {
     el = el.$el;
-    if (!(el instanceof HTMLElement)) return;
+    if (!(el instanceof HTMLElement) && !(el instanceof SVGElement)) return;
   }
   return el;
 });
@@ -89,8 +94,16 @@ watch(
   },
 );
 
+let componentCleanUp = () => {};
+
 watch(
-  () => [slotRef.value, tooltipRef.value, arrowRef.value],
+  () => [
+    slotRef.value,
+    tooltipRef.value,
+    arrowRef.value,
+    show.value,
+    props.forceShow,
+  ],
   () => {
     if (!slotRef.value) return;
     if (!tooltipRef.value) return;
@@ -134,26 +147,26 @@ watch(
           arrowRef.value.style.transformOrigin = "bottom";
           arrowRef.value.style.top = "";
           arrowRef.value.style.bottom = "-5px";
+        } else if (pos.placement === "left") {
+          arrowRef.value.style.transform = "rotate(-90deg)";
+          arrowRef.value.style.transformOrigin = "right";
+          arrowRef.value.style.top = "";
+        } else if (pos.placement === "right") {
+          arrowRef.value.style.transform = "rotate(90deg)";
+          arrowRef.value.style.transformOrigin = "left";
+          arrowRef.value.style.top = "";
+          arrowRef.value.style.left = "-2px";
         }
+      },
+      {
+        placement: props.placement,
       },
     );
 
-    let stop = () => {};
-    const handleOpenChange = (show: boolean) => {
-      if (show) {
-        open();
-      } else {
-        cleanUp();
-        style.value.display = "none";
-      }
-      stop();
-    };
-
-    handleOpenChange(show.value || props.forceShow);
-    stop = watch(
-      () => [show.value, props.forceShow],
-      ([show, forceShow]) => handleOpenChange(show || forceShow),
-    );
+    if (props.forceShow || show.value) {
+      open();
+      componentCleanUp = cleanUp;
+    }
   },
 );
 
@@ -163,6 +176,16 @@ watch(
     show.value = forceShow;
   },
 );
+
+watchEffect(() => {
+  if (!show.value) {
+    componentCleanUp();
+  }
+});
+
+onUnmounted(() => {
+  componentCleanUp();
+});
 
 const id = useId();
 </script>
