@@ -12,3 +12,6 @@ export * from "./menuItem";
 export * from "./popover/setPopover";
 export * from "./tooltip/tooltip";
 export * from "./Button";
+export * from "./math/clamp";
+export * from "./SVPicker";
+export * from "./colors";

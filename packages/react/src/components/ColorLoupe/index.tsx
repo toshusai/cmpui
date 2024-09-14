@@ -31,7 +31,13 @@ export const ColorLoupe = memo(function ColorLoupe({
         radius={nobRadius * 2}
         strokeColor="var(--cmpui-border-color)"
         strokeWidth={1}
-        style={{ zIndex: 1, "--block-size": "4px" } as React.CSSProperties}
+        style={
+          {
+            zIndex: 1,
+            "--block-size": "4px",
+            pointerEvents: "none",
+          } as React.CSSProperties
+        }
         x={x}
         y={y - nobRadius * 4}
         className="alpha-checker-board"
@@ -41,7 +47,7 @@ export const ColorLoupe = memo(function ColorLoupe({
         radius={nobRadius * 2}
         strokeColor="var(--cmpui-border-color)"
         strokeWidth={1}
-        style={{ zIndex: 1 }}
+        style={{ zIndex: 1, pointerEvents: "none" }}
         x={x}
         y={y - nobRadius * 4}
       />

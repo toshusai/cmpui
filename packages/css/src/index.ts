@@ -16,6 +16,7 @@ import "./Modal/index.css";
 import "./Radio/index.css";
 import "./Select/index.css";
 import "./Skelton/index.css";
+import "./SVPicker/index.css";
 import "./Switch/index.css";
 import "./TextInput/index.css";
 import "./Toast/index.css";

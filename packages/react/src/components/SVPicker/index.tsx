@@ -1,9 +1,9 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { createNobPointerDownHandler } from "@toshusai/cmpui-core";
 
 import { hsvToRgb } from "../../utils/colors/hsvToRgb";
 import { rgbToCss } from "../../utils/colors/rgbToCss";
 import { useHighContrastColor } from "../../utils/colors/useHighContrastColor";
-import { createDragHandler } from "../../utils/interactions/createDragHandler";
 import { useKeyDownStartEnd } from "../../utils/interactions/useKeyDownStartEnd";
 import { clamp } from "../../utils/math/clamp";
 import { Circle } from "../Circle";
@@ -73,34 +73,23 @@ export function SVPicker({
     setIsDown(false);
   }, []);
 
-  const handlePointerDown = useMemo(
-    () =>
-      createDragHandler({
-        onDown: (e) => {
-          setIsDown(true);
-          props.onStart?.();
-          return {
-            startX: e.clientX,
-            startY: e.clientY,
-            s: saturation,
-            v: value,
-          };
-        },
-        onMove: (e, ctx) => {
-          if (!ctx) return;
-          const dx = e.clientX - ctx.startX;
-          const dy = e.clientY - ctx.startY;
-          const s = clamp(ctx.s + dx / width, 0, 1);
-          const v = clamp(ctx.v - dy / height, 0, 1);
-          onChange(s, v);
-        },
-        onUp: () => {
-          setIsDown(false);
-          props.onEnd?.();
-        },
-      }),
-    [onChange, saturation, value, width, height, props.onEnd, props.onStart],
-  );
+  const handlePointerDown = useMemo(() => {
+    return createNobPointerDownHandler({
+      height,
+      width,
+      onChange,
+      onDown: () => {
+        setIsDown(true);
+        props.onStart?.();
+      },
+      onUp: () => {
+        setIsDown(false);
+        props.onEnd?.();
+      },
+      s: saturation,
+      v: value,
+    });
+  }, [onChange, saturation, value, width, height, props.onEnd, props.onStart]);
 
   const fill = useMemo(
     () => rgbToCss(hsvToRgb({ h: hue, s: saturation, v: value })),
@@ -114,6 +103,20 @@ export function SVPicker({
 
   const strokeColor = useHighContrastColor(hsv);
 
+  const nobRef = useRef<HTMLDivElement>(null);
+
+  /**
+   * e.currentTarget may not be the same as the underlying e.nativeEvent.currentTarget.
+   */
+  useEffect(() => {
+    if (!nobRef.current) return;
+    nobRef.current.addEventListener("pointerdown", handlePointerDown);
+    return () => {
+      if (!nobRef.current) return;
+      nobRef.current.removeEventListener("pointerdown", handlePointerDown);
+    };
+  }, [handlePointerDown]);
+
   return (
     <div
       className="cmpui_sv-picker__root"
@@ -126,7 +129,9 @@ export function SVPicker({
         width={width}
         height={height}
         hue={hue}
-        onChange={onChange}
+        onChange={(s, v) => {
+          onChange(s, v);
+        }}
         onDownChange={setIsDown}
       />
 
@@ -134,9 +139,9 @@ export function SVPicker({
         <ColorLoupe nobRadius={nobRadius} x={x} y={y} color={fill} />
       )}
       <Circle
+        ref={nobRef}
         className="cmpui_sv-picker__nob"
         fill={fill}
-        onPointerDown={handlePointerDown}
         radius={nobRadius}
         strokeColor={strokeColor}
         strokeWidth={2}
