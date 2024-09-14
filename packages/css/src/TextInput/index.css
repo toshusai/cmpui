@@ -6,7 +6,7 @@
   border-radius: 4px;
   box-sizing: border-box;
   display: flex;
-  height: 32px;
+  min-height: 32px;
   justify-content: flex-start;
   position: relative;
   text-decoration: none;

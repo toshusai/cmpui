@@ -10,11 +10,13 @@ withDefaults(
     disabled?: boolean;
     invalid?: boolean;
     label?: string;
+    rootAttrs?: Record<string, unknown>;
   }>(),
   {
     disabled: false,
     invalid: false,
     label: undefined,
+    rootAttrs: undefined,
   },
 );
 
@@ -29,6 +31,7 @@ const finalId = (useAttrs() as { id?: string }).id ?? id;
     class="cmpui_text-input__root"
     :aria-disabled="disabled"
     :aria-invalid="invalid"
+    v-bind="rootAttrs"
   >
     <label class="cmpui_text-input__label" :for="finalId">
       {{ label }}

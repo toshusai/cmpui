@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from "@storybook/vue3";
 import CMenuList from "./CMenuList.vue";
 import { h, ref } from "vue";
 import CMenuListItem from "../CMenuListItem/CMenuListItem.vue";
+import { codeWords } from "../../test/const";
 
 const meta = {
   title: "data display/CMenuList",
@@ -11,7 +12,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const names = ["Alfa", "Bravo", "Charlie", "Delta", "Echo"];
+const names = codeWords.slice(0, 5);
 export const Default: Story = {
   render: () => ({
     setup() {

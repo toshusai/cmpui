@@ -12,13 +12,19 @@ const props = withDefaults(
     options: {
       value: string;
     }[];
+    rootAttrs?: Record<string, unknown>;
   }>(),
   {
     options: () => [],
+    rootAttrs: undefined,
   },
 );
 
 const show = ref(false);
+
+const emit = defineEmits<{
+  (_: "select", value: string): void;
+}>();
 
 const value = defineModel<string>({ default: "" });
 
@@ -50,6 +56,7 @@ const { keydown } = createAutoComplete({
   },
   onChangeValue: (newValue) => {
     value.value = newValue;
+    emit("select", newValue);
   },
 });
 </script>
@@ -58,10 +65,19 @@ const { keydown } = createAutoComplete({
   <CTextInput
     ref="el"
     v-model="value"
+    v-bind="$attrs"
     autocomplete="off"
+    :root-attrs="props.rootAttrs"
     @keydown="keydown"
     @focus="show = true"
-  ></CTextInput>
+  >
+    <template #prefix>
+      <slot name="prefix" />
+    </template>
+    <template #suffix>
+      <slot name="suffix" />
+    </template>
+  </CTextInput>
 
   <CPopover
     v-if="show"
@@ -82,6 +98,7 @@ const { keydown } = createAutoComplete({
         @click="
           value = option.value;
           show = false;
+          emit('select', option.value);
         "
       >
         {{ option.value }}

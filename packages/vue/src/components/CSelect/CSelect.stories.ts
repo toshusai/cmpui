@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import CSelect from "./CSelect.vue";
 import { h, ref } from "vue";
+import { codeWords } from "../../test/const";
 
 const meta = {
   title: "inputs/CSelect",
@@ -10,49 +11,22 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const names = [
-  "Alfa",
-  "Bravo",
-  "Charlie",
-  "Delta",
-  "Echo",
-  "Foxtrot",
-  "Golf",
-  "Hotel",
-  "India",
-  "Juliett",
-  "Kilo",
-  "Lima",
-  "Mike",
-  "November",
-  "Oscar",
-  "Papa",
-  "Quebec",
-  "Romeo",
-  "Sierra",
-  "Tango",
-  "Uniform",
-  "Victor",
-  "Whiskey",
-  "X-ray",
-  "Yankee",
-  "Zulu",
-];
-
 const style = {
   transform: `translateY(-64px)`,
 };
 
+const options = codeWords.map((word) => ({ label: word, value: word }));
+
 export const Default: Story = {
   render: () => ({
     setup() {
-      const value = ref<string>(names[8]);
+      const value = ref<string>(codeWords[8]);
 
       return () =>
         h(CSelect, {
           style,
           modelValue: value.value,
-          options: names.map((name) => ({ label: name, value: name })),
+          options,
           "onUpdate:value": (v: string) => (value.value = v),
         });
     },
@@ -62,13 +36,13 @@ export const Default: Story = {
 export const Label: Story = {
   render: () => ({
     setup() {
-      const value = ref<string>(names[8]);
+      const value = ref<string>(codeWords[8]);
 
       return () =>
         h(CSelect, {
           style,
           modelValue: value.value,
-          options: names.map((name) => ({ label: name, value: name })),
+          options,
           label: "Label",
           "onUpdate:value": (v: string) => (value.value = v),
         });
@@ -79,13 +53,13 @@ export const Label: Story = {
 export const Disabled: Story = {
   render: () => ({
     setup() {
-      const value = ref<string>(names[8]);
+      const value = ref<string>(codeWords[8]);
 
       return () =>
         h(CSelect, {
           style,
           modelValue: value.value,
-          options: names.map((name) => ({ label: name, value: name })),
+          options,
           disabled: true,
           label: "Label",
           "onUpdate:value": (v: string) => (value.value = v),
@@ -97,8 +71,8 @@ export const Disabled: Story = {
 export const Custom: Story = {
   render: () => ({
     setup() {
-      const value = ref<string>(names[8]);
-      const options = names.map((name) => ({
+      const value = ref<string>(codeWords[8]);
+      const options = codeWords.map((name) => ({
         label: name,
         value: name,
         render: (value) => h("strong", value),

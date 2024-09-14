@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import CAutoComplete from "./CAutoComplete.vue";
 import { h } from "vue";
+import AutoCompleteExample from "./stories/AutoCompleteExample.vue";
+import { codeWords } from "../../test/const";
 
 const meta = {
   title: "inputs/CAutoComplete",
@@ -10,43 +12,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const names = [
-  "Alfa",
-  "Bravo",
-  "Charlie",
-  "Delta",
-  "Echo",
-  "Foxtrot",
-  "Golf",
-  "Hotel",
-  "India",
-  "Juliett",
-  "Kilo",
-  "Lima",
-  "Mike",
-  "November",
-  "Oscar",
-  "Papa",
-  "Quebec",
-  "Romeo",
-  "Sierra",
-  "Tango",
-  "Uniform",
-  "Victor",
-  "Whiskey",
-  "X-ray",
-  "Yankee",
-  "Zulu",
-];
 export const Default: Story = {
   render: () => ({
     setup() {
       return () =>
         h(() => [
           h(CAutoComplete, {
-            options: names.map((name) => ({ label: name, value: name })),
+            options: codeWords.map((word) => ({ label: word, value: word })),
           }),
         ]);
+    },
+  }),
+};
+
+export const Example: Story = {
+  render: () => ({
+    setup() {
+      return () => h(AutoCompleteExample)
     },
   }),
 };
