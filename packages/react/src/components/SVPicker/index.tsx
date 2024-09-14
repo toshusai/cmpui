@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { createNobPointerDownHandler } from "@toshusai/cmpui-core";
+import {
+  createHandleSVPickerKeyDown,
+  createNobPointerDownHandler,
+} from "@toshusai/cmpui-core";
 
 import { hsvToRgb } from "../../utils/colors/hsvToRgb";
 import { rgbToCss } from "../../utils/colors/rgbToCss";
 import { useHighContrastColor } from "../../utils/colors/useHighContrastColor";
-import { useKeyDownStartEnd } from "../../utils/interactions/useKeyDownStartEnd";
-import { clamp } from "../../utils/math/clamp";
 import { Circle } from "../Circle";
 import { ColorLoupe } from "../ColorLoupe";
 
@@ -42,27 +43,14 @@ export function SVPicker({
 
   const [isDown, setIsDown] = useState(false);
 
-  const updateKeyDown = useKeyDownStartEnd(props.onStart, props.onEnd);
-
   const handleKeyDown = useMemo(
-    () => (e: React.KeyboardEvent) => {
-      if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-        updateKeyDown();
-        const sign = e.key === "ArrowLeft" ? -1 : 1;
-        const signedStep = 0.01 * sign;
-        const s = clamp(saturation + signedStep, 0, 1);
-        onChange(s, value);
-        e.preventDefault();
-      } else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
-        updateKeyDown();
-        const sign = e.key === "ArrowUp" ? 1 : -1;
-        const signedStep = 0.01 * sign;
-        const v = clamp(value + signedStep, 0, 1);
-        onChange(saturation, v);
-        e.preventDefault();
-      }
-    },
-    [saturation, value, onChange, updateKeyDown],
+    () =>
+      createHandleSVPickerKeyDown({
+        saturation,
+        value,
+        onChange,
+      }),
+    [saturation, value, onChange],
   );
 
   const handleFocus = useCallback(() => {
@@ -121,7 +109,7 @@ export function SVPicker({
     <div
       className="cmpui_sv-picker__root"
       tabIndex={0}
-      onKeyDown={handleKeyDown}
+      onKeyDown={(e) => handleKeyDown(e.nativeEvent)}
       onFocus={handleFocus}
       onBlur={handleBlur}
     >

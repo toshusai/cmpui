@@ -1,5 +1,6 @@
 import { hsvToRgb } from "./colors";
 import { createDragHandler } from "./createDragHandler";
+import { KeyboardKey } from "./KeyboardKey";
 import { clamp } from "./math/clamp";
 
 export function initSVCanvas(canvas: HTMLCanvasElement) {
@@ -45,7 +46,7 @@ export function createNobPointerDownHandler(props: {
   });
 }
 
-export function createPointerDownHandler(props: {
+export function createSVCanvasPointerDownHandler(props: {
   onStart?: () => void;
   onChange: (s: number, v: number) => void;
   onDownChange: (down: boolean) => void;
@@ -112,4 +113,35 @@ export function drawSV(ctx: CanvasRenderingContext2D, hue: number) {
   }
 
   ctx.putImageData(imageData, 0, 0);
+}
+
+export function createHandleSVPickerKeyDown({
+  scale = 0.01,
+  shiftScale = 0.1,
+  ...props
+}: {
+  saturation: number;
+  value: number;
+  onChange: (s: number, v: number) => void;
+  scale?: number;
+  shiftScale?: number;
+}) {
+  return (e: KeyboardEvent) => {
+    if (e.key === KeyboardKey.ArrowLeft || e.key === KeyboardKey.ArrowRight) {
+      const sign = e.key === KeyboardKey.ArrowLeft ? -1 : 1;
+      const signedStep = e.metaKey ? shiftScale * sign : scale * sign;
+      const s = clamp(props.saturation + signedStep, 0, 1);
+      props.onChange(s, props.value);
+      e.preventDefault();
+    } else if (
+      e.key === KeyboardKey.ArrowUp ||
+      e.key === KeyboardKey.ArrowDown
+    ) {
+      const sign = e.key === KeyboardKey.ArrowUp ? 1 : -1;
+      const signedStep = e.metaKey ? shiftScale * sign : scale * sign;
+      const v = clamp(props.value + signedStep, 0, 1);
+      props.onChange(props.saturation, v);
+      e.preventDefault();
+    }
+  };
 }

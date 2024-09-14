@@ -4,6 +4,7 @@ import CColorLoupe from "../CColorLoupe/CColorLoupe.vue";
 import CCircle from "../CCircle/CCircle.vue";
 import CSVCanvas from "./CSVCanvas.vue";
 import {
+  createHandleSVPickerKeyDown,
   createNobPointerDownHandler,
   hsvToRgb,
   rgbToCss,
@@ -22,8 +23,11 @@ const emit = defineEmits<{
   (_: "change", s: number, v: number): void;
 }>();
 
+const showLoupe = ref(false);
+
 const x = computed(() => props.saturation * props.width);
 const y = computed(() => (1 - props.value) * props.height);
+
 const fill = computed(() =>
   rgbToCss(
     hsvToRgb({
@@ -33,12 +37,15 @@ const fill = computed(() =>
     }),
   ),
 );
+
 const hsv = computed(() => ({
   h: props.hue,
   s: props.saturation,
   v: props.value,
 }));
+
 const strokeColor = computed(() => useHighContrastColor(hsv.value));
+
 const nobPd = computed(() =>
   createNobPointerDownHandler({
     height: props.height,
@@ -55,10 +62,17 @@ const nobPd = computed(() =>
   }),
 );
 
-const showLoupe = ref(false);
+const handleKeyDown = computed(() =>
+  createHandleSVPickerKeyDown({
+    saturation: props.saturation,
+    value: props.value,
+    onChange: (s, v) => emit("change", s, v),
+  }),
+);
 </script>
+
 <template>
-  <div className="cmpui_sv-picker__root" tabIndex="0">
+  <div className="cmpui_sv-picker__root" tabIndex="0" @keydown="handleKeyDown">
     <CSVCanvas
       :width="width"
       :height="height"

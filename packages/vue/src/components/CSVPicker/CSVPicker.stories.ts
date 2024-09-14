@@ -3,7 +3,7 @@ import CSVPicker from "./CSVPicker.vue";
 import { h, ref } from "vue";
 
 const meta = {
-  title: "inputs/CSVPicker",
+  title: "colors/CSVPicker",
   component: CSVPicker,
   args: {
     width: 256,

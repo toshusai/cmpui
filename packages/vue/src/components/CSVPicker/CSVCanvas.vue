@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watchEffect } from "vue";
 import {
-  createPointerDownHandler,
+  createSVCanvasPointerDownHandler,
   drawSV,
   initSVCanvas,
 } from "@toshusai/cmpui-core";
@@ -32,7 +32,7 @@ watchEffect(() => {
 
 const pointerdown = computed(() => {
   if (!canvasRef.value) return;
-  return createPointerDownHandler({
+  return createSVCanvasPointerDownHandler({
     width: props.width,
     height: props.height,
     onChange: (s, v) => emit("change", s, v),

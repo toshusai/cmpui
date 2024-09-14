@@ -1,7 +1,7 @@
 import {
   CButtonProps,
   CButtonSize,
-  CButtonVariant,
+  KeyboardKey,
 } from "@toshusai/cmpui-core";
 import { forwardRef } from "react";
 

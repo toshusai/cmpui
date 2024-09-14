@@ -1,6 +1,6 @@
 import { memo, useEffect, useMemo, useRef } from "react";
 import {
-  createPointerDownHandler,
+  createSVCanvasPointerDownHandler,
   drawSV,
   initSVCanvas,
 } from "@toshusai/cmpui-core";
@@ -30,7 +30,7 @@ export const SVCanvas = memo(function SVCanvas(
 
   const handlePointerDownCanvas = useMemo(
     () =>
-      createPointerDownHandler({
+      createSVCanvasPointerDownHandler({
         height: props.height,
         width: props.width,
         onChange: props.onChange,
