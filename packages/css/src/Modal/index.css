@@ -7,6 +7,13 @@
   transform: translate(-50%, -50%);
 }
 
+.cmpui_modal__native {
+  display: revert;
+  left: revert;
+  top: revert;
+  transform: revert;
+}
+
 .cmpui_modal__header {
   align-items: center;
   display: flex;

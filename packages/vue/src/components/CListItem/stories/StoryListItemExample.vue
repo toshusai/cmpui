@@ -15,11 +15,7 @@ defineProps<{
 
 <template>
   <ul>
-    <CListItem
-      v-for="item in items"
-      :key="item.children"
-      v-bind="item"
-   >
+    <CListItem v-for="item in items" :key="item.children" v-bind="item">
       {{ item.children }}
     </CListItem>
   </ul>

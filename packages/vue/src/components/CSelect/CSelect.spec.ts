@@ -18,8 +18,8 @@ test("select an item", async () => {
               { label: "Alfa", value: "alfa" },
               { label: "Bravo", value: "bravo" },
             ],
-            value: value.value,
-            onChange: (v: string) => {
+            modelValue: value.value,
+            ["update:modelValue"]: (v: string) => {
               value.value = v;
             },
           });

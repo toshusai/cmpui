@@ -17,6 +17,6 @@ const handleSubmit = (e: Event) => {
 <template>
   <form @submit="handleSubmit">
     <CRadioGroup name="radio" :options="props.options" />
-    <CButton type="submit" size="S" style="margin-top: 16px;">Submit</CButton>
+    <CButton type="submit" size="S" style="margin-top: 16px">Submit</CButton>
   </form>
 </template>

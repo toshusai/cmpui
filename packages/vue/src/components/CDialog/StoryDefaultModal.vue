@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
-import CModal from "../CModal.vue";
-import CButton from "../../CButton/CButton.vue";
-import CIconButton from "../../CIconButton/CIconButton.vue";
+import { ref, useId, watch } from "vue";
 import { IconMessagePlus } from "@tabler/icons-vue";
-import CTextInput from "../../CTextInput/CTextInput.vue";
-import { useId } from "../../../lib/useId";
+import CIconButton from "../CIconButton/CIconButton.vue";
+import CDialog from "./CDialog.vue";
+import CTextInput from "../CTextInput/CTextInput.vue";
+import CButton from "../CButton/CButton.vue";
 
 const show = ref(false);
 const message = ref("");
@@ -24,7 +23,7 @@ watch(
     <IconMessagePlus size="20" />
   </CIconButton>
 
-  <CModal :show="show" title="Add Message" @close="show = false">
+  <CDialog :show="show" title="Add Message" @close="show = false">
     <div style="padding: 8px">
       <CTextInput
         v-model="message"
@@ -51,5 +50,5 @@ watch(
         </CButton>
       </div>
     </div>
-  </CModal>
+  </CDialog>
 </template>

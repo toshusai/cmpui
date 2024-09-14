@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  CButtonProps,
-  CButtonSize,
-  CButtonVariant,
-} from "@toshusai/cmpui-core";
+import { CButtonProps } from "@toshusai/cmpui-core";
 import { VNode } from "vue";
 
 withDefaults(
@@ -14,10 +10,10 @@ withDefaults(
   >(),
   {
     is: "button",
-    bordered: false,
-    disabled: false,
-    size: CButtonSize.M,
-    variant: CButtonVariant.primary,
+    bordered: undefined,
+    disabled: undefined,
+    size: undefined,
+    variant: undefined,
   },
 );
 </script>

@@ -7,16 +7,21 @@ const value = defineModel<string>();
 export type RadioInputOption = {
   id?: string;
   autofocus?: boolean;
-  label: string | (() => VNode);
+  label: string | VNode;
   disabled?: boolean;
   value: string;
 };
 
-defineProps<{
-  name: string;
-  size?: "M" | "L";
-  options: RadioInputOption[];
-}>();
+withDefaults(
+  defineProps<{
+    name: string;
+    size?: "M" | "L";
+    options: RadioInputOption[];
+  }>(),
+  {
+    size: undefined,
+  },
+);
 </script>
 
 <template>
@@ -37,8 +42,10 @@ defineProps<{
       :disabled="option.disabled"
       :value="option.value"
     >
-      <span v-if="typeof option.label === 'string'">{{ option.label }}</span>
-      <component :is="option.label()" v-else />
+      <template v-if="typeof option.label === 'string'">
+        {{ option.label }}
+      </template>
+      <component :is="option.label" v-else />
     </CRadio>
   </div>
 </template>

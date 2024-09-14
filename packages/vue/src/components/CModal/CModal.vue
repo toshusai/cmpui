@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { inject, ref, watch } from "vue";
+import { inject, ref, watchEffect } from "vue";
 import IconButton from "../CIconButton/CIconButton.vue";
-import { useId } from "../../lib/useId";
-import { ariaHiddenOthers, focusTrap, lockScroll } from "@toshusai/cmpui-core";
+import { useDialog } from "./libs/useDialog";
 
-const el = ref<HTMLElement | null>(null);
+const elRef = ref<HTMLElement | null>(null);
 
 const props = defineProps<{
   show: boolean;
@@ -15,32 +14,13 @@ const emit = defineEmits<{
   (_e: "close"): void;
 }>();
 
-let cleanUp = () => {};
+const { id, cleanUp } = useDialog(elRef, () => emit("close"));
 
-watch(
-  () => el.value,
-  (el) => {
-    if (el) {
-      const cleanUpFocusTrap = focusTrap(el);
-      const cleanUpLockScroll = lockScroll();
-      const cleanUpAriaHiddenOthers = ariaHiddenOthers(el);
-      cleanUp = () => {
-        cleanUpFocusTrap();
-        cleanUpLockScroll();
-        cleanUpAriaHiddenOthers();
-      };
-    }
-  },
-);
-
-watch(
-  () => props.show,
-  (show) => {
-    if (!show) cleanUp();
-  },
-);
-
-const id = useId();
+watchEffect(() => {
+  if (!props.show) {
+    cleanUp();
+  }
+});
 
 const modalOptions = inject("modalOptions", {
   modalCloseButtonAriaLabel: "Close",
@@ -52,7 +32,7 @@ const modalOptions = inject("modalOptions", {
     <Transition name="cmpui_modal_transition">
       <div
         v-if="show"
-        ref="el"
+        ref="elRef"
         class="cmpui_modal__overlay"
         aria-modal="true"
         :aria-labelledby="id"

@@ -2,10 +2,10 @@
 withDefaults(
   defineProps<{
     is?: string;
-    rounded?: boolean;
-    selected?: boolean;
     disabled?: boolean;
     disabledInteraction?: boolean;
+    rounded?: boolean;
+    selected?: boolean;
     size?: "S" | "M" | "L";
   }>(),
   {

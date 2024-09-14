@@ -55,7 +55,7 @@ const dataPlacement = ref<Placement | undefined>(undefined);
 let componentCleanUp = () => {};
 
 onMounted(() => {
-  if (props.trigger && divRef.value) {
+  if (props.fitTrigger && props.trigger && divRef.value) {
     divRef.value.style.width = `${props.trigger.getBoundingClientRect().width}px`;
   }
 });
@@ -63,7 +63,7 @@ onMounted(() => {
 watch(
   () => props.trigger,
   (trigger) => {
-    if (trigger && divRef.value) {
+    if (props.fitTrigger && trigger && divRef.value) {
       divRef.value.style.width = `${trigger.getBoundingClientRect().width}px`;
     }
   },

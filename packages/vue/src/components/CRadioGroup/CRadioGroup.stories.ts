@@ -9,6 +9,7 @@ import { IconBuildingBank, IconCash, IconCreditCard } from "@tabler/icons-vue";
 const meta = {
   title: "inputs/CRadioGroup",
   args: {
+    name: "radio-group",
     options: [],
   },
   component: CRadioGroup,
@@ -89,27 +90,24 @@ export const CustomOptions: Story = {
     return h(StoryCRadioGroupBasic, {
       options: [
         {
-          label: () =>
-            h("span", { style: spanStyle }, [
-              h(IconCash, { size: 16 }),
-              "Cash",
-            ]),
+          label: h("span", { style: spanStyle }, [
+            h(IconCash, { size: 16 }),
+            "Cash",
+          ]),
           value: "cash",
         },
         {
-          label: () =>
-            h("span", { style: spanStyle }, [
-              h(IconBuildingBank, { size: 16 }),
-              "Bank",
-            ]),
+          label: h("span", { style: spanStyle }, [
+            h(IconBuildingBank, { size: 16 }),
+            "Bank",
+          ]),
           value: "bank",
         },
         {
-          label: () =>
-            h("span", { style: spanStyle }, [
-              h(IconCreditCard, { size: 16 }),
-              "Credit card",
-            ]),
+          label: h("span", { style: spanStyle }, [
+            h(IconCreditCard, { size: 16 }),
+            "Credit card",
+          ]),
           value: "credit",
         },
       ],

@@ -1,58 +1,35 @@
 <script setup lang="ts">
-import { ariaHiddenOthers, focusTrap, lockScroll } from "@toshusai/cmpui-core";
-import { ref, watch } from "vue";
+import { ref, watchEffect } from "vue";
+import { useDialog } from "../CModal/libs/useDialog";
 
-const el = ref<HTMLElement | null>(null);
+const elRef = ref<HTMLElement | null>(null);
 
-const props = withDefaults(
-  defineProps<{
-    show: boolean;
-    position?: "left" | "right";
-  }>(),
-  {
-    show: false,
-    position: "left",
-  },
-);
+const props = defineProps<{
+  show: boolean;
+  title: string;
+  position: "left" | "right";
+}>();
 
 const emit = defineEmits<{
   (_e: "close"): void;
 }>();
 
-let cleanUp = () => {};
+const { cleanUp } = useDialog(elRef, () => emit("close"));
 
-watch(
-  () => el.value,
-  (el) => {
-    if (el) {
-      const cleanUpFocusTrap = focusTrap(el);
-      const cleanUpLockScroll = lockScroll();
-      const cleanUpAriaHiddenOthers = ariaHiddenOthers(el);
-      cleanUp = () => {
-        cleanUpFocusTrap();
-        cleanUpLockScroll();
-        cleanUpAriaHiddenOthers();
-      };
-    }
-  },
-);
-
-watch(
-  () => props.show,
-  (show) => {
-    if (!show) cleanUp();
-  },
-);
+watchEffect(() => {
+  if (!props.show) {
+    cleanUp();
+  }
+});
 </script>
 
 <template>
   <Teleport to="body">
-    <Transition name="cmpui_drawer_transition" :duration="1000">
+    <Transition name="cmpui_drawer_transition" :duration="250">
       <div
         v-if="show"
         ref="el"
         class="cmpui_drawer__overlay"
-        @keydown.esc="emit('close')"
         @click="emit('close')"
       >
         <div class="cmpui_drawer" :data-position="position" @click.stop>

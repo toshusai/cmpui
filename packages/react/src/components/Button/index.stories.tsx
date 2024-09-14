@@ -58,7 +58,7 @@ export const Bordered: Story = {
   },
 };
 
-export const LinK: Story = {
+export const Link: Story = {
   render: () => {
     return (
       <Button as="a" href="">

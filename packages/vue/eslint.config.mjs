@@ -7,7 +7,7 @@ export default [
   ...tseslint.configs.recommended,
   ...pluginVue.configs["flat/recommended"],
   {
-    ignores: ["dist/*"],
+    ignores: ["dist/*", "types/*"],
   },
   {
     rules: {

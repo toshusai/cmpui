@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useId } from "../../lib/useId";
+import { useAttrs, useId } from "vue";
 
 defineOptions({
   inheritAttrs: false,
@@ -7,24 +7,21 @@ defineOptions({
 
 withDefaults(
   defineProps<{
-    label?: string;
-    invalid?: boolean;
     disabled?: boolean;
-    type?: string;
-    placeholder?: string;
+    invalid?: boolean;
+    label?: string;
   }>(),
   {
-    label: undefined,
-    invalid: false,
     disabled: false,
-    type: "text",
-    placeholder: undefined,
+    invalid: false,
+    label: undefined,
   },
 );
 
 const value = defineModel<string>();
 
 const id = useId();
+const finalId = (useAttrs() as { id?: string }).id ?? id;
 </script>
 
 <template>
@@ -33,19 +30,17 @@ const id = useId();
     :aria-disabled="disabled"
     :aria-invalid="invalid"
   >
-    <label class="cmpui_text-input__label" :for="id">
+    <label class="cmpui_text-input__label" :for="finalId">
       {{ label }}
     </label>
     <slot name="prefix" />
     <input
-      :id="id"
+      :id="finalId"
       v-model="value"
+      class="cmpui_text-input__input"
       :aria-invalid="invalid"
       :disabled="disabled"
-      :placeholder="placeholder"
-      :type="type"
       v-bind="$attrs"
-      class="cmpui_text-input__input"
     />
     <slot name="suffix" />
   </div>
