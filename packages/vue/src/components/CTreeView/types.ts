@@ -1,5 +1,6 @@
 export type ITree = {
   id: string;
+  isExpanded?: boolean;
   children?: ITree[];
 };
 

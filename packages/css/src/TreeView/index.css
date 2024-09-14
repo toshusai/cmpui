@@ -10,7 +10,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    width: fit-content;
+    width: 100%;
   }
   
   .cmpui_tree-view__item {

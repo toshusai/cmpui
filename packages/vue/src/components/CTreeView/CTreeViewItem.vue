@@ -20,7 +20,10 @@ const rendered = props.render({
   <li>
     <component :is="rendered" />
   </li>
-  <li v-if="item.children" className="cmpui_tree-view__item-dir">
+  <li
+    v-if="item.children && item.isExpanded !== false"
+    className="cmpui_tree-view__item-dir"
+  >
     <ol className="cmpui_tree-view__item-dir-ol">
       <CTreeViewItem
         v-for="child in item.children"

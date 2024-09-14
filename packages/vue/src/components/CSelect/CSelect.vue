@@ -22,10 +22,7 @@ const trigger = ref<HTMLElement | null>(null);
 const preview = computed(() => {
   const option = props.options?.find((o) => o.value === value.value);
   if (option) {
-    if (option?.render && value.value) {
-      const v = option.render(value.value);
-      return v;
-    }
+    if (typeof option.label === "string") return option.label;
     return option.label;
   }
   return null;
@@ -146,7 +143,7 @@ const popupId = useId();
           class="cmpui_select_check-icon"
           style="position: absolute; left: 8px"
         ></div>
-        <component :is="option.render(option.value)" v-if="option.render" />
+        <component :is="option.label" v-if="typeof option.label !== 'string'" />
         <template v-else>
           {{ option.label }}
         </template>

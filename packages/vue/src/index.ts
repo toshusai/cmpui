@@ -6,6 +6,7 @@ import CChip from "./components/CChip/CChip.vue";
 import CDrawer from "./components/CDrawer/CDrawer.vue";
 import CIconButton from "./components/CIconButton/CIconButton.vue";
 import CListItem from "./components/CListItem/CListItem.vue";
+import CLoading from "./components/CLoading/CLoading.vue";
 import CMenuList from "./components/CMenuList/CMenuList.vue";
 import CMenuListItem from "./components/CMenuListItem/CMenuListItem.vue";
 import CModal from "./components/CModal/CModal.vue";
@@ -29,6 +30,7 @@ export {
   CDrawer,
   CIconButton,
   CListItem,
+  CLoading,
   CMenuList,
   CMenuListItem,
   CModal,

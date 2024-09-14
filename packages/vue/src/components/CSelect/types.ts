@@ -6,6 +6,5 @@ export type SelectProps = {
   options?: {
     label: string | VNode;
     value: string;
-    render?: (value: string) => VNode;
   }[];
 };
