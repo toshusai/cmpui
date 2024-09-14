@@ -15,14 +15,18 @@ export const Default: Story = {
 };
 
 export const Rounded: Story = {
-  render: () => h(CChip, { ["data-rounded"]: true }, () => "Hello World"),
+  render: () => h(CChip, { rounded: true }, () => "Hello World"),
+};
+
+export const Clickable: Story = {
+  render: () => h(CChip, { clickable: true }, () => "Hello World"),
 };
 
 export const Size: Story = {
   render: () =>
     h(() => [
-      h(CChip, { ["data-size"]: "S" }, () => "Hello World"),
+      h(CChip, { size: "S" }, () => "Hello World"),
       h(CChip, {}, () => "Hello World"),
-      h(CChip, { ["data-size"]: "L" }, () => "Hello World"),
+      h(CChip, { size: "L" }, () => "Hello World"),
     ]),
 };

@@ -14,6 +14,15 @@
   width: fit-content;
 }
 
+.cmpui__chip[data-clickable]:hover {
+  cursor: pointer;
+  background-color: var(--cmpui-bg-hover-color);
+}
+
+.cmpui__chip[data-clickable]:active {
+  background-color: var(--cmpui-bg-active-color);
+}
+
 .cmpui__chip[data-rounded] {
   border-radius: 9999px;
 }
