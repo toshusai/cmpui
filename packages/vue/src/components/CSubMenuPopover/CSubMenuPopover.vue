@@ -4,6 +4,7 @@ import CMenuList from "../CMenuList/CMenuList.vue";
 import CPopover from "../CPopover/CPopover.vue";
 
 const props = defineProps<{
+  show: boolean
   trigger: HTMLElement | null;
 }>();
 
@@ -36,7 +37,7 @@ const focusBackToTrigger = () => {
 <template>
   <CPopover
     placement="right-start"
-    :show="true"
+    :show="show"
     :trigger="trigger"
     @close="emit('close')"
   >

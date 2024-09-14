@@ -2,13 +2,21 @@
 import { onMounted, watch } from "vue";
 import CFloatBox from "../CFloatBox/CFloatBox.vue";
 
+defineOptions({
+  inheritAttrs: false,
+});
+
 const props = withDefaults(
   defineProps<{
     show: boolean;
     time?: number;
+    horizontal?: "left" | "center" | "right";
+    vertical?: "top" | "center" | "bottom";
   }>(),
   {
     time: 3000,
+    horizontal: "right",
+    vertical: "bottom",
   },
 );
 
@@ -32,6 +40,16 @@ watch(
 );
 
 onMounted(() => {
+  if (props.show) {
+    if (props.time === 0) return;
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      emit("close");
+    }, props.time);
+  }
+});
+
+onMounted(() => {
   watch(
     () => props.show,
     (show) => {
@@ -45,10 +63,14 @@ onMounted(() => {
 
 <template>
   <Transition name="cmpui_toast_transition">
-    <Teleport v-if="show" to="body">
-      <CFloatBox class="cmpui_toast__root">
-        <slot></slot>
-      </CFloatBox>
-    </Teleport>
+    <CFloatBox
+      v-if="show"
+      class="cmpui_toast__root"
+      :data-horizontal="horizontal"
+      :data-vertical="vertical"
+      v-bind="$attrs"
+    >
+      <slot></slot>
+    </CFloatBox>
   </Transition>
 </template>

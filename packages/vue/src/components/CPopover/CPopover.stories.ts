@@ -45,6 +45,9 @@ export const AutoFlip: Story = {
 };
 
 export const Scroll: Story = {
+  parameters: {
+    layout: "fullscreen",
+  },
   render: () => ({
     setup() {
       const trigger = ref<InstanceType<typeof CButton> | null>(null);
@@ -72,7 +75,7 @@ export const Scroll: Story = {
       MenuListItem: CMenuListItem,
     },
     template: html`
-      <div style="height: 400px; overflow: auto;"></div>
+      <div style="min-height: 800px; width: 1px; background: red;"></div>
       <CButton ref="trigger" @click="show = true">
         {{ selected || "Select" }}
       </CButton>
@@ -80,15 +83,17 @@ export const Scroll: Story = {
         v-if="show"
         :trigger="trigger?.$el"
         :show="show"
+        :scroll-lock="false"
+        flip
         @close="show = false"
       >
         <MenuList @select="handleSelect">
           <MenuListItem is="button" value="Alpha">Alpha</MenuListItem>
           <MenuListItem is="button" value="Beta">Beta</MenuListItem>
           <MenuListItem is="button" value="Gamma">Gamma</MenuListItem>
-        </MenuList>
+       </MenuList>
       </Popover>
-      <div style="height: 400px; overflow: auto;"></div>
+      <div style="min-height: 800px; width: 1px; background: red;"></div>
     `,
   }),
 };

@@ -1,37 +1,77 @@
-.cmpui_toast__root {
+.cmpui_toaster {
   position: fixed;
-
-  right: 16px;
   bottom: 16px;
+  right: 16px;
+  z-index: 1;
+  pointer-events: none;
+}
 
+.cmpui_toaster > .cmpui_toast__root {
+  pointer-events: auto;
+  position: relative;
+  bottom: revert;
+  right: revert;
+}
+
+.cmpui_toast__root {
   border: 1px solid var(--cmpui-primary-color);
   padding: 8px;
+  margin-top: 4px;
+  margin-left: auto;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+.cmpui_toast__root[data-vertical="top"] {
+  bottom: revert;
+  top: 16px;
+}
+
+.cmpui_toast__root[data-horizontal="left"] {
+  right: revert;
+  left: 16px;
+}
+
+.cmpui_toast__root[data-horizontal="center"] {
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .cmpui_toast_transition-enter-from {
-  transform: translateY(16px);
   opacity: 0;
 }
 
 .cmpui_toast_transition-enter-active {
-  transition: opacity 175ms, transform 175ms;
+  transition: opacity 175ms;
 }
 
 .cmpui_toast_transition-enter-to {
-  transform: translateY(0px);
   opacity: 1;
+}
+
+.cmpui_toast_transition-move {
+  transition: all 175ms;
 }
 
 .cmpui_toast_transition-leave-from {
-  transform: translateY(0px);
   opacity: 1;
 }
 
+.cmpui_toaster > .cmpui_toast_transition-leave-active:not(:first-child),
+.cmpui_toaster > .cmpui_toast_transition-leave-active:not(:last-child) {
+  transition: all 175ms;
+  position: absolute;
+}
+
 .cmpui_toast_transition-leave-active {
-  transition: opacity 175ms, transform 175ms;
+  transition: opacity 175ms;
+}
+
+.cmpui_toast_transition-leave-active:first-child:last-child {
+  transition: opacity 175ms;
 }
 
 .cmpui_toast_transition-leave-to {
-  transform: translateY(16px);
   opacity: 0;
 }

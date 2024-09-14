@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/vue";
 import { test, expect, beforeEach } from "vitest";
-import SubMenuPopoverExample from "./SubMenuPopoverExample.vue";
+import SubMenuPopoverExample from "./StorySubMenuPopoverExample2.vue";
 import { userEvent } from "@vitest/browser/context";
 import "@toshusai/cmpui-css/dist/index.css";
 import { asyncNextTick } from "../../../../test/asyncNextTick";

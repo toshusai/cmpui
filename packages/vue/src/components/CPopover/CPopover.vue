@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { CSSProperties, onMounted, onUnmounted, ref, watch } from "vue";
+import {
+  CSSProperties,
+  onMounted,
+  onUnmounted,
+  ref,
+  watch,
+  watchEffect,
+} from "vue";
 import { setPopover } from "../../../../core/src/popover/setPopover";
 import { useId } from "../../lib/useId";
 import { Placement } from "@floating-ui/dom";
@@ -24,6 +31,7 @@ const props = withDefaults(
     boundary?: HTMLElement;
     autoResize?: boolean;
     fitTrigger?: boolean;
+    scrollLock?: boolean;
   }>(),
   {
     id: undefined,
@@ -36,6 +44,7 @@ const props = withDefaults(
     trigger: null,
     boundary: undefined,
     fitTrigger: false,
+    scrollLock: true,
   },
 );
 
@@ -74,6 +83,7 @@ watch(
   () => {
     if (!props.trigger) return;
     if (!divRef.value) return;
+    if (!props.show) return;
     const { cleanUp: cleanUpPopover, open } = setPopover(
       divRef.value,
       props.trigger,
@@ -104,46 +114,33 @@ watch(
         padding: defaultOptions.padding,
       },
     );
-    componentCleanUp = cleanUpPopover;
+    const cleanUpLockScroll = props.scrollLock ? lockScroll() : () => {};
+    componentCleanUp = () => {
+      cleanUpPopover();
+      cleanUpLockScroll();
+    };
 
     if (props.focusTrap) {
       const cleanUpFocusTrap = cmpUiFocusTrap(divRef.value);
       componentCleanUp = () => {
         cleanUpFocusTrap();
         cleanUpPopover();
+        cleanUpLockScroll();
       };
     }
 
-    const handleOpenChange = (show: boolean) => {
-      if (show) {
-        open();
-      } else {
-        cleanUp();
-        style.value.display = "none";
-      }
-    };
-
-    handleOpenChange(props.show);
-
-    watch(() => props.show, handleOpenChange);
+    open();
   },
 );
 
-let cleanUp = () => {};
-onMounted(() => {
-  if (props.show) {
-    const cleanUpLockScroll = lockScroll();
-    cleanUp = () => {
-      cleanUpLockScroll();
-    };
-  } else {
-    cleanUp();
+watchEffect(() => {
+  if (!props.show) {
+    componentCleanUp();
   }
 });
 
 onUnmounted(() => {
   componentCleanUp();
-  cleanUp();
 });
 
 const id = useId(props.id);
@@ -152,6 +149,7 @@ const id = useId(props.id);
 <template>
   <Teleport :to="boundary ?? 'body'">
     <div
+      v-if="show"
       :id="id"
       ref="divRef"
       class="cmpui_float-box__root"

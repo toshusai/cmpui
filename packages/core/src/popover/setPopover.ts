@@ -88,6 +88,11 @@ export function setPopover(
           padding: finalOptions.padding,
           boundary: document.body,
         }),
+        finalOptions.flip
+          ? flip({
+              fallbackStrategy: "bestFit",
+            })
+          : undefined,
         finalOptions.autoResize
           ? size({
               apply(args) {
@@ -98,11 +103,6 @@ export function setPopover(
               },
               padding: finalOptions.padding,
               boundary: finalOptions.boundary ?? document.body,
-            })
-          : undefined,
-        finalOptions.flip
-          ? flip({
-              fallbackStrategy: "initialPlacement",
             })
           : undefined,
       ],

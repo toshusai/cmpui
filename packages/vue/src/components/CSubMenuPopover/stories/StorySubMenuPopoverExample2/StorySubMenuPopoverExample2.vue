@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-import Content from "./RootMenuItems.vue";
+import Contents from "./Contents.vue";
 import CMenuListItem from "../../../CMenuListItem/CMenuListItem.vue";
 import CButton from "../../../CButton/CButton.vue";
 import CPopover from "../../../CPopover/CPopover.vue";
@@ -29,7 +29,7 @@ const handleSelect = (v: string) => {
     @close="show = false"
   >
     <CMenuList>
-      <Content @select="handleSelect" />
+      <Contents @select="handleSelect" />
     </CMenuList>
   </CPopover>
 </template>

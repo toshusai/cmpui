@@ -1,12 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { h } from "vue";
 import CSubMenuPopover from "./CSubMenuPopover.vue";
-import SubMenuExample from "./stories/SubMenuPopoverExample/SubMenuPopoverExample.vue";
+import StorySubMenuPopoverExample2 from "./stories/StorySubMenuPopoverExample2/StorySubMenuPopoverExample2.vue";
+import StorySubMenuPopoverExample from "./stories/StorySubMenuPopoverExample.vue";
 
 const meta = {
   title: "components/CSubMenuPopover",
   component: CSubMenuPopover,
   args: {
+    show: false,
     trigger: null,
   },
 } satisfies Meta<typeof CSubMenuPopover>;
@@ -14,6 +16,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const _SubMenuExample: Story = {
-  render: () => h(SubMenuExample),
+export const Example: Story = {
+  render: () => h(StorySubMenuPopoverExample),
+};
+
+export const Example2: Story = {
+  render: () => h(StorySubMenuPopoverExample2),
 };

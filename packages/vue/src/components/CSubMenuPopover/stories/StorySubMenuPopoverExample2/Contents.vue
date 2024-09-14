@@ -2,7 +2,7 @@
 import CMenuListItem from "../../../CMenuListItem/CMenuListItem.vue";
 import CSubMenuPopover from "../../CSubMenuPopover.vue";
 import { useSubMenuPopover } from "../../useSubMenuPopover";
-import SubMenu2 from "./SubMenu2MenuItems.vue";
+import SubMenu2Contents from "./SubMenu2Contents.vue";
 import SubMenuItem from "./SubMenuItem.vue";
 
 const emit = defineEmits<{
@@ -38,7 +38,7 @@ const popover2 = useSubMenuPopover();
   </CMenuListItem>
 
   <CSubMenuPopover
-    v-if="popover1.show.value"
+    :show="popover1.show.value"
     :trigger="popover1.trigger.value"
     @close="popover1.close"
   >
@@ -69,6 +69,6 @@ const popover2 = useSubMenuPopover();
     :show="popover2.show.value"
     @close="popover2.close"
   >
-    <SubMenu2 @select="(v) => emit('select', v)" />
+    <SubMenu2Contents @select="(v) => emit('select', v)" />
   </CSubMenuPopover>
 </template>

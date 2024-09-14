@@ -4,6 +4,7 @@ export const lockScroll = () => {
   if (document.body.dataset.lockScroll) {
     return () => {};
   }
+  console.log("lockScroll");
   const scrollLeft = document.documentElement.scrollLeft;
   const scrollTop = document.documentElement.scrollTop;
   const bodyStyle: Pick<

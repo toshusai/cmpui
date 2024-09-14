@@ -19,22 +19,11 @@ const handleSelect = (v: string) => {
 </script>
 
 <template>
-  <div
-    style="
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    "
-  >
-    <div>Selected: {{ selected ?? "null" }}</div>
-    <CIconButton ref="trigger" bordered @click="show = true">
-      <IconDots size="20" />
-    </CIconButton>
-  </div>
+  <div>Selected: {{ selected ?? "null" }}</div>
+  <CIconButton ref="trigger" bordered @click="show = true">
+    <IconDots size="20" />
+  </CIconButton>
   <CPopover
-    v-if="show"
     placement="bottom-start"
     :trigger="trigger?.$el"
     :show="show"
