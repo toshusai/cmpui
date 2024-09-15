@@ -17,6 +17,7 @@ export const defaultOptions: Option = {
   flip: true,
   autoResize: false,
   boundary: undefined,
+  disabledFocusBack: false,
 } as const;
 
 export type Option = {
@@ -28,6 +29,7 @@ export type Option = {
   flip?: boolean;
   autoResize?: boolean;
   boundary?: HTMLElement;
+  disabledFocusBack?: boolean;
 };
 
 export function setPopover(
@@ -71,9 +73,11 @@ export function setPopover(
       e.key === "Escape" ||
       (!finalOptions.disabledTabClose && e.key === "Tab")
     ) {
+      if (!finalOptions.disabledFocusBack) {
+        triggerElement.focus();
+      }
       onClose?.();
       cleanUp();
-      triggerElement.focus();
     }
   };
 

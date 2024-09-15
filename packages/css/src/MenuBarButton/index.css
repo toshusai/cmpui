@@ -28,8 +28,8 @@
   color: white;
 }
 
-.cmpui_menu-bar-button__root[data-highlighted],
-.cmpui_menu-bar-button__root[data-highlighted]:active,
+.cmpui_menu-bar-button__root[data-selected="true"],
+.cmpui_menu-bar-button__root[data-selected="true"]:active,
 .cmpui_menu-bar-button__root[data-state="open"],
 .cmpui_menu-bar-button__root[data-state="open"]:active {
   background-color: var(--cmpui-bg-focus-color);
@@ -46,7 +46,7 @@
   outline: none;
 }
 
-.cmpui_menu-bar-button__root[data-selected] {
+.cmpui_menu-bar-button__root[data-selected="true"] {
   background-color: var(--cmpui-bg-focus-color);
 }
 

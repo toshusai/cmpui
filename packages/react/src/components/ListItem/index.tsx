@@ -9,6 +9,7 @@ export type ListItemProps<T extends CustomJSXElement = "li"> = {
   className?: string;
   rounded?: boolean;
   selected?: boolean;
+  disabled?: boolean;
   size?: "S" | "M";
 } & React.ComponentProps<T>;
 
@@ -21,6 +22,7 @@ export const ListItem = forwardRef(function ListItem<
     className,
     rounded,
     size = "M",
+    disabled,
     ...props
   }: ListItemProps<T>,
   ref: ForwardedRef<HTMLElement>,
@@ -32,6 +34,7 @@ export const ListItem = forwardRef(function ListItem<
       aria-selected={props.selected}
       data-size={size}
       data-rounded={rounded}
+      aria-disabled={disabled}
       {...props}
     >
       {children}
