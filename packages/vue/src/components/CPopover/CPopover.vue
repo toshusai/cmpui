@@ -4,11 +4,11 @@ import {
   onMounted,
   onUnmounted,
   ref,
+  useId,
   watch,
   watchEffect,
 } from "vue";
 import { setPopover } from "../../../../core/src/popover/setPopover";
-import { useId } from "../../lib/useId";
 import { Placement } from "@floating-ui/dom";
 import {
   focusTrap as cmpUiFocusTrap,
@@ -143,14 +143,14 @@ onUnmounted(() => {
   componentCleanUp();
 });
 
-const id = useId(props.id);
+const vueId = useId();
 </script>
 
 <template>
   <Teleport :to="boundary ?? 'body'">
     <div
       v-if="show"
-      :id="id"
+      :id="id ?? vueId"
       ref="divRef"
       class="cmpui_float-box__root"
       tabindex="-1"

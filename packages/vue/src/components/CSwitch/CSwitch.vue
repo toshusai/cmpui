@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useAttrs, VNode } from "vue";
-import { useId } from "../../lib/useId";
+import { useAttrs, useId, VNode } from "vue";
 import CCheckboxInput from "./CSwitchInput.vue";
 
 defineOptions({
@@ -20,7 +19,8 @@ withDefaults(
 );
 
 const attrs = useAttrs() as { id?: string };
-const id = useId(attrs.id);
+const vueId = useId();
+const id = attrs.id ?? vueId;
 const value = defineModel<boolean>();
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useId } from "../../lib/useId";
+import { useId } from "vue";
 import CRadioInput from "./CRadioInput.vue";
 
 const props = defineProps<{
@@ -8,7 +8,8 @@ const props = defineProps<{
   size?: "L" | "M";
 }>();
 const value = defineModel<string>();
-const finalId = useId(props.id);
+const vueId = useId();
+const finalId = props.id ?? vueId;
 </script>
 
 <template>

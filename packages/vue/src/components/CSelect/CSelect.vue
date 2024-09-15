@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { computed, onUnmounted, ref, watch } from "vue";
+import { computed, onUnmounted, ref, useId, watch } from "vue";
 import Popover from "../CPopover/CPopover.vue";
 import CMenuList from "../CMenuList/CMenuList.vue";
 import CMenuListItem from "../CMenuListItem/CMenuListItem.vue";
 import { lockScroll } from "../../../../core/src/dialog/lockScroll";
 import { SelectProps } from "./types";
-import { useId } from "../../lib/useId";
 
 const props = withDefaults(defineProps<SelectProps>(), {
   disabled: false,

@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, useId, watch } from "vue";
 import CModal from "../CModal.vue";
 import CButton from "../../CButton/CButton.vue";
 import CIconButton from "../../CIconButton/CIconButton.vue";
 import { IconMessagePlus } from "@tabler/icons-vue";
 import CTextInput from "../../CTextInput/CTextInput.vue";
-import { useId } from "../../../lib/useId";
 
 const show = ref(false);
 const message = ref("");

@@ -6,12 +6,12 @@ import {
   onMounted,
   onUnmounted,
   ref,
+  useId,
   useSlots,
   watch,
   watchEffect,
 } from "vue";
 import { tooltip } from "../../../../core/src/tooltip/tooltip";
-import { useId } from "../../lib/useId";
 import { isValidVNode } from "./lib";
 import { Side } from "@floating-ui/dom";
 
