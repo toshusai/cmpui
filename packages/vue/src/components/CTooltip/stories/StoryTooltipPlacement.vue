@@ -20,7 +20,7 @@ const icons = {
 <template>
   <div class="grid">
     <div v-for="side in sides" :key="side">
-      <CTooltip :placement="side" :text="'Tooltip ' + side">
+      <CTooltip :placement="side" :content="'Tooltip ' + side">
         <CIconButton bordered>
           <component :is="icons[side]" size="20" />
         </CIconButton>

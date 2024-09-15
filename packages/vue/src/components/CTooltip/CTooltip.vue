@@ -3,7 +3,6 @@ import {
   ComponentPublicInstance,
   computed,
   CSSProperties,
-  inject,
   onMounted,
   onUnmounted,
   ref,
@@ -13,20 +12,24 @@ import {
 } from "vue";
 import { tooltip } from "../../../../core/src/tooltip/tooltip";
 import { useId } from "../../lib/useId";
-import { isValidVNode, TOAST_PROVIDER_KEY, TooltipProvide } from "./lib";
+import { isValidVNode } from "./lib";
 import { Side } from "@floating-ui/dom";
 
 const props = withDefaults(
   defineProps<{
-    text: string;
+    content: string;
     forceShow?: boolean;
     delay?: number;
-    placement?: Side;
+    side?: Side;
+    group?: string;
+    groupDelay?: number;
   }>(),
   {
     forceShow: false,
     delay: 300,
-    placement: "top",
+    side: "top",
+    group: "cmpuiTooltip",
+    groupDelay: 200,
   },
 );
 
@@ -36,11 +39,6 @@ const style = ref<CSSProperties>({
   top: "0",
   left: "0",
 });
-
-const provider = inject<TooltipProvide | undefined>(
-  TOAST_PROVIDER_KEY,
-  undefined,
-);
 
 const slots = useSlots();
 
@@ -59,6 +57,17 @@ const arrowRef = ref<HTMLElement | null>(null);
 
 const show = ref(false);
 
+const setData = (value?: string) => {
+  if (value === undefined) {
+    delete document.body.dataset[props.group];
+    return;
+  }
+  document.body.dataset[props.group] = value;
+};
+const getData = () => {
+  return document.body.dataset[props.group];
+};
+
 const slotElement = computed(() => {
   let el = slotRef.value;
   if (!el) return;
@@ -71,7 +80,7 @@ const slotElement = computed(() => {
 
 let i: ReturnType<typeof setTimeout> | undefined;
 const handleMouseEnter = () => {
-  if (provider?.show.value === true) {
+  if (getData()) {
     show.value = true;
     return;
   }
@@ -88,8 +97,14 @@ const handleMouseLeave = () => {
 watch(
   () => show.value,
   (show) => {
-    if (provider) {
-      provider.setShow(show);
+    if (show) {
+      setData(id);
+    } else {
+      setTimeout(() => {
+        if (getData() === id) {
+          setData(undefined);
+        }
+      }, props.groupDelay);
     }
   },
 );
@@ -159,7 +174,7 @@ watch(
         }
       },
       {
-        placement: props.placement,
+        placement: props.side,
       },
     );
 
@@ -198,26 +213,28 @@ const id = useId();
     @pointerenter="handleMouseEnter"
     @pointerleave="handleMouseLeave"
   />
-  <div
-    v-if="show || forceShow"
-    :id="id"
-    ref="tooltipRef"
-    class="cmpui_tooltip__root"
-    role="tooltip"
-    v-bind="$attrs"
-    :style="style"
-  >
-    {{ text }}
-    <svg
-      ref="arrowRef"
-      class="cmpui_tooltip__arrow"
-      style="position: absolute"
-      width="10"
-      height="5"
-      viewBox="0 0 30 10"
-      preserveAspectRatio="none"
+  <Teleport to="body">
+    <div
+      v-if="show || forceShow"
+      :id="id"
+      ref="tooltipRef"
+      class="cmpui_tooltip__root"
+      role="tooltip"
+      v-bind="$attrs"
+      :style="style"
     >
-      <polygon points="0,0 30,0 15,10" />
-    </svg>
-  </div>
+      {{ content }}
+      <svg
+        ref="arrowRef"
+        class="cmpui_tooltip__arrow"
+        style="position: absolute"
+        width="10"
+        height="5"
+        viewBox="0 0 30 10"
+        preserveAspectRatio="none"
+      >
+        <polygon points="0,0 30,0 15,10" />
+      </svg>
+    </div>
+  </Teleport>
 </template>

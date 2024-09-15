@@ -17,7 +17,6 @@ import CRadioInput from "./components/CRadioGroup/CRadioInput.vue";
 import CSelect from "./components/CSelect/CSelect.vue";
 import CTextInput from "./components/CTextInput/CTextInput.vue";
 import CTooltip from "./components/CTooltip/CTooltip.vue";
-import CTooltipProvider from "./components/CTooltip/CTooltipProvider.vue";
 import CTreeView from "./components/CTreeView/CTreeView.vue";
 import CTreeViewItem from "./components/CTreeView/CTreeViewItem.vue";
 
@@ -41,7 +40,6 @@ export {
   CSelect,
   CTextInput,
   CTooltip,
-  CTooltipProvider,
   CTreeView,
   CTreeViewItem,
 };

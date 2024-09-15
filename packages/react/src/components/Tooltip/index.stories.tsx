@@ -1,10 +1,18 @@
-import { TooltipProvider } from "@radix-ui/react-tooltip";
+import {
+  IconArrowDown,
+  IconArrowLeft,
+  IconArrowRight,
+  IconArrowUp,
+  IconInfoCircle,
+  IconPhoto,
+  IconPointer,
+  IconTypography,
+} from "@tabler/icons-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "../Button";
 import { IconButton } from "../IconButton";
 
-import { Tooltip, TooltipPresenter } from ".";
+import { Tooltip } from ".";
 
 const meta: Meta<typeof Tooltip> = {
   title: "Float/Tooltip",
@@ -17,41 +25,103 @@ type Story = StoryObj<typeof Tooltip>;
 export const Basic: Story = {
   render: function RenderBasic() {
     return (
-      <TooltipProvider>
-        <Tooltip content="Hello">
-          <Button>Tooltip</Button>
-        </Tooltip>
-      </TooltipProvider>
+      <Tooltip content="Tooltip">
+        <IconInfoCircle size={20} />
+      </Tooltip>
     );
   },
 };
 
-export const Multiple: Story = {
+export const Flip: Story = {
   render: function RenderBasic() {
     return (
-      <TooltipProvider>
-        <div
+      <Tooltip content="Tooltip">
+        <IconInfoCircle
+          size={20}
           style={{
-            display: "flex",
+            position: "absolute",
+            top: "8px",
+            right: "8px",
           }}
-        >
-          <Tooltip content="A">
-            <IconButton>A</IconButton>
-          </Tooltip>
-          <Tooltip content="B">
-            <IconButton>B</IconButton>
-          </Tooltip>
-          <Tooltip content="C">
-            <IconButton>C</IconButton>
-          </Tooltip>
-        </div>
-      </TooltipProvider>
+        />
+      </Tooltip>
     );
   },
 };
 
-export const Presenter: Story = {
-  render: function RenderPresenter() {
-    return <TooltipPresenter>Hello, World!</TooltipPresenter>;
+export const ForceShow: Story = {
+  render: function RenderBasic() {
+    return (
+      <Tooltip content="Tooltip" forceShow>
+        <IconInfoCircle size={20} />
+      </Tooltip>
+    );
+  },
+};
+
+export const Placement: Story = {
+  render: function RenderPlacement() {
+    const sides = ["top", "right", "bottom", "left"] as const;
+    const icons = {
+      top: <IconArrowUp />,
+      right: <IconArrowRight />,
+      bottom: <IconArrowDown />,
+      left: <IconArrowLeft />,
+    };
+    return (
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 150px)",
+          gridTemplateRows: "repeat(2, 150px)",
+        }}
+      >
+        {sides.map((side) => (
+          <div
+            key={side}
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              border: "1px solid var(--cmpui-border-color)",
+            }}
+          >
+            <Tooltip content="Tooltip" side={side} key={side}>
+              <IconButton
+                style={{
+                  margin: "auto",
+                }}
+              >
+                {icons[side]}
+              </IconButton>
+            </Tooltip>
+          </div>
+        ))}
+      </div>
+    );
+  },
+};
+
+export const Group: Story = {
+  render: function RenderBasic() {
+    return (
+      <div className="cmpui_icon-button__group">
+        <Tooltip content="Select">
+          <IconButton>
+            <IconPointer size={20} />
+          </IconButton>
+        </Tooltip>
+        <Tooltip content="Text" side="bottom">
+          <IconButton>
+            <IconTypography size={20} />
+          </IconButton>
+        </Tooltip>
+        <Tooltip content="Image">
+          <IconButton>
+            <IconPhoto size={20} />
+          </IconButton>
+        </Tooltip>
+      </div>
+    );
   },
 };

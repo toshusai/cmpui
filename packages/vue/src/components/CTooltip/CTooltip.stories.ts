@@ -1,16 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import CIconButton from "../CIconButton/CIconButton.vue";
 import CButton from "../CButton/CButton.vue";
-import TooltipProvider from "./CTooltipProvider.vue";
 import Tooltip from "./CTooltip.vue";
 import { h } from "vue";
 import StoryTooltipPlacement from "./stories/StoryTooltipPlacement.vue";
-import { IconInfoCircle } from "@tabler/icons-vue";
+import {
+  IconInfoCircle,
+  IconPhoto,
+  IconPointer,
+  IconTypography,
+} from "@tabler/icons-vue";
 
 const meta = {
   component: Tooltip,
   args: {
-    text: "tooltip",
+    content: "tooltip",
   },
 } satisfies Meta<typeof Tooltip>;
 
@@ -26,10 +30,9 @@ export const Default: Story = {
       CIconButton,
       IconInfoCircle,
       Tooltip,
-      TooltipProvider,
     },
     template: `
-        <Tooltip text="Tooltip">
+        <Tooltip content="Tooltip">
             <IconInfoCircle size="20" />
         </Tooltip>
     `,
@@ -42,9 +45,9 @@ export const Placement: Story = {
 
 export const ForceShow: Story = {
   render: () => ({
-    components: { CIconButton, IconInfoCircle, Tooltip, TooltipProvider },
+    components: { CIconButton, IconInfoCircle, Tooltip },
     template: `
-        <Tooltip text="Tooltip" force-show>
+        <Tooltip content="Tooltip" force-show>
           <CIconButton>
             <IconInfoCircle size="20" />
           </CIconButton>
@@ -55,28 +58,10 @@ export const ForceShow: Story = {
 
 export const Flip: Story = {
   render: () => ({
-    components: { CIconButton, IconInfoCircle, Tooltip, TooltipProvider },
+    components: { CIconButton, IconInfoCircle, Tooltip },
     template: `
-        <Tooltip text="Tooltip">
-          <CIconButton style="position: absolute; bottom: 4px;">
-            <IconInfoCircle size="20" />
-          </CIconButton>
-        </Tooltip>
-    `,
-  }),
-};
-
-export const AutoPlacement: Story = {
-  render: () => ({
-    components: {
-      Tooltip,
-      TooltipProvider,
-      IconInfoCircle,
-      CIconButton,
-    },
-    template: `
-        <Tooltip text="Tooltip can be placed anywhere">
-          <CIconButton style="position: absolute; bottom: 4px; right: 4px">
+        <Tooltip content="Tooltip">
+          <CIconButton style="position: absolute; top: 8px; right: 8px">
             <IconInfoCircle size="20" />
           </CIconButton>
         </Tooltip>
@@ -86,27 +71,31 @@ export const AutoPlacement: Story = {
 
 export const MultipleItems: Story = {
   render: () => ({
-    components: { CIconButton, Tooltip, TooltipProvider },
+    components: {
+      CIconButton,
+      Tooltip,
+      IconPointer,
+      IconTypography,
+      IconPhoto,
+    },
     template: html`
-      <TooltipProvider>
-        <div class="cmpui_icon-button__group">
-          <Tooltip text="pointer">
-            <CIconButton>
-              <i class="ti ti-pointer"></i>
-            </CIconButton>
-          </Tooltip>
-          <Tooltip text="typography">
-            <CIconButton>
-              <i class="ti ti-typography"></i>
-            </CIconButton>
-          </Tooltip>
-          <Tooltip text="italic">
-            <CIconButton>
-              <i class="ti ti-italic"></i>
-            </CIconButton>
-          </Tooltip>
-        </div>
-      </TooltipProvider>
+      <div class="cmpui_icon-button__group">
+        <Tooltip content="Select">
+          <CIconButton>
+            <IconPointer size="20" />
+          </CIconButton>
+        </Tooltip>
+        <Tooltip content="Text" side="bottom">
+          <CIconButton>
+            <IconTypography size="20" />
+          </CIconButton>
+        </Tooltip>
+        <Tooltip content="Image">
+          <CIconButton>
+            <IconPhoto size="20" />
+          </CIconButton>
+        </Tooltip>
+      </div>
     `,
   }),
 };

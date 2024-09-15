@@ -21,12 +21,12 @@
     "fix": "npm run format:fix && npm run lint:fix"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.6.10",
     "@radix-ui/react-context-menu": "^2.1.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-menubar": "^1.0.4",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-toast": "^1.1.5",
-    "@radix-ui/react-tooltip": "^1.0.7",
     "@toshusai/cmpui-core": "link:../core",
     "@toshusai/cmpui-css": "link:../css",
     "react-transition-group": "^4.4.5"

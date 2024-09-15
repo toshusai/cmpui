@@ -25,7 +25,7 @@ const defaultOptions: TooltipOptions = {
 export function tooltip(
   tooltipElement: HTMLElement,
   triggerElement: HTMLElement | SVGElement,
-  arrowElement: HTMLElement,
+  arrowElement: HTMLElement | SVGElement,
   onCleanUp: () => void,
   callback: (position: {
     top?: number;
@@ -69,7 +69,7 @@ export function tooltip(
           padding: finalOptions.padding,
         }),
         flip({
-          fallbackStrategy: "initialPlacement",
+          fallbackStrategy: "bestFit",
         }),
         arrow({ element: arrowElement }),
       ],
@@ -92,7 +92,8 @@ export function tooltip(
   };
 
   const open = () => {
-    cleanupUpdate = autoUpdate(triggerElement, tooltipElement, updatePosition);
+    // cleanupUpdate = autoUpdate(triggerElement, tooltipElement, updatePosition);
+    updatePosition();
     window.addEventListener("keydown", handleKeyDown);
   };
 
