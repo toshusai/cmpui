@@ -1,4 +1,11 @@
-import { ForwardedRef, forwardRef, useCallback, useState } from "react";
+import {
+  ForwardedRef,
+  forwardRef,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 import { hsvaToRgba } from "../../utils/colors";
 import { hexToHsv } from "../../utils/colors/hexToHsv";
@@ -8,9 +15,9 @@ import { rgbToCss } from "../../utils/colors/rgbToCss";
 import { HSVA } from "../../utils/colors/types/HSVA";
 import { clamp } from "../../utils/math/clamp";
 import { ColorPickerCircle } from "../ColorPickerCircle";
-import { Popover } from "../Popover";
 import { SliderNumberField } from "../SliderNumberField";
 import { TextInput } from "../TextInput";
+import { MemoPopover } from "../Popover";
 
 import "./index.css";
 
@@ -45,6 +52,7 @@ const ColorView = forwardRef(function ColorView(
       style={
         {
           "--cmpui-block-size": "4px",
+          margin: "0 4px 0 8px",
         } as React.CSSProperties
       }
     >
@@ -118,33 +126,51 @@ export function ColorInput(props: ColorInputProps) {
     [isFocused, props.onChange, props.value.a, props.value],
   );
 
+  const viewRef = useRef<HTMLDivElement>(null);
+
+  const memoColorPickerCircle = useMemo(
+    () => (
+      <ColorPickerCircle
+        onChange={handleChangeHsva}
+        onStart={props.onStart}
+        onEnd={props.onEnd}
+        hue={props.value.h}
+        saturation={props.value.s}
+        value={props.value.v}
+        alpha={props.value.a}
+      />
+    ),
+    [handleChangeHsva, props.onStart, props.onEnd],
+  );
+
+  const handleClose = useCallback(() => {
+    setOpen(false);
+  }, []);
+
   return (
     <div className="cmpui_color-input__root">
       <TextInput
         label={props.label}
         prefix={
-          <Popover
-            isOpen={open}
-            onOpenChange={() => setOpen(false)}
-            content={
-              <div>
-                <ColorPickerCircle
-                  onChange={handleChangeHsva}
-                  alpha={props.value.a}
-                  hue={props.value.h}
-                  saturation={props.value.s}
-                  value={props.value.v}
-                  onStart={props.onStart}
-                  onEnd={props.onEnd}
-                />
-              </div>
-            }
-          >
+          <>
+            <MemoPopover
+              isOpen={open}
+              onClose={handleClose}
+              trigger={viewRef}
+              placement="bottom-start"
+              disabledTabClose
+              focusTrap
+              autoResize
+            >
+              {memoColorPickerCircle}
+            </MemoPopover>
+
             <ColorView
+              ref={viewRef}
               onClick={() => setOpen((prev) => !prev)}
               value={props.value}
             />
-          </Popover>
+          </>
         }
         onFocus={() => setIsFocused(props.value)}
         value={isFocused ? prevValue : hsvToHex(props.value)}

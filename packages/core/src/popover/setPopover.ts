@@ -19,7 +19,7 @@ export const defaultOptions: Option = {
   boundary: undefined,
 } as const;
 
-type Option = {
+export type Option = {
   placement?: Placement;
   offset?: number;
   padding?: number;
@@ -41,7 +41,8 @@ export function setPopover(
     maxHeight?: number;
     placement?: Placement;
   }) => void,
-  options?: Option
+  options?: Option,
+  onClose?: () => void
 ) {
   const finalOptions = {
     ...defaultOptions,
@@ -60,6 +61,7 @@ export function setPopover(
     ) {
       return;
     } else {
+      onClose?.();
       cleanUp();
     }
   };
@@ -69,12 +71,14 @@ export function setPopover(
       e.key === "Escape" ||
       (!finalOptions.disabledTabClose && e.key === "Tab")
     ) {
+      onClose?.();
       cleanUp();
       triggerElement.focus();
     }
   };
 
   const handleClick = () => {
+    onClose?.();
     cleanUp();
   };
 

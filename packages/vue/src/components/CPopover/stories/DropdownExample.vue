@@ -5,6 +5,7 @@ import { ref } from "vue";
 import CPopover from "../CPopover.vue";
 import CMenuList from "../../CMenuList/CMenuList.vue";
 import CMenuListItem from "../../CMenuListItem/CMenuListItem.vue";
+import { codeWords } from "../../../test/const";
 
 const trigger = ref<InstanceType<typeof CIconButton> | null>(null);
 
@@ -16,6 +17,8 @@ const handleSelect = (v: string) => {
   selected.value = v;
   show.value = false;
 };
+
+const options = codeWords.slice(0, 5);
 </script>
 
 <template>
@@ -30,9 +33,9 @@ const handleSelect = (v: string) => {
     @close="show = false"
   >
     <CMenuList @select="handleSelect">
-      <CMenuListItem is="button" value="Alpha">Alpha</CMenuListItem>
-      <CMenuListItem is="button" value="Beta">Beta</CMenuListItem>
-      <CMenuListItem is="button" value="Gamma">Gamma</CMenuListItem>
+      <CMenuListItem v-for="option in options" :key="option" :value="option">
+        {{ option }}
+      </CMenuListItem>
     </CMenuList>
   </CPopover>
 </template>
