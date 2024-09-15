@@ -25,7 +25,7 @@ onMounted(() => {
   if (!el.value) return;
   if (props.autoFocus) {
     setTimeout(() => {
-      el.value?.focus();
+      el.value?.focus({ preventScroll: true });
     }, 0);
   }
   cleanup = useKeyboardNavigation(

@@ -1,28 +1,61 @@
-import * as RadixContextMenu from "@radix-ui/react-context-menu";
+import { useRef, useState } from "react";
 
-import { FloatBox } from "../FloatBox";
-
-import "./index.css";
+import { Popover } from "../Popover";
 
 export type ContextMenuProps = {
   children: React.ReactNode;
-  content: React.ReactNode;
-  open?: boolean;
-  onOpenChange?: (open: boolean) => void;
+
+  x: number;
+  y: number;
+  show: boolean;
+  onClose: () => void;
 };
 
-export function ContextMenu(props: ContextMenuProps) {
-  return (
-    <RadixContextMenu.Root onOpenChange={props.onOpenChange}>
-      <RadixContextMenu.Trigger asChild>
-        {props.children}
-      </RadixContextMenu.Trigger>
+export function useContextMenu() {
+  const [ctx, setCtx] = useState({ x: 0, y: 0, show: false });
+  const handleContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCtx({
+      x: e.clientX,
+      y: e.clientY,
+      show: true,
+    });
+  };
 
-      <RadixContextMenu.Portal>
-        <RadixContextMenu.Content asChild>
-          <FloatBox>{props.content}</FloatBox>
-        </RadixContextMenu.Content>
-      </RadixContextMenu.Portal>
-    </RadixContextMenu.Root>
+  const handleClose = () => {
+    setCtx({
+      ...ctx,
+      show: false,
+    });
+  };
+
+  return {
+    handleContextMenu,
+    ctx,
+    handleClose,
+  };
+}
+
+export function ContextMenu(props: ContextMenuProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  return (
+    <>
+      <div
+        ref={ref}
+        style={{
+          position: "fixed",
+          top: props.y,
+          left: props.x,
+        }}
+      ></div>
+      <Popover
+        trigger={ref}
+        isOpen={props.show}
+        onClose={props.onClose}
+        autoResize
+      >
+        {props.children}
+      </Popover>
+    </>
   );
 }
