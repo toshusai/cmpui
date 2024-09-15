@@ -17,7 +17,9 @@ export function MenuList({
 
   useEffect(() => {
     if (!(autoFocus === false)) {
-      el.current?.focus();
+      setTimeout(() => {
+        el.current?.focus();
+      }, 0);
     }
   }, [autoFocus]);
   useEffect(() => {

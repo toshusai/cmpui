@@ -107,7 +107,7 @@ const popupId = useId();
       <span v-if="typeof preview === 'string'">{{ preview }}</span>
       <component :is="preview" v-else />
     </div>
-    <label v-if="label" :id="labelId" className="cmpui_select__label" :for="id">
+    <label v-if="label" :id="labelId" class="cmpui_select__label" :for="id">
       {{ label }}
     </label>
   </button>

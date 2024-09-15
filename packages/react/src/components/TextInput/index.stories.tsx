@@ -2,8 +2,9 @@ import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconCurrencyDollar, IconEye, IconEyeOff } from "@tabler/icons-react";
 
-import { TextInput } from ".";
 import { IconButton } from "../IconButton";
+
+import { TextInput } from ".";
 
 const meta: Meta<typeof TextInput> = {
   title: "Form/TextInput",
