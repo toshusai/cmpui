@@ -3,10 +3,10 @@ import {
   createHandleSVPickerKeyDown,
   createNobPointerDownHandler,
 } from "@toshusai/cmpui-core";
+import { hsvToRgb } from "@toshusai/cmpui-core";
+import { rgbToCss } from "@toshusai/cmpui-core";
+import { useHighContrastColor } from "@toshusai/cmpui-core";
 
-import { hsvToRgb } from "../../utils/colors/hsvToRgb";
-import { rgbToCss } from "../../utils/colors/rgbToCss";
-import { useHighContrastColor } from "../../utils/colors/useHighContrastColor";
 import { Circle } from "../Circle";
 import { ColorLoupe } from "../ColorLoupe";
 

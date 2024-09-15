@@ -1,8 +1,7 @@
 import { useCallback, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { HSVA } from "../..";
-import { hexToHsv } from "../../utils/colors/hexToHsv";
+import { HSVA } from "@toshusai/cmpui-core";
+import { hexToHsv } from "@toshusai/cmpui-core";
 
 import { ColorPickerCircle } from ".";
 

@@ -1,13 +1,13 @@
 import { useCallback, useMemo, useState } from "react";
+import { blendColors } from "@toshusai/cmpui-core";
+import { WHITE } from "@toshusai/cmpui-core";
+import { getHighContrast } from "@toshusai/cmpui-core";
+import { rgbToCss } from "@toshusai/cmpui-core";
+import { rgbaToCss } from "@toshusai/cmpui-core";
+import { RGBA } from "@toshusai/cmpui-core";
 
-import { useTouchStartPrevent } from "../..";
 import { classNames } from "../../utils/classNames";
-import { blendColors } from "../../utils/colors/blendColors";
-import { WHITE } from "../../utils/colors/const";
-import { getHighContrast } from "../../utils/colors/getHighContrast";
-import { rgbToCss } from "../../utils/colors/rgbToCss";
-import { rgbaToCss } from "../../utils/colors/rgbaToCss";
-import { RGBA } from "../../utils/colors/types/RGBA";
+import { useTouchStartPrevent } from "../..";
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
 import { useKeyDownStartEnd } from "../../utils/interactions/useKeyDownStartEnd";
 import { clamp } from "../../utils/math/clamp";

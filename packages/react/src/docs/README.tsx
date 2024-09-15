@@ -1,7 +1,7 @@
 import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { HSVA, hexToHsv, hsvaToRgba, rgbaToCss } from "@toshusai/cmpui-core";
 
 import { Button, ColorInput, Grid, RectGizmo, Vector2 } from "..";
-import { HSVA, hexToHsv, hsvaToRgba, rgbaToCss } from "../utils/colors";
 
 import "./README.css";
 

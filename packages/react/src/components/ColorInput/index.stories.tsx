@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-
-import { hexToHsv } from "../../utils/colors/hexToHsv";
+import { hexToHsv } from "@toshusai/cmpui-core";
 
 import { ColorInput } from ".";
 

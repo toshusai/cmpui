@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { hsvToRgb } from "../../utils/colors/hsvToRgb";
+import { hsvToRgb } from "@toshusai/cmpui-core";
 
 import { ColorSlider } from ".";
 
