@@ -4,7 +4,7 @@ import { h } from "vue";
 import StoryDefaultModal from "./StoryDefaultModal.vue";
 
 const meta = {
-  title: "parts/CDialog",
+  title: "floating/CDialog",
   component: CDialog,
   args: {
     show: false,

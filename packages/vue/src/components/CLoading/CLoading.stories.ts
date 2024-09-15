@@ -3,7 +3,7 @@ import { h } from "vue";
 import CLoading from "./CLoading.vue";
 
 const meta = {
-  title: "data display/CLoading",
+  title: "parts/CLoading",
   component: CLoading,
 } satisfies Meta<typeof CLoading>;
 

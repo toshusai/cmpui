@@ -5,7 +5,11 @@ import CDrawer from "./CDrawer.vue";
 import StoryDefault from "./stories/StoryDefault.vue";
 
 const meta = {
+  title: "floating/CDrawer",
   component: CDrawer,
+  args: {
+    show: false,
+  },
 } satisfies Meta<typeof CDrawer>;
 
 export default meta;

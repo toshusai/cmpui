@@ -7,28 +7,26 @@ import CIconButton from "../CIconButton/CIconButton.vue";
 const meta = {
   title: "inputs/CTextInput",
   component: CTextInput,
+  args: {
+    label: "",
+    disabled: false,
+  },
 } satisfies Meta<typeof CTextInput>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    placeholder: "Placeholder",
-  },
-};
+export const Default: Story = {};
 
 export const Label: Story = {
   args: {
     label: "Label",
-    placeholder: "Placeholder",
   },
 };
 
 export const Disabled: Story = {
   args: {
     label: "Label",
-    placeholder: "Placeholder",
     disabled: true,
   },
 };
@@ -36,7 +34,6 @@ export const Disabled: Story = {
 export const Invalid: Story = {
   args: {
     label: "Error",
-    placeholder: "Placeholder",
     invalid: true,
   },
 };
@@ -44,6 +41,8 @@ export const Invalid: Story = {
 export const Prefix: Story = {
   args: {
     label: "Amount",
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     placeholder: "1.0",
     type: "number",
     prefix: () =>

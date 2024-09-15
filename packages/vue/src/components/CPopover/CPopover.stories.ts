@@ -11,6 +11,7 @@ import AutoFlipExample from "./stories/AutoFlipExample.vue";
 import DropdownExample from "./stories/DropdownExample.vue";
 
 const meta = {
+  title: "floating/CPopover",
   component: Popover,
   args: {
     trigger: null,

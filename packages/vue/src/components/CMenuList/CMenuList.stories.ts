@@ -5,7 +5,7 @@ import CMenuListItem from "../CMenuListItem/CMenuListItem.vue";
 import { codeWords } from "../../test/const";
 
 const meta = {
-  title: "data display/CMenuList",
+  title: "inputs/CMenuList",
   component: CMenuList,
 } satisfies Meta<typeof CMenuList>;
 

@@ -3,7 +3,7 @@ import CSVCanvas from "./CSVCanvas.vue";
 import { h, ref } from "vue";
 
 const meta = {
-  title: "colors/CSVCanvas",
+  title: "parts/CSVCanvas",
   component: CSVCanvas,
   args: {
     hue: 0,

@@ -5,7 +5,7 @@ import StorySubMenuPopoverExample2 from "./stories/StorySubMenuPopoverExample2/S
 import StorySubMenuPopoverExample from "./stories/StorySubMenuPopoverExample.vue";
 
 const meta = {
-  title: "components/CSubMenuPopover",
+  title: "floating/CSubMenuPopover",
   component: CSubMenuPopover,
   args: {
     show: false,

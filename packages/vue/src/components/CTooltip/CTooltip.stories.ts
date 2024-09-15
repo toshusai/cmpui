@@ -12,6 +12,7 @@ import {
 } from "@tabler/icons-vue";
 
 const meta = {
+  title: "floating/CTooltip",
   component: Tooltip,
   args: {
     content: "tooltip",

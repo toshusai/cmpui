@@ -3,7 +3,7 @@ import { h } from "vue";
 import CColorLoupe from "./CColorLoupe.vue";
 
 const meta = {
-  title: "data display/CColorLoupe",
+  title: "parts/CColorLoupe",
   component: CColorLoupe,
   args: {
     x: 50,

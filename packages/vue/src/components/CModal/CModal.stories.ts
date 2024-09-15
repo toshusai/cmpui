@@ -5,6 +5,7 @@ import StoryDefaultModal from "./stories/StoryDefaultModal.vue";
 import NestExample from "./stories/NestExample.vue";
 
 const meta = {
+  title: "floating/CModal",
   component: CModal,
   args: {
     show: false,

@@ -5,6 +5,7 @@ import CIconButton from "../CIconButton/CIconButton.vue";
 import { IconBell, IconX } from "@tabler/icons-vue";
 
 const meta = {
+  title: "floating/CToast",
   component: CToast,
   args: {
     show: false,
@@ -89,8 +90,8 @@ export const Controlled: Story = {
 export const Placement: Story = {
   render: () => ({
     setup() {
-      const horizontals = ["left", "center", "right"];
-      const verticals = ["top", "bottom"];
+      const horizontals = ["left", "center", "right"] as const;
+      const verticals = ["top", "bottom"] as const;
       const show = ref(false);
       return () =>
         h(() => [
