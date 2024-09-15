@@ -1,39 +1,52 @@
-import * as RadixToast from "@radix-ui/react-toast";
+import { useEffect, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import { FloatBox } from "../FloatBox";
-
-import "./index.css";
+import { createCssTransitionClassNames } from "../Modal/createCssTransitionClassNames";
 
 export type ToastProps = {
-  open?: boolean;
-  defaultOpen?: boolean;
-  onOpenChange?: (open: boolean) => void;
-  side?: "top" | "bottom" | "left" | "right";
-  avoidCollisions?: boolean;
-  onDismiss?: () => void;
-  sideOffset?: number;
-  alignOffset?: number;
+  show: boolean;
+  time?: number;
+  horizontal?: "left" | "center" | "right";
+  vertical?: "top" | "center" | "bottom";
+
   children: React.ReactNode;
-  close?: React.ReactNode;
+  onClose?: () => void;
 };
 
 export function Toast(props: ToastProps) {
-  return (
-    <RadixToast.Provider swipeDirection="down">
-      <RadixToast.Root
-        duration={3000}
-        open={props.open}
-        onOpenChange={props.onOpenChange}
-        asChild
-      >
-        <FloatBox className="cmpui_toast__root">
-          <RadixToast.Title />
-          <RadixToast.Description>{props.children}</RadixToast.Description>
-          {props.close && <RadixToast.Close>{props.close}</RadixToast.Close>}
-        </FloatBox>
-      </RadixToast.Root>
+  const timeoutRef = useRef<number | null>(null);
 
-      <RadixToast.Viewport className="cmpui_toast__viewport" />
-    </RadixToast.Provider>
+  useEffect(() => {
+    if (props.show) {
+      if (props.time === 0) return;
+      timeoutRef.current = window.setTimeout(() => {
+        props.onClose?.();
+      }, props.time ?? 3000);
+    }
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [props.show, props.time]);
+  const ref = useRef<HTMLDivElement>(null);
+  return (
+    <CSSTransition
+      nodeRef={ref}
+      unmountOnExit
+      timeout={300}
+      in={props.show}
+      classNames={createCssTransitionClassNames("cmpui_toast_transition")}
+    >
+      <FloatBox
+        ref={ref}
+        className="cmpui_toast__root"
+        data-horizontal={props.horizontal}
+        data-vertical={props.vertical}
+      >
+        {props.children}
+      </FloatBox>
+    </CSSTransition>
   );
 }

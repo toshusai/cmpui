@@ -8,9 +8,6 @@ import { Toast } from ".";
 const meta: Meta<typeof Toast> = {
   title: "Float/Toast",
   component: Toast,
-  parameters: {
-    layout: "fullscreen",
-  },
 };
 
 export default meta;
@@ -22,26 +19,12 @@ export const Basic: Story = {
     const [open, setOpen] = useState(false);
 
     return (
-      <div
-        style={{
-          width: "100vw",
-          height: 300,
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
-        }}
-      >
+      <>
         <Button onClick={() => setOpen(true)}>Open</Button>
-        <Toast open={open} onOpenChange={setOpen}>
-          <div
-            style={{
-              padding: 8,
-            }}
-          >
-            Hello World
-          </div>
+        <Toast show={open} onClose={() => setOpen(false)}>
+          <div>Hello World</div>
         </Toast>
-      </div>
+      </>
     );
   },
 };

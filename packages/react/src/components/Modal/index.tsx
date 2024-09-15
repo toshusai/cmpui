@@ -7,6 +7,8 @@ import { classNames } from "../../utils/classNames";
 import { FloatBox } from "../FloatBox";
 import { IconButton } from "../IconButton";
 
+import { createCssTransitionClassNames } from "./createCssTransitionClassNames";
+
 export type ModalProps = {
   children: React.ReactNode;
   container?: HTMLElement | null;
@@ -39,14 +41,7 @@ export function Modal(props: ModalProps) {
     <CSSTransition
       nodeRef={ref}
       addEndListener={() => {}}
-      classNames={{
-        enter: "cmpui_modal_transition-enter-from",
-        enterActive: "cmpui_modal_transition-enter-to cmpui_modal_transition-enter-active",
-        enterDone: "cmpui_modal_transition-enter-to",
-        exit: "cmpui_modal_transition-leave-from",
-        exitActive: "cmpui_modal_transition-leave-to cmpui_modal_transition-leave-active",
-        exitDone: "cmpui_modal_transition-leave-to",
-      }}
+      classNames={createCssTransitionClassNames("cmpui_modal_transition")}
       unmountOnExit
       timeout={300}
       in={props.open}
