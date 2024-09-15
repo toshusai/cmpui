@@ -3,8 +3,6 @@ import React, { ForwardedRef, forwardRef } from "react";
 import { CustomJSXElement } from "../../types/CustomJSXElement";
 import { classNames } from "../../utils/classNames";
 
-import "./index.css";
-
 export type ListItemProps<T extends CustomJSXElement = "li"> = {
   as?: T;
   children: React.ReactNode;
