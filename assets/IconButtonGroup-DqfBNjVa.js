@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime-DEdD30eg.js";import{r as t}from"./index-RYns6xqu.js";import{c as a}from"./classNames-CN4lTu6a.js";const c=t.forwardRef((o,r)=>s.jsx("div",{ref:r,className:a("cmpui_icon-button__group",o.className),children:o.children}));c.__docgenInfo={description:"",methods:[],displayName:"IconButtonGroup"};export{c as I};

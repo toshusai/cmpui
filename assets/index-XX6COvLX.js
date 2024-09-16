@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime-DEdD30eg.js";import{r as a}from"./index-RYns6xqu.js";import{c as m}from"./classNames-CN4lTu6a.js";const e=a.forwardRef(function({className:o,...t},r){return s.jsx("div",{className:m("cmpui_float-box__root",o),ref:r,...t})});e.__docgenInfo={description:"",methods:[],displayName:"FloatBox"};export{e as F};
