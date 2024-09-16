@@ -12,8 +12,6 @@ import { ColorLoupe } from "../ColorLoupe";
 
 import { SVCanvas } from "./lib/SVCanvas";
 
-import "./index.css";
-
 export type SVPickerProps = {
   nobRadius?: number;
   onChange: (saturation: number, value: number) => void;

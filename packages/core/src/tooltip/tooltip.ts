@@ -92,7 +92,7 @@ export function tooltip(
   };
 
   const open = () => {
-    // cleanupUpdate = autoUpdate(triggerElement, tooltipElement, updatePosition);
+    cleanupUpdate = autoUpdate(triggerElement, tooltipElement, updatePosition);
     updatePosition();
     window.addEventListener("keydown", handleKeyDown);
   };

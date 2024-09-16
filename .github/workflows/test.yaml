@@ -26,5 +26,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
       - run: pnpm install
+      - run: pnpm build
+        working-directory: packages/core
       - run: pnpm -r build
       - run: pnpm -r test
