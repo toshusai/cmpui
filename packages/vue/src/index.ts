@@ -4,6 +4,8 @@ import CCheckbox from "./components/CCheckbox/CCheckbox.vue";
 import CCheckboxInput from "./components/CCheckbox/CCheckboxInput.vue";
 import CChip from "./components/CChip/CChip.vue";
 import CDrawer from "./components/CDrawer/CDrawer.vue";
+import CCircle from "./components/CCircle/CCircle.vue";
+import CFloatBox from "./components/CFloatBox/CFloatBox.vue";
 import CIconButton from "./components/CIconButton/CIconButton.vue";
 import CListItem from "./components/CListItem/CListItem.vue";
 import CLoading from "./components/CLoading/CLoading.vue";
@@ -24,6 +26,8 @@ import CTreeViewItem from "./components/CTreeView/CTreeViewItem.vue";
 export {
   CButton,
   CCanvasView,
+  CCircle,
+  CFloatBox,
   CCheckbox,
   CCheckboxInput,
   CChip,
