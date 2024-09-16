@@ -1,16 +1,18 @@
 import { useCallback, useMemo, useState } from "react";
-import { blendColors } from "@toshusai/cmpui-core";
-import { WHITE } from "@toshusai/cmpui-core";
-import { getHighContrast } from "@toshusai/cmpui-core";
-import { rgbToCss } from "@toshusai/cmpui-core";
-import { rgbaToCss } from "@toshusai/cmpui-core";
-import { RGBA } from "@toshusai/cmpui-core";
+import {
+  blendColors,
+  WHITE,
+  getHighContrast,
+  rgbToCss,
+  rgbaToCss,
+  RGBA,
+  clamp,
+} from "@toshusai/cmpui-core";
 
 import { classNames } from "../../utils/classNames";
 import { useTouchStartPrevent } from "../..";
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
 import { useKeyDownStartEnd } from "../../utils/interactions/useKeyDownStartEnd";
-import { clamp } from "../../utils/math/clamp";
 import { Circle } from "../Circle";
 import { ColorLoupe } from "../ColorLoupe";
 

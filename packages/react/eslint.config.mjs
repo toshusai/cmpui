@@ -13,6 +13,8 @@ export default [
     rules: {
       "vue/multi-word-component-names": "off",
       "no-unused-vars": "off",
+      "no-duplicate-imports": "error",
+      "import/no-duplicates": "error",
       "@typescript-eslint/no-unused-vars": ["error"],
       "import/order": [
         "error",

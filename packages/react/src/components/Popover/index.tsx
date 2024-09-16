@@ -7,8 +7,12 @@ import {
   useRef,
   useState,
 } from "react";
-import { lockScroll, Option, setPopover } from "@toshusai/cmpui-core";
-import { focusTrap as cmpUiFocusTrap } from "@toshusai/cmpui-core";
+import {
+  lockScroll,
+  Option,
+  setPopover,
+  focusTrap as cmpUiFocusTrap,
+} from "@toshusai/cmpui-core";
 
 import { FloatBox } from "../FloatBox";
 

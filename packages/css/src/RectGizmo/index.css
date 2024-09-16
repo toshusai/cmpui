@@ -1,0 +1,125 @@
+.cmpui_rect-gizmo {
+  position: absolute;
+  transform-origin: top left;
+  left: 0;
+  top: 0;
+}
+
+.cmpui_rect-gizmo > div:first-child {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmpui_rect-gizmo-origin {
+  position: absolute;
+  pointer-events: none;
+}
+
+.cmpui_rect-gizmo-origin > div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+}
+
+.cmpui_rect-gizmo-origin > div::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  background-color: var(--cmpui-primary-color);
+  left: 7.5px;
+  box-sizing: border-box;
+}
+
+.cmpui_rect-gizmo-origin > div::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  background-color: var(--cmpui-primary-color);
+  top: 7.5px;
+  box-sizing: border-box;
+}
+
+.cmpui_rect-gizmo-corner {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+}
+.cmpui_rect-gizmo-corner[data-pos="lt"] {
+  top: calc(0px - var(--size));
+  left: calc(0px - var(--size));
+  transform-origin: right bottom;
+}
+
+.cmpui_rect-gizmo-corner[data-pos="rt"] {
+  top: calc(0px - var(--size));
+  right: calc(0px - var(--size));
+  transform-origin: left bottom;
+}
+
+.cmpui_rect-gizmo-corner[data-pos="lb"] {
+  bottom: calc(0px - var(--size));
+  left: calc(0px - var(--size));
+  transform-origin: right top;
+}
+
+.cmpui_rect-gizmo-corner[data-pos="rb"] {
+  bottom: calc(0px - var(--size));
+  right: calc(0px - var(--size));
+  transform-origin: left top;
+}
+
+.cmpui_rect-gizmo-edge {
+  position: absolute;
+  display: flex;
+}
+
+.cmpui_rect-gizmo-edge[data-pos="l"]::after,
+.cmpui_rect-gizmo-edge[data-pos="r"]::after {
+  content: "";
+  margin: auto;
+  height: 100%;
+  width: 1px;
+  background: var(--cmpui-primary-color);
+}
+.cmpui_rect-gizmo-edge[data-pos="t"]::after,
+.cmpui_rect-gizmo-edge[data-pos="b"]::after {
+  content: "";
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  background: var(--cmpui-primary-color);
+}
+
+.cmpui_rect-gizmo-edge[data-pos="l"] {
+  top: 0;
+  left: 0;
+  width: var(--size);
+  height: 100%;
+}
+
+.cmpui_rect-gizmo-edge[data-pos="r"] {
+  top: 0;
+  right: 0;
+  width: var(--size);
+  height: 100%;
+}
+
+.cmpui_rect-gizmo-edge[data-pos="t"] {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--size);
+}
+
+.cmpui_rect-gizmo-edge[data-pos="b"] {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--size);
+}

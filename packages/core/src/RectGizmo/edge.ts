@@ -1,14 +1,56 @@
-import { RectGizmoProps } from "..";
-import { Vector2, createDragHandler, rotateVector } from "../../../utils";
-import { corners } from "../corners";
 
-export function createEdgeHandler(props: RectGizmoProps, w: 0 | 1, h: 0 | 1) {
+import { createDragHandler } from "../createDragHandler";
+import { rotateVector, Vector2 } from "../math";
+import { matrixToCss } from "../matrixToCss";
+import { corners } from "./const";
+import { RectGizmoProps } from "./RectGizmoProps";
+
+function getEdgeTransform(
+  w: number,
+  h: number,
+  i: number,
+  sw: number,
+  scale: Vector2,
+) {
+  const half = sw / 2;
+  return new DOMMatrix()
+    .translate(
+      w === corners[(i + 1) % corners.length][0] ? -half : 0,
+      h === corners[(i + 1) % corners.length][1] ? -half : 0,
+    )
+    .scale(
+      w === corners[(i + 1) % corners.length][0] ? 1 / Math.abs(scale.x) : 1,
+      h === corners[(i + 1) % corners.length][1] ? 1 / Math.abs(scale.y) : 1,
+    );
+}
+
+export function createEdgeStyle(
+  w: number,
+  h: number,
+  i: number,
+  sw: number,
+  scale: Vector2,
+) {
+  return {
+    "--size": `${sw}px`,
+    transform: matrixToCss(
+      getEdgeTransform(w, h, i, h === 0 ? sw : -sw, scale),
+    ),
+  };
+}
+
+export function createEdgeHandler(
+  props: RectGizmoProps,
+  w: 0 | 1,
+  h: 0 | 1,
+  onChange: (scaleX: number, scaleY: number) => void,
+) {
   return createDragHandler({
     onDown() {
       const originRateX = props.origin.x / props.width;
       const originRateY = props.origin.y / props.height;
-      const scaledX = props.width * props.scaleX;
-      const scaledY = props.height * props.scaleY;
+      const scaledX = props.width * props.scale.x;
+      const scaledY = props.height * props.scale.y;
 
       const originToCorner = new Vector2(
         w * scaledX - scaledX * originRateX,
@@ -28,7 +70,7 @@ export function createEdgeHandler(props: RectGizmoProps, w: 0 | 1, h: 0 | 1) {
       const alreadyMovedDistanceRotated = rotateVector(
         alreadyMovedDistance,
         { x: 0, y: 0 },
-        props.angle,
+        props.rotation,
       );
 
       return {
@@ -39,7 +81,7 @@ export function createEdgeHandler(props: RectGizmoProps, w: 0 | 1, h: 0 | 1) {
     onMove(_, ctx, move) {
       if (!ctx) return;
       const { alreadyMovedDistanceRotated, originToCornerWithoutScale } = ctx;
-      const theta = props.angle;
+      const theta = props.rotation;
 
       move.dx += alreadyMovedDistanceRotated.x;
       move.dy += alreadyMovedDistanceRotated.y;
@@ -57,10 +99,10 @@ export function createEdgeHandler(props: RectGizmoProps, w: 0 | 1, h: 0 | 1) {
         (w === corners[2][0] && h === corners[2][1])
       ) {
         if (!Number.isFinite(scaleX)) return;
-        props.setScaleX?.(scaleX);
+        onChange(scaleX, props.scale.y);
       } else {
         if (!Number.isFinite(scaleY)) return;
-        props.setScaleY?.(scaleY);
+        onChange(props.scale.x, scaleY);
       }
     },
   });

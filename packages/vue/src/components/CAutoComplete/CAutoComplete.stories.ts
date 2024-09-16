@@ -28,7 +28,7 @@ export const Default: Story = {
 export const Example: Story = {
   render: () => ({
     setup() {
-      return () => h(AutoCompleteExample)
+      return () => h(AutoCompleteExample);
     },
   }),
 };

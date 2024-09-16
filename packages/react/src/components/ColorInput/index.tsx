@@ -6,14 +6,16 @@ import {
   useRef,
   useState,
 } from "react";
-import { hsvaToRgba } from "@toshusai/cmpui-core";
-import { hexToHsv } from "@toshusai/cmpui-core";
-import { hsvToHex } from "@toshusai/cmpui-core";
-import { isValidHex6 } from "@toshusai/cmpui-core";
-import { rgbToCss } from "@toshusai/cmpui-core";
-import { HSVA } from "@toshusai/cmpui-core";
+import {
+  hsvaToRgba,
+  hexToHsv,
+  hsvToHex,
+  isValidHex6,
+  rgbToCss,
+  HSVA,
+  clamp,
+} from "@toshusai/cmpui-core";
 
-import { clamp } from "../../utils/math/clamp";
 import { ColorPickerCircle } from "../ColorPickerCircle";
 import { SliderNumberField } from "../SliderNumberField";
 import { TextInput } from "../TextInput";

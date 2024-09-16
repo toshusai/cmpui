@@ -8,6 +8,8 @@ import "./Chip/index.css";
 import "./Circle/index.css";
 import "./Drawer/index.css";
 import "./FloatBox/index.css";
+import "./RectGizmo/index.css";
+import "./RectGizmo/horizontal-cursor.css";
 import "./IconButton/index.css";
 import "./ListItem/index.css";
 import "./Loading/index.css";

@@ -9,6 +9,7 @@ export default defineConfig({
       name: "CmpUiCore",
       fileName: (format) => `index.${format}.js`,
     },
+    outDir: path.resolve(__dirname, "dist"),
     rollupOptions: {},
   },
 });

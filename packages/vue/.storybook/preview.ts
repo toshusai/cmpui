@@ -1,7 +1,6 @@
 import type { Decorator, Preview } from "@storybook/vue3";
 
 import "@toshusai/cmpui-css/dist/index.css";
-import { h } from "vue";
 
 const preview: Preview = {
   parameters: {

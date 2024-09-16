@@ -1,84 +1,46 @@
-import { Fragment, useMemo, useRef } from "react";
+import { useRef } from "react";
+import {
+  matrixToCss,
+  radToDeg,
+  px,
+  createEdgeStyle,
+  createEdgeHandler,
+  corners,
+  createRotateStyle,
+  createStepped,
+  createRotateHandler,
+  whIndexToCornerName,
+  createResizeHandler,
+  type RectGizmoProps as CoreRectGizmoProps,
+} from "@toshusai/cmpui-core";
 
 import { Circle } from "../Circle";
-import { matrixToCss } from "../../utils/matrixToCss";
-import { Vector2, createDragHandler, radToDeg } from "../../utils";
+import { createDragHandler } from "../../utils";
 
-import { OriginMarker } from "./OriginMarker";
-import { corners } from "./corners";
-import { createEdgeHandler } from "./lib/createEdgeHandler";
-import { createResizeHandler } from "./lib/createResizeHandler";
-import { createRotateHorizontalResize } from "./lib/createRotateHorizontalResize";
-
-export type RectGizmoProps = {
-  width: number;
-  height: number;
-  scaleX: number;
-  scaleY: number;
-  setScaleX?: (scaleX: number) => void;
-  setScaleY?: (scaleY: number) => void;
-  position: Vector2;
-  setPosition?: (position: Vector2) => void;
-  origin: Vector2;
-  angle: number;
-  onChangeAngle?: (angle: number) => void;
+export type RectGizmoProps = CoreRectGizmoProps & {
   rootProps?: React.HTMLAttributes<HTMLDivElement>;
-  showOrigin?: boolean;
-  canRotate?: boolean;
-  canResize?: boolean;
+  onChange: (props: CoreRectGizmoProps) => void;
 };
 
 export function RectGizmo(props: RectGizmoProps) {
   const matrix = new DOMMatrix()
     .translate(props.position.x, props.position.y)
-    .rotate(0, 0, radToDeg(props.angle))
-    .scale(props.scaleX, props.scaleY)
+    .rotate(0, 0, radToDeg(props.rotation))
+    .scale(props.scale.x, props.scale.y)
     .translate(-props.origin.x, -props.origin.y);
 
-  const invertScale = new DOMMatrix().scale(1 / props.scaleX, 1 / props.scaleY);
+  const invertScale = new DOMMatrix().scale(
+    1 / props.scale.x,
+    1 / props.scale.y,
+  );
   const invertScaleCss = matrixToCss(invertScale);
-
-  const steppedAngle = useMemo(() => {
-    const step = Math.PI / 12;
-    return Math.round(props.angle / step) * step;
-  }, [props.angle]);
-
-  const memoCursorStyle = useMemo(() => {
-    return [0, 0, 0, 0].map((_, i) => {
-      return {
-        cursor: createRotateHorizontalResize(
-          steppedAngle +
-            Math.PI / 4 +
-            (i * Math.PI) / 2 +
-            (props.scaleX < 0 ? Math.PI / 2 : 0) +
-            (props.scaleY < 0 ? Math.PI / 2 : 0),
-        ),
-      };
-    });
-  }, [steppedAngle, props.scaleX, props.scaleY]);
-
-  const edgeCursorStyle = useMemo(() => {
-    return [0, 0, 0, 0].map((_, i) => {
-      return {
-        cursor: createRotateHorizontalResize(
-          steppedAngle +
-            (i * Math.PI) / 2 +
-            (props.scaleX < 0 ? Math.PI / 2 : 0) +
-            (props.scaleY < 0 ? Math.PI / 2 : 0),
-        ),
-      };
-    });
-  }, [steppedAngle, props.scaleX, props.scaleY]);
 
   const centerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
+      className="cmpui_rect-gizmo"
       style={{
-        position: "absolute",
-        transformOrigin: "top left",
-        left: 0,
-        top: 0,
         transform: matrixToCss(matrix),
         width: props.width,
         height: props.height,
@@ -86,254 +48,107 @@ export function RectGizmo(props: RectGizmoProps) {
       {...props.rootProps}
     >
       <div
-        style={{
-          left: 0,
-          height: "100%",
-          boxSizing: "border-box",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
         onPointerDown={createDragHandler({
           onMove(_, __, move) {
-            props.setPosition?.({
-              x: props.position.x + move.dx,
-              y: props.position.y + move.dy,
+            props.onChange({
+              ...props,
+              position: {
+                x: props.position.x + move.dx,
+                y: props.position.y + move.dy,
+              },
             });
           },
         })}
       />
 
-      <OriginMarker
-        x={props.origin.x}
-        y={props.origin.y}
-        transform={invertScaleCss}
+      <div
+        className="cmpui_rect-gizmo-origin"
+        style={{
+          left: px(props.origin.x),
+          top: px(props.origin.y),
+          transform: invertScaleCss,
+        }}
         ref={centerRef}
-      />
-
-      {props.showOrigin && (
-        <div
-          style={{
-            position: "absolute",
-            pointerEvents: "none",
-            left: props.origin.x,
-            top: props.origin.y,
-            transform: invertScaleCss,
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              width: 16,
-              height: 16,
-              transform: "translate(-50%, -50%)",
-              border: "1px solid var(--cmpui-primary-color)",
-              borderRadius: "50%",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                width: 1,
-                height: 16,
-                background: "var(--cmpui-primary-color)",
-                left: 7.5,
-              }}
-            />
-
-            <div
-              style={{
-                position: "absolute",
-                width: 16,
-                height: 1,
-                background: "var(--cmpui-primary-color)",
-                top: 7.5,
-              }}
-            />
-          </div>
-        </div>
-      )}
+      >
+        <div></div>
+      </div>
 
       {corners.map(([w, h], i) => {
         return (
-          <Fragment key={i}>
-            <div
-              style={{
-                position: "absolute",
-                left: w === 1 && h === 0 ? 0 : w * props.width,
-                top: w === 1 && h === 1 ? 0 : h * props.height,
-                width:
-                  w === corners[(i + 1) % corners.length][0] ? 1 : props.width,
-                height:
-                  h === corners[(i + 1) % corners.length][1] ? 1 : props.height,
-                background: "var(--cmpui-primary-color)",
-                transform: matrixToCss(
-                  new DOMMatrix()
-                    .translate(
-                      w === corners[(i + 1) % corners.length][0] ? -0.5 : 0,
-                      h === corners[(i + 1) % corners.length][1] ? -0.5 : 0,
-                    )
-                    .scale(
-                      w === corners[(i + 1) % corners.length][0]
-                        ? 1 / Math.abs(props.scaleX)
-                        : 1,
-                      h === corners[(i + 1) % corners.length][1]
-                        ? 1 / Math.abs(props.scaleY)
-                        : 1,
-                    ),
-                ),
-              }}
-            />
-
-            {props.canResize && (
-              <div
-                style={{
-                  position: "absolute",
-                  left: w === 1 && h === 0 ? 0 : w * props.width,
-                  top: w === 1 && h === 1 ? 0 : h * props.height,
-                  width:
-                    w === corners[(i + 1) % corners.length][0]
-                      ? 8
-                      : props.width,
-                  height:
-                    h === corners[(i + 1) % corners.length][1]
-                      ? 8
-                      : props.height,
-                  cursor: edgeCursorStyle[i].cursor,
-                  transform: matrixToCss(
-                    new DOMMatrix()
-                      .translate(
-                        w === corners[(i + 1) % corners.length][0] ? -4 : 0,
-                        h === corners[(i + 1) % corners.length][1] ? -4 : 0,
-                      )
-                      .scale(
-                        w === corners[(i + 1) % corners.length][0]
-                          ? 1 / Math.abs(props.scaleX)
-                          : 1,
-                        h === corners[(i + 1) % corners.length][1]
-                          ? 1 / Math.abs(props.scaleY)
-                          : 1,
-                      ),
-                  ),
-                }}
-                onPointerDown={createEdgeHandler(props, w, h)}
-              />
-            )}
-          </Fragment>
+          <div
+            key={i}
+            style={createEdgeStyle(w, h, i, 8, props.scale)}
+            className={`cmpui_rect-gizmo-edge step-${createStepped(props.rotation, i, 0)}`}
+            data-pos={"lbrt"[i]}
+            onPointerDown={(e) =>
+              createEdgeHandler(props, w, h, (x, y) => {
+                props.onChange({
+                  ...props,
+                  scale: { x, y },
+                });
+              })(e.nativeEvent)
+            }
+          />
         );
       })}
 
-      {props.canRotate &&
-        corners.map(([w, h], i) => {
-          return (
-            <div
-              key={i}
-              style={{
-                transform: matrixToCss(
-                  new DOMMatrix()
-                    .scale(
-                      1 / Math.abs(props.scaleX),
-                      1 / Math.abs(props.scaleY),
-                    )
-                    .translate(w === 1 ? -4 : 4, h === 1 ? -4 : 4),
-                ),
-                left: w * props.width + (w === 1 ? 0 : -16),
-                top: h * props.height + (h === 1 ? 0 : -16),
-                position: "absolute",
-                width: 16,
-                height: 16,
-                transformOrigin: `${w === 0 ? "right" : "left"} ${
-                  h === 0 ? "bottom" : "top"
-                }`,
-                cursor: [0, 0, 0, 0].map((_, i) => {
-                  return {
-                    cursor: createRotateHorizontalResize(
-                      steppedAngle +
-                        -Math.PI / 4 +
-                        (i * Math.PI) / 2 +
-                        (props.scaleX < 0 ? Math.PI / 2 : 0) +
-                        (props.scaleY < 0 ? Math.PI / 2 : 0),
-                    ),
-                  };
-                })[i].cursor,
-              }}
-              onPointerDown={createDragHandler({
-                onDown(e) {
-                  const originEl = centerRef.current;
-                  if (!originEl) return;
-                  const rect = originEl.getBoundingClientRect();
-                  const globalCenter = new Vector2(
-                    rect.left + rect.width / 2,
-                    rect.top + rect.height / 2,
-                  );
+      {corners.map(([w, h], i) => {
+        return (
+          <div
+            key={i}
+            style={createRotateStyle(w, h, props.scale)}
+            className={`cmpui_rect-gizmo-corner step-${createStepped(
+              props.rotation,
+              i,
+              -(Math.PI / 4) +
+                (props.scale.x < 0 ? Math.PI / 2 : 0) +
+                (props.scale.y < 0 ? Math.PI / 2 : 0),
+            )}`}
+            data-pos={whIndexToCornerName(w, h)}
+            onPointerDown={(e) =>
+              createRotateHandler(
+                props.rotation,
+                (r) =>
+                  props.onChange({
+                    ...props,
+                    rotation: r,
+                  }),
+                centerRef.current!,
+              )(e.nativeEvent)
+            }
+          />
+        );
+      })}
 
-                  const globalCursor = new Vector2(e.clientX, e.clientY);
-                  return {
-                    startX: e.clientX,
-                    startY: e.clientY,
-                    startAngle: props.angle,
-                    globalCenter,
-                    diffAngle:
-                      Math.atan2(
-                        globalCenter.y - globalCursor.y,
-                        globalCenter.x - globalCursor.x,
-                      ) -
-                      Math.PI / 2,
-                  };
-                },
-                onMove(e, ctx) {
-                  if (!ctx) return;
-                  const deltaX = e.clientX - ctx.globalCenter.x;
-                  const deltaY = e.clientY - ctx.globalCenter.y;
-                  const newAngle = Math.atan2(deltaY, deltaX) + Math.PI / 2;
-                  props.onChangeAngle?.(
-                    newAngle - ctx.diffAngle + ctx.startAngle,
-                  );
-                },
-              })}
-            />
-          );
-        })}
-
-      {props.canResize &&
-        corners.map(([w, h], i) => {
-          return (
-            <Fragment key={i}>
-              <Circle
-                x={w * props.width}
-                y={h * props.height}
-                radius={4}
-                fill="var(--cmpui-primary-color)"
-                style={{
-                  transform: invertScaleCss,
-                  ...memoCursorStyle[i],
-                }}
-              />
-              <div
-                style={{
-                  transform: matrixToCss(
-                    new DOMMatrix()
-                      .scale(
-                        1 / Math.abs(props.scaleX),
-                        1 / Math.abs(props.scaleY),
-                      )
-                      .translate(w === 1 ? -4 : 4, h === 1 ? -4 : 4),
-                  ),
-                  left: w * props.width + (w === 1 ? 0 : -8),
-                  top: h * props.height + (h === 1 ? 0 : -8),
-                  position: "absolute",
-                  width: 8,
-                  height: 8,
-                  transformOrigin: `${w === 0 ? "right" : "left"} ${
-                    h === 0 ? "bottom" : "top"
-                  }`,
-                  ...memoCursorStyle[i],
-                }}
-                onPointerDown={createResizeHandler(props, w, h)}
-              />
-            </Fragment>
-          );
-        })}
+      {corners.map(([w, h], i) => {
+        return (
+          <Circle
+            key={i}
+            x={w * props.width}
+            y={h * props.height}
+            radius={4}
+            fill="var(--cmpui-primary-color)"
+            style={{
+              transform: invertScaleCss,
+            }}
+            className={`cmpui_rect-gizmo-corner step-${createStepped(
+              props.rotation,
+              i,
+              Math.PI / 4 +
+                (props.scale.x < 0 ? Math.PI / 2 : 0) +
+                (props.scale.y < 0 ? Math.PI / 2 : 0),
+            )}`}
+            onPointerDown={(e) =>
+              createResizeHandler(props, w, h, (x, y) => {
+                props.onChange({
+                  ...props,
+                  scale: { x, y },
+                });
+              })(e.nativeEvent)
+            }
+          />
+        );
+      })}
     </div>
   );
 }

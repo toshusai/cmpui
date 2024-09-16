@@ -14,6 +14,7 @@ import CPopover from "./components/CPopover/CPopover.vue";
 import CRadio from "./components/CRadioGroup/CRadio.vue";
 import CRadioGroup from "./components/CRadioGroup/CRadioGroup.vue";
 import CRadioInput from "./components/CRadioGroup/CRadioInput.vue";
+import CRectGizmo from "./components/CRectGizmo/CRectGizmo.vue";
 import CSelect from "./components/CSelect/CSelect.vue";
 import CTextInput from "./components/CTextInput/CTextInput.vue";
 import CTooltip from "./components/CTooltip/CTooltip.vue";
@@ -37,6 +38,7 @@ export {
   CRadio,
   CRadioGroup,
   CRadioInput,
+  CRectGizmo,
   CSelect,
   CTextInput,
   CTooltip,

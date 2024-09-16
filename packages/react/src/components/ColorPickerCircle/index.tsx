@@ -1,7 +1,5 @@
 import { useCallback, useMemo } from "react";
-import { hsvaToRgba } from "@toshusai/cmpui-core";
-import { hsvToRgb } from "@toshusai/cmpui-core";
-import { rgbToCss } from "@toshusai/cmpui-core";
+import { hsvaToRgba, hsvToRgb, rgbToCss } from "@toshusai/cmpui-core";
 
 import { ColorPickerRectProps } from "../ColorPickerRect";
 import { ColorSlider } from "../ColorSlider";

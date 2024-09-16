@@ -25,11 +25,7 @@ const popover1 = useSubMenuPopover();
     {{ selected ?? "Select" }}
   </CButton>
 
-  <CPopover
-    :trigger="trigger?.$el"
-    :show="show"
-    @close="show = false"
-  >
+  <CPopover :trigger="trigger?.$el" :show="show" @close="show = false">
     <CMenuList>
       <CMenuListItem
         is="button"

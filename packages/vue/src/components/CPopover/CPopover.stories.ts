@@ -92,7 +92,7 @@ export const Scroll: Story = {
           <MenuListItem is="button" value="Alpha">Alpha</MenuListItem>
           <MenuListItem is="button" value="Beta">Beta</MenuListItem>
           <MenuListItem is="button" value="Gamma">Gamma</MenuListItem>
-       </MenuList>
+        </MenuList>
       </Popover>
       <div style="min-height: 800px; width: 1px; background: red;"></div>
     `,

@@ -1,44 +1,11 @@
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { HSVA, hexToHsv, hsvaToRgba, rgbaToCss } from "@toshusai/cmpui-core";
 
-import { Button, ColorInput, Grid, RectGizmo, Vector2 } from "..";
+import { Button, ColorInput, Grid } from "..";
 
 import "./README.css";
 
-const WIDTH = 128;
-const HEIGHT = 30;
 export function README(props: { children?: React.ReactNode }) {
-  const [points, setPoints] = useState({
-    x: 0,
-    y: 0,
-    width: WIDTH,
-    height: HEIGHT,
-    angle: -Math.PI / 24,
-  });
-  const [init, setInit] = useState(false);
-
-  const h1Ref = useRef<HTMLHeadingElement>(null);
-
-  const [scale, setScale] = useState(new Vector2(1, 1));
-
-  useEffect(() => {
-    if (init) {
-      return;
-    }
-    const h1 = h1Ref.current;
-    if (!h1) return;
-    const rect = h1.getBoundingClientRect();
-    const x = rect.left + rect.width / 2;
-    const y = rect.top + rect.height / 2;
-
-    setPoints({
-      ...points,
-      x,
-      y,
-    });
-    setInit(true);
-  }, [init, points]);
-
   return (
     <>
       <Grid
@@ -51,27 +18,8 @@ export function README(props: { children?: React.ReactNode }) {
           height: 64,
         }}
       >
-        <div
-          style={
-            init
-              ? {
-                  top: points.y - HEIGHT / 2,
-                  left: points.x - WIDTH / 2,
-                  width: WIDTH,
-                  height: HEIGHT,
-                  transform: `rotate(${points.angle}rad) scale(${scale.x}, ${scale.y})`,
-
-                  pointerEvents: "none",
-                  position: "absolute",
-                  margin: 0,
-                  zIndex: 1,
-                }
-              : undefined
-          }
-        >
-          <h1 ref={h1Ref} id="title">
-            CmpUI
-          </h1>
+        <div>
+          <h1 id="title">CmpUI</h1>
         </div>
       </div>
 
@@ -104,44 +52,6 @@ export function README(props: { children?: React.ReactNode }) {
           {props.children}
         </div>
       </div>
-
-      {init && (
-        <RectGizmo
-          angle={points.angle}
-          height={points.height}
-          width={points.width}
-          origin={{ x: points.width / 2, y: points.height / 2 }}
-          setPosition={(point) => {
-            setPoints({
-              ...points,
-              ...point,
-            });
-          }}
-          canResize
-          canRotate
-          scaleX={scale.x}
-          scaleY={scale.y}
-          setScaleX={(scaleX) => {
-            setScale((prev) => ({
-              x: scaleX,
-              y: prev.y,
-            }));
-          }}
-          setScaleY={(scaleY) => {
-            setScale((prev) => ({
-              x: prev.x,
-              y: scaleY,
-            }));
-          }}
-          onChangeAngle={(angle) => {
-            setPoints({
-              ...points,
-              angle,
-            });
-          }}
-          position={points}
-        />
-      )}
     </>
   );
 }

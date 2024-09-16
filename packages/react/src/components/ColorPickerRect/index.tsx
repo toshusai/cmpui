@@ -1,7 +1,5 @@
 import { useMemo } from "react";
-import { HSVA, hsvaToRgba } from "@toshusai/cmpui-core";
-import { hsvToRgb } from "@toshusai/cmpui-core";
-import { rgbToCss } from "@toshusai/cmpui-core";
+import { HSVA, hsvaToRgba, hsvToRgb, rgbToCss } from "@toshusai/cmpui-core";
 
 import { ColorSlider } from "../ColorSlider";
 import { SVPicker } from "../SVPicker";

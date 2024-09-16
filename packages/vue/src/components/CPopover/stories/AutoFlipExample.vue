@@ -11,15 +11,10 @@ const show2 = ref(false);
 </script>
 
 <template>
-  <div
-    style="
-      position: absolute;
-      bottom: 24px;
-      display: flex;
-      gap: 16px;
-    "
-  >
-    <CButton ref="trigger1" variant="transparent" @click="show1 = true"> flit=true </CButton>
+  <div style="position: absolute; bottom: 24px; display: flex; gap: 16px">
+    <CButton ref="trigger1" variant="transparent" @click="show1 = true">
+      flit=true
+    </CButton>
     <CPopover
       v-if="show1"
       style="padding: 8px"
@@ -31,7 +26,9 @@ const show2 = ref(false);
         Nested Popover
       </div>
     </CPopover>
-    <CButton ref="trigger2" variant="transparent" @click="show2 = true"> flip=false </CButton>
+    <CButton ref="trigger2" variant="transparent" @click="show2 = true">
+      flip=false
+    </CButton>
     <CPopover
       v-if="show2"
       :trigger="trigger2?.$el"

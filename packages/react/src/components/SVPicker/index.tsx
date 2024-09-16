@@ -2,10 +2,10 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   createHandleSVPickerKeyDown,
   createNobPointerDownHandler,
+  hsvToRgb,
+  rgbToCss,
+  useHighContrastColor,
 } from "@toshusai/cmpui-core";
-import { hsvToRgb } from "@toshusai/cmpui-core";
-import { rgbToCss } from "@toshusai/cmpui-core";
-import { useHighContrastColor } from "@toshusai/cmpui-core";
 
 import { Circle } from "../Circle";
 import { ColorLoupe } from "../ColorLoupe";

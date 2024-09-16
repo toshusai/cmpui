@@ -4,7 +4,7 @@ import CMenuList from "../CMenuList/CMenuList.vue";
 import CPopover from "../CPopover/CPopover.vue";
 
 const props = defineProps<{
-  show: boolean
+  show: boolean;
   trigger: HTMLElement | null;
 }>();
 

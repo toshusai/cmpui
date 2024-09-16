@@ -1,13 +1,15 @@
 import { useCallback, useMemo, useState } from "react";
-import { hsvToRgb } from "@toshusai/cmpui-core";
-import { rgbToCss } from "@toshusai/cmpui-core";
-import { useHighContrastColor } from "@toshusai/cmpui-core";
+import {
+  hsvToRgb,
+  rgbToCss,
+  useHighContrastColor,
+  degToRad,
+  radToDeg,
+} from "@toshusai/cmpui-core";
 
 import { useTouchStartPrevent } from "../..";
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
 import { useKeyDownStartEnd } from "../../utils/interactions/useKeyDownStartEnd";
-import { degToRad } from "../../utils/math/degToRad";
-import { radToDeg } from "../../utils/math/radToDeg";
 import { Circle } from "../Circle";
 import { ColorLoupe } from "../ColorLoupe";
 

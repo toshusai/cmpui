@@ -22,6 +22,14 @@
     "typeRoots": ["node_modules/@types", ".storybook/@types", "./node_modules"],
     "types": ["@vitest/browser/providers/playwright"]
   },
-  "include": ["./src"],
+  "include": [
+    "./src",
+    "../core/src/RectGizmo/rotate.ts",
+    "../core/src/RectGizmo/RectGizmoProps.ts",
+    "../core/src/RectGizmo/edge.ts",
+    "../core/src/RectGizmo/createStepped.ts",
+    "../core/src/RectGizmo/corner.ts",
+    "../core/src/RectGizmo/const.ts"
+  ],
   "exclude": ["src/**/*.stories.ts", "node_modules", "types"]
 }

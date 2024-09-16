@@ -1,7 +1,7 @@
 import { useMemo, useRef } from "react";
+import { clamp } from "@toshusai/cmpui-core";
 
 import { createDragHandler } from "../../utils/interactions/createDragHandler";
-import { clamp } from "../../utils/math/clamp";
 import "./index.css";
 
 export type SliderProps = {

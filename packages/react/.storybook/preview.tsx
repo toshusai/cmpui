@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import React from "react";
+import React, { useEffect } from "react";
 import { DocsContainer } from "@storybook/blocks";
 import type { Decorator, Preview } from "@storybook/react";
 
