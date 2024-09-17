@@ -4,7 +4,7 @@ import type { Decorator, Preview } from "@storybook/react";
 
 import DocumentationTemplate from "./DocumentationTemplate.mdx";
 
-import "@toshusai/cmpui-css/dist/index.css";
+import "@toshusai/cmpui-core/dist/style.css";
 import "./storybook.css";
 
 const preview: Preview = {

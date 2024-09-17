@@ -5,16 +5,25 @@ import {
   px,
   radToDeg,
   createResizeHandler,
+  Vector2,
 } from "@toshusai/cmpui-core";
 import { computed, ref } from "vue";
 import { corners } from "@toshusai/cmpui-core";
 import CCircle from "../CCircle/CCircle.vue";
 
-import { RectGizmoProps } from "@toshusai/cmpui-core";
 import { createEdgeHandler, createEdgeStyle } from "@toshusai/cmpui-core";
 import { createStepped } from "@toshusai/cmpui-core";
 import { createRotateHandler, createRotateStyle } from "@toshusai/cmpui-core";
 import { whIndexToCornerName } from "@toshusai/cmpui-core";
+
+export type RectGizmoProps = {
+  width: number;
+  height: number;
+  scale: Vector2;
+  rotation: number;
+  position: Vector2;
+  origin: Vector2;
+};
 
 const props = defineProps<RectGizmoProps>();
 

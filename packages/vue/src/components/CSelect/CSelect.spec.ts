@@ -3,7 +3,7 @@ import { test, expect } from "vitest";
 import CSelect from "./CSelect.vue";
 import { defineComponent, h, nextTick, ref } from "vue";
 
-import "@toshusai/cmpui-css/dist/index.css";
+import "@toshusai/cmpui-core/dist/style.css";
 
 const waitNextTick = () => new Promise<void>((resolve) => nextTick(resolve));
 

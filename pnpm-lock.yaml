@@ -28,12 +28,6 @@ importers:
         specifier: ^5.4.1
         version: 5.4.3
 
-  packages/css:
-    devDependencies:
-      tsup:
-        specifier: ^8.0.1
-        version: 8.2.4(@swc/core@1.7.23)(typescript@5.5.4)
-
   packages/docs:
     dependencies:
       '@nuxt/content':
@@ -45,9 +39,6 @@ importers:
       '@tabler/icons-vue':
         specifier: ^3.12.0
         version: 3.14.0(vue@3.5.0)
-      '@toshusai/cmpui-core':
-        specifier: link:../core
-        version: link:../core
       '@toshusai/cmpui-vue':
         specifier: link:../vue
         version: link:../vue
@@ -66,9 +57,6 @@ importers:
       '@toshusai/cmpui-core':
         specifier: link:../core
         version: link:../core
-      '@toshusai/cmpui-css':
-        specifier: link:../css
-        version: link:../css
       react-transition-group:
         specifier: ^4.4.5
         version: 4.4.5(react-dom@18.3.1)(react@18.3.1)
@@ -169,9 +157,6 @@ importers:
       '@toshusai/cmpui-core':
         specifier: link:../core
         version: link:../core
-      '@toshusai/cmpui-css':
-        specifier: link:../css
-        version: link:../css
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^1.7.0

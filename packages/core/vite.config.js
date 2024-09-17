@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-  plugins: [],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
@@ -10,6 +9,5 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     outDir: path.resolve(__dirname, "dist"),
-    rollupOptions: {},
   },
 });

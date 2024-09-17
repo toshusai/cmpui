@@ -14,7 +14,6 @@ CmpUI is a component library designed for creating complex GUI applications in w
 
 | package name         | framework | NPM                                                                                                                   |
 | -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------- |
-| @toshusai/cmpui-css  | CSS       | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui-css) |
 | @toshusai/cmpui      | React     | [![NPM Version](https://img.shields.io/npm/v/%40toshusai%2Fcmpui)](https://www.npmjs.com/package/@toshusai/cmpui)     |
 | @toshusai/cmpui-vue  | Vue       | WIP                                                                                                                   |
 | @toshusai/cmpui-core | Vanilla   | WIP                                                                                                                   |
@@ -31,8 +30,7 @@ npm install @toshusai/cmpui
 
 ```tsx
 import { Button } from "@toshusai/cmpui";
-import "@toshusai/cmpui/dist/index.css";
-import "@toshusai/cmpui-css/dist/index.css";
+import "@toshusai/cmpui-core/dist/style.css";
 
 export default function App() {
   return <Button>Hello world</Button>;

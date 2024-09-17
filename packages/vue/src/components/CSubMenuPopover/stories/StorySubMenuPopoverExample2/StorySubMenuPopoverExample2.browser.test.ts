@@ -5,7 +5,7 @@ import { userEvent } from "@vitest/browser/context";
 import { asyncNextTick } from "../../../../test/asyncNextTick";
 import { asyncSetTimeout } from "../../../../test/asyncSetTimeout";
 
-import "@toshusai/cmpui-css/dist/index.css";
+import "@toshusai/cmpui-core/dist/style.css";
 import "../../../../test/test.css";
 
 beforeEach(cleanup);

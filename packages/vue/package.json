@@ -38,8 +38,7 @@
   },
   "dependencies": {
     "@floating-ui/dom": "^1.6.10",
-    "@toshusai/cmpui-core": "link:../core",
-    "@toshusai/cmpui-css": "link:../css"
+    "@toshusai/cmpui-core": "link:../core"
   },
   "peerDependencies": {
     "vue": "^3.4.38"

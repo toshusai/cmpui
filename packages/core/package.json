@@ -9,12 +9,18 @@
     ".": {
       "import": {
         "default": "./dist/index.es.js",
-        "types": "./types/index.d.ts"
+        "types": "./types/index.d.ts",
+        "style.css": "./dist/style.css"
       },
       "require": {
         "default": "./dist/index.umd.js",
-        "types": "./types/index.d.ts"
+        "types": "./types/index.d.ts",
+        "dist/*": "./dist/*"
       }
+    },
+    "./dist/*": {
+      "import": "./dist/*",
+      "require": "./dist/*"
     }
   },
   "files": [

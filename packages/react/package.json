@@ -23,7 +23,6 @@
   "dependencies": {
     "@floating-ui/dom": "^1.6.10",
     "@toshusai/cmpui-core": "link:../core",
-    "@toshusai/cmpui-css": "link:../css",
     "react-transition-group": "^4.4.5"
   },
   "peerDependencies": {
