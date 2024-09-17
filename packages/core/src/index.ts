@@ -1,3 +1,4 @@
+
 export * from "./Button";
 export * from "./CanvasView/createPanDragHandler";
 export * from "./CanvasView/handleWheelZoom";
@@ -10,6 +11,7 @@ export * from "./dialog/ariaHiddenOthers";
 export * from "./dialog/focusTrap";
 export * from "./dialog/getScrollBarWidth";
 export * from "./dialog/lockScroll";
+export * from "./KeyboardKey";
 export * from "./math";
 export * from "./math/clamp";
 export * from "./matrixToCss";
@@ -17,5 +19,6 @@ export * from "./menuItem";
 export * from "./popover/setPopover";
 export * from "./px";
 export * from "./RectGizmo";
+export * from "./Slider";
 export * from "./SVPicker";
 export * from "./tooltip/tooltip";

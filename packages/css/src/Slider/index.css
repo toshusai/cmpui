@@ -6,6 +6,7 @@
   position: relative;
   width: 200px;
   cursor: pointer;
+  padding: 7px 0;
 }
 
 .cmpui_slider__root[aria-disabled="true"] {
@@ -16,6 +17,7 @@
   flex-direction: column;
   height: 100px;
   width: 4px;
+  padding: 0 7px;
 }
 
 .cmpui_slider__input {
@@ -36,6 +38,10 @@
 
 .cmpui_slider__root:hover > .cmpui_slider-track {
   border: 1px solid var(--cmpui-border-hover-color);
+}
+
+.cmpui_slider__root[aria-disabled="true"] {
+  pointer-events: none;
 }
 
 .cmpui_slider__root[aria-disabled="true"]:hover > .cmpui_slider-track {

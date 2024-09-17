@@ -50,7 +50,7 @@
     color-scheme: dark;
     --cmpui-contrast-bg-color: #ffffff;
     --cmpui-contrast-text-color: #000000;
-    --cmpui-bg-color: #111;
+    --cmpui-bg-color: #222;
     --cmpui-bg-hover-color: color-mix(
       in srgb,
       var(--cmpui-primary-color) 30%,
