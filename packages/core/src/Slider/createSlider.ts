@@ -1,4 +1,4 @@
-import { createDragHandler } from "../createDragHandler";
+import { createDragHandler } from "../interactions/createDragHandler";
 import { clamp } from "../math";
 import { Direction, Orientation } from "./Orientation";
 

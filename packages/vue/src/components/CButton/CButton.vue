@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import {
-  type CButtonSize,
-  type CButtonVariant,
-} from "@toshusai/cmpui-core";
+import { type CButtonSize, type CButtonVariant } from "@toshusai/cmpui-core";
 import { VNode } from "vue";
 
 withDefaults(

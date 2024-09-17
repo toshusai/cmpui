@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  createHandleSVPickerKeyDown,
-  createNobPointerDownHandler,
+  createSVPickerKeyDownHandler,
+  createSVPickerNobPointerDownHandler,
   hsvToRgb,
   rgbToCss,
   useHighContrastColor,
@@ -43,7 +43,7 @@ export function SVPicker({
 
   const handleKeyDown = useMemo(
     () =>
-      createHandleSVPickerKeyDown({
+      createSVPickerKeyDownHandler({
         saturation,
         value,
         onChange,
@@ -60,7 +60,7 @@ export function SVPicker({
   }, []);
 
   const handlePointerDown = useMemo(() => {
-    return createNobPointerDownHandler({
+    return createSVPickerNobPointerDownHandler({
       height,
       width,
       onChange,

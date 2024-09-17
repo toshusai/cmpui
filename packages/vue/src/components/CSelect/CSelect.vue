@@ -3,7 +3,7 @@ import { computed, onUnmounted, ref, useId, watch } from "vue";
 import Popover from "../CPopover/CPopover.vue";
 import CMenuList from "../CMenuList/CMenuList.vue";
 import CMenuListItem from "../CMenuListItem/CMenuListItem.vue";
-import { lockScroll } from "../../../../core/src/dialog/lockScroll";
+import { lockScroll } from "../../../../core/src/Dialog/lockScroll";
 import { SelectProps } from "./types";
 
 const props = withDefaults(defineProps<SelectProps>(), {

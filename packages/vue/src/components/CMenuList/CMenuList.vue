@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
-import { useKeyboardNavigation } from "../../../../core/src/menuItem";
+import { useKeyboardNavigation } from "../../../../core/src/MenuList";
 
 const props = withDefaults(
   defineProps<{

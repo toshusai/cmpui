@@ -11,7 +11,7 @@ import {
   watch,
   watchEffect,
 } from "vue";
-import { tooltip } from "../../../../core/src/tooltip/tooltip";
+import { createTooltip } from "../../../../core/src/Tooltip/createTooltip";
 import { isValidVNode } from "./lib";
 import { Side } from "@floating-ui/dom";
 
@@ -124,7 +124,7 @@ watch(
     if (!tooltipRef.value) return;
     if (!slotElement.value) return;
     if (!arrowRef.value) return;
-    const { cleanUp, open } = tooltip(
+    const { cleanUp, open } = createTooltip(
       tooltipRef.value,
       slotElement.value,
       arrowRef.value,

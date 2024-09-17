@@ -1,7 +1,7 @@
 
-import { createDragHandler } from "../createDragHandler";
+import { createDragHandler } from "../interactions/createDragHandler";
 import { rotateVector, Vector2 } from "../math";
-import { matrixToCss } from "../matrixToCss";
+import { matrixToCss } from "../styles/matrixToCss";
 import { corners } from "./const";
 import { RectGizmoProps } from "./RectGizmoProps";
 

@@ -1,7 +1,7 @@
 import { memo, useEffect, useMemo, useRef } from "react";
 import {
   createSVCanvasPointerDownHandler,
-  drawSV,
+  drawSVRect,
   initSVCanvas,
 } from "@toshusai/cmpui-core";
 
@@ -25,7 +25,7 @@ export const SVCanvas = memo(function SVCanvas(
 
   useEffect(() => {
     if (!ctx.current) return;
-    drawSV(ctx.current, props.hue);
+    drawSVRect(ctx.current, props.hue);
   }, [props.hue]);
 
   const handlePointerDownCanvas = useMemo(

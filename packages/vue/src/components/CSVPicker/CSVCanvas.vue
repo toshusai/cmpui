@@ -2,7 +2,7 @@
 import { computed, onMounted, ref, watchEffect } from "vue";
 import {
   createSVCanvasPointerDownHandler,
-  drawSV,
+  drawSVRect,
   initSVCanvas,
 } from "@toshusai/cmpui-core";
 
@@ -22,12 +22,12 @@ let ctx: CanvasRenderingContext2D | null = null;
 onMounted(() => {
   if (!canvasRef.value) return;
   ctx = initSVCanvas(canvasRef.value);
-  drawSV(ctx, props.hue);
+  drawSVRect(ctx, props.hue);
 });
 
 watchEffect(() => {
   if (!ctx) return;
-  drawSV(ctx, props.hue);
+  drawSVRect(ctx, props.hue);
 });
 
 const pointerdown = computed(() => {

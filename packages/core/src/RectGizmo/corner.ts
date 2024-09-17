@@ -1,6 +1,6 @@
-import { createDragHandler } from "../createDragHandler";
+import { createDragHandler } from "../interactions/createDragHandler";
 import { rotateVector, Vector2 } from "../math";
-import { matrixToCss } from "../matrixToCss";
+import { matrixToCss } from "../styles/matrixToCss";
 import { RectGizmoProps } from "./RectGizmoProps";
 
 export const createCornerStyles = (w: number, h: number, scale: Vector2) => {

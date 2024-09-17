@@ -1,4 +1,4 @@
-import { tooltip } from "@toshusai/cmpui-core";
+import { createTooltip } from "@toshusai/cmpui-core";
 import React, {
   CSSProperties,
   isValidElement,
@@ -103,7 +103,7 @@ export const Tooltip = (rawProps: TooltipProps) => {
   useLayoutEffect(() => {
     if (!tooltipRef.current || !arrowRef.current) return;
     if (!childRef.current) return;
-    const { cleanUp, open } = tooltip(
+    const { cleanUp, open } = createTooltip(
       tooltipRef.current,
       childRef.current,
       arrowRef.current,

@@ -1,6 +1,6 @@
 import { hsvToRgb } from "./colors";
-import { createDragHandler } from "./createDragHandler";
-import { KeyboardKey } from "./KeyboardKey";
+import { createDragHandler } from "./interactions/createDragHandler";
+import { KeyboardKey } from "./interactions/KeyboardKey";
 import { clamp } from "./math/clamp";
 
 export function initSVCanvas(canvas: HTMLCanvasElement) {
@@ -15,7 +15,7 @@ export function initSVCanvas(canvas: HTMLCanvasElement) {
   return ctx;
 }
 
-export function createNobPointerDownHandler(props: {
+export function createSVPickerNobPointerDownHandler(props: {
   onChange: (s: number, v: number) => void;
   width: number;
   height: number;
@@ -95,7 +95,7 @@ export function createSVCanvasPointerDownHandler(props: {
   });
 }
 
-export function drawSV(ctx: CanvasRenderingContext2D, hue: number) {
+export function drawSVRect(ctx: CanvasRenderingContext2D, hue: number) {
   const width = ctx.canvas.width;
   const height = ctx.canvas.height;
   const imageData = ctx.getImageData(0, 0, width, height);
@@ -115,7 +115,7 @@ export function drawSV(ctx: CanvasRenderingContext2D, hue: number) {
   ctx.putImageData(imageData, 0, 0);
 }
 
-export function createHandleSVPickerKeyDown({
+export function createSVPickerKeyDownHandler({
   scale = 0.01,
   shiftScale = 0.1,
   ...props

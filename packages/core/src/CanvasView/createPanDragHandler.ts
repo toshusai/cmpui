@@ -1,4 +1,4 @@
-import { createDragHandler } from "../createDragHandler";
+import { createDragHandler } from "../interactions/createDragHandler";
 import { CanvasViewTransform, CanvasViewCursor } from "./types";
 
 export function createPanDragHandler(

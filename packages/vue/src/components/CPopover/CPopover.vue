@@ -8,11 +8,11 @@ import {
   watch,
   watchEffect,
 } from "vue";
-import { setPopover } from "../../../../core/src/popover/setPopover";
+import { createPopover } from "../../../../core/src/Popover/setPopover";
 import { Placement } from "@floating-ui/dom";
 import {
   focusTrap as cmpUiFocusTrap,
-  defaultOptions,
+  defaultPopoverOption,
   lockScroll,
 } from "@toshusai/cmpui-core";
 
@@ -35,11 +35,11 @@ const props = withDefaults(
   }>(),
   {
     id: undefined,
-    disabledTabClose: defaultOptions.disabledTabClose,
-    disabledTriggerClickClose: defaultOptions.disabledTriggerClickClose,
-    placement: defaultOptions.placement,
-    autoResize: defaultOptions.autoResize,
-    flip: defaultOptions.flip,
+    disabledTabClose: defaultPopoverOption.disabledTabClose,
+    disabledTriggerClickClose: defaultPopoverOption.disabledTriggerClickClose,
+    placement: defaultPopoverOption.placement,
+    autoResize: defaultPopoverOption.autoResize,
+    flip: defaultPopoverOption.flip,
     show: false,
     trigger: null,
     boundary: undefined,
@@ -84,7 +84,7 @@ watch(
     if (!props.trigger) return;
     if (!divRef.value) return;
     if (!props.show) return;
-    const { cleanUp: cleanUpPopover, open } = setPopover(
+    const { cleanUp: cleanUpPopover, open } = createPopover(
       divRef.value,
       props.trigger,
       () => {
@@ -110,8 +110,8 @@ watch(
         flip: props.flip,
         autoResize: props.autoResize,
         boundary: props.boundary,
-        offset: defaultOptions.offset,
-        padding: defaultOptions.padding,
+        offset: defaultPopoverOption.offset,
+        padding: defaultPopoverOption.padding,
       },
     );
     const cleanUpLockScroll = props.scrollLock ? lockScroll() : () => {};

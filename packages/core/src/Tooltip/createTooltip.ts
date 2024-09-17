@@ -16,13 +16,13 @@ type TooltipOptions = {
   placement?: Side;
 };
 
-const defaultOptions: TooltipOptions = {
+const defaultTooltipOption: TooltipOptions = {
   offset: 8,
   padding: 8,
   placement: "top",
 };
 
-export function tooltip(
+export function createTooltip(
   tooltipElement: HTMLElement,
   triggerElement: HTMLElement | SVGElement,
   arrowElement: HTMLElement | SVGElement,
@@ -41,7 +41,7 @@ export function tooltip(
   options?: TooltipOptions
 ) {
   const finalOptions = {
-    ...defaultOptions,
+    ...defaultTooltipOption,
     ...options,
   };
   const handleKeyDown = (e: KeyboardEvent) => {

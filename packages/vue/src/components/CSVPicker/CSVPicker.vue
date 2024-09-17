@@ -4,8 +4,8 @@ import CColorLoupe from "../CColorLoupe/CColorLoupe.vue";
 import CCircle from "../CCircle/CCircle.vue";
 import CSVCanvas from "./CSVCanvas.vue";
 import {
-  createHandleSVPickerKeyDown,
-  createNobPointerDownHandler,
+  createSVPickerKeyDownHandler,
+  createSVPickerNobPointerDownHandler,
   hsvToRgb,
   rgbToCss,
   useHighContrastColor,
@@ -47,7 +47,7 @@ const hsv = computed(() => ({
 const strokeColor = computed(() => useHighContrastColor(hsv.value));
 
 const nobPd = computed(() =>
-  createNobPointerDownHandler({
+  createSVPickerNobPointerDownHandler({
     height: props.height,
     width: props.width,
     s: props.saturation,
@@ -63,7 +63,7 @@ const nobPd = computed(() =>
 );
 
 const handleKeyDown = computed(() =>
-  createHandleSVPickerKeyDown({
+  createSVPickerKeyDownHandler({
     saturation: props.saturation,
     value: props.value,
     onChange: (s, v) => emit("change", s, v),

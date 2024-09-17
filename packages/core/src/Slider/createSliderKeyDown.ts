@@ -1,4 +1,4 @@
-import { KeyboardKey } from "../KeyboardKey";
+import { KeyboardKey } from "../interactions/KeyboardKey";
 import { clamp } from "../math";
 import { Orientation } from "./Orientation";
 

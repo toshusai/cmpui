@@ -1,4 +1,4 @@
-import { FOCUSABLE_ELEMENTS_SELECTOR } from "../dialog/focusTrap";
+import { FOCUSABLE_ELEMENTS_SELECTOR } from "../Dialog/focusTrap";
 
 export function useKeyboardNavigation(
   element: HTMLDivElement,

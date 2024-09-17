@@ -9,8 +9,8 @@ import {
 } from "react";
 import {
   lockScroll,
-  Option,
-  setPopover,
+  PopoverOption,
+  createPopover,
   focusTrap as cmpUiFocusTrap,
 } from "@toshusai/cmpui-core";
 
@@ -23,7 +23,7 @@ export type PopoverProps = {
   onClose?: () => void;
   scrollLock?: boolean;
   focusTrap?: boolean;
-} & Option;
+} & PopoverOption;
 
 export const MemoPopover = memo(Popover);
 
@@ -38,7 +38,7 @@ export function Popover(props: PopoverProps) {
   useEffect(() => {
     if (!ref.current) return;
     if (!props.trigger.current) return;
-    const { cleanUp, open } = setPopover(
+    const { cleanUp, open } = createPopover(
       ref.current,
       props.trigger.current,
       () => {},
