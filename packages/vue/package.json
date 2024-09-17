@@ -25,7 +25,7 @@
   "scripts": {
     "typecheck": "vue-tsc -p tsconfig.ci.json",
     "test": "vitest",
-    "test:browser": "vitest --browser=chromium",
+    "test:browser": "vitest --config vitest.browser.config.js",
     "dev": "concurrently \"vue-tsc . --watch -p tsconfig.json\" \"vite build --watch\"",
     "build": "npm run typecheck && vite build && vue-tsc",
     "storybook": "storybook dev -p 6006",
@@ -69,6 +69,7 @@
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.27.0",
+    "happy-dom": "^15.7.4",
     "storybook": "8.2.6",
     "typescript": "^5.2.2",
     "typescript-eslint": "^8.2.0",

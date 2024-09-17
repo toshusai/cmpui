@@ -2,9 +2,11 @@ import { cleanup, render, screen } from "@testing-library/vue";
 import { test, expect, beforeEach } from "vitest";
 import SubMenuPopoverExample from "./StorySubMenuPopoverExample2.vue";
 import { userEvent } from "@vitest/browser/context";
-import "@toshusai/cmpui-css/dist/index.css";
 import { asyncNextTick } from "../../../../test/asyncNextTick";
 import { asyncSetTimeout } from "../../../../test/asyncSetTimeout";
+
+import "@toshusai/cmpui-css/dist/index.css";
+import "../../../../test/test.css";
 
 beforeEach(cleanup);
 
@@ -16,10 +18,10 @@ test("select a nested submenu item by click", async () => {
   await asyncNextTick();
   const targetItemElement = screen.getByText("SubMenu2");
   await userEvent.click(targetItemElement);
-  await asyncSetTimeout(200);
+  await asyncSetTimeout(500);
   const targetItemElement2 = screen.getByTestId("submenu3");
   await userEvent.click(targetItemElement2);
-  await asyncSetTimeout(200);
+  await asyncSetTimeout(500);
 
   const el = screen.getByText("Golf");
   await userEvent.click(el);
@@ -36,7 +38,7 @@ test("open a nested submenu by keyboard", async () => {
   await userEvent.keyboard("{arrowdown}");
   await userEvent.keyboard("{enter}");
   await asyncNextTick();
-  await asyncSetTimeout(300);
+  await asyncSetTimeout(500);
   expect(screen.getByText("Beta")).not.toBeNull();
 });
 
@@ -49,7 +51,7 @@ test("select a nested submenu item by keyboard", async () => {
 
   // 2. Open the submenu1 with keyboard
   await userEvent.keyboard("{arrowup}");
-  await asyncSetTimeout(300);
+  await asyncSetTimeout(500);
   expect(screen.getByText("Delta")).not.toBeNull();
 
   // 3. Open the submenu2 with keyboard
@@ -57,7 +59,7 @@ test("select a nested submenu item by keyboard", async () => {
   await userEvent.keyboard("{arrowdown}");
   await userEvent.keyboard("{arrowdown}");
   await userEvent.keyboard("{arrowdown}");
-  await asyncSetTimeout(300);
+  await asyncSetTimeout(500);
   expect(screen.getByText("Golf")).not.toBeNull();
 
   // Select the item

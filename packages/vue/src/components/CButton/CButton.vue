@@ -1,13 +1,18 @@
 <script setup lang="ts">
-import { CButtonProps } from "@toshusai/cmpui-core";
+import {
+  type CButtonSize,
+  type CButtonVariant,
+} from "@toshusai/cmpui-core";
 import { VNode } from "vue";
 
 withDefaults(
-  defineProps<
-    CButtonProps & {
-      is?: string | VNode;
-    }
-  >(),
+  defineProps<{
+    is?: string | VNode;
+    bordered?: boolean;
+    disabled?: boolean;
+    size?: CButtonSize;
+    variant?: CButtonVariant;
+  }>(),
   {
     is: "button",
     bordered: undefined,

@@ -1,7 +1,11 @@
-import { render } from "@testing-library/vue";
-import { expect, it, describe } from "vitest";
+import { cleanup, render } from "@testing-library/vue";
+import { expect, it, describe, beforeEach } from "vitest";
 import { defineComponent, h } from "vue";
 import CButton from "./CButton.vue";
+
+import "../../test/test.css";
+
+beforeEach(cleanup);
 
 describe("render", () => {
   it("renders a button", () => {
